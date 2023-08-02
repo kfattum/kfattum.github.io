@@ -29,3 +29,8 @@
     padding: 0.45em 0.9em;
     color: var(--link-color);
   }  
+
+radius {}
+.radius {
+    border-radius: 0.2rem;
+  }
