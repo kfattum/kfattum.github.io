@@ -11,3 +11,21 @@
     color: #fa0000;
     }
   }
+
+ one {}
+.one {
+    color: #f2591d;
+  }
+
+  two {}
+  .two {
+      color: #0a91eb;
+    }
+    
+.md-typeset .md-button {
+    border-radius: 0.3rem;
+    font-weight: 400;
+    font-size: 0.7rem;
+    padding: 0.45em 0.9em;
+    color: var(--link-color);
+  }  
