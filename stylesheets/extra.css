@@ -12,25 +12,33 @@
     }
   }
 
- one {}
-.one {
+  {}
+@keyframes scaled_boosty {
+    0%, 40%, 80%, 100% {
+      transform: scale(1.4);
+    }
+    20%, 60% {
+      transform: scale(1.6);
+    }
+  }
+.scaled_boosty {
+  animation: scaled_boosty 1000ms infinite;
+  }  
+
+ {}
+.c1 {
     color: #f2591d;
   }
 
-  two {}
-  .two {
-      color: #0a91eb;
-    }
-    
 .md-typeset .md-button {
     border-radius: 0.3rem;
     font-weight: 400;
     font-size: 0.7rem;
     padding: 0.45em 0.9em;
-    color: var(--link-color);
+    color: #ffffff;
   }  
 
-radius {}
+ {}
 .radius {
     border-radius: 0.2rem;
   }
