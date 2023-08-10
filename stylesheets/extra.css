@@ -42,3 +42,7 @@
 .radius {
     border-radius: 0.2rem;
   }
+
+  {}
+.clearfix {
+    clear: both;  
