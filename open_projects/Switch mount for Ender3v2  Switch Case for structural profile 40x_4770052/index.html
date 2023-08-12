@@ -88,8 +88,8 @@
 
     
     
-  
 <script type="text/javascript" src="https://vk.com/js/api/openapi.js?168"></script>
+  
 <script type="text/javascript">
   VK.init({ apiId: 51727503, onlyWidgets: true });
 </script>
@@ -559,43 +559,13 @@
     </fieldset>
   </form>
 
-
-  <h3 id="__comments">Комментарии</h2>
-  <!-- Insert generated snippet here -->
-  <div id="vk_comments"></div>
+  <div class="vkcomments">
+    <div class="vkcommentstitl">Комментарии</div>
+     <div id="vk_comments"></div>
 <script type="text/javascript">
   VK.Widgets.Comments("vk_comments", {limit: 10, attach: "*"});
 </script>
-  <!-- Synchronize Giscus theme with palette -->
-  <script>
-    var giscus = document.querySelector("script[src*=giscus]")
-
-    /* Set palette on initial load */
-    // var palette = __md_get("__palette")
-    // if (palette && typeof palette.color === "object") {
-    //   var theme = palette.color.scheme === "slate" ? "dark" : "light"
-    //   giscus.setAttribute("data-theme", theme) 
-    // }
-
-    /* Register event handlers after documented loaded */
-    document.addEventListener("DOMContentLoaded", function() {
-      var ref = document.querySelector("[data-md-component=palette]")
-      // ref.addEventListener("change", function() {
-      //   var palette = __md_get("__palette")
-        // if (palette && typeof palette.color === "object") {
-        //   var theme = palette.color.scheme === "slate" ? "dark" : "light"
-
-          // /* Instruct Giscus to change theme */
-          // var frame = document.querySelector(".giscus-frame")
-          // frame.contentWindow.postMessage(
-          //   { giscus: { setConfig: { theme } } },
-          //   "https://giscus.app"
-          // )
-      //   }
-      // })
-    })
-  </script>
-
+</div>
                 
               </article>
             </div>
