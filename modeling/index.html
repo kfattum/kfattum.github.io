@@ -500,7 +500,7 @@
   </form>
 
 
-  <h2 id="__comments">Комментарии</h2>
+  <h3 id="__comments">Комментарии</h2>
   <!-- Insert generated snippet here -->
   <div id="vk_comments"></div>
 <script type="text/javascript">
@@ -511,28 +511,28 @@
     var giscus = document.querySelector("script[src*=giscus]")
 
     /* Set palette on initial load */
-    var palette = __md_get("__palette")
-    if (palette && typeof palette.color === "object") {
-      var theme = palette.color.scheme === "slate" ? "dark" : "light"
-      giscus.setAttribute("data-theme", theme) 
-    }
+    // var palette = __md_get("__palette")
+    // if (palette && typeof palette.color === "object") {
+    //   var theme = palette.color.scheme === "slate" ? "dark" : "light"
+    //   giscus.setAttribute("data-theme", theme) 
+    // }
 
     /* Register event handlers after documented loaded */
     document.addEventListener("DOMContentLoaded", function() {
       var ref = document.querySelector("[data-md-component=palette]")
-      ref.addEventListener("change", function() {
-        var palette = __md_get("__palette")
-        if (palette && typeof palette.color === "object") {
-          var theme = palette.color.scheme === "slate" ? "dark" : "light"
+      // ref.addEventListener("change", function() {
+      //   var palette = __md_get("__palette")
+        // if (palette && typeof palette.color === "object") {
+        //   var theme = palette.color.scheme === "slate" ? "dark" : "light"
 
-          /* Instruct Giscus to change theme */
-          var frame = document.querySelector(".giscus-frame")
-          frame.contentWindow.postMessage(
-            { giscus: { setConfig: { theme } } },
-            "https://giscus.app"
-          )
-        }
-      })
+          // /* Instruct Giscus to change theme */
+          // var frame = document.querySelector(".giscus-frame")
+          // frame.contentWindow.postMessage(
+          //   { giscus: { setConfig: { theme } } },
+          //   "https://giscus.app"
+          // )
+      //   }
+      // })
     })
   </script>
 
