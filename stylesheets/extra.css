@@ -47,6 +47,3 @@
 .clearfix {
     clear: both;
 }  
-
-.vkcomments {z-index:99;position:relative;}
-.vkcommentstitl {z-index:100;position:absolute;background-color:#000;width:100%;padding:6px 20px;color:#fff;}
