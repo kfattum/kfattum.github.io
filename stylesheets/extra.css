@@ -47,19 +47,38 @@
 .clearfix {
     clear: both;
 }
-
+/* Цвета */
+[data-md-color-scheme="slate"] {
+  --link-color: #ffee00;
+}
 /* Линейно раскладывает картинки */
 .menu-figures {
   display: inline-block;
-  padding: 0px 50px;
+  padding: 0px 8px;
   margin: auto;
-  :link {
-    color: #ffffff;
   }
-  :visited {
-    color: #ffffff;
+  .menu-figures a {
+  color: #ffffff;
   }
-}  
+.figures-wrapper {
+    margin: 0px -8px;
+    text-align: center;
+    }
 .menu-img {
-  border-radius: 0.3rem;
+border-radius: 20%;
+}    
+  /* .menu-figures a:visited {
+  color: #ffffff;
+  } */
+.menu-img {
+  border-radius: 0.6rem;
 }
+figure:hover > .menu-img {
+  border: 2px solid var(--link-color);
+  }
+  .md-typeset figure {
+  margin: 0px;
+  }
+  .md-typeset figcaption {
+    margin: 0.2em auto 0.8em auto;
+  }
