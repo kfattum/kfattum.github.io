@@ -36,21 +36,26 @@
     font-size: 0.7rem;
     padding: 0.45em 0.9em;
     color: #ffffff;
+    margin-bottom: 10px;
 }
 
-/* Этим я скруглял картинки */
+/* Радиусы */
 .radius {
     border-radius: 0.2rem;
 }
+
+.radius_video { border-radius: 20px; overflow: hidden; -webkit-transform: translateZ(0); }
 
 /* Этим я лечил облизывание картинок */
 .clearfix {
     clear: both;
 }
+
 /* Цвета */
 [data-md-color-scheme="slate"] {
   --link-color: #ffee00;
 }
+
 /* Линейно раскладывает картинки */
 .menu-figures {
   display: inline-block;
@@ -82,112 +87,198 @@ figure:hover > .menu-img {
   .md-typeset figcaption {
     margin: 0.2em auto 0.8em auto;
   }
-
-/* Галерея   */
-.gallery-figures {
-  display: inline-block;
-  padding: 0px 3px;
-  margin: auto;
+/* ===================================================================== */
+/* Gallery Filter */
+/* ===================================================================== */
+  html,body{
+    width: 100%;
+    height: 100%;
   }
-  .gallery-figures a {
-  color: #ffffff;
+  
+  body{
+    font-family: sans-serif;
+    font-size: 18px;
+    overflow-x: hidden;
   }
-.figures-wrapper {
-    margin: 0px -8px;
-    text-align: center;
-    }
-.gallery-img {
-border-radius: 20%;
-}    
-  /* .menu-figures a:visited {
-  color: #ffffff;
-  } */
-.gallery-img {
-  border-radius: 0.2rem;
-}
-figure:hover > .gallery-img {
-  outline: 2px solid var(--link-color);
+  
+  #gallery ul{
+    list-style: none;
   }
-  .md-typeset figure {
-  margin: 0px;
+  
+  #gallery img{
+    max-width: 100%;
+    height: auto;
   }
-  .md-typeset figcaption {
-    margin: 0.2em auto 0.8em auto;
-  }
-
-
-
-
-
-
-
-  /* sorter */
-  * {
-    box-sizing: border-box;
-  }
-  /* Center website */
-  .main {
-    max-width: 1000px;
+  
+  #gallery{
+    max-width: 1200px;
     margin: auto;
+    text-align: center;
   }
   
-  h1 {
-    font-size: 50px;
-    word-break: break-all;
+  .galleryfilter ul{
+    list-style: none;
   }
   
-  .row {
-    margin: 8px -16px;
+  .galleryfilter img{
+    max-width: 100%;
+    height: auto;
   }
   
-  /* Add padding BETWEEN each column (if you want) */
-  .row,
-  .row > .column {
-    padding: 8px;
-  }
   
-  /* Create three equal columns that floats next to each other */
-  .column {
-    float: left;
-    width: 33.33%;
-    display: none; /* Hide columns by default */
+  .filter-menu{
+    margin-bottom: 20px;
   }
-  
-  /* Clear floats after rows */
-  .row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-  
-  /* Content */
-  .content {
-    background-color: #161b22;
-    outline: 2px solid var(--link-color);
-    padding: 10px;
-  }
-  
-  /* The "show" class is added to the filtered elements */
-  .show {
-    display: block;
-  }
-  
-  /* Style the buttons */
-  .btn {
+  .filter-menu li{
+    display: inline-block;
+    cursor: pointer;
     border-radius: 0.3rem;
     font-weight: 400;
     font-size: 0.7rem;
     padding: 0.45em 0.9em;
     color: #ffffff;
+    outline: 2px solid #ffffff;
+    
+  }
+  .filter-menu li:hover,
+  .filter-menu li.current{
+    background:#ffc400;
+    color: #000;
+    outline: 2px solid #ffc400;
+  }
+  
+  .filter-item li{
+    width: 50%;
+    padding: 6px 0px;
+    margin: auto;
+    display: inline-block;
+  }
+  
+  .filter-item li.active{
+    width: 50%;
+    padding: 2px;
+    transition: all 0.1s ease;
+  }
+  
+  .filter-item li.delete{
+    width: 0%;
+    padding: 0;
+    transition: all 0.1s ease;
+  }
+  
+  .filter-item img{
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 0.3rem;
+  }
+  img:hover {
+    outline: 2px solid #ffc400;
+  }
+  @media screen and (min-width: 768px){
+    .filter-item li.active,
+    .filter-item li{
+        width: 33.33%;
+    }
+  
+  }
+  @media screen and (min-width: 1280px){
+    .filter-item li.active,
+    .filter-item li{
+        width: 25%;
+    }
+  
+  }  
+
+/* ================================================================================================================ */
+.block {
+  width: 450px;
+  height: 250px;
+  background-color:  #29272773;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.9rem;
+  margin-bottom: 10px; /* Увеличение расстояния между блоками */
+}
+
+/* =========================================================================================================================== */
+/* .menu-block {
+    width: 300px;
+    height: 400px;
+    background-color: #29272773;
+    border-radius: 0.9rem;
+    text-align: center;
+    padding: 20px;
+    display: inline-block;
+    padding: 0px 8px;
+    margin: auto;
+    }
+    .menu-block a {
+    color: #ffffff;
+    }
+  .figures-wrapper {
+      margin: 0px -8px;
+      text-align: center;
+      }
 }
   
-  /* Add a grey background color on mouse-over */
-  .btn:hover {
-    background-color: #ffc400;
-  }
+.menu-block img {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 10px;
+}
   
-  /* Add a dark background color to the active button */
-  .btn.active {
-    background-color: #ffc400;
-     color: rgb(0, 0, 0);
+.menu-block h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+  
+.menu-block p {
+    font-size: 16px;
+    margin-bottom: 20px;
+} */
+
+/* ============================================================ */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 350px;
+  height: 300px;
+  background-color: #29272773;
+  /* border: 1px solid #000000; */
+  border-radius: 0.9rem;
+  display: inline-block;
+  padding: 0px 8px;
+  margin: auto;
   }
+ .menu-block a {
+  color: #ffffff;
+  }
+ .figures-wrapper {
+  margin: 0px -8px;
+  text-align: center;
+  }
+
+ .image {
+  position: relative;
+ }
+
+ .image img {
+  width: 100%;
+  height: auto;
+ }
+
+ .text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #FFF;
+  font-size: 18px;
+  text-align: center;
+}

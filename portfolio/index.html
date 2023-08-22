@@ -426,98 +426,39 @@
 
   <h1>Portfolio</h1>
 
-<div><div id="myBtnContainer">
-  <button class="btn active" onclick="filterSelection('all')">ВСЕ</button>
-  <button class="btn" onclick="filterSelection('print')"> 3D ПЕЧАТЬ</button>
-  <button class="btn" onclick="filterSelection('design')"> 3D ДИЗАЙН</button>
-  <!-- <button class="btn" onclick="filterSelection('people')"> People</button> -->
-</div>
+<section id="gallery">
+      <div class="galleryfilter">
+        <ul class="filter-menu">
+            <li data-target="all">ВСЕ</li>
+            <li data-target="print">3D ПЕЧАТЬ</li>
+            <li data-target="design">3D ДИЗАЙН</li>
+            <li data-target="skan">3D СКАНИРОВАНИЕ</li>
+        </ul>
 
-<!-- Portfolio Gallery Grid -->
-<div class="row">
-  <div class="column print">
-    <div class="content">
-      <img src="/images/small/bs.jpg" alt="" style="width:100%">
-      <h4>Mountains</h4>
-      <p>Lorem ipsum dolor..</p>
-    </div>
-  </div>
-  <div class="column print">
-    <div class="content">
-      <img src="/images/small/bs.jpg" alt="" style="width:100%">
-      <h4>Lights</h4>
-      <p>Lorem ipsum dolor..</p>
-    </div>
-  </div>
-  <div class="column print">
-    <div class="content">
-      <img src="/images/small/bs.jpg" alt="" style="width:100%">
-      <h4>Forest</h4>
-      <p>Lorem ipsum dolor..</p>
-    </div>
-  </div>
-
-  <div class="column design">
-    <div class="content">
-      <img src="/images/small/bs.jpg" alt="" style="width:100%">
-      <h4>Retro</h4>
-      <p>Lorem ipsum dolor..</p>
-    </div>
-  </div>
-  <div class="column design">
-    <div class="content">
-      <img src="/images/small/bs.jpg" alt="" style="width:100%">
-      <h4>Fast</h4>
-      <p>Lorem ipsum dolor..</p>
-    </div>
-  </div>
-  <div class="column design">
-    <div class="content">
-      <img src="/images/small/bs.jpg" alt="" style="width:100%">
-      <h4>Classic</h4>
-      <p>Lorem ipsum dolor..</p>
-    </div>
-  </div>
-
-  <div class="column people">
-    <div class="content">
-      <img src="/images/small/bs.jpg" alt="" style="width:100%">
-      <h4>Girl</h4>
-      <p>Lorem ipsum dolor..</p>
-    </div>
-  </div>
-  <div class="column people">
-    <div class="content">
-      <img src="/images/small/bs.jpg" alt="" style="width:100%">
-      <h4>Man</h4>
-      <p>Lorem ipsum dolor..</p>
-    </div>
-  </div>
-  <div class="column people">
-    <div class="content">
-      <img src="/images/small/bs.jpg" alt="" style="width:100%">
-      <h4>Woman</h4>
-      <p>Lorem ipsum dolor..</p>
-    </div>
-  </div>
-<!-- END GRID -->
-</div>
-<!-- 
-<div class="figures-wrapper">
-
-<div class="gallery-figures">
-<a href="/portfolio/p1">
-<figure><img class="gallery-img" width="370" height="370" src="/images/small/gl2.jpg" />
-</figure></a>
-</div>
-
-<div class="gallery-figures">
-<a href="/portfolio/p2">
-<figure><img class="gallery-img" width="370" height="370" src="/images/small/bs.jpg" />
-</figure></a>
-</div>
-
-</div> --></div>
+        <ul class="filter-item">
+            <li data-item="print">
+            <a href="/contacts.md">
+              <img src="/images/bs.jpg">
+            </a>  
+            </li>
+            <li data-item="print">
+              <img src="/images/f3.jpg">
+            </li>
+            <li data-item="design">
+              <img src="/images/f1.jpg">
+            </li>
+          <li data-item="design">
+            <img src="/images/bs.jpg">
+          </li>
+            <li data-item="skan">
+              <img src="/images/bs.jpg">
+            </li>
+            <li data-item="skan">
+              <img src="/images/bs.jpg">
+            </li>
+        </ul>
+      </div>
+</section>
 
 
   
@@ -621,6 +562,10 @@
       
         
           <script src="../javascripts/extra.js"></script>
+        
+      
+        
+          <script src="../javascripts/gallery.js"></script>
         
       
     
