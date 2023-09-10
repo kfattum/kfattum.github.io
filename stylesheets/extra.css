@@ -4,6 +4,12 @@
   max-width: 1280px
 }
 
+/* Цвета */
+[data-md-color-scheme="slate"] {
+  background-color: #15202a;
+  /* --md-primary-fg-color:#385570; */
+}
+
 /* Спрятать скрыть и закопать элемент */
 .hide {
   display:none;
