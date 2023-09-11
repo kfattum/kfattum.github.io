@@ -81,8 +81,8 @@
   position: relative;
   left: 50%;
   transform: translate(-50%, 0);
-  /* width: 100px; */
   text-align: center;
+  width: 360px;
 }
 
 /* Значок скопировать :material-content-copy: */
