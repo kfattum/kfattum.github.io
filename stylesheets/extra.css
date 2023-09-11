@@ -4,12 +4,6 @@
   max-width: 1280px
 }
 
-/* Цвета */
-[data-md-color-scheme="slate"] {
-  background-color: #15202a;
-  /* --md-primary-fg-color:#385570; */
-}
-
 /* Спрятать скрыть и закопать элемент */
 .hide {
   display:none;
@@ -81,8 +75,8 @@
   position: relative;
   left: 50%;
   transform: translate(-50%, 0);
-  /* width: 100px; */
   text-align: center;
+  width: 470px;
 }
 
 /* Значок скопировать :material-content-copy: */
