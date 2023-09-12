@@ -623,8 +623,8 @@
 
 <div><div class="admonition warning">
 <p class="admonition-title">Внимание</p>
-<p>Обязательным условием для 3D-печати является наличие исходного файла с 3D-моделью. Если у вас нет 3Д модели, свяжитесь со мной, заполнив простую форму
-внизу страницы, и я сделаю модель по вашему заказу.</p>
+<p>Обязательным условием для 3D-печати является наличие исходного файла с 3D-моделью. Если у вас нет 3Д модели, свяжитесь со мной, заполнив простую <a href="#openModal">форму</a>
+или напишите мне в <a href="#tg">telegram</a>, и я сделаю модель по вашему заказу.</p>
 </div>
 <h3>Этапы работы</h3>
 
@@ -670,7 +670,112 @@
 </ul>
 <!-- композитные материалы: ABS+GF12, ABS+GF4, PA6+CF20; TPU+GF30, TPU+CF5; -->
 
-<p><a class="md-button md-button--primary button_wide" href="/#openModal">                      Оставить заявку                      </a></p></div>
+<p><a class="md-button md-button--primary button_wide" href="/#openModal">                      Оставить заявку                      </a></p>
+<div id="tg" class="modal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <class>ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ
+        <a href="#Close" title="Close" class="close">×</a>
+      </class></div>
+      <div class="modal-body">
+       <figure>
+<data-type data-width="100%" data-height="auto" data-desc-position="bottom"><a class="glightbox" href="/images/small/tg.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Image title" class="R06" loading="lazy" src="/images/small/tg.jpg" width="500"></a>
+<figcaption>Сканируйте код для перехода в telegram с телефона</figcaption>
+</data-type></figure>
+<a class="md-button md-button--primary button_wide" href="https://t.me/kFattum"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"></path></svg></span> Написать в Telegram</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="openModal" class="modal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <class>Введите свои данные и я свяжусь с вами. Или напишите мне в<a href="#tg"> telegram</a>
+        <a href="#close" title="Close" class="close">×</a>
+      </class></div>
+      <div class="modal-body">    
+        <!-- START HERE -->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@%203.0.0%20/build/forms-min.css">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+  <form class="gform pure-form pure-form-stacked" method="POST" data-email="example@email.net" action="https://script.google.com/macros/s/AKfycbx31ZusOH7jpG_mW486UspPLwXRz-w2SBI8NHH4kLtPC4qYoaxYmVQSLdAl5_eSDqUnYQ/exec">
+    <!-- change the form action to your script url -->
+<div class="form-elements">    
+      <fieldset class="pure-group">
+        <label for="name">Имя: </label>
+        <input id="name" name="name" placeholder="Введите свое имя">
+      </fieldset>
+
+<fieldset class="pure-group">
+        <label for="email">Ваша почта или telegram: </label>
+        <input id="email" name="email" value="" required placeholder="Введите ваш email или ссылку на ваш telegram">
+      </fieldset>
+
+<fieldset class="pure-group">
+        <label for="message">Комментарий: </label>
+        <textarea id="message" name="message" rows="10" placeholder="Напишите комментарий"></textarea>
+      </fieldset>
+
+<fieldset class="pure-group">
+        <input id="url" name="url" placeholder="Ссылка на файлы">
+      </fieldset>
+
+<!-- <fieldset class="pure-group">
+        <label for="material">Материал:</label>
+        <select id="material" name="material">
+          <option selected>PET-G пластик</option>
+          <option>PLA пластик</option>
+          <option>Другой</option>
+        </select>
+      </fieldset>
+
+<fieldset class="pure-group">
+        <label for="color">Цвет:</label>
+        <select id="color" name="color">
+          <option selected> <div >Любой</div></option>
+          <option class="Black">Черный непрозрачный</option>
+          <option class="White">Белый непрозрачный</option>
+          <option class="White-t">Белый прозрачный</option>
+          <option class="Gray">Серый непрозрачный</option>
+          <option class="Beige">Бежевый непрозрачный</option>
+          <option class="Blue ">Синий непрозрачный</option>
+          <option class="Brown">Коричневый непрозрачный</option>
+          <option class="Orange">Оранжевый непрозрачный</option>
+          <option class="Red">Красный непрозрачный</option>
+          <option class="Green">Зеленый непрозрачный</option>
+          <option class="Yellow">Желтый непрозрачный</option>
+          <option class="Blue">Голубой непрозрачный</option>
+          <option class="Violet">Фиолетовый непрозрачный</option>
+          <option>Другой</option>
+        </select>
+      </fieldset> -->
+
+<fieldset class="pure-group honeypot-field, hide">
+        <label for="honeypot">To help avoid spam, utilize a Honeypot technique with a hidden text field; must be empty to submit the form! Otherwise, we assume the user is a spam bot.</label>
+        <input id="honeypot" type="text" name="honeypot" value="">
+      </fieldset>      
+
+<button class="button-success md-button md-button--primary button-xlarge">
+        <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M7 2h10v6h2v5h-2.5L13 17h-2l-3.5-4H5V8h2V2m3 20H2v-2h8a1 1 0 0 0 1-1v-1h2v1a3 3 0 0 1-3 3Z"></path></svg></span> Отправить</button>
+    </div>
+
+<!-- Customise the Thankyou Message People See when they submit the form: -->
+<div class="thankyou_message" style="display:none;">
+      <h2>Заявка успешно отправлена!</h2>
+    </div>
+
+</form>
+
+  <!-- Submit the Form to Google Using "AJAX" -->
+  <script data-cfasync="false" src="/form-submission-handler.js"></script>
+<!-- END -->
+      </div>
+    </div>
+  </div>
+</div></div>
 
 
   
