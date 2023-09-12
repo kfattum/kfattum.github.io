@@ -97,8 +97,6 @@
 .corner-wrapper {
   display: block;
   overflow: hidden;
-  width: 300px;
-  height: 150px;
   border-radius: 10px;
   transform: translateZ(0px);
   border: 3px solid #eee;
