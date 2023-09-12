@@ -76,7 +76,13 @@
   left: 50%;
   transform: translate(-50%, 0);
   text-align: center;
-  width: 360px;
+}
+.button_wide_s {
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 0);
+  text-align: center;
+  width: 100px;
 }
 
 /* Значок скопировать :material-content-copy: */
