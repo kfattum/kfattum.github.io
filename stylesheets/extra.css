@@ -1,3 +1,5 @@
+.alt-link {color: #ffffff;}
+.alt-link :hover {color: #f1f1f1ea}
 /* Ширина страницы */
 .md-grid {
   width: 100%;
