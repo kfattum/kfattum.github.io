@@ -44,6 +44,11 @@
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
 }
+.gradient-background2 {
+  background: linear-gradient(-45deg, #23d5ab, #23a6d5, #e73c7e, #ee7752);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
 
 @keyframes gradient {
 0% {
@@ -103,10 +108,10 @@
 
 /* Значок скопировать :material-content-copy: */
 .button_copy {
-  color: #0c9485;
+  color: var(--md-typeset-a-color);;
 }
 .button_copy:hover {
-  color: #ffd539;
+  color: var(--link-color);
 }
 
 /* рамка коментов */
@@ -183,7 +188,7 @@
 #slider_bl #slide3:checked~.slider-dot-control label:nth-child(3),
 #slider_bl #slide4:checked~.slider-dot-control label:nth-child(4),
 /* цвет точки */
-#slider_bl #slide5:checked~.slider-dot-control label:nth-child(5){background:#ffee00} 
+#slider_bl #slide5:checked~.slider-dot-control label:nth-child(5){background: var(--md-primary-fg-color);} 
 #slider_bl #slide1:checked~.slider-wrapper article:nth-child(1) .info,
 #slider_bl #slide2:checked~.slider-wrapper article:nth-child(2) .info,
 #slider_bl #slide3:checked~.slider-wrapper article:nth-child(3) .info,
@@ -211,7 +216,7 @@
 
 /* контур */
 .outline:hover {
-  outline: 2px solid #ffc400;
+  outline: 2px solid #ffee00;
 }
 
 /* Этим я лечил облизывание картинок */
@@ -312,9 +317,9 @@ figure:hover > .block-img {
   }
   .filter-menu li:hover,
   .filter-menu li.current{
-    background:#ffc400;
+    background: var(--link-color);
     color: #000;
-    outline: 2px solid #ffc400;
+    outline: 2px solid var(--link-color);
   }
   
   .filter-item li{
@@ -391,47 +396,6 @@ text-align: left;
     height: auto;
   }
 }
-
-/* Цветные прямоугольники */
-
-/* Черный непрозрачный */
-.Black { background: #090d11; }
-
-/* Белый непрозрачный */
-.White { background: #b8b4af; }
-
-/* Белый прозрачный */
-.White-t { background: #b8b4af; }
-
-/* Серый непрозрачный */
-.Gray { background: #797a75; }
-
-/* Бежевый непрозрачный */
-.Beige { background: #dcc188; }
-
-/* Синий непрозрачный */
-.Blue { background: #001770; }
-
-/* Коричневый непрозрачный */
-.Brown { background: #6c3315; }
-
-/* Оранжевый непрозрачный */
-.Orange { background: #e27b2f; }
-
-/* Красный непрозрачный */
-.Red { background: #c32015; }
-
-/* Зеленый непрозрачный */
-.Green { background: #055b24; }
-
-/* Желтый непрозрачный */
-.Yellow { background: #b8a329; }
-
-/* Голубой непрозрачный */
-.Blue {	background: #13a5e3; }
-
-/* Фиолетовый непрозрачный */
-.Violet {	background: #6a1969; }
 
 /* Модальное окно */
 
