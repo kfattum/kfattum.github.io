@@ -493,6 +493,7 @@ text-align: left;
 .modal-content {
     -webkit-box-shadow: 0 5px 15px rgba(0,0,0,.5);
     box-shadow: 0 5px 15px rgba(0,0,0,.5);
+    min-width: 525px;
 }
 }
 /* свойства для заголовка модального окна */
@@ -548,7 +549,17 @@ position: relative;
   padding: 15px;
   overflow: auto;
 }
-
+.overlay1 {
+  z-index: 1;
+  position:absolute;
+  left: 55%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  width: 40px;
+  height: 20px;
+  background-color: rgba(0,0,0,0.5); 
+  top: 0;
+}
 /* Форма */
 
 /* Стили для поля) */
