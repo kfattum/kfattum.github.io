@@ -81,7 +81,7 @@
   object-fit:cover;
 }
 /* Дата последней модификации страницы */
-.git-revision-date-localized-plugin { color: #ffffff; }
+.git-revision-date-localized-plugin { color: var(--md-typeset-color); }
 
 /* Красивые кнопки   */
 .md-typeset .md-button {
@@ -89,7 +89,7 @@
     font-weight: 400;
     font-size: 0.7rem;
     padding: 0.45em 0.9em;
-    color: #ffffff;
+    color: var(--md-typeset-color);
     margin-bottom: 10px;
 }
 
@@ -106,14 +106,6 @@
   transform: translate(-50%, 0);
   text-align: center;
   width: 100px;
-}
-
-/* Значок скопировать :material-content-copy: */
-.button_copy {
-  color: var(--md-typeset-a-color);;
-}
-.button_copy:hover {
-  color: var(--link-color);
 }
 
 /* рамка коментов */
@@ -204,6 +196,9 @@
 #slider_bl #slide5:checked~.slider-wrapper .inner{margin-left:-400%}@media only screen and (max-width:850px) and (min-width:450px){#slider_bl .slider-wrapper{border-radius:0}}@media only screen and (max-width:450px){#slider_bl .slider-wrapper{border-radius:0}
 #slider_bl .slider-wrapper .info{opacity:0}}@media only screen and (min-width:850px){#slider_bl body{padding:0 80px}}
 
+/* 2 */
+.slider{position:relative;overflow:hidden;max-width:600px;margin-left:auto;margin-right:auto}.slider__wrapper{position:relative;overflow:hidden;background-color:#eee}.slider__items{display:flex;transition:transform .5s ease}.transition-none{transition:none}.slider__item{flex:0 0 100%;max-width:100%;position:relative}.slider__control{position:absolute;top:50%;width:40px;height:50px;transform:translateY(-50%);display:none;align-items:center;justify-content:center;color:#fff;background:rgba(0,0,0,.3);opacity:.5;user-select:none}.slider__control_show{display:flex}.slider__control:focus,.slider__control:hover{color:#fff;text-decoration:none;opacity:.7}.slider__control_prev{left:0}.slider__control_next{right:0}.slider__control::before{content:'';display:inline-block;width:20px;height:20px;background:transparent no-repeat center center;background-size:100% 100%}.slider__control_prev::before{background-image:url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E")}.slider__control_next::before{background-image:url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E")}.slider__indicators{position:absolute;left:0;right:0;bottom:10px;display:flex;justify-content:center;padding-left:0;margin:0 15%;list-style:none;user-select:none}.slider__indicator{flex:0 1 auto;width:30px;height:4px;margin-right:3px;margin-left:3px;background-color:rgba(255,255,255,.5);background-clip:padding-box;border-top:10px solid transparent;border-bottom:10px solid transparent;cursor:pointer}.slider__indicator_active{background-color:#ffffff}
+
 /* Радиусы */
 .R02 {
   border-radius: 0.2rem;
@@ -230,8 +225,16 @@
 /* Цвета */
 [data-md-color-scheme="slate"] {
   --link-color: #ffee00;
-  --md-typeset-color: #ffffff;
+  /* --md-typeset-color: #ffffff; */
   /* --md-primary-fg-color: #14151a; */
+}
+.md-nav__link { --md-typeset-a-color: #13bfa6;}
+.md-typeset a { --md-typeset-a-color: #13bfa6;}
+
+[data-md-color-primary=black] .md-button--primary {
+  background-color: #1d3136;
+  border-color: var(--md-typeset-a-color);
+  color: #13bfa6;
 }
 
 /* Линейно раскладывает картинки */
@@ -240,7 +243,7 @@
   text-align: center;
   display: inline-block;
   padding: 0px 8px;
-  margin: auto;
+  margin: auto
   }
   .block a {
   color: #ffffff;
@@ -529,42 +532,11 @@ position: relative;
   background-color: rgba(0,0,0,0.5); 
   top: 0;
 }
-/* Форма */
 
-/* Стили для поля) */
-.pure-group textarea,
-.pure-group input,
-.pure-group select {
-  color: #000;
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  box-sizing: border-box;
-  border: 2px solid #009485;
-  border-radius: 4px;
-  resize: vertical;
-  background-color: #eceeef;
-  transition: border-color 0.3s ease;
+/* Значок скопировать :material-content-copy: */
+.button_copy {
+  color: #13bfa6;
 }
-
-/* Стили для поля при фокусе */
-.pure-group textarea:focus,
-.pure-group input:focus,
-.pure-group select:focus {
-  border-color: #343541;
-  outline: none;
+.button_copy:hover {
+  color: var(--link-color);
 }
-
-/* Стили для placeholder (подсказки) */
-.pure-group textarea::placeholder,
-.pure-group input::placeholder,
-.pure-group select::placeholder {
-  color: #999;
-}
-
-/* Стили для поля с ошибкой (по желанию) */
-.pure-group .error {
-  border-color: #ff0000;
-  color: #ff0000;
-}
-
