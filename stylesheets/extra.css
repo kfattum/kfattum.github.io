@@ -92,6 +92,7 @@
     color: #ffffff;
     margin-bottom: 10px;
 }
+
 /* кнопка по центру */
 .button_wide {
   position: relative;
@@ -164,7 +165,8 @@
 #slider_bl #slide4:checked~.slider-prev-next-control label:nth-child(5)::after,
 
 #slider_bl #slide5:checked~.slider-prev-next-control label:nth-child(1)::after,
-#slider_bl #slide5:checked~.slider-prev-next-control label:nth-child(4)::after{font-family:FontAwesome;font-style:normal;font-weight:400;text-decoration:inherit;margin:0;line-height:38px;font-size:3em;display:block;color:#777}#slider_bl #slide1:checked~.slider-prev-next-control label:nth-child(2)::after,#slider_bl 
+#slider_bl #slide5:checked~.slider-prev-next-control label:nth-child(4)::after{font-family:FontAwesome;font-style:normal;font-weight:400;text-decoration:inherit;margin:0;line-height:38px;font-size:3em;display:block;color:#ffffff}
+#slider_bl #slide1:checked~.slider-prev-next-control label:nth-child(2)::after,#slider_bl 
 #slide2:checked~.slider-prev-next-control label:nth-child(3)::after,
 #slider_bl #slide3:checked~.slider-prev-next-control label:nth-child(4)::after,
 #slider_bl #slide4:checked~.slider-prev-next-control label:nth-child(5)::after,
@@ -217,7 +219,7 @@
 
 /* контур */
 .outline:hover {
-  outline: 2px solid #ffee00;
+  outline: 3px solid #ffffffe3;
 }
 
 /* Этим я лечил облизывание картинок */
@@ -228,6 +230,8 @@
 /* Цвета */
 [data-md-color-scheme="slate"] {
   --link-color: #ffee00;
+  --md-typeset-color: #ffffff;
+  /* --md-primary-fg-color: #14151a; */
 }
 
 /* Линейно раскладывает картинки */
@@ -254,7 +258,7 @@ height: "auto";
   border-radius: 0.6rem;
 }
 figure:hover > .block-img {
-  outline: 2px solid var(--link-color);
+  outline: 3px solid #ffffffe3;
   }
   .md-typeset figure {
   margin: 0px;
