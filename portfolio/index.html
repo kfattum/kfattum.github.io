@@ -552,7 +552,37 @@
 
   <h1>Портфолио</h1>
 
-<div><section id="gallery">
+<html><head><script type="text/javascript">
+// Gallery Filter
+
+let sortBtn = document.querySelector('.filter-menu').children;
+let sortItem = document.querySelector('.filter-item').children;
+
+for(let i = 0; i < sortBtn.length; i++){
+    sortBtn[i].addEventListener('click', function(){
+        for(let j = 0; j< sortBtn.length; j++){
+            sortBtn[j].classList.remove('current');
+        }
+
+        this.classList.add('current');
+
+
+        let targetData = this.getAttribute('data-target');
+
+        for(let k = 0; k < sortItem.length; k++){
+            sortItem[k].classList.remove('active');
+            sortItem[k].classList.add('delete');
+
+            if(sortItem[k].getAttribute('data-item') == targetData || targetData == "all"){
+                sortItem[k].classList.remove('delete');
+                sortItem[k].classList.add('active');
+            }
+        }
+    });
+}
+</script>
+
+<section id="gallery">
       <div class="galleryfilter">
         <ul class="filter-menu">
             <li data-target="all">ВСЕ</li>
@@ -591,7 +621,7 @@
 </section>
 
 <!-- 1 модальное окно -->
-<div id="m1" class="modal">
+</head><body><div id="m1" class="modal">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -723,7 +753,7 @@
       </div>
     </div>
   </div>
-</div></div>
+</div></body></html>
 
 
   
@@ -825,10 +855,6 @@
     
     
       <script src="../assets/javascripts/bundle.4e0fa4ba.min.js"></script>
-      
-        <script src="../javascripts/extra.js"></script>
-      
-        <script src="../javascripts/gallery.js"></script>
       
     
   </body>
