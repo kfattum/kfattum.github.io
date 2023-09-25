@@ -195,7 +195,7 @@
 #slider_bl #slide3:checked~.slider-dot-control label:nth-child(3),
 #slider_bl #slide4:checked~.slider-dot-control label:nth-child(4),
 /* цвет точки */
-#slider_bl #slide5:checked~.slider-dot-control label:nth-child(5){background: #0ca852;} 
+#slider_bl #slide5:checked~.slider-dot-control label:nth-child(5){background: #13bfa58f} 
 #slider_bl #slide1:checked~.slider-wrapper article:nth-child(1) .info,
 #slider_bl #slide2:checked~.slider-wrapper article:nth-child(2) .info,
 #slider_bl #slide3:checked~.slider-wrapper article:nth-child(3) .info,
