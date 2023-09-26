@@ -101,6 +101,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#_1" class="md-skip">
+          Перейти к содержанию
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -254,23 +259,6 @@
   
   
   
-    <li class="md-tabs__item">
-      <a href="portfolio/" class="md-tabs__link">
-        
-  
-    
-  
-  Портфолио
-
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
     
     
       <li class="md-tabs__item">
@@ -370,6 +358,17 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Главная
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="." class="md-nav__link md-nav__link--active">
         
   
@@ -379,6 +378,30 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    Портфолио 
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -423,25 +446,6 @@
   
 
       
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="portfolio/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Портфолио
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -649,31 +653,457 @@
     </div>
 </section>
 
-<h2>Портфолио</h2>
+<script type="text/javascript">
+function switchVisible() {
+            if (document.getElementById('portfolio')) {
 
-<div class="container">
+                if (document.getElementById('portfolio').style.display == 'none') {
+                    document.getElementById('portfolio').style.display = 'block';
+                    document.getElementById('gallery').style.display = 'none';
+                }
+                else {
+                    document.getElementById('portfolio').style.display = 'none';
+                    document.getElementById('gallery').style.display = 'block';
+                }
+            }
+}
+</script>
 
-  <div class="block">
-    <a href="#">
-    <figure><img class="block-img" src="/images/small/bs.jpg">
-    </figure></a>
+<h2 id="_1">Портфолио <a value="Click" onclick="switchVisible();"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M10 4v4h4V4h-4m6 0v4h4V4h-4m0 6v4h4v-4h-4m0 6v4h4v-4h-4m-2 4v-4h-4v4h4m-6 0v-4H4v4h4m0-6v-4H4v4h4m0-6V4H4v4h4m2 6h4v-4h-4v4M4 2h16a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H4c-1.08 0-2-.9-2-2V4a2 2 0 0 1 2-2Z"></path></svg></span></a></h2>
+<p><link href="./stylesheets/itc-slider.css" rel="stylesheet">
+<br>
+<script src="./javascripts/itc-slider.js" defer></script></p>
+<style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+.container {
+      max-width: 350px;
+      margin: 0 auto;
+    }
+    @media (min-width: 768px) {
+      .container {
+        max-width: 710px;
+        margin: 0 auto;
+      }
+    }
+    @media (min-width: 1280px) {
+      .container {
+        max-width: 1280px;
+        margin: 0 auto;
+      }
+    }
+    .itc-slider {
+      overflow: hidden;
+      padding-bottom: 35px;
+    }
+    .itc-slider__wrapper {
+      margin-left: -10px;
+      margin-right: -10px;
+    }
+    @media (min-width: 768px) {
+      .itc-slider__item {
+        flex: 0 0 50%;
+        max-width: 50%;
+      }
+    }
+    @media (min-width: 1280px) {
+      .itc-slider__item {
+        flex: 0 0 33.3333333333%;
+        max-width: 33.3333333333%;
+      }
+    }
+    .card {
+      position: relative;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    .card__header {
+      position: relative;
+    }
+    .card__img {
+      display: block;
+      height: auto;
+      max-width: 100%;
+      border-radius:0.9rem 0.9rem 0 0 ;
+    }
+    .card__section {
+      position: absolute;
+      bottom: 6px;
+      left: 10px;
+      background-color: rgba(0, 0, 0, 0.5);
+      color: #fff;
+      padding: 6px 10px;
+      font-size: 14px;
+      border-radius: 12px;
+      line-height: 1;
+    }
+    .card__title {
+      background: #191b22;
+      /* color: #424242; */
+      white-space: normal;
+      /* font-weight: 700; */
+      /* font-size: 20px; */
+      line-height: 1.3;
+      padding: 10px 15px;
+      margin: 0;
+      height: 72px;
+      border-radius: 0 0 0.9rem 0.9rem;
+    }
+    .card__footer {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      background: #fafafa;
+      padding: 10px 15px 15px;
+      color: #616161;
+    }
+    .card__photo {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+    }
+    .card__author {
+      margin-left: 6px;
+    }
+    .card__icon {
+      margin-left: auto;
+      width: 18px;
+      max-height: 20px;
+    }
+    .card__views {
+      margin-left: 6px;
+    }
+    .itc-slider__btn {
+      background-color: unset;
+    }
+    .itc-slider__btn:hover,
+    .itc-slider__btn:focus {
+      background-color: rgba(0, 0, 0, 0.1);
+    }
+    .itc-slider__indicators {
+      bottom: 0;
+    }
+    .itc-slider__indicator {
+      background-color: #eee;
+    }
+    .itc-slider__indicator_active {
+      background-color: #757575;
+    }
+  </style>
+
+<p><svg style="display: none;" xmlns="http://www.w3.org/2000/svg">
+  <symbol id="eye" viewbox="0 0 16 16">
+    <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"></path>
+    <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"></path>
+  </symbol>
+</svg></p>
+<div id="portfolio" class="container">
+
+  <div class="itc-slider" data-autoplay="true" data-interval="5000" data-loop="true" data-refresh="true" data-slider="itc-slider">
+    <div class="itc-slider__wrapper">
+      <div class="itc-slider__items">
+        <div class="itc-slider__item itc-slider__item_active"><!-- Начало 1 слайда -->
+          <div class="card">
+            <header class="card__header">
+              <a href="#m1">
+              <img alt="..." class="card__img" height="350" loading="lazy" src="./images/bs.jpg" width="450">
+              </a>
+              <span class="card__section">3D ПЕЧАТЬ</span>
+            </header>
+            <div class="card__title">Lorem ipsum dolor sit amet, consectetur.</div>
+          </div>
+        </div> <!-- Конец 1 слайда -->
+        <div class="itc-slider__item itc-slider__item_active"><!-- Начало 2 слайда -->
+          <div class="card">
+            <header class="card__header">
+              <a href="#m2">
+              <img alt="..." class="card__img" height="350" loading="lazy" src="./images/bs.jpg" width="450">
+              </a>
+              <span class="card__section">3D СКАНИРОВАНИЕ</span>
+            </header>
+            <div class="card__title">Lorem ipsum dolor sit amet, consectetur.</div>
+          </div>
+        </div><!-- Конец 2 слайда -->
+        <div class="itc-slider__item itc-slider__item_active"><!-- Начало 3 слайда -->
+          <div class="card">
+            <header class="card__header">
+              <a href="#m3">
+              <img alt="..." class="card__img" height="350" loading="lazy" src="./images/bs.jpg" width="450">
+              </a>
+              <span class="card__section">3D СКАНИРОВАНИЕ</span>
+            </header>
+            <div class="card__title">Lorem ipsum dolor sit amet, consectetur.</div>
+          </div>
+        </div><!-- Конец 3 слайда -->
+        <div class="itc-slider__item"><!-- Начало 4 слайда -->
+          <div class="card">
+            <header class="card__header">
+              <a href="#m4">
+              <img alt="..." class="card__img" height="350" loading="lazy" src="./images/bs.jpg" width="450">
+              </a>
+              <span class="card__section">3D СКАНИРОВАНИЕ</span>
+            </header>
+            <div class="card__title">Lorem ipsum dolor sit amet, consectetur.</div>
+          </div>
+        </div><!-- Конец 4 слайда -->
+        <div class="itc-slider__item"><!-- Начало 5 слайда -->
+          <div class="card">
+            <header class="card__header">
+              <a href="#m5">
+              <img alt="..." class="card__img" height="350" loading="lazy" src="./images/bs.jpg" width="450">
+              </a>
+              <span class="card__section">3D СКАНИРОВАНИЕ</span>
+            </header>
+            <div class="card__title">Lorem ipsum dolor sit amet, consectetur.</div>
+          </div>
+        </div><!-- Конец 5 слайда -->
+        <div class="itc-slider__item"><!-- Начало 6 слайда -->
+          <div class="card">
+            <header class="card__header">
+            <a href="#m6">
+              <img alt="..." class="card__img" height="350" loading="lazy" src="./images/bs.jpg" width="450">
+              </a>
+              <span class="card__section">3D ПЕЧАТЬ</span>
+            </header>
+            <div class="card__title">Lorem ipsum dolor sit amet, consectetur.</div>
+          </div>
+        </div><!-- Конец 6 слайда -->
+        <div class="itc-slider__item" style="transform: translate3d(-2496.59px, 0px, 0.1px);"><!-- Начало 7 слайда -->
+          <div class="card">
+            <header class="card__header">
+            <a href="#m7">
+              <img alt="..." class="card__img" height="350" loading="lazy" src="./images/bs.jpg" width="450">
+              </a>
+              <span class="card__section">3D ПЕЧАТЬ</span>
+            </header>
+            <div class="card__title">Lorem ipsum dolor sit amet, consectetur.</div>
+          </div>
+        </div><!-- Конец 7 слайда -->
+      </div>
+    </div>
+    <button class="itc-slider__btn itc-slider__btn_prev"></button>
+    <button class="itc-slider__btn itc-slider__btn_next"></button>
+    <!-- <ol class="itc-slider__indicators">
+      <li class="itc-slider__indicator itc-slider__indicator_active" data-slide-to="0"></li>
+      <li class="itc-slider__indicator itc-slider__indicator_active" data-slide-to="1"></li>
+      <li class="itc-slider__indicator itc-slider__indicator_active" data-slide-to="2"></li>
+      <li class="itc-slider__indicator" data-slide-to="3"></li>
+      <li class="itc-slider__indicator" data-slide-to="4"></li>
+      <li class="itc-slider__indicator" data-slide-to="5"></li>
+      <li class="itc-slider__indicator" data-slide-to="6"></li>
+    </ol> -->
   </div>
-
-  <div class="block">
-    <a href="#">
-    <figure><img class="block-img" src="/images/small/gl220.jpg">
-    </figure></a>
-  </div>
-
-  <div class="block">
-    <a href="#">
-    <figure><img class="block-img" src="/images/small/gl1.jpg">
-    </figure></a>
-  </div>
-
 </div>
 
-<p><a class="md-button button_wide" href="/portfolio">Еще <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 16 16"><path d="M16 13.25A1.75 1.75 0 0 1 14.25 15H1.75A1.75 1.75 0 0 1 0 13.25V2.75C0 1.784.784 1 1.75 1h12.5c.966 0 1.75.784 1.75 1.75ZM1.75 2.5a.25.25 0 0 0-.25.25v10.5c0 .138.112.25.25.25h.94l.03-.03 6.077-6.078a1.75 1.75 0 0 1 2.412-.06L14.5 10.31V2.75a.25.25 0 0 0-.25-.25Zm12.5 11a.25.25 0 0 0 .25-.25v-.917l-4.298-3.889a.25.25 0 0 0-.344.009L4.81 13.5ZM7 6a2 2 0 1 1-3.999.001A2 2 0 0 1 7 6ZM5.5 6a.5.5 0 1 0-1 0 .5.5 0 0 0 1 0Z"></path></svg></span></a></p>
+<!-- /// -->
+
+<script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', function () {
+        // Gallery Filter
+
+        let sortBtn = document.querySelector('.filter-menu').children;
+        let sortItem = document.querySelector('.filter-item').children;
+
+        for (let i = 0; i < sortBtn.length; i++) {
+            sortBtn[i].addEventListener('click', function () {
+                for (let j = 0; j < sortBtn.length; j++) {
+                    sortBtn[j].classList.remove('current');
+                }
+
+                this.classList.add('current');
+
+                let targetData = this.getAttribute('data-target');
+
+                for (let k = 0; k < sortItem.length; k++) {
+                    sortItem[k].classList.remove('active');
+                    sortItem[k].classList.add('delete');
+
+                    if (sortItem[k].getAttribute('data-item') == targetData || targetData == "all") {
+                        sortItem[k].classList.remove('delete');
+                        sortItem[k].classList.add('active');
+                    }
+                }
+            });
+        }
+    });
+</script>
+
+<section class="hideme" id="gallery">
+      <div class="galleryfilter">
+        <ul class="filter-menu">
+            <li data-target="all">ВСЕ</li>
+            <li data-target="print">3D ПЕЧАТЬ</li>
+            <li data-target="design">3D ДИЗАЙН</li>
+            <li data-target="skan">3D СКАНИРОВАНИЕ</li>
+        </ul>
+        <ul class="filter-item">
+            <li data-item="print">
+            <a href="#m1">
+              <img class="R03 outline" src="/images/bs.jpg">
+            </a>  
+            </li>
+            <li data-item="print">
+            <a href="#m2">
+              <img class="R03 outline" src="/images/f3.jpg">
+            </a></li>
+            <li data-item="design">
+            <a href="#m3">
+              <img class="R03 outline" src="/images/f1.jpg">
+            </a></li>
+          <li data-item="design">
+          <a href="#m4">
+            <img class="R03 outline" src="/images/bs.jpg">
+          </a></li>
+            <li data-item="skan">
+            <a href="#m5">
+              <img class="R03 outline" src="/images/bs.jpg">
+            </a></li>
+            <li data-item="skan">
+            <a href="#m6">
+              <img class="R03 outline" src="/images/bs.jpg">
+            </a></li>
+        </ul>
+      </div>
+</section>
+
+<!-- 1 модальное окно -->
+<div id="m1" class="modal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <class>ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ
+        <a href="#Close" title="Close" class="close">×</a>
+      </class></div>
+      <div class="modal-body">
+1
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 2 модальное окно -->
+<div id="m2" class="modal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <class>ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ
+        <a href="#Close" title="Close" class="close">×</a>
+      </class></div>
+      <div class="modal-body">
+2
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 3 модальное окно -->
+<div id="m3" class="modal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <class>ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ
+        <a href="#Close" title="Close" class="close">×</a>
+      </class></div>
+      <div class="modal-body">
+3
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 4 модальное окно -->
+<div id="m4" class="modal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <class>ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ
+        <a href="#Close" title="Close" class="close">×</a>
+      </class></div>
+      <div class="modal-body">
+4
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 5 модальное окно -->
+<div id="m5" class="modal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <class>ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ
+        <a href="#Close" title="Close" class="close">×</a>
+      </class></div>
+      <div class="modal-body">
+5
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 6 модальное окно -->
+<div id="m6" class="modal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <class>ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ
+        <a href="#Close" title="Close" class="close">×</a>
+      </class></div>
+      <div class="modal-body">
+6
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 7 модальное окно -->
+<div id="m7" class="modal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <class>ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ
+        <a href="#Close" title="Close" class="close">×</a>
+      </class></div>
+      <div class="modal-body">
+7
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 8 модальное окно -->
+<div id="m8" class="modal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <class>ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ
+        <a href="#Close" title="Close" class="close">×</a>
+      </class></div>
+      <div class="modal-body">
+8
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 9 модальное окно -->
+<div id="m9" class="modal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <class>ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ
+        <a href="#Close" title="Close" class="close">×</a>
+      </class></div>
+      <div class="modal-body">
+9
+      </div>
+    </div>
+  </div>
+</div>
+
 <hr>
 <div class="container_txt">
 
