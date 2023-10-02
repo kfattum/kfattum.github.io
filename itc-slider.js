@@ -1,4 +1,3 @@
-(function(){
 /**
  * @class ItcSlider
  * @version 1.0.0
@@ -437,4 +436,3 @@ class ItcSlider {
 }
 
 ItcSlider.createInstances();
-})();

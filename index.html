@@ -20,7 +20,7 @@
     
     
       
-        <title>Fattum // Константин - специалист по аддитивным технологиям</title>
+        <title>3DPM // Fattum</title>
       
     
     
@@ -84,6 +84,10 @@
 
     
     
+
+<script type="text/javascript" src="./javascripts/itc-slider.js" defer=""></script>
+<script type="text/javascript" src="./javascripts/filter.js" defer=""></script>
+
   </head>
   
   
@@ -134,7 +138,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Верхний колонтитул">
-    <a href="." title="Fattum // Константин - специалист по аддитивным технологиям" class="md-header__button md-logo" aria-label="Fattum // Константин - специалист по аддитивным технологиям" data-md-component="logo">
+    <a href="." title="3DPM // Fattum" class="md-header__button md-logo" aria-label="3DPM // Fattum" data-md-component="logo">
       
   <img src="images/logo2.svg" alt="logo">
 
@@ -147,7 +151,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Fattum // Константин - специалист по аддитивным технологиям
+            3DPM // Fattum
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -352,12 +356,12 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Навигация" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="Fattum // Константин - специалист по аддитивным технологиям" class="md-nav__button md-logo" aria-label="Fattum // Константин - специалист по аддитивным технологиям" data-md-component="logo">
+    <a href="." title="3DPM // Fattum" class="md-nav__button md-logo" aria-label="3DPM // Fattum" data-md-component="logo">
       
   <img src="images/logo2.svg" alt="logo">
 
     </a>
-    Fattum // Константин - специалист по аддитивным технологиям
+    3DPM // Fattum
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -590,52 +594,9 @@
 
   <h1>Главная</h1>
 
-<html><head><script>
-  if (typeof ItcSlider === 'undefined') {
-document.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll('.itc-slider').forEach((el) => {
-    ItcSlider.getOrCreateInstance(el);
-  });  
-});}
-  </script>
-<script src="./javascripts/itc-slider.js" defer></script>
-
-<script src="./javascripts/filter.js" defer></script>
-<script type="text/javascript">
-    document.addEventListener('DOMContentLoaded', function () {
-        // Gallery Filter
-
-        let sortBtn = document.querySelector('.filter-menu').children;
-        let sortItem = document.querySelector('.filter-item').children;
-
-        for (let i = 0; i < sortBtn.length; i++) {
-            sortBtn[i].addEventListener('click', function () {
-                for (let j = 0; j < sortBtn.length; j++) {
-                    sortBtn[j].classList.remove('current');
-                }
-
-                this.classList.add('current');
-
-                let targetData = this.getAttribute('data-target');
-
-                for (let k = 0; k < sortItem.length; k++) {
-                    sortItem[k].classList.remove('active');
-                    sortItem[k].classList.add('delete');
-
-                    if (sortItem[k].getAttribute('data-item') == targetData || targetData == "all") {
-                        sortItem[k].classList.remove('delete');
-                        sortItem[k].classList.add('active');
-                    }
-                }
-            });
-        }
-    });
-</script>
-
-<script type="text/javascript">
+<html><head><script type="text/javascript">
 function switchVisible() {
             if (document.getElementById('portfolio')) {
-
                 if (document.getElementById('portfolio').style.display == 'none') {
                     document.getElementById('portfolio').style.display = 'block';
                     document.getElementById('gallery').style.display = 'none';
@@ -774,7 +735,7 @@ function switchVisible() {
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <class>Сканируйте код для перехода в telegram с телефона
+        <class>Сканируйте код для перехода в telegram с телефона 
         <a href="#openModal" title="Close" class="close">×</a>
       </class></div>
       <div class="modal-body">
@@ -791,7 +752,7 @@ function switchVisible() {
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <class>Заполните форму и я свяжусь с вами. Или напишите мне в<a href="/#tg"> telegram</a>
+        <class>Заполните форму и я свяжусь с вами или напишите мне в<a href="/#tg"> telegram</a>
         <a href="#close" title="Close" class="close">×</a>
       </class></div>
       <div class="modal-body">    
@@ -805,7 +766,7 @@ function switchVisible() {
 
 <h2>Услуги</h2>
 <div class="container1">
-  <div class="itc-slider1">
+  <div class="itc-slider" data-slider="itc-slider" data-loop="false" data-autoplay="false" data-interval="7000">
     <div class="itc-slider__wrapper">
       <div class="itc-slider__items">
         <div class="itc-slider__item itc-slider__item_active"><!-- Начало 1 слайда -->
@@ -843,8 +804,8 @@ function switchVisible() {
         </div><!-- Конец 3 слайда -->
       </div>
     </div>
-    <!-- <button class="itc-slider__btn itc-slider__btn_prev"></button>
-    <button class="itc-slider__btn itc-slider__btn_next"></button> -->
+    <button class="itc-slider__btn itc-slider__btn_prev"></button>
+    <button class="itc-slider__btn itc-slider__btn_next"></button>
     <!-- <ol class="itc-slider__indicators">
       <li class="itc-slider__indicator itc-slider__indicator_active" data-slide-to="0"></li>
       <li class="itc-slider__indicator itc-slider__indicator_active" data-slide-to="1"></li>
@@ -859,7 +820,7 @@ function switchVisible() {
 
 <h2 id="_1">Портфолио <a value="Click" onclick="switchVisible();"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M10 4v4h4V4h-4m6 0v4h4V4h-4m0 6v4h4v-4h-4m0 6v4h4v-4h-4m-2 4v-4h-4v4h4m-6 0v-4H4v4h4m0-6v-4H4v4h4m0-6V4H4v4h4m2 6h4v-4h-4v4M4 2h16a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H4c-1.08 0-2-.9-2-2V4a2 2 0 0 1 2-2Z"></path></svg></span></a></h2>
 <div id="portfolio" class="container">
-  <div class="itc-slider">
+  <div class="itc-slider" data-slider="itc-slider" data-loop="true" data-autoplay="true" data-interval="7000">
     <div class="itc-slider__wrapper">
       <div class="itc-slider__items">
         <div class="itc-slider__item itc-slider__item_active"><!-- Начало 1 слайда -->
@@ -1132,7 +1093,7 @@ function switchVisible() {
 
 <h2>Блог</h2>
 <div class="container">
-  <div class="itc-slider">
+  <div class="itc-slider" data-slider="itc-slider" data-loop="true" data-autoplay="false" data-interval="7000">
     <div class="itc-slider__wrapper">
       <div class="itc-slider__items">
         <div class="itc-slider__item itc-slider__item_active"><!-- Начало 1 слайда -->
@@ -1248,7 +1209,10 @@ function switchVisible() {
    <button class="md-button">ПЕРЕЙТИ <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M3 3.25c0-.966.784-1.75 1.75-1.75h5.5a.75.75 0 0 1 0 1.5h-5.5a.25.25 0 0 0-.25.25v17.5c0 .138.112.25.25.25h5.5a.75.75 0 0 1 0 1.5h-5.5A1.75 1.75 0 0 1 3 20.75Zm9.994 9.5 3.3 3.484a.75.75 0 0 1-1.088 1.032l-4.5-4.75a.75.75 0 0 1 0-1.032l4.5-4.75a.75.75 0 0 1 1.088 1.032l-3.3 3.484h8.256a.75.75 0 0 1 0 1.5Z"></path></svg></span></button>
    </a>
   </div>
-</div></body></html>
+</div>
+
+<script src="./javascripts/itc-slider.js" defer></script>
+<script src="./javascripts/filter.js" defer></script></body></html>
 
 
   
@@ -1350,6 +1314,10 @@ function switchVisible() {
     
     
       <script src="assets/javascripts/bundle.4e0fa4ba.min.js"></script>
+      
+        <script src="javascripts/filter.js"></script>
+      
+        <script src="javascripts/itc-slider.js"></script>
       
     
   </body>

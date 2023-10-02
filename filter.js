@@ -1,4 +1,3 @@
-(function(){ 
 let sortBtn = document.querySelector('.filter-menu').children;
 let sortItem = document.querySelector('.filter-item').children;
 for(let i = 0; i < sortBtn.length; i++){
@@ -18,4 +17,3 @@ for(let i = 0; i < sortBtn.length; i++){
         }
     });
 }
-})();
