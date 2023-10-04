@@ -365,7 +365,7 @@ text-align: center;
   height: auto;
   padding-right: 30px; /* отступ справа */
   padding-bottom: 30px; /* отступ снизу */
-  padding-left: 30px; /* отступ слева */
+  padding-left: 50px; /* отступ слева */
 }
 
 @media screen and (max-width: 395px) {
