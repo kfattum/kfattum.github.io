@@ -162,15 +162,7 @@ font-weight: bold};
     clear: both;
 }
 
-/* Цвета */
-[data-md-color-scheme="slate"] {
-  --link-color: #ffd500;
-  --md-accent-fg-color: #ffd500;
-  /* --md-typeset-color: #ffffff; */
-  /* --md-primary-fg-color: #14151a; */
-}
-.md-nav__link { --md-typeset-a-color: #13bfa6;}
-.md-typeset a { --md-typeset-a-color: #13bfa6;}
+
 
 [data-md-color-primary=black] .md-button--primary {
   background-color: #1d3136;
@@ -520,3 +512,13 @@ position: relative;
 .button_copy:hover {
   color: var(--link-color);
 }
+
+/* Цвета */
+[data-md-color-scheme="slate"] {
+  --link-color: #ffd500;
+  --md-accent-fg-color: #ffd500;
+  /* --md-typeset-color: #ffffff; */
+  /* --md-primary-fg-color: #14151a; */
+}
+.md-nav__link { --md-typeset-a-color: #13bfa6;}
+.md-typeset a { --md-typeset-a-color: #13bfa6;}
