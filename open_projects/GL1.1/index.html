@@ -946,17 +946,17 @@
 </li>
 </ol>
 <h3 id="cura">Настройки Cura</h3>
-<details class="material-printer-3d-nozzle-outline">
-<summary>4.cap.stl</summary>
+<div class="admonition material-printer-3d-nozzle-outline">
+<p class="admonition-title">4.cap.stl</p>
 <p>◌ Ширина линии 0.4 mm</p>
-</details>
-<details class="material-printer-3d-nozzle-outline">
-<summary>3.plafon.stl</summary>
+</div>
+<div class="admonition material-printer-3d-nozzle-outline">
+<p class="admonition-title">3.plafon.stl</p>
 <p>◌ Режим "вазы"</p>
 <p>◌ Ширина линии 0.7 mm</p>
 <p>◌ Высота слоя ≤0.12 mm</p>
 <p><a class="glightbox" href="/images/small/gl21.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Image title" class="R02" loading="lazy" src="/images/small/gl21.jpg"></a></p>
-</details>
+</div>
 <details class="warning">
 <summary><strong>Артефакты</strong></summary>
 <p>Если вы столкнулись с ошибкой слайсера используйте Cura v4.8 <a href="https://github.com/Ultimaker/Cura/releases/tag/4.8.0">скачать</a>
@@ -987,23 +987,28 @@ document.addEventListener('DOMContentLoaded', () => {
  $('.slider-for').slick({
    slidesToShow: 1,
   slidesToScroll: 1,
-  speed: 500,
+  speed: 250,
   arrows: false,
   fade: true,
-  asNavFor: ".slider-nav"
+  asNavFor: ".slider-nav",
+  touchThreshold: 2,
+  swipeToSlide: true,
+  infinite: true
 });
 $(".slider-nav").slick({
   slidesToShow: 3,
   slidesToScroll: 1,
-  speed: 500,
+  speed: 250,
   asNavFor: ".slider-for",
   centerMode: true,
   focusOnSelect: true,
   slide: "div",
   variableWidth: true,
-  infinite: false,
-  initialSlide: 2,
-  dots: false
+  initialSlide: 1,
+  dots: false,
+  touchThreshold: 2,
+  swipeToSlide: true,
+  infinite: true
 });});
 </script></div>
 
@@ -1012,7 +1017,7 @@ $(".slider-nav").slick({
   <small>
     
       Последнее обновление:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">12 октября 2023 г.</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">17 октября 2023 г.</span>
       
     
   </small>
