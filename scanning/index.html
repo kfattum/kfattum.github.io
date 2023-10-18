@@ -748,18 +748,26 @@
   <h1>3D сканирование</h1>
 
 <div><h3>При заказе 3D сканирования цена зависит от размера и сложности формы объекта.</h3>
-<div style="color: #fff" class="parent">
+<div class="parent">
 
-  <div class="child gradient-background">
-   <h2 style="font-weight: bold">S</h2>
+  <div class="child">
+   <br>
+   <br>
+   <a class="glightbox" href="../bolvan_16x9.webp" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Alt text" src="../bolvan_16x9.webp" width="700"></a><br>
+   <!-- <h2 style="font-weight: bold">S</h2> -->
    Объекты объемом ≤ 210х210х210 мм
    <h3>30 BYN</h3>
+   <a class="md-button" href="#openModal">Оставить заявку <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M12.75 7.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5v-3.5Z"></path><path d="M12 1c6.075 0 11 4.925 11 11s-4.925 11-11 11S1 18.075 1 12 5.925 1 12 1ZM2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5 9.5 9.5 0 0 0 2.5 12Z"></path></svg></span></a>
   </div>
 
-  <div class="child gradient-background2">
-   <h2 style="font-weight: bold">M</h2>
+  <div class="child">
+  <br>
+  <br>
+  <a class="glightbox" href="../q2_render.webp" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Alt text" src="../q2_render.webp" width="700"></a><br>
+   <!-- <h2 style="font-weight: bold">M</h2> -->
    Объекты объемом &gt; 210х210х210 мм
    <h3>от 60 BYN</h3>
+   <a class="md-button" href="#openModal">Оставить заявку <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M12.75 7.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5v-3.5Z"></path><path d="M12 1c6.075 0 11 4.925 11 11s-4.925 11-11 11S1 18.075 1 12 5.925 1 12 1ZM2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5 9.5 9.5 0 0 0 2.5 12Z"></path></svg></span></a>
   </div>
 </div>
 
@@ -797,11 +805,39 @@
 </div>
 </div>
 <h3>Этапы работы</h3>
+<style>
+        #element1 {
+            display: none;
+        }
+        #element2 {
+            display: block;
+        }
+        @media (min-width: 992px) {
+            #element1 {
+                display: block;
+            }
+            #element2 {
+                display: none;
+            }
+        }
+</style>
+<div id="element1">
+<pre class="mermaid"><code>graph LR
+  A(Согласование&lt;br&gt;технического задания) --&gt;|Деталь образец| PR(3D&lt;br&gt;сканирование);
+  PR --&gt;|Облако точек|DP(Обработка&lt;br&gt;данных)
+  DP --&gt;S("Полигональная модель&lt;br&gt; Формат файла: STL, OBJ, PLY");</code></pre>
+</div>
+<div id="element2">
 <pre class="mermaid"><code>graph TB
   A(Согласование технического задания) --&gt;|Деталь образец| PR(3D сканирование);
   PR --&gt;|Облако точек|DP(Обработка данных)
   DP --&gt;S("Полигональная модель&lt;br&gt; Формат файла: STL, OBJ, PLY");</code></pre>
-<p><a class="md-button md-button--primary button-fixed" href="#openModal">Оставить заявку <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M12.75 7.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5v-3.5Z"></path><path d="M12 1c6.075 0 11 4.925 11 11s-4.925 11-11 11S1 18.075 1 12 5.925 1 12 1ZM2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5 9.5 9.5 0 0 0 2.5 12Z"></path></svg></span></a></p>
+</div>
+
+<figure>
+<p><a class="glightbox" href="../bolvan_16x9.webp" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Alt text" loading="lazy" src="../bolvan_16x9.webp"></a></p>
+<!-- <figcaption>Контроллер Oculus Quest 2</figcaption> -->
+</figure>
 <div id="tg" class="modal">
   <div class="modal-dialog">
     <div class="modal-content">
