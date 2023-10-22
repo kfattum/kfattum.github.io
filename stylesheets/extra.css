@@ -552,8 +552,8 @@ position: relative;
 .md-typeset details.material-printer-3d-nozzle-outline {
   border-color: #13bfa6;
 }
-.md-typeset .material-printer-3d-nozzle-outline > .admonition-title,
-.md-typeset .material-printer-3d-nozzle-outline > summary {
+ .material-printer-3d-nozzle-outline > .admonition-title,
+ .material-printer-3d-nozzle-outline > summary {
   background-color: rgba(43, 155, 70, 0.1);
 }
 .md-typeset .material-printer-3d-nozzle-outline > .admonition-title::before,
