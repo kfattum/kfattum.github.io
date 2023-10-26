@@ -791,49 +791,134 @@
   </div>
 </div>
 
+<style>
+.flex-element {
+  position: relative;
+  width: 32.25%;
+  background: #191b22;
+  border-radius: 0.9rem; 
+}
+.flex-container {
+  display: inline-flex;
+  flex-direction: row;
+/* row (слева направо) - по умолчанию
+    row-reverse (справа налево)
+    column (сверху вниз)
+    column-reverse (снизу вверх) */
+  flex-wrap: wrap;
+/* nowrap (только на одной линии - по умолчанию)
+    wrap (разрешить перенос flex-элементов на новые линии)
+    wrap-reverse (осуществлять перенос flex-элементов в обратном порядке) */  
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+  align-items: center;
+} 
+.flex-element_img {
+  height: auto;
+  max-width: 100%;
+  border-radius: 0.9rem 0.9rem 0 0; 
+}
+.flex-element_header {
+  border-radius: 0.9rem 0.9rem 0 0 ;
+  position: relative;
+  background: #14151a;
+   height: 450px;
+}
+.flex-element_section {
+  position: absolute;
+    bottom: 15px;
+    left: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 6px 10px;
+    font-size: 14px;
+    border-radius: 12px;
+    line-height: 1;
+}
+.flex-element_title {
+    background: #191b22;
+    /* color: #424242; */
+    white-space: normal;
+    /* font-weight: 700; */
+    /* font-size: 20px; */
+    line-height: 1.3;
+    padding: 10px 0px 5px 15px;
+    margin: 0;
+    /* height: 72px; */
+    border-radius: 0 0 0.9rem 0.9rem;
+}
+  @media (min-width: 768px) and (max-width: 1280px) {
+      .flex-element {
+        width: 345px;
+      }
+      .flex-container {
+        justify-content: flex-start; 
+      }
+    }
+  @media (min-width: 300px) and (max-width: 1280px) {
+      .flex-container {
+        width: 710px;
+      }
+      .fatter-conteiner {
+        display: flex;
+        justify-content: center;
+}  
+  }
+  @media (max-width: 768px) {
+      .flex-element {
+        width: 350px;
+      }
+      .flex-container {
+        justify-content: center;
+      }
+    }  
+</style>
+
 <h2>Услуги</h2>
-<div class="container">
-  <div class="itc-slider" data-slider="itc-slider" data-loop="false" data-autoplay="false" data-interval="7000">
-    <div class="itc-slider__wrapper">
-      <div class="itc-slider__items">
-        <div class="itc-slider__item itc-slider__item_active"><!-- Начало 1 слайда -->
-          <div class="card">
-            <header class="card__header">
-              <a href="#m1">
-              <img alt="..." class="card__img" src="./images/land_low.jpg">
-              </a>
-              <span class="card__section">3D ПЕЧАТЬ ПЛАСТИКОМ (FDM)</span>
-            </header>
-            <div class="card__title"><a href="/fdm"><button class="md-button md-button--primary">Подробнее</button></a> <a href="#openModal"><button class="md-button md-button--primary-c2">Оставить заявку</button></a></div>
-          </div>
-        </div> <!-- Конец 1 слайда -->
-        <div class="itc-slider__item itc-slider__item_active"><!-- Начало 2 слайда -->
-          <div class="card">
-            <header class="card__header">
-              <a href="#m2">
-              <img alt="..." class="card__img" src="./images/revers.png">
-              </a>
-              <span class="card__section">3D МОДЕЛИРОВАНИЕ ДЛЯ 3D ПЕЧАТИ</span>
-            </header>
-            <div class="card__title"><a href="/modeling"><button class="md-button md-button--primary">Подробнее</button></a> <a href="#openModal"><button class="md-button md-button--primary-c2">Оставить заявку</button></a></div>
-          </div>
-        </div><!-- Конец 2 слайда -->
-        <div class="itc-slider__item itc-slider__item_active"><!-- Начало 3 слайда -->
-          <div class="card">
-            <header class="card__header">
-              <a href="#m3">
-              <img alt="..." class="card__img" src="./images/scan.png">
-              </a>
-              <span class="card__section">3D СКАНИРОВАНИЕ</span>
-            </header>
-            <div class="card__title"><a href="/scanning"><button class="md-button md-button--primary">Подробнее</button></a> <a href="#openModal"><button class="md-button md-button--primary-c2">Оставить заявку</button></a></div>
-          </div>
-        </div><!-- Конец 3 слайда -->
+<div class="fatter-conteiner">
+<div class="flex-container">
+  <div class="flex-element">
+    <a href="/fdm">
+      <header class="flex-element_header">
+        <img alt="..." class="flex-element_img" src="/bigbuba.webp" style="display: block; margin-left: auto; margin-right: auto; padding-top: 20px; max-width: 60%;">
+          <span class="flex-element_section">3D ПЕЧАТЬ ПЛАСТИКОМ (FDM)</span>
+      </header>
+    </a>
+      <div class="flex-element_title">
+        <a href="/fdm"><button class="md-button md-button--primary">Подробнее</button></a> 
+        <!-- <a href="#openModal"><button class="md-button md-button--primary-c2">Оставить заявку</button></a> -->
       </div>
-    </div>
-    <button class="itc-slider__btn itc-slider__btn_prev"></button>
-    <button class="itc-slider__btn itc-slider__btn_next"></button>
   </div>
+  <div class="flex-element">
+    <a href="/modeling">
+      <header class="flex-element_header">
+        <img alt="..." class="flex-element_img" src="/skyl_1080x1080.webp" style="display: block; margin-left: auto; margin-right: auto; padding-top: 120px; max-width: 70%;">
+          <span class="flex-element_section">3D МОДЕЛИРОВАНИЕ ДЛЯ 3D ПЕЧАТИ</span>
+      </header>
+    </a>
+      <div class="flex-element_title">
+        <a href="/modeling">
+          <button class="md-button md-button--primary">Подробнее</button></a> <a href="#openModal">
+          <!-- <button class="md-button md-button--primary-c2">Оставить заявку</button> -->
+        </a>
+      </div>
+  </div>
+<div class="flex-element">
+      <header class="flex-element_header">
+        <a href="/scanning">
+          <img alt="..." class="flex-element_img" src="/q2_1080x1080.webp" style="display: block; margin-left: auto; margin-right: auto; padding-top: 120px; max-width: 70%;">
+          <span class="flex-element_section">3D СКАНИРОВАНИЕ</span>
+        </a> 
+      </header>
+      <div class="flex-element_title">
+        <a href="/scanning">
+          <button class="md-button md-button--primary">Подробнее</button></a> <a href="#openModal">
+          <!-- <button class="md-button md-button--primary-c2">Оставить заявку</button> -->
+        </a>
+      </div>
+  </div>  
+</div>
 </div>
 
 <h2 id="_1">Портфолио</h2>
