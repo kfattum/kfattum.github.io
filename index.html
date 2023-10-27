@@ -264,23 +264,6 @@
   
   
     <li class="md-tabs__item">
-      <a href="blog/" class="md-tabs__link">
-        
-  
-    
-  
-  Блог
-
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-    <li class="md-tabs__item">
       <a href="https://vk.com/fattum.link "target="_blank"" class="md-tabs__link">
         
   
@@ -467,25 +450,6 @@
   
 
       
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="blog/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Блог
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -815,26 +779,32 @@
   align-items: center;
 } 
 .flex-element_img {
+  position: relative;
   height: auto;
-  max-width: 100%;
-  border-radius: 0.9rem 0.9rem 0 0; 
+  width: 60%;
+  border-radius: 0.9rem 0.9rem 0 0;
 }
 .flex-element_header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 0.9rem 0.9rem 0 0 ;
   position: relative;
   background: #14151a;
-   height: 450px;
+  height: 450px;
 }
 .flex-element_section {
   position: absolute;
     bottom: 15px;
-    left: 10px;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: #fff;
+    left: 15px;
+    background-color: #ffffff17;
+    color: #e2e2e2;
+    /* color: var(--md-typeset-color); */
     padding: 6px 10px;
-    font-size: 14px;
-    border-radius: 12px;
+    font-size: 18px;
+    border-radius: 0.3rem;
     line-height: 1;
+
 }
 .flex-element_title {
     background: #191b22;
@@ -873,16 +843,38 @@
         justify-content: center;
       }
     }  
+@media (width > 768px) {    
+.hover-img1:hover .flex-element_img{
+content: url('/bigbuba.webp');
+}
+.hover-img2:hover .flex-element_img{
+content: url('/skull_2.webp');
+} 
+.hover-img3:hover .flex-element_img{
+content: url('/q2_1080x1080.webp');
+}
+}   
+@media (width < 768px) {    
+.hover-img1 .flex-element_img{
+content: url('/bigbuba.webp');
+}
+.hover-img2 .flex-element_img{
+content: url('/skull_2.webp');
+} 
+.hover-img3 .flex-element_img{
+content: url('/q2_1080x1080.webp');
+}
+}   
 </style>
 
 <h2>Услуги</h2>
 <div class="fatter-conteiner">
 <div class="flex-container">
-  <div class="flex-element">
+  <div class="flex-element hover-img1">
     <a href="/fdm">
       <header class="flex-element_header">
-        <img alt="..." class="flex-element_img" src="/bigbuba.webp" style="display: block; margin-left: auto; margin-right: auto; padding-top: 20px; max-width: 60%;">
-          <span class="flex-element_section">3D ПЕЧАТЬ ПЛАСТИКОМ (FDM)</span>
+        <img alt="..." class="flex-element_img hover-img1" loading="lazy" src="/images/hover-boba.webp">
+          <span class="flex-element_section">3D печать пластиком (FDM)</span>
       </header>
     </a>
       <div class="flex-element_title">
@@ -890,11 +882,11 @@
         <a href="#openModal"><button class="md-button md-button--primary-c2">Оставить заявку</button></a>
       </div>
   </div>
-  <div class="flex-element">
+  <div class="flex-element hover-img2">
     <a href="/modeling">
       <header class="flex-element_header">
-        <img alt="..." class="flex-element_img" src="/skyl_1080x1080.webp" style="display: block; margin-left: auto; margin-right: auto; padding-top: 120px; max-width: 70%;">
-          <span class="flex-element_section">3D МОДЕЛИРОВАНИЕ ДЛЯ 3D ПЕЧАТИ</span>
+        <img alt="..." class="flex-element_img .hover-img2" loading="lazy" src="/images/hover-skull.webp">
+          <span class="flex-element_section">3D моделирование для 3D печати</span>
       </header>
     </a>
       <div class="flex-element_title">
@@ -904,13 +896,13 @@
         </a>
       </div>
   </div>
-<div class="flex-element">
-      <header class="flex-element_header">
-        <a href="/scanning">
-          <img alt="..." class="flex-element_img" src="/q2_1080x1080.webp" style="display: block; margin-left: auto; margin-right: auto; padding-top: 120px; max-width: 70%;">
-          <span class="flex-element_section">3D СКАНИРОВАНИЕ</span>
-        </a> 
-      </header>
+<div class="flex-element hover-img3">
+      <a href="/scanning">
+        <header class="flex-element_header">
+          <img alt="..." class="flex-element_img .hover-img3" loading="lazy" src="/images/hover_q2.webp">
+          <span class="flex-element_section">3D сканирование</span>
+       </header>
+       </a> 
       <div class="flex-element_title">
         <a href="/scanning">
           <button class="md-button md-button--primary">Подробнее</button></a> <a href="#openModal">
@@ -1192,94 +1184,94 @@
   </div>
 </div>
 
-<h2>Блог</h2>
+<!-- <h2>Блог</h2>
 <div class="container">
   <div class="itc-slider" data-slider="itc-slider" data-loop="true" data-autoplay="false" data-interval="7000">
     <div class="itc-slider__wrapper">
       <div class="itc-slider__items">
-        <div class="itc-slider__item itc-slider__item_active"><!-- Начало 1 слайда -->
-          <div class="card">
+<div class="itc-slider__item itc-slider__item_active">
+  <div class="card">
             <header class="card__header">
               <a href="#">
-              <img alt="..." class="card__img" loading="lazy" src="http://dummyimage.com/800x600">
+              <img alt="..." class="card__img"  loading="lazy" src="http://dummyimage.com/800x600" >
               </a>
               <span class="card__section">3D ПЕЧАТЬ</span>
             </header>
             <div class="card__title">Lorem ipsum dolor sit amet, consectetur.</div>
           </div>
-        </div> <!-- Конец 1 слайда -->
-        <div class="itc-slider__item itc-slider__item_active"><!-- Начало 2 слайда -->
-          <div class="card">
+        </div> 
+<div class="itc-slider__item itc-slider__item_active">
+  <div class="card">
             <header class="card__header">
               <a href="#">
-              <img alt="..." class="card__img" loading="lazy" src="http://dummyimage.com/800x600">
+              <img alt="..." class="card__img"  loading="lazy" src="http://dummyimage.com/800x600" >
               </a>
               <span class="card__section">3D СКАНИРОВАНИЕ</span>
             </header>
             <div class="card__title">Lorem ipsum dolor sit amet, consectetur.</div>
           </div>
-        </div><!-- Конец 2 слайда -->
-        <div class="itc-slider__item itc-slider__item_active"><!-- Начало 3 слайда -->
+        </div>
+<div class="itc-slider__item itc-slider__item_active">
           <div class="card">
             <header class="card__header">
               <a href="#">
-              <img alt="..." class="card__img" loading="lazy" src="http://dummyimage.com/800x600">
+              <img alt="..." class="card__img"  loading="lazy" src="http://dummyimage.com/800x600" >
               </a>
               <span class="card__section">3D СКАНИРОВАНИЕ</span>
             </header>
             <div class="card__title">Lorem ipsum dolor sit amet, consectetur.</div>
           </div>
-        </div><!-- Конец 3 слайда -->
-        <div class="itc-slider__item"><!-- Начало 4 слайда -->
+        </div>
+<div class="itc-slider__item">
           <div class="card">
             <header class="card__header">
               <a href="#">
-              <img alt="..." class="card__img" loading="lazy" src="http://dummyimage.com/800x600">
+              <img alt="..." class="card__img"  loading="lazy" src="http://dummyimage.com/800x600" >
               </a>
               <span class="card__section">3D СКАНИРОВАНИЕ</span>
             </header>
             <div class="card__title">Lorem ipsum dolor sit amet, consectetur.</div>
           </div>
-        </div><!-- Конец 4 слайда -->
-        <div class="itc-slider__item"><!-- Начало 5 слайда -->
+        </div>
+<div class="itc-slider__item">
           <div class="card">
             <header class="card__header">
               <a href="#">
-              <img alt="..." class="card__img" loading="lazy" src="http://dummyimage.com/800x600">
+              <img alt="..." class="card__img"  loading="lazy" src="http://dummyimage.com/800x600" >
               </a>
               <span class="card__section">3D СКАНИРОВАНИЕ</span>
             </header>
             <div class="card__title">Lorem ipsum dolor sit amet, consectetur.</div>
           </div>
-        </div><!-- Конец 5 слайда -->
-        <div class="itc-slider__item"><!-- Начало 6 слайда -->
+        </div>
+<div class="itc-slider__item">
           <div class="card">
             <header class="card__header">
             <a href="#">
-              <img alt="..." class="card__img" loading="lazy" src="http://dummyimage.com/800x600">
+              <img alt="..." class="card__img"  loading="lazy" src="http://dummyimage.com/800x600" >
               </a>
               <span class="card__section">3D ПЕЧАТЬ</span>
             </header>
             <div class="card__title">Lorem ipsum dolor sit amet, consectetur.</div>
           </div>
-        </div><!-- Конец 6 слайда -->
-        <div class="itc-slider__item" style="transform: translate3d(-2496.59px, 0px, 0.1px);"><!-- Начало 7 слайда -->
+        </div>
+<div class="itc-slider__item" style="transform: translate3d(-2496.59px, 0px, 0.1px);">
           <div class="card">
             <header class="card__header">
             <a href="#">
-              <img alt="..." class="card__img" loading="lazy" src="http://dummyimage.com/800x600">
+              <img alt="..." class="card__img"  loading="lazy" src="http://dummyimage.com/800x600" >
               </a>
               <span class="card__section">3D ПЕЧАТЬ</span>
             </header>
             <div class="card__title">Lorem ipsum dolor sit amet, consectetur.</div>
           </div>
-        </div><!-- Конец 7 слайда -->
+        </div>
       </div>
     </div>
     <button class="itc-slider__btn itc-slider__btn_prev"></button>
     <button class="itc-slider__btn itc-slider__btn_next"></button>
   </div>
-</div>
+</div> -->
 
 <hr>
 <div class="parent">
