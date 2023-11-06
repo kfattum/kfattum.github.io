@@ -86,6 +86,7 @@
 
     
     
+    <meta http-equiv="Cache-Control" content="public, max-age=2500000" />
   
     <meta name="robots" content="index, follow" />
   
@@ -695,6 +696,16 @@
   <h1>Открытые проекты</h1>
 
 <html><head><style>
+@media (width <= 1281px) {
+  .md-grid {
+    max-width: 768px;
+  }
+} 
+@media (width <= 767px) {
+  .md-grid {
+    max-width: 400px;
+  }
+}   
 .flex-element {
   position: relative;
   width: 32.25%;
@@ -721,7 +732,7 @@
   position: relative;
   height: auto;
   /* width: 60%; */
-  border-radius: 0.9rem;
+  border-radius: 0.9rem 0.9rem 0 0 ;
 }
 .flex-element_header {
   display: flex;
@@ -798,40 +809,63 @@
     <a href="../open_projects/GL1.1">
       <header class="flex-element_header">
         <img alt="..." class="flex-element_img" loading="lazy" src="/images/gl/1.JPG">
-          <span class="flex-element_section">GyverLamp | RGB лампа с Wi-Fi управлением V1.1</span>
+          <!-- <span class="flex-element_section">GyverLamp | RGB лампа с Wi-Fi управлением V1.1</span> -->
       </header>
     </a>
+      <div class="flex-element_title">
+      GyverLamp | RGB лампа с Wi-Fi управлением V1.1
+      </div>
   </div>
 
   <div class="flex-element">
     <a href="../open_projects/GL1">
       <header class="flex-element_header">
         <img alt="..." class="flex-element_img" loading="lazy" src="/images/gl/0.jpg">
-          <span class="flex-element_section">GyverLamp | RGB лампа с Wi-Fi управлением V1</span>
+          <!-- <span class="flex-element_section">GyverLamp | RGB лампа с Wi-Fi управлением V1</span> -->
       </header>
     </a>
+      <div class="flex-element_title">
+      GyverLamp | RGB лампа с Wi-Fi управлением V1
+      </div>
   </div>
 
   <div class="flex-element">
     <a href="../open_projects/Switch">
       <header class="flex-element_header">
         <img alt="..." class="flex-element_img" loading="lazy" src="../images/switch/1.jpg">
-          <span class="flex-element_section">Крепление выключателя для Ender3v2</span>
+          <!-- <span class="flex-element_section">Крепление выключателя для Ender3v2</span> -->
       </header>
     </a>
+      <div class="flex-element_title">
+      Крепление выключателя для Ender3v2
+      </div>
   </div>
 
   <div class="flex-element">
     <a href="../open_projects/Runcam_Thumb_mount">
       <header class="flex-element_header">
         <img alt="..." class="flex-element_img" loading="lazy" src="../images/gt_m515/1.jpg">
-          <span class="flex-element_section">Крепление для Runcam Thumb на Diatone GT M515</span>
+          <!-- <span class="flex-element_section">Крепление для Runcam Thumb на Diatone GT M515</span> -->
       </header>
     </a>
+      <div class="flex-element_title">
+      Крепление для Runcam Thumb на Diatone GT M515
+      </div>
   </div>
 
 </div>
 </div></body></html>
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      Последнее обновление:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2 ноября 2023 г.</span>
+      
+    
+  </small>
+</div>
 
 
   
