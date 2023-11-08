@@ -696,21 +696,16 @@
   <h1>Открытые проекты</h1>
 
 <html><head><style>
-@media (width <= 1281px) {
-  .md-grid {
-    max-width: 768px;
-  }
-} 
-@media (width <= 767px) {
-  .md-grid {
-    max-width: 500px;
-  }
-}   
+
 .flex-element {
   position: relative;
-  width: 32.25%;
   background: #191b22;
   border-radius: 0.9rem; 
+  outline: 1px solid #14151a;
+  max-width: 400px;
+}
+.flex-element:hover {
+  outline: 2px solid #d3d6e118;
 }
 .flex-container {
   display: inline-flex;
@@ -726,8 +721,9 @@
   justify-content: flex-start;
   gap: 20px;
   margin-top: 20px;
-  align-items: center;
-} 
+  align-items: flex-start;
+  width: 100%;
+}     
 .flex-element_img {
   position: relative;
   height: auto;
@@ -738,7 +734,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 0.9rem;
+  border-radius: 0.9rem 0.9rem 0 0;
   position: relative;
   background: #14151a;
   height: auto;
@@ -764,44 +760,33 @@
     /* font-weight: 700; */
     /* font-size: 20px; */
     line-height: 1.3;
-    padding: 10px 0px 5px 15px;
+    padding: 10px 10px 5px 15px;
     margin: 0;
-    /* height: 72px; */
     border-radius: 0 0 0.9rem 0.9rem;
+    color: var(--md-default-fg-color);
 }
-  @media (min-width: 768px) and (max-width: 1280px) {
-      .flex-element {
-        width: 345px;
-      }
-      .flex-container {
-        justify-content: flex-start; 
-      }
-    }
-  @media (min-width: 300px) and (max-width: 1280px) {
-      .flex-container {
-        width: 710px;
-      }
-      .fatter-conteiner {
-        display: flex;
-        justify-content: center;
-}  
+
+@media (min-width: 320px) and (max-width: 500px) {
+  .flex-element {
+  width: 100%;
   }
-  @media (max-width: 768px) {
-      .flex-element {
-        width: 350px;
-      }
-      .flex-container {
-        justify-content: center;
-      }
-    }  
-  @media (width < 360px) {
-      .flex-element {
-        width: 100%;
-      }
-      .flex-container {
-        justify-content: center;
-      }
-    }      
+}
+@media (min-width: 501px) and (max-width: 884px) {
+  .flex-element {
+    max-width: 47%;
+  }
+  .flex-container {
+    justify-content: center;
+  }  
+}
+@media (min-width: 884px) and (max-width: 1271px) {
+  .flex-element {
+    max-width: 400px;
+  }
+  .flex-container {
+    justify-content: center;
+  }    
+}
 </style>
 </head><body><div class="fatter-conteiner">
 <div class="flex-container">
@@ -811,10 +796,10 @@
         <img alt="..." class="flex-element_img" loading="lazy" src="/images/gl/1.JPG">
           <!-- <span class="flex-element_section">GyverLamp | RGB лампа с Wi-Fi управлением V1.1</span> -->
       </header>
-    </a>
-      <div class="flex-element_title">
+          <div class="flex-element_title">
       GyverLamp | RGB лампа с Wi-Fi управлением V1.1
       </div>
+    </a>
   </div>
 
   <div class="flex-element">
@@ -823,10 +808,10 @@
         <img alt="..." class="flex-element_img" loading="lazy" src="/images/gl/0.jpg">
           <!-- <span class="flex-element_section">GyverLamp | RGB лампа с Wi-Fi управлением V1</span> -->
       </header>
-    </a>
       <div class="flex-element_title">
       GyverLamp | RGB лампа с Wi-Fi управлением V1
       </div>
+    </a>
   </div>
 
   <div class="flex-element">
@@ -835,10 +820,10 @@
         <img alt="..." class="flex-element_img" loading="lazy" src="../images/switch/1.jpg">
           <!-- <span class="flex-element_section">Крепление выключателя для Ender3v2</span> -->
       </header>
-    </a>
       <div class="flex-element_title">
       Крепление выключателя для Ender3v2
       </div>
+    </a>  
   </div>
 
   <div class="flex-element">
@@ -847,10 +832,10 @@
         <img alt="..." class="flex-element_img" loading="lazy" src="../images/gt_m515/1.jpg">
           <!-- <span class="flex-element_section">Крепление для Runcam Thumb на Diatone GT M515</span> -->
       </header>
-    </a>
       <div class="flex-element_title">
       Крепление для Runcam Thumb на Diatone GT M515
       </div>
+    </a>
   </div>
 
 </div>

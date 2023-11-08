@@ -812,7 +812,7 @@
       line-height: 1;
     }
     .card__title {
-      background: #191b22;
+      /* background: #191b22; */
       /* color: #424242; */
       white-space: normal;
       /* font-weight: 700; */
@@ -946,6 +946,10 @@
   width: 32.25%;
   background: #191b22;
   border-radius: 0.9rem; 
+  outline: 1px solid #14151a;
+}
+.flex-element:hover {
+  outline: 2px solid #d3d6e118;
 }
 .flex-container {
   display: inline-flex;
@@ -990,7 +994,6 @@
     font-size: 18px;
     border-radius: 0.3rem;
     line-height: 1;
-
 }
 .flex-element_title {
     background: #191b22;
@@ -1003,6 +1006,7 @@
     margin: 0;
     /* height: 72px; */
     border-radius: 0 0 0.9rem 0.9rem;
+    color: #1ebfa7;
 }
   @media (min-width: 768px) and (max-width: 1280px) {
       .flex-element {
@@ -1058,7 +1062,16 @@ content: url('/skull_2.webp');
 .hover-img3 .flex-element_img{
 content: url('/q2_1080x1080.webp');
 }
-}   
+}  
+.color-link-fix {
+  color: var(--md-default-fg-color);
+  background-color: #191b22;
+  border-radius: 0.9rem;
+} 
+.color-link-fix:hover {
+  /* color: var(--link-color); */
+  background-color: #14151a;
+} 
 </style>
 
 <h2>Услуги</h2>
@@ -1116,57 +1129,68 @@ content: url('/q2_1080x1080.webp');
       <div class="itc-slider__items">
         <div class="itc-slider__item itc-slider__item_active"><!-- Начало 1 слайда -->
           <div class="card">
-            <header class="card__header">
-              <a href="#m1">
+            <a href="#m1">
+              <div class="color-link-fix">
+              <header class="card__header">
               <img alt="..." class="card__img" src="./images/gl/3.JPG">
-              </a>
               <span class="card__section">3D ПЕЧАТЬ</span>
-            </header>
-            <div class="card__title">Корпус для  проекта "Gyverlamp"</div>
+              </header>
+              <div class="card__title">Корпус для  проекта "Gyverlamp"</div>
+              </div>
+            </a>
           </div>
-        </div> <!-- Конец 1 слайда -->
+        </div>
+        <!-- Конец 1 слайда -->
         <div class="itc-slider__item itc-slider__item_active"><!-- Начало 2 слайда -->
           <div class="card">
-            <header class="card__header">
-              <a href="#m2">
+            <a href="#m2">
+              <div class="color-link-fix">
+              <header class="card__header">
               <img alt="..." class="card__img" src="./images/portfolio/4.jpg">
-              </a>
               <span class="card__section">3D ПЕЧАТЬ</span>
-            </header>
-            <div class="card__title">Светодиодная вывеска</div>
+              </header>
+              <div class="card__title">Светодиодная вывеска</div>
+              </div>
+            </a>
           </div>
         </div><!-- Конец 2 слайда -->
         <div class="itc-slider__item itc-slider__item_active"><!-- Начало 3 слайда -->
           <div class="card">
-            <header class="card__header">
               <a href="#m3">
-              <img alt="..." class="card__img" src="./images/portfolio/5.1.PNG">
+                <div class="color-link-fix">
+                <header class="card__header">
+                <img alt="..." class="card__img" src="./images/portfolio/5.1.PNG">
+                <span class="card__section">3D ПЕЧАТЬ</span>
+                </header>
+                <div class="card__title">Боковое навершие старинных часов</div>
+                </div>
               </a>
-              <span class="card__section">3D ПЕЧАТЬ</span>
-            </header>
-            <div class="card__title">Боковое навершие старинных часов</div>
           </div>
         </div><!-- Конец 3 слайда -->
         <div class="itc-slider__item"><!-- Начало 4 слайда -->
           <div class="card">
-            <header class="card__header">
               <a href="#m4">
-              <img alt="..." class="card__img" src="http://dummyimage.com/800x600">
-              </a>
-              <span class="card__section">3D ПЕЧАТЬ</span>
-            </header>
-            <div class="card__title">Украшение часов фирмы F.M.S</div>
+                <div class="color-link-fix">
+                <header class="card__header">
+                <img alt="..." class="card__img" src="http://dummyimage.com/800x600">
+                <span class="card__section">3D ПЕЧАТЬ</span>
+                </header>
+                <div class="card__title">Украшение часов фирмы F.M.S</div>
+                </div>
+              </a>  
           </div>
         </div><!-- Конец 4 слайда -->
                 <div class="itc-slider__item"><!-- Начало 5 слайда -->
           <div class="card">
-            <header class="card__header">
-              <a href="#m5">
+            <a href="#m5">
+              <div class="color-link-fix">
+              <header class="card__header">
               <img alt="..." class="card__img" src="./images/portfolio/2.jpg">
-              </a>
               <span class="card__section">3D ПЕЧАТЬ</span>
-            </header>
-            <div class="card__title">Концептуальный бюст женщины-робота</div>
+              </header>
+              <div class="card__title">Концептуальный бюст женщины-робота</div>
+              </div>
+            </a>
           </div>
         </div><!-- Конец 5 слайда -->
       </div>
