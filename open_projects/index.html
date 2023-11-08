@@ -702,7 +702,6 @@
   background: #191b22;
   border-radius: 0.9rem; 
   outline: 1px solid #14151a;
-  max-width: 400px;
 }
 .flex-element:hover {
   outline: 2px solid #d3d6e118;
@@ -770,7 +769,12 @@
   .flex-element {
   width: 100%;
   }
+  .flex-container {
+    justify-content: center;
+    gap:40px;
+  }  
 }
+
 @media (min-width: 501px) and (max-width: 884px) {
   .flex-element {
     max-width: 47%;
@@ -786,6 +790,11 @@
   .flex-container {
     justify-content: center;
   }    
+}
+@media (min-width: 1271px) {
+  .flex-element {
+    max-width: 400px;
+}
 }
 </style>
 </head><body><div class="fatter-conteiner">
