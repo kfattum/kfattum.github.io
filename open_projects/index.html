@@ -699,12 +699,13 @@
 
 .flex-element {
   position: relative;
-  background: #191b22;
+  background: #14151a;
   border-radius: 0.9rem; 
   outline: 1px solid #14151a;
 }
 .flex-element:hover {
   outline: 2px solid #d3d6e118;
+  background-color: #191b22;
 }
 .flex-container {
   display: inline-flex;
@@ -751,23 +752,26 @@
     border-radius: 0.3rem;
     line-height: 1;
 
+
 }
 .flex-element_title {
-    background: #191b22;
+    min-height: 51px; 
+    /* background: #191b22; */
     /* color: #424242; */
     white-space: normal;
-    /* font-weight: 700; */
-    /* font-size: 20px; */
-    line-height: 1.3;
-    padding: 10px 10px 5px 15px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1;
+    padding: 10px 20px 10px 20px;
     margin: 0;
     border-radius: 0 0 0.9rem 0.9rem;
     color: var(--md-default-fg-color);
+    /* background-color: #14151a; */
+    /* color: #1ebfa7; */
 }
-
 @media (min-width: 320px) and (max-width: 500px) {
   .flex-element {
-  width: 100%;
+  width: 95%;
   }
   .flex-container {
     justify-content: center;
@@ -823,7 +827,7 @@
     </a>
   </div>
 
-  <div class="flex-element">
+  <div class="flex-element color-fix">
     <a href="../open_projects/Switch">
       <header class="flex-element_header">
         <img alt="..." class="flex-element_img" loading="lazy" src="../images/switch/1.jpg">
