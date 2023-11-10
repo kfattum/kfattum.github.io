@@ -714,10 +714,89 @@
 
   <h1>3D сканирование</h1>
 
-<div><h3>При заказе 3D сканирования цена зависит от размера и сложности формы объекта.</h3>
-<div class="parent">
+<html><head><style>
 
-  <div class="child">
+.flex-element {
+  position: relative;
+  background: #191c22;
+  border-radius: 0.9rem; 
+  padding-bottom: 20px;
+  padding-left:5px;
+  padding-right:5px;
+  /* outline: 1px solid #14151a; */
+}
+/* .flex-element:hover {
+  outline: 2px solid #d3d6e118;
+  background-color: #191b22;
+} */
+.flex-container {
+  display: inline-flex;
+  flex-direction: row;
+/* row (слева направо) - по умолчанию
+    row-reverse (справа налево)
+    column (сверху вниз)
+    column-reverse (снизу вверх) */
+  flex-wrap: wrap;
+/* nowrap (только на одной линии - по умолчанию)
+    wrap (разрешить перенос flex-элементов на новые линии)
+    wrap-reverse (осуществлять перенос flex-элементов в обратном порядке) */  
+  justify-content: flex-start;
+  gap: 20px;
+  margin-top: 20px;
+  align-items: flex-start;
+  width: 100%;
+}     
+
+@media (min-width: 365px) and (max-width: 500px) {
+  .flex-element {
+  width: 90%;
+  }
+  .flex-container {
+  justify-content: center;
+  gap: 40px;
+  margin-top: 0px;
+  }  
+}
+
+@media (min-width: 501px) and (max-width: 884px) {
+  .flex-element {
+    max-width: 47%;
+  }
+  .flex-container {
+    justify-content: center;
+  }  
+}
+@media (min-width: 884px) and (max-width: 1271px) {
+  .flex-element {
+    max-width: 400px;
+  }
+  .flex-container {
+    justify-content: center;
+  }    
+}
+@media (min-width: 1271px) {
+  .flex-element {
+    max-width: 400px;
+}
+}
+</style>
+
+ <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../assets/javascripts/glightbox.min.js"></script></head><body><h3>При заказе 3D сканирования цена зависит от размера и сложности формы объекта.</h3>
+
+<div class="fatter-conteiner">
+  <div class="flex-container"> 
+    <div class="flex-element" style="text-align: center;">
    <br>
    <br>
    <img alt="Alt text" class="skiplightbox" src="../bolvan_16x9.webp" width="700"><br>
@@ -725,9 +804,10 @@
    Объекты объемом ≤ 210х210х210 мм
    <h3>30 BYN</h3>
    <a class="md-button" href="#openModal">Оставить заявку <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M12.75 7.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5v-3.5Z"></path><path d="M12 1c6.075 0 11 4.925 11 11s-4.925 11-11 11S1 18.075 1 12 5.925 1 12 1ZM2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5 9.5 9.5 0 0 0 2.5 12Z"></path></svg></span></a>
+   <br>
   </div>
 
-  <div class="child">
+  <div class="flex-element" style="text-align: center;">
   <br>
   <br>
   <img alt="Alt text" class="skiplightbox" src="../q2_render.webp" width="700"><br>
@@ -735,7 +815,10 @@
    Объекты объемом &gt; 210х210х210 мм
    <h3>от 60 BYN</h3>
    <a class="md-button" href="#openModal">Оставить заявку <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M12.75 7.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5v-3.5Z"></path><path d="M12 1c6.075 0 11 4.925 11 11s-4.925 11-11 11S1 18.075 1 12 5.925 1 12 1ZM2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5 9.5 9.5 0 0 0 2.5 12Z"></path></svg></span></a>
+   <br>
   </div>
+
+</div>  
 </div>
 
 <div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><input id="__tabbed_1_3" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Описание</label><label for="__tabbed_1_2">Характеристики 3D сканера</label><label for="__tabbed_1_3">Область применения</label></div>
@@ -998,7 +1081,7 @@
 .gslide-image img {
   background: rgb(0, 0, 0);
 }
-</style></div>
+</style><script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body></html>
 
 
   
@@ -1143,5 +1226,5 @@
       <script src="../assets/javascripts/bundle.aecac24b.min.js"></script>
       
     
-  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+  </body>
 </html>
