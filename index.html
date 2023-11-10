@@ -961,9 +961,6 @@
   border-radius: 0.9rem; 
   outline: 1px solid #14151a;
 }
-.flex-element:hover {
-  outline: 2px solid #d3d6e118;
-}
 .flex-container {
   display: inline-flex;
   flex-direction: row;
@@ -1021,6 +1018,11 @@
     border-radius: 0 0 0.9rem 0.9rem;
     color: #1ebfa7;
 }
+  @media (width > 768px) {
+         .flex-element:hover {
+  outline: 2px solid #d3d6e118;
+} 
+}    
   @media (min-width: 768px) and (max-width: 1280px) {
       .flex-element, .flex-element-txt {
         width: 345px;
