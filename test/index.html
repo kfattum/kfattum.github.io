@@ -698,17 +698,10 @@
 
   <h1>Test</h1>
 
-<html><head><style>
-      canvas {
-        position: absolute;
-        left: 0px; top: 0px;
-        display: inline-block;
-        border: 1px solid blue;
-        width: auto; height: 75vh;
-      }
-    </style>
-<script src="//StlReader.js"></script>
-<script src="//Slice.js"></script>
+<html><head><style> 
+body{padding-top:30px;}
+label,input{display:block;} 
+</style>
  <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
         html.glightbox-open { overflow: initial; height: 100%; }
         .gslide-title { margin-top: 0px; user-select: text; }
@@ -720,48 +713,66 @@
             body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
             body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
             body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
-            </style> <script src="../assets/javascripts/glightbox.min.js"></script></head><body><p><input type="file"><br>
-<br>
+            </style> <script src="../assets/javascripts/glightbox.min.js"></script></head><body><p>Шар</p>
+<form action="" method="post" id="sphere">
+        <label for="wall">Толщина стенки</label><input type="text" name="wall" id="wall" required>
+        <label for="radius">Радиус</label><input type="text" name="radius" id="radius" required>
+        <label for="P">Выберите материал:</label>
+        <select name="P" id="P">
+          <option value="1,0">PLA</option>
+          <option value="1.1">PETG</option>
+          <option value="1.2">Flex</option>
+        </select>
+        <label for="Z_proc">Заполнение</label>
+        <select name="% Z" id="Z_proc">
+          <option value="0">0%</option>
+          <option value="10">10%</option>
+          <option value="20">20%</option>
+          <option value="30" selected>30%</option>
+          <option value="40">40%</option>
+          <option value="50">50%</option>
+          <option value="60">60%</option>
+          <option value="70">70%</option>
+          <option value="80">80%</option>
+          <option value="90">90%</option>
+          <option value="100">100%</option>
+        </select>
+        <label for="volume_c">Объем сферы</label><input type="text" name="volume_c" id="volume_c">
+        <label for="volume_w">Объем стенки</label><input type="text" name="volume_w" id="volume_w">
+        <label for="volume_z">Объем заполнения</label><input type="text" name="volume_z" id="volume_z">
+        <label for="M">Масса</label><input type="text" name="M" id="M">
+        <br>
+        <input type="submit" value="Рассчитать стоимость" id="submit">    
+    </form>
+
 <script>
-  const scale = 10;
-  var input = document.querySelector('input[type=file]');
-  input.addEventListener('change', e => {
-    datadink.io.StlReader.fromBlob(
-      e.target.files[0]
-    ).then(reader => {
-      var slice = new datadink.Slice(reader, .5);
-      console.log(slice);
-      var bounds = {
-        left: -slice.bounds.left,
-        back: -slice.bounds.back,
-        width: (slice.bounds.right-slice.bounds.left),
-        depth: (slice.bounds.front-slice.bounds.back)
-      };
-      slice.layers
-        .forEach(layer => {
-          var container = document.body.appendChild(document.createElement('div'));
-          layer.regions.forEach(region => {
-            var canvas = container.appendChild(document.createElement('canvas'));
-            canvas.width = bounds.width*scale;
-            canvas.height = bounds.depth*scale;
-            var drawing = canvas.getContext('2d');
-            drawing.scale(scale, scale);
-            drawing.lineWidth = bounds.width/1000;
-            drawing.beginPath();
-            drawing.moveTo(region.path[0].x+bounds.left, region.path[0].y+bounds.back);
-            region.path.forEach(v =>
-              drawing.lineTo(v.x+bounds.left, v.y+bounds.back)
-            );
-            drawing.lineTo(region.path[0].x+bounds.left, region.path[0].y+bounds.back);
-            drawing.stroke();
-          });
-        });
-    }).catch(e =>
-      console.error(e)
-    )
-  });
-  </script>
-</p><script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body></html>
+function volume_wall()
+{
+    var volume_w, volume_z, volume_c, M, P, Z_proc;
+    var radius = document.getElementById('radius').value;
+    var wall = document.getElementById('wall').value;
+    P = parseFloat(document.getElementById('P').value);
+    Z_proc = document.getElementById('Z_proc').value / 100;
+    radius = Math.abs(radius);
+    wall = Math.abs(wall);
+    var volume1 = (4/3) * Math.PI * Math.pow(radius, 3);
+    var volume2 = (4/3) * Math.PI * Math.pow(radius-wall, 3);
+    volume_w = volume1 - volume2;
+    volume_z = volume2 * Z_proc;
+    volume_c = volume1;
+    M = ((P * volume_z) + (P * volume_w)) / 100;
+    volume_w = volume_w.toFixed(0);
+    volume_z = volume_z.toFixed(0);
+    volume_c = volume_c.toFixed(0);
+    M = M.toFixed(0);
+    document.getElementById('volume_w').value = volume_w;
+    document.getElementById('volume_z').value = volume_z;
+    document.getElementById('volume_c').value = volume_c;
+    document.getElementById('M').value = M;
+    return false;
+} 
+window.onload = document.getElementById('MyForm').onsubmit = volume_wall;
+    </script><script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body></html>
 
   <hr>
 <div class="md-source-file">
