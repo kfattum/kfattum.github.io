@@ -698,10 +698,93 @@
 
   <h1>Test</h1>
 
-<html><head><style> 
-body{padding-top:30px;}
-label,input{display:block;} 
+<html><head><style>
+.td1 {
+width: 105px;
+}
+
+.md-typeset table:not([class]) td {
+  padding: 16px 8px
+}
+.md-typeset table:not([class]) th {
+    font-weight: 700;
+    min-width: 50px;
+    /* padding: .9375em 1.25em;
+    vertical-align: top */
+}
+input[type="number"] {
+  width: 50px; /* Устанавливаем ширину input в 300 пикселей */
+}
+.error {
+  border-color: red;
+}
 </style>
+<style>
+
+.flex-table-element {
+  position: relative;
+}
+.flex-table-container {
+  display: inline-flex;
+  flex-direction: row;
+/* row (слева направо) - по умолчанию
+    row-reverse (справа налево)
+    column (сверху вниз)
+    column-reverse (снизу вверх) */
+  flex-wrap: wrap;
+/* nowrap (только на одной линии - по умолчанию)
+    wrap (разрешить перенос flex-элементов на новые линии)
+    wrap-reverse (осуществлять перенос flex-элементов в обратном порядке) */  
+  justify-content: flex-start;
+  gap: 10px;
+  margin-top: 20px;
+  align-items: flex-start;
+  width: 100%;
+}     
+@media (min-width: 365px) and (max-width: 500px) {
+  .flex-table-element {
+  width: 47%;
+  }
+  .flex-table-container {
+  justify-content: center;
+  gap: 10px;
+  margin-top: 0px;
+  }  
+  .flex-table-element_title {
+  /* font-size: 14px; */
+  line-height: 1.1;
+  }
+}
+
+@media (min-width: 501px) and (max-width: 884px) {
+  .flex-table-element {
+    max-width: 47%;
+  }
+  .flex-table-container {
+    justify-content: center;
+  }  
+}
+@media (min-width: 884px) and (max-width: 1271px) {
+  .flex-table-element {
+    max-width: 400px;
+  }
+  .flex-table-container {
+    justify-content: center;
+  }    
+}
+@media (min-width: 1271px) {
+  .flex-table-element {
+    max-width: 400px;
+}
+}
+</style>
+<script src="../javascripts/three.min.js"></script>
+<script src="../javascripts/webgl_detector.js"></script>
+<script src="../javascripts/Projector.js"></script>
+<script src="../javascripts/CanvasRenderer.js"></script>
+<script src="../javascripts/OrbitControls.js"></script>
+<script src="../javascripts/stl_viewer.min.js"></script>
+
  <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
         html.glightbox-open { overflow: initial; height: 100%; }
         .gslide-title { margin-top: 0px; user-select: text; }
@@ -713,73 +796,230 @@ label,input{display:block;}
             body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
             body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
             body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
-            </style> <script src="../assets/javascripts/glightbox.min.js"></script></head><body><p>Шар</p>
-<form action="" method="post" id="sphere">
-        <label for="wall">Толщина стенки</label><input type="text" name="wall" id="wall" required>
-        <label for="radius">Радиус</label><input type="text" name="radius" id="radius" required>
-        <label for="P">Выберите материал:</label>
-        <select name="P" id="P">
-          <option value="1,0">PLA</option>
-          <option value="1.1">PETG</option>
-          <option value="1.2">Flex</option>
-        </select>
-        <label for="Z_proc">Заполнение</label>
-        <select name="% Z" id="Z_proc">
-          <option value="0">0%</option>
-          <option value="10">10%</option>
-          <option value="20">20%</option>
-          <option value="30" selected>30%</option>
-          <option value="40">40%</option>
-          <option value="50">50%</option>
-          <option value="60">60%</option>
-          <option value="70">70%</option>
-          <option value="80">80%</option>
-          <option value="90">90%</option>
-          <option value="100">100%</option>
-        </select>
-        <label for="volume_c">Объем сферы</label><input type="text" name="volume_c" id="volume_c">
-        <label for="volume_w">Объем стенки</label><input type="text" name="volume_w" id="volume_w">
-        <label for="volume_z">Объем заполнения</label><input type="text" name="volume_z" id="volume_z">
-        <label for="M">Масса</label><input type="text" name="M" id="M">
-        <br>
-        <input type="submit" value="Рассчитать стоимость" id="submit">    
-    </form>
+            </style> <script src="../assets/javascripts/glightbox.min.js"></script></head><body><p>Расчет предварительной стоимости 3D-печати</p>
+<form>
+  <input type="radio" value="500" name="forma" checked>
+    <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M21 16.5c0 .38-.21.71-.53.88l-7.9 4.44c-.16.12-.36.18-.57.18-.21 0-.41-.06-.57-.18l-7.9-4.44A.991.991 0 0 1 3 16.5v-9c0-.38.21-.71.53-.88l7.9-4.44c.16-.12.36-.18.57-.18.21 0 .41.06.57.18l7.9 4.44c.32.17.53.5.53.88v9M12 4.15 6.04 7.5 12 10.85l5.96-3.35L12 4.15M5 15.91l6 3.38v-6.71L5 9.21v6.7m14 0v-6.7l-6 3.37v6.71l6-3.38Z"></path></svg></span>3D модель
+  <input type="radio" value="200" name="forma">
+    <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M21 16.5c0 .38-.21.71-.53.88l-7.9 4.44c-.16.12-.36.18-.57.18-.21 0-.41-.06-.57-.18l-7.9-4.44A.991.991 0 0 1 3 16.5v-9c0-.38.21-.71.53-.88l7.9-4.44c.16-.12.36-.18.57-.18.21 0 .41.06.57.18l7.9 4.44c.32.17.53.5.53.88v9M12 4.15 6.04 7.5 12 10.85l5.96-3.35L12 4.15M5 15.91l6 3.38v-6.71L5 9.21v6.7m14 0v-6.7l-6 3.37v6.71l6-3.38Z"></path></svg></span>Параллелепипед
 
+  <input type="radio" value="100" name="forma">
+    <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M12 20a8 8 0 0 1-8-8 8 8 0 0 1 8-8 8 8 0 0 1 8 8 8 8 0 0 1-8 8m0-18A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2Z"></path></svg></span>Шар
+
+  <input type="radio" value="300" name="forma">
+  <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M12 6c4.41 0 8 2.69 8 6s-3.59 6-8 6-8-2.69-8-6 3.59-6 8-6m0-2C6.5 4 2 7.58 2 12s4.5 8 10 8 10-3.58 10-8-4.5-8-10-8Z"></path></svg></span>Эллипсоид
+  <input type="radio" value="400" name="forma">
+    <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M12 2c-2.11 0-9 .29-9 4v12c0 3.71 6.89 4 9 4 2.11 0 9-.29 9-4V6c0-3.71-6.89-4-9-4m0 8c1.38 0 4.8-.13 7-1.25v6.5C16.8 14.13 13.38 14 12 14s-4.8.13-7 1.25v-6.5C7.2 9.87 10.62 10 12 10m0-6c3.87 0 7 .89 7 2 0 1.11-3.13 2-7 2s-7-.89-7-2c0-1.11 3.13-2 7-2m0 16c-3.87 0-7-.89-7-2 0-1.1 3.13-2 7-2s7 .9 7 2c0 1.11-3.13 2-7 2Z"></path></svg></span>
+  Цилиндр
+  </form>
+<div class="flex-table-container">
+
+<div class="flex-table-element">
+<table id="3d">
+    <thead>
+        <tr>
+            <th style="width: 5px;"></th>
+            <th>X</th>
+            <th>Y</th>
+          <th>Z</th>
+        </tr>
+    </thead>
+
+<tbody>
+    <tr>
+        <td>Размер, мм</td>
+        <td><button onclick="sizeminusX()"> - </button> <input id="sizex" style="width:60px" type="number" step="1" readonly> <button onclick="sizeplusX()"> + </button></td>
+        <td><button onclick="sizeminusX()"> - </button> <input id="sizey" style="width:60px" type="number" step="1" readonly> <button onclick="sizeplusY()"> + </button></td>
+        <td><button onclick="sizeminusX()"> - </button> <input id="sizez" style="width:60px" type="number" step="1" readonly> <button onclick="sizeplusZ()"> + </button></td>
+    </tr>
+    <tr>
+        <td>Масштаб</td>
+        <td><input name="scale_xyz" style="width:60px" value="1" min="0" id="scale_x" type="number" step="0.1"></td>
+        <td><input name="scale_xyz" style="width:60px" value="1" min="0" id="scale_y" type="number" step="0.1"></td>
+        <td><input name="scale_xyz" style="width:60px" value="1" min="0" id="scale_z" type="number" step="0.1"></td>
+    </tr>
+    <tr>
+        <td>Объем</td>
+        <td colspan="2"><input style="width:175px" type="number" id="volume" readonly></td>
+        <td>cm<sup>3</sup></td>
+    </tr>
+    <tr>
+        <td>Площадь</td>
+        <td colspan="2"><input style="width:175px" type="number" id="area" readonly></td>
+        <td>cm<sup>2</sup></td>
+    </tr>       
+    <tr>
+        <td>Масса</td>
+        <td colspan="2"><input style="width:175px" type="number" id="masssa" min="0.1" readonly></td>
+        <td>г</td>
+    </tr>       
+    <tr>
+        <td>Итого</td>
+        <td colspan="2"><input style="width:175px" type="number" id="total" min="0.1" readonly></td>
+        <td>BYN</td>
+    </tr>                   
+</tbody>
+</table> 
+</div>
+
+<div class="flex-table-element">
+<table id="2d-input" style="width: 190px;overflow-x: hidden;">
+    <thead>
+        <tr>
+            <th>ввод</th>
+        </tr>
+    </thead>
+
+<tbody>
+    <tr id="length">
+        <td class="td1">Длина</td>
+        <td colspan="2"><input type="number" id="f" min="10"></td>
+        <td>мм</td>
+    </tr>
+    <tr id="width">
+        <td class="td1">Ширина</td>
+        <td colspan="2"><input type="number" id="h" min="10"></td>
+        <td>мм</td>
+    </tr>       
+    <tr id="height">
+        <td class="td1">Высота</td>
+        <td colspan="2"><input type="number" id="g" min="10"></td>
+        <td>мм</td>
+    </tr>       
+    <tr id="diametr">
+        <td class="td1">Диаметр</td>
+        <td colspan="2"><input type="number" id="a" min="1"></td>
+        <td>мм</td>
+    </tr>
+  <tr id="wall">        
+        <td class="td1">Толщина стенок</td>
+        <td colspan="2"><input type="number" id="c" min="0.4" placeholder="1.6"></td>
+        <td>мм</td>
+    </tr>   
+    <tr id="material">  
+        <td class="td1">Материал</td>
+        <td colspan="2"><select id="p">
+      <option value="1.0">PLA</option>
+      <option value="1.087" selected>PETG</option>
+      <option value="1.2">Flex</option>
+    </select></td>
+    <td> </td>
+    </tr>   
+    <tr id="infil"> 
+        <td class="td1">Заполнение</td>
+        <td colspan="2"><input type="number" name="s" id="s" value="30" min="0" max="100"></td>
+        <td>%</td>
+    </tr>   
+    <tr id="ht">    
+        <td class="td1">Количество</td>
+        <td colspan="2"><input type="number" id="k" value="1" min="1"></td>
+        <td>%</td>
+    </tr>
+</tbody>
+</table> 
+</div>
+
+<div class="sale"></div>
+<div class="error"></div>
+
+
+<!-- <button type="submit" id="submit">start</button> -->
+
+<div class="flex-table-element">
+<table id="2d">
+    <thead>
+        <tr>
+            <th>вывод</th>
+        </tr>
+    </thead>
+
+<tbody>
+    <tr>
+        <td>Объем</td>
+        <td colspan="2"><input type="number" id="r1" readonly></td>
+        <td>см<sup>3</sup></td>
+    </tr>
+    <!-- <tr>
+        <td>Area</td>
+        <td colspan="2"><input type="number" id="area" readonly></td>
+        <td>cm<sup>2</sup></td>
+    </tr>        -->
+    <tr>
+        <td>Масса</td>
+        <td colspan="2"><input type="number" id="r6" min="0.1" readonly></td>
+        <td>г</td>
+    </tr>       
+    <tr>
+        <td>Итого</td>
+        <td colspan="2"><input type="number" id="r8" min="0.1" readonly></td>
+        <td>BYN</td>
+    </tr>                   
+</tbody>
+</table>  
+</div>
+
+
+
+
+
+
+ <div class="flex-table-element"> 
+  <input style="padding-top:20px;" id="file_select" type="file" onchange="stl_viewer.clean(); stl_viewer.add_model({local_file:this.files[0]}); loaded_sign()" accept=".stl,.obj,.vf,.vsj,.vsb,.3mf"><div class="loaded_sign"></div>
+  <!-- <button id="del" onclick="stl_viewer.clean();">Удалить<span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 19a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V7H6v12M8 9h8v10H8V9m7.5-5-1-1h-5l-1 1H5v2h14V4h-3.5Z"></path></svg></span></button>   -->
+
+  <div id="stl_cont" style="width:400px;height:400px;margin:0px;"></div>
+</div>
+</div>
+<div class="admonition info">
+<p>Обращаею ваше внимание на то, что этот калькулятор дает лишь приблизительную оценку объема, массы и стоимости 3D-печати.</p>
+</div>
+<script src="../javascripts/fdm.js"></script>
 <script>
-function volume_wall()
-{
-    var volume_w, volume_z, volume_c, M, P, Z_proc;
-    var radius = document.getElementById('radius').value;
-    var wall = document.getElementById('wall').value;
-    P = parseFloat(document.getElementById('P').value);
-    Z_proc = document.getElementById('Z_proc').value / 100;
-    radius = Math.abs(radius);
-    wall = Math.abs(wall);
-    var volume1 = (4/3) * Math.PI * Math.pow(radius, 3);
-    var volume2 = (4/3) * Math.PI * Math.pow(radius-wall, 3);
-    volume_w = volume1 - volume2;
-    volume_z = volume2 * Z_proc;
-    volume_c = volume1;
-    M = ((P * volume_z) + (P * volume_w)) / 100;
-    volume_w = volume_w.toFixed(0);
-    volume_z = volume_z.toFixed(0);
-    volume_c = volume_c.toFixed(0);
-    M = M.toFixed(0);
-    document.getElementById('volume_w').value = volume_w;
-    document.getElementById('volume_z').value = volume_z;
-    document.getElementById('volume_c').value = volume_c;
-    document.getElementById('M').value = M;
-    return false;
-} 
-window.onload = document.getElementById('MyForm').onsubmit = volume_wall;
-    </script><script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body></html>
+function updateForm() {
+    var value = document.querySelector('input[name="forma"]:checked').value;
+    document.getElementById('length').style.visibility = (value == '200' || value == '300') ? 'visible' : 'hidden';
+        document.getElementById('length').style.display = (value == '200' || value == '300') ? 'block' : 'none';
+    document.getElementById('width').style.visibility = (value == '200' || value == '300') ? 'visible' : 'hidden';
+        document.getElementById('width').style.display = (value == '200' || value == '300') ? 'block' : 'none';
+    document.getElementById('height').style.visibility = (value == '200' || value == '300' || value == '400') ? 'visible' : 'hidden';
+        document.getElementById('height').style.display = (value == '200' || value == '300' || value == '400') ? 'block' : 'none';
+    document.getElementById('diametr').style.visibility = (value == '100' || value == '400') ? 'visible' : 'hidden';
+        document.getElementById('diametr').style.display = (value == '100' || value == '400') ? 'block' : 'none';
+    document.getElementById('wall').style.visibility = (value == '100' || value == '200' || value == '300'|| value == '400') ? 'visible' : 'hidden';
+        document.getElementById('wall').style.display = (value == '100' || value == '200' || value == '300'|| value == '400') ? 'block' : 'none';
+    document.getElementById('stl_cont').style.display = (value == '500') ? 'block' : 'none';
+    document.getElementById('file_select').style.display = (value == '500') ? 'block' : 'none';
+    // document.getElementById('del').style.display = (value == '500') ? 'block' : 'none';
+    document.getElementById('3d').style.display = (value == '500') ? 'block' : 'none';
+    document.getElementById('2d').style.display = (value == '100' || value == '200' || value == '300' || value == '400') ? 'block' : 'none';
+    document.getElementById('2d-input').style.display = (value == '100' || value == '200' || value == '300' || value == '400') ? 'block' : 'none';
+    document.getElementById('material').style.visibility = (value == '100' || value == '200' || value == '300' || value == '400') ? 'visible' : 'hidden';
+        document.getElementById('material').style.display = (value == '100' || value == '200' || value == '300' || value == '400') ? 'block' : 'none';
+    document.getElementById('infil').style.visibility = (value == '100' || value == '200' || value == '300' || value == '400') ? 'visible' : 'hidden';
+        document.getElementById('infil').style.display = (value == '100' || value == '200' || value == '300' || value == '400') ? 'block' : 'none';
+    document.getElementById('ht').style.visibility = (value == '100' || value == '200' || value == '300' || value == '400') ? 'visible' : 'hidden';
+        document.getElementById('ht').style.display = (value == '100' || value == '200' || value == '300' || value == '400') ? 'block' : 'none';
+}
+document.querySelectorAll('input[name="forma"]').forEach(function(radio) {
+    radio.addEventListener('change', updateForm);
+});
+window.onload = updateForm;
+</script>
+<script>
+  var stl_viewer=new StlViewer (document.getElementById("stl_cont"),{
+    model_loaded_callback:calc3d,
+    on_model_drop:loaded_sign,
+    jszip_path:"../javascripts/jszip.min.js", 
+    jszip_utils_path:"../javascripts/jszip_utils.min.js",
+    controls:"1"});
+</script><script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body></html>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Последнее обновление:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">10 ноября 2023 г.</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">14 ноября 2023 г.</span>
       
     
   </small>
