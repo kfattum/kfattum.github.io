@@ -65,42 +65,42 @@
   function sizeplusX() {
   var inputX = document.getElementById('scale_x');
   var currentValueX = parseFloat(inputX.value) || 0;
-  inputX.value = (currentValueX + 0.1).toFixed(1);
+  inputX.value = (currentValueX + 0.01).toFixed(2);
   scale_xyz();
   calc3d();
 }
   function sizeplusY() {
   var inputY = document.getElementById('scale_y');
   var currentValueY = parseFloat(inputY.value) || 0;
-  inputY.value = (currentValueY + 0.1).toFixed(1);
+  inputY.value = (currentValueY + 0.01).toFixed(2);
   scale_xyz();
   calc3d();
 }
   function sizeplusZ() {
   var inputZ = document.getElementById('scale_z');
   var currentValueZ = parseFloat(inputZ.value) || 0;
-  inputZ.value = (currentValueZ + 0.1).toFixed(1);
+  inputZ.value = (currentValueZ + 0.01).toFixed(2);
   scale_xyz();
   calc3d();
 }
   function sizeminusX() {
   var inputX = document.getElementById('scale_x');
   var currentValueX = parseFloat(inputX.value) || 0;
-  inputX.value = (currentValueX - 0.1).toFixed(1);
+  inputX.value = (currentValueX - 0.01).toFixed(2);
   scale_xyz();
   calc3d();
 }
   function sizeminusY() {
   var inputY = document.getElementById('scale_y');
   var currentValueY = parseFloat(inputY.value) || 0;
-  inputY.value = (currentValueY - 0.1).toFixed(1);
+  inputY.value = (currentValueY - 0.01).toFixed(2);
   scale_xyz();
   calc3d();
 }
   function sizeminusZ() {
   var inputZ = document.getElementById('scale_z');
   var currentValueZ = parseFloat(inputZ.value) || 0;
-  inputZ.value = (currentValueZ - 0.1).toFixed(1);
+  inputZ.value = (currentValueZ - 0.01).toFixed(2);
   scale_xyz();
   calc3d();
 }
@@ -119,7 +119,7 @@
     });
 
   function loaded_sign() {
-    document.querySelector('.loaded_sign').innerHTML = '<span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 12a9 9 0 0 0 9 9c2.39 0 4.68-.94 6.4-2.6l-1.5-1.5A6.706 6.706 0 0 1 11 19c-6.24 0-9.36-7.54-4.95-11.95C10.46 2.64 18 5.77 18 12h-3l4 4h.1l3.9-4h-3a9 9 0 0 0-18 0Z"></path></svg></span>';
+    document.querySelector('.loaded_sign').innerHTML = '<span class="twemoji load"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 12a9 9 0 0 0 9 9c2.39 0 4.68-.94 6.4-2.6l-1.5-1.5A6.706 6.706 0 0 1 11 19c-6.24 0-9.36-7.54-4.95-11.95C10.46 2.64 18 5.77 18 12h-3l4 4h.1l3.9-4h-3a9 9 0 0 0-18 0Z"></path></svg></span>';
   }
 function delete_sign() {
     setTimeout(function() {
@@ -134,9 +134,9 @@ function delete_sign() {
   delete_sign();
   var info = JSON.stringify(stl_viewer.get_model_info(1));
       
-  var p = parseFloat(document.getElementById('p').value);//mat
-  var k = parseFloat(document.getElementById('k').value);//kal
-  var s = parseFloat(document.getElementById('s').value)/100;//%
+  var dp = parseFloat(document.getElementById('dp').value);//mat
+  var dk = parseFloat(document.getElementById('dk').value);//kal
+  var ds = parseFloat(document.getElementById('ds').value)/100;//%
   var data = JSON.parse(info);
   var dims = data.dims;
 if (dims !== undefined) {
@@ -148,9 +148,10 @@ if (dims !== undefined) {
 }
   var volume = data.volume;
   var area = data.area;
+  var total = 0;
 
-  massa = volume * s * p * 1.1;//massa 1
-  price = massa * 0.15 * k;//$
+  massa = volume * ds * dp * 1.1/1000;//massa 1
+
   var scale_x = parseFloat(document.getElementById('scale_x').value);
 if (isNaN(scale_x)) {
   scale_x = 1; // Значение по умолчанию
@@ -166,12 +167,14 @@ if (isNaN(scale_z)) {
   scale_z = 1; // Значение по умолчанию
   console.error('Ошибка: некорректное значение для scale_z');
 }
-  if (price > 99 && k >= 2) {
-  price = massa * 0.15 * k * 0.7;//скидка massa*byn/g*0.7(-30%)
+price = massa * 0.15 * dk;//$
+if (dk >= 2 && price >= 100 ) {
+  total = massa * 0.10 * dk;//скидка massa*byn/g*0.7(-30%)
   document.querySelector('.sale').innerHTML = '-30%';
-  } else {
+} else {
+  total = massa * 0.15 * dk;
   document.querySelector('.sale').innerHTML = '';
-  }
+};
   document.getElementById('sizex').value = (size_x * scale_x).toFixed(1);
   document.getElementById('sizey').value = (size_y * scale_y).toFixed(1);
   document.getElementById('sizez').value = (size_z * scale_z).toFixed(1);
@@ -179,6 +182,10 @@ if (isNaN(scale_z)) {
   document.getElementById('area').value = (area/100).toFixed(0); //cm2
   document.getElementById('volume').value = (volume/1000).toFixed(0); //cm3    
   
-  document.getElementById('masssa').value = (massa/1000).toFixed(0);
-  document.getElementById('total').value = (price/1000).toFixed(0);
-  }
+  document.getElementById('masssa').value = massa.toFixed(0);
+  document.getElementById('total').value = total.toFixed(2);
+  };
+  document.querySelectorAll('input[name="3dt"], select[name="3dt"], #ds, #dk, #dp').forEach(function(el) {
+    el.oninput = calc3d;});
+  // document.querySelectorAll('input[name="3dt"], #ds, #dk').forEach(function(el) {
+  //   el.oninput = calc3d;});
