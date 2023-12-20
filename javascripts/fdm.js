@@ -149,9 +149,9 @@ if (dims !== undefined) {
   var volume = data.volume;
   var area = data.area;
   var total = 0;
-
-  massa = volume * ds * dp * 1.1/1000;//massa 1
-
+  
+  massa = volume * ds * dp/1000;//massa 1
+  
   var scale_x = parseFloat(document.getElementById('scale_x').value);
 if (isNaN(scale_x)) {
   scale_x = 1; // Значение по умолчанию
@@ -169,8 +169,8 @@ if (isNaN(scale_z)) {
 }
 price = massa * 0.15 * dk;//$
 if (dk >= 2 && price >= 100 ) {
-  total = massa * 0.10 * dk;//скидка massa*byn/g*0.7(-30%)
-  document.querySelector('.sale').innerHTML = '-30%';
+  total = massa * 0.10 * dk;//скидка massa*byn/g*0.7(-33,3%)
+  document.querySelector('.sale').innerHTML = '-33,3%';
 } else {
   total = massa * 0.15 * dk;
   document.querySelector('.sale').innerHTML = '';
@@ -185,7 +185,17 @@ if (dk >= 2 && price >= 100 ) {
   document.getElementById('masssa').value = massa.toFixed(0);
   document.getElementById('total').value = total.toFixed(2);
   };
-  document.querySelectorAll('input[name="3dt"], select[name="3dt"], #ds, #dk, #dp').forEach(function(el) {
+
+  // Обработчики событий для кнопок
+document.querySelectorAll('.increment-btn').forEach(function(button) {
+  button.addEventListener('click', function() {
+      var input = document.querySelector('#' + this.dataset.input);
+      var step = parseFloat(this.dataset.step);
+      input.value = parseFloat(input.value || 0) + step;
+      calc3d();
+      calc();
+  });
+});
+
+  document.querySelectorAll('input[name="3dt"], select[name="3dt"], #ds, #dk, #dp, #dc').forEach(function(el) {
     el.oninput = calc3d;});
-  // document.querySelectorAll('input[name="3dt"], #ds, #dk').forEach(function(el) {
-  //   el.oninput = calc3d;});

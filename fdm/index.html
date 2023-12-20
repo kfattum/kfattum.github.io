@@ -756,6 +756,10 @@
   gap: 40px;
   margin-top: 0px;
   }  
+  .fte1 {order: 2;}
+  .fte2 {order: 3;}
+  .fte3 {order: 4;}
+  .fte4 {order: 1;}
 }
 
 @media (min-width: 501px) and (max-width: 884px) {
@@ -917,7 +921,7 @@ input[type="number"] {
   </form>
 <div class="error"></div>
 <div class="flex-table-container">
-<div class="flex-table-element" style="max-width: 190px">
+<div class="flex-table-element fte1" style="max-width: 190px">
 <table id="2d-input" style="width: 190px;overflow-x: hidden;">
     <thead>
         <tr>
@@ -948,9 +952,14 @@ input[type="number"] {
     </tr>
   <tr id="wall">        
         <td class="td1">Толщина стенок</td>
-        <td colspan="2"><input type="number" id="c" min="0.4" placeholder="1.6"></td>
+        <td colspan="2"><button class="increment-btn" data-input="c" data-step="-0.4">-</button><input type="number" id="c" min="0.4" value="0.8"><button class="increment-btn" data-input="c" data-step="0.4">+</button></td>
         <td>мм</td>
-    </tr>   
+    </tr>       
+    <tr id="infil"> 
+        <td class="td1">Заполнение</td>
+        <td colspan="2"><button class="increment-btn" data-input="s" data-step="-1">-</button><input type="number" name="s" id="s" value="30" min="0" max="100"><button class="increment-btn" data-input="s" data-step="1">+</button></td>
+        <td>%</td>
+    </tr>
     <tr id="material">  
         <td class="td1">Материал</td>
         <td colspan="2"><select id="p">
@@ -959,16 +968,11 @@ input[type="number"] {
       <option value="1.2">Flex</option>
     </select></td>
     <td> </td>
-    </tr>   
-    <tr id="infil"> 
-        <td class="td1">Заполнение</td>
-        <td colspan="2"><input type="number" name="s" id="s" value="30" min="0" max="100"></td>
-        <td>%</td>
-    </tr>   
+    </tr>
     <tr id="ht">    
         <td class="td1">Количество</td>
-        <td colspan="2"><input type="number" id="k" value="1" min="1"></td>
-        <td>%</td>
+        <td colspan="2"><button class="increment-btn" data-input="k" data-step="-1">-</button><input type="number" id="k" value="1" min="1"><button class="increment-btn" data-input="k" data-step="1">+</button></td>
+        <td>шт</td>
     </tr>
 </tbody>
 </table> 
@@ -976,7 +980,7 @@ input[type="number"] {
 
 
 
-<div class="flex-table-element">
+<div class="flex-table-element fte2">
 <table name="3dt" id="3d">
     <thead>
         <tr>
@@ -991,15 +995,20 @@ input[type="number"] {
     <tr>
         <td>Размер, мм</td>
         <td><button onclick="sizeminusX()"> - </button> <input id="sizex" style="width:60px" type="text" step="1" readonly> <button onclick="sizeplusX()"> + </button></td>
-        <td><button onclick="sizeminusX()"> - </button> <input id="sizey" style="width:60px" type="text" step="1" readonly> <button onclick="sizeplusY()"> + </button></td>
-        <td><button onclick="sizeminusX()"> - </button> <input id="sizez" style="width:60px" type="text" step="1" readonly> <button onclick="sizeplusZ()"> + </button></td>
+        <td><button onclick="sizeminusY()"> - </button> <input id="sizey" style="width:60px" type="text" step="1" readonly> <button onclick="sizeplusY()"> + </button></td>
+        <td><button onclick="sizeminusZ()"> - </button> <input id="sizez" style="width:60px" type="text" step="1" readonly> <button onclick="sizeplusZ()"> + </button></td>
     </tr>
     <tr>
         <td>Масштаб</td>
-        <td>  <input name="scale_xyz" style="width:60px" value="1" min="0" id="scale_x" type="number" step="0.01"></td>
-        <td>  <input name="scale_xyz" style="width:60px" value="1" min="0" id="scale_y" type="number" step="0.01"></td>
-        <td>  <input name="scale_xyz" style="width:60px" value="1" min="0" id="scale_z" type="number" step="0.01"></td>
+        <td><button onclick="sizeminusX()"> - </button> <input name="scale_xyz" style="width:60px" value="1" min="0" id="scale_x" type="number" step="0.1"> <button onclick="sizeplusX()"> + </button></td>
+        <td><button onclick="sizeminusY()"> - </button> <input name="scale_xyz" style="width:60px" value="1" min="0" id="scale_y" type="number" step="0.1"> <button onclick="sizeplusY()"> + </button></td>
+        <td><button onclick="sizeminusZ()"> - </button> <input name="scale_xyz" style="width:60px" value="1" min="0" id="scale_z" type="number" step="0.1"> <button onclick="sizeplusZ()"> + </button></td>
     </tr>
+  <tr>  
+        <td>Заполнение</td>
+        <td colspan="2"><button class="increment-btn" data-input="ds" data-step="-1">-</button> <input style="width:60px" type="number" name="3dt" id="ds" value="30" min="0" max="100"> <button class="increment-btn" data-input="ds" data-step="1">+</button>   %</td>
+        <td></td>
+    </tr>   
   <tr>
         <td>Материал</td>
         <td colspan="2">  <select name="3dt" id="dp">
@@ -1009,11 +1018,6 @@ input[type="number"] {
     </select></td>
     <td>
   </td></tr>
-  <tr>  
-        <td>Заполнение</td>
-        <td colspan="2">  <input style="width:60px" type="number" name="3dt" id="ds" value="30" min="0" max="100">   %</td>
-        <td></td>
-    </tr>   
     <tr>
         <td>Объем</td>
         <td colspan="2">  <input style="width:60px" type="number" id="volume" readonly>   см<sup>3</sup></td>
@@ -1031,7 +1035,7 @@ input[type="number"] {
     </tr>
     <tr>    
         <td>Количество</td>
-        <td colspan="2">  <input style="width:60px" type="number" name="3dt" id="dk" value="1" min="1">   шт</td>
+        <td colspan="2"><button class="increment-btn" data-input="dk" data-step="-1">-</button> <input style="width:60px" type="number" name="3dt" id="dk" value="1" min="1"> <button class="increment-btn" data-input="dk" data-step="1">+</button>   шт</td>
         <td></td>
     </tr>   
     <tr>
@@ -1045,7 +1049,7 @@ input[type="number"] {
 
 <!-- <button type="submit" id="submit">start</button> -->
 
-<div class="flex-table-element">
+<div class="flex-table-element fte3">
 <table id="2d">
     <thead>
         <tr>
@@ -1083,7 +1087,7 @@ input[type="number"] {
 
 
 
- <div class="flex-table-element"> 
+ <div class="flex-table-element fte4"> 
   <input style="padding-top:20px;" id="file_select" type="file" onchange="stl_viewer.clean(); stl_viewer.add_model({local_file:this.files[0]}); loaded_sign()" accept=".stl,.obj,.vf,.vsj,.vsb,.3mf"><div class="loaded_sign"></div>
   <!-- <button id="del" onclick="stl_viewer.clean();">Удалить<span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 19a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V7H6v12M8 9h8v10H8V9m7.5-5-1-1h-5l-1 1H5v2h14V4h-3.5Z"></path></svg></span></button>   -->
 
