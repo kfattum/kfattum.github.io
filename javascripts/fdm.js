@@ -65,42 +65,42 @@
   function sizeplusX() {
   var inputX = document.getElementById('scale_x');
   var currentValueX = parseFloat(inputX.value) || 0;
-  inputX.value = (currentValueX + 0.01).toFixed(2);
+  inputX.value = (currentValueX + 0.1).toFixed(2);
   scale_xyz();
   calc3d();
 }
   function sizeplusY() {
   var inputY = document.getElementById('scale_y');
   var currentValueY = parseFloat(inputY.value) || 0;
-  inputY.value = (currentValueY + 0.01).toFixed(2);
+  inputY.value = (currentValueY + 0.1).toFixed(2);
   scale_xyz();
   calc3d();
 }
   function sizeplusZ() {
   var inputZ = document.getElementById('scale_z');
   var currentValueZ = parseFloat(inputZ.value) || 0;
-  inputZ.value = (currentValueZ + 0.01).toFixed(2);
+  inputZ.value = (currentValueZ + 0.1).toFixed(2);
   scale_xyz();
   calc3d();
 }
   function sizeminusX() {
   var inputX = document.getElementById('scale_x');
   var currentValueX = parseFloat(inputX.value) || 0;
-  inputX.value = (currentValueX - 0.01).toFixed(2);
+  inputX.value = (currentValueX - 0.1).toFixed(2);
   scale_xyz();
   calc3d();
 }
   function sizeminusY() {
   var inputY = document.getElementById('scale_y');
   var currentValueY = parseFloat(inputY.value) || 0;
-  inputY.value = (currentValueY - 0.01).toFixed(2);
+  inputY.value = (currentValueY - 0.1).toFixed(2);
   scale_xyz();
   calc3d();
 }
   function sizeminusZ() {
   var inputZ = document.getElementById('scale_z');
   var currentValueZ = parseFloat(inputZ.value) || 0;
-  inputZ.value = (currentValueZ - 0.01).toFixed(2);
+  inputZ.value = (currentValueZ - 0.1).toFixed(2);
   scale_xyz();
   calc3d();
 }
