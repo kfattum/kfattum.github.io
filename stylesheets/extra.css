@@ -585,3 +585,12 @@ position: relative;
   -webkit-mask-image: var(--md-admonition-icon--material-printer-3d-nozzle-outline);
           mask-image: var(--md-admonition-icon--material-printer-3d-nozzle-outline);
 }
+
+.increment-btn {
+  color: #13bfa6;
+  background-color: #41474a;
+  width: 18px;
+  height: 18px;
+  text-align:center;
+  font-weight: bold;
+}

@@ -746,7 +746,6 @@
   align-items: flex-start;
   width: 100%;
 }     
-
 @media (min-width: 365px) and (max-width: 500px) {
   .flex-element {
   width: 100%;
@@ -829,7 +828,7 @@ input[type="number"] {
 }     
 @media (min-width: 365px) and (max-width: 500px) {
   .flex-table-element {
-  max-width: 400px;
+  max-width: 420px;
   }
   .flex-table-container {
   justify-content: center;
@@ -844,7 +843,7 @@ input[type="number"] {
 
 @media (min-width: 501px) and (max-width: 884px) {
   .flex-table-element {
-    max-width: 400px;
+    max-width: 420px;
   }
   .flex-table-container {
     justify-content: center;
@@ -852,7 +851,7 @@ input[type="number"] {
 }
 @media (min-width: 884px) and (max-width: 1271px) {
   .flex-table-element {
-    max-width: 400px;
+    max-width: 420px;
   }
   .flex-table-container {
     justify-content: center;
@@ -860,7 +859,7 @@ input[type="number"] {
 }
 @media (min-width: 1271px) {
   .flex-table-element {
-    max-width: 400px;
+    max-width: 420px;
 }
 }
 </style>
@@ -921,8 +920,8 @@ input[type="number"] {
   </form>
 <div class="error"></div>
 <div class="flex-table-container">
-<div class="flex-table-element fte1" style="max-width: 190px">
-<table id="2d-input" style="width: 190px;overflow-x: hidden;">
+<div class="flex-table-element fte1" style="max-width: 255px">
+<table id="2d-input" style="width: 255px;overflow-x: hidden;">
     <thead>
         <tr>
             <th>ввод</th>
@@ -932,32 +931,32 @@ input[type="number"] {
 <tbody>
     <tr id="length">
         <td class="td1">Длина</td>
-        <td colspan="2"><input type="number" id="f" min="10"></td>
-        <td>мм</td>
+        <td colspan="2">      <input type="number" id="f" min="10"></td>
+        <td>      мм</td>
     </tr>
     <tr id="width">
         <td class="td1">Ширина</td>
-        <td colspan="2"><input type="number" id="h" min="10"></td>
-        <td>мм</td>
+        <td colspan="2">      <input type="number" id="h" min="10"></td>
+        <td>      мм</td>
     </tr>       
     <tr id="height">
         <td class="td1">Высота</td>
-        <td colspan="2"><input type="number" id="g" min="10"></td>
-        <td>мм</td>
+        <td colspan="2">      <input type="number" id="g" min="10"></td>
+        <td>      мм</td>
     </tr>       
     <tr id="diametr">
         <td class="td1">Диаметр</td>
-        <td colspan="2"><input type="number" id="a" min="1"></td>
-        <td>мм</td>
+        <td colspan="2">      <input type="number" id="a" min="1"></td>
+        <td>      мм</td>
     </tr>
   <tr id="wall">        
         <td class="td1">Толщина стенок</td>
-        <td colspan="2"><button class="increment-btn" data-input="c" data-step="-0.4">-</button><input type="number" id="c" min="0.4" value="0.8"><button class="increment-btn" data-input="c" data-step="0.4">+</button></td>
+        <td colspan="2"><button class="increment-btn" data-input="c" data-step="-0.4">-</button> <input type="number" id="c" min="0.4" value="0.8"> <button class="increment-btn" data-input="c" data-step="0.4">+</button></td>
         <td>мм</td>
     </tr>       
     <tr id="infil"> 
         <td class="td1">Заполнение</td>
-        <td colspan="2"><button class="increment-btn" data-input="s" data-step="-1">-</button><input type="number" name="s" id="s" value="30" min="0" max="100"><button class="increment-btn" data-input="s" data-step="1">+</button></td>
+        <td colspan="2"><button class="increment-btn" data-input="s" data-step="-1">-</button> <input type="number" name="s" id="s" value="30" min="0" max="100"> <button class="increment-btn" data-input="s" data-step="1">+</button></td>
         <td>%</td>
     </tr>
     <tr id="material">  
@@ -967,11 +966,11 @@ input[type="number"] {
       <option value="1.087" selected>PETG</option>
       <option value="1.2">Flex</option>
     </select></td>
-    <td> </td>
+    <td>                   </td>
     </tr>
     <tr id="ht">    
         <td class="td1">Количество</td>
-        <td colspan="2"><button class="increment-btn" data-input="k" data-step="-1">-</button><input type="number" id="k" value="1" min="1"><button class="increment-btn" data-input="k" data-step="1">+</button></td>
+        <td colspan="2"><button class="increment-btn" data-input="k" data-step="-1">-</button> <input type="number" id="k" value="1" min="1"> <button class="increment-btn" data-input="k" data-step="1">+</button></td>
         <td>шт</td>
     </tr>
 </tbody>
@@ -985,33 +984,33 @@ input[type="number"] {
     <thead>
         <tr>
             <th style="width: 5px;"></th>
-            <th>X</th>
-            <th>Y</th>
-          <th>Z</th>
+            <th>         X</th>
+            <th>         Y</th>
+          <th>        Z</th>
         </tr>
     </thead>
 
 <tbody>
     <tr>
         <td>Размер, мм</td>
-        <td><button onclick="sizeminusX()"> - </button> <input id="sizex" style="width:60px" type="text" step="1" readonly> <button onclick="sizeplusX()"> + </button></td>
-        <td><button onclick="sizeminusY()"> - </button> <input id="sizey" style="width:60px" type="text" step="1" readonly> <button onclick="sizeplusY()"> + </button></td>
-        <td><button onclick="sizeminusZ()"> - </button> <input id="sizez" style="width:60px" type="text" step="1" readonly> <button onclick="sizeplusZ()"> + </button></td>
+        <td><button class="increment-btn" onclick="sizeminusX()"> - </button> <input id="sizex" style="width:45px" type="text" step="1" readonly> <button class="increment-btn" onclick="sizeplusX()"> + </button></td>
+        <td><button class="increment-btn" onclick="sizeminusY()"> - </button> <input id="sizey" style="width:45px" type="text" step="1" readonly> <button class="increment-btn" onclick="sizeplusY()"> + </button></td>
+        <td><button class="increment-btn" onclick="sizeminusZ()"> - </button> <input id="sizez" style="width:45px" type="text" step="1" readonly> <button class="increment-btn" onclick="sizeplusZ()"> + </button></td>
     </tr>
     <tr>
         <td>Масштаб</td>
-        <td><button onclick="sizeminusX()"> - </button> <input name="scale_xyz" style="width:60px" value="1" min="0" id="scale_x" type="number" step="0.1"> <button onclick="sizeplusX()"> + </button></td>
-        <td><button onclick="sizeminusY()"> - </button> <input name="scale_xyz" style="width:60px" value="1" min="0" id="scale_y" type="number" step="0.1"> <button onclick="sizeplusY()"> + </button></td>
-        <td><button onclick="sizeminusZ()"> - </button> <input name="scale_xyz" style="width:60px" value="1" min="0" id="scale_z" type="number" step="0.1"> <button onclick="sizeplusZ()"> + </button></td>
+        <td><button class="increment-btn" onclick="sizeminusX()"> - </button> <input name="scale_xyz" style="width:45px" value="1" min="0" id="scale_x" type="number" step="0.1"> <button class="increment-btn" onclick="sizeplusX()"> + </button></td>
+        <td><button class="increment-btn" onclick="sizeminusY()"> - </button> <input name="scale_xyz" style="width:45px" value="1" min="0" id="scale_y" type="number" step="0.1"> <button class="increment-btn" onclick="sizeplusY()"> + </button></td>
+        <td><button class="increment-btn" onclick="sizeminusZ()"> - </button> <input name="scale_xyz" style="width:45px" value="1" min="0" id="scale_z" type="number" step="0.1"> <button class="increment-btn" onclick="sizeplusZ()"> + </button></td>
     </tr>
   <tr>  
         <td>Заполнение</td>
-        <td colspan="2"><button class="increment-btn" data-input="ds" data-step="-1">-</button> <input style="width:60px" type="number" name="3dt" id="ds" value="30" min="0" max="100"> <button class="increment-btn" data-input="ds" data-step="1">+</button>   %</td>
+        <td colspan="2"><button class="increment-btn" data-input="ds" data-step="-1">-</button> <input style="width:45px" type="number" name="3dt" id="ds" value="30" min="0" max="100"> <button class="increment-btn" data-input="ds" data-step="1">+</button>   %</td>
         <td></td>
     </tr>   
   <tr>
         <td>Материал</td>
-        <td colspan="2">  <select name="3dt" id="dp">
+        <td colspan="2">     <select name="3dt" id="dp">
       <option value="1.0">PLA</option>
       <option value="1.087" selected>PETG</option>
       <option value="1.2">Flex</option>
@@ -1020,17 +1019,17 @@ input[type="number"] {
   </td></tr>
     <tr>
         <td>Объем</td>
-        <td colspan="2">  <input style="width:60px" type="number" id="volume" readonly>   см<sup>3</sup></td>
+        <td colspan="2">     <input style="width:60px" type="number" id="volume" readonly>   см<sup>3</sup></td>
         <td></td>
     </tr>
     <tr>
         <td>Площадь</td>
-        <td colspan="2">  <input style="width:60px" type="number" id="area" readonly>   см<sup>2</sup></td>
+        <td colspan="2">     <input style="width:60px" type="number" id="area" readonly>   см<sup>2</sup></td>
         <td></td>
     </tr>       
     <tr>
         <td>Масса</td>
-        <td colspan="2">  <input style="width:60px" type="number" id="masssa" min="0.1" readonly>   г</td>
+        <td colspan="2">     <input style="width:60px" type="number" id="masssa" min="0.1" readonly>   г</td>
         <td></td>
     </tr>
     <tr>    
@@ -1040,7 +1039,7 @@ input[type="number"] {
     </tr>   
     <tr>
         <td>Итого</td>
-        <td colspan="2">  <input style="width:60px" type="number" id="total" min="0.1" readonly>   BYN</td>
+        <td colspan="2">     <input style="width:60px" type="number" id="total" min="0.1" readonly>   BYN</td>
         <td><div class="sale"></div></td>
     </tr>                   
 </tbody>
@@ -1088,10 +1087,12 @@ input[type="number"] {
 
 
  <div class="flex-table-element fte4"> 
-  <input style="padding-top:20px;" id="file_select" type="file" onchange="stl_viewer.clean(); stl_viewer.add_model({local_file:this.files[0]}); loaded_sign()" accept=".stl,.obj,.vf,.vsj,.vsb,.3mf"><div class="loaded_sign"></div>
+  <input style="padding-top:20px; color:#13bfa6;" id="file_select" type="file" onchange="stl_viewer.clean(); stl_viewer.add_model({local_file:this.files[0]}); loaded_sign()" accept=".stl,.obj,.vf,.vsj,.vsb,.3mf"><div class="loaded_sign"></div>
   <!-- <button id="del" onclick="stl_viewer.clean();">Удалить<span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 19a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V7H6v12M8 9h8v10H8V9m7.5-5-1-1h-5l-1 1H5v2h14V4h-3.5Z"></path></svg></span></button>   -->
 
-  <div id="stl_cont" style="width:320px;height:500px;margin:0px;"></div>
+ <div class="canvas-hide">
+  <div id="stl_cont" style="width:320px;height:160px;margin:0px;"></div>
+ </div> 
 </div>
 </div>
 <!-- !!! info ""
@@ -1407,10 +1408,11 @@ window.onload = updateForm;
     model_loaded_callback:calc3d,
     on_model_drop:loaded_sign,
     auto_resize:true,
+    auto_rotate:true,
     center_models:true,
     jszip_path:"../javascripts/jszip.min.js", 
     jszip_utils_path:"../javascripts/jszip_utils.min.js",
-    controls:"1"});
+    controls:"0"});
 </script><script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body></html>
 
 
