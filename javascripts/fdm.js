@@ -40,8 +40,8 @@
     var resultR6 = ((p*resultR5)+(p*resultR4))/1000; // Масса, г
     var resultR8 = resultR6 * 0.15 * k; // $
     if (resultR8 > 99 && k >= 2) {
-    resultR8 = resultR6 * 0.15 * k * 0.7;//скидка massa*byn/g*0.7(-30%)
-    document.querySelector('.sale').innerHTML = '-30%';
+    resultR8 = resultR6 * 0.15 * k * 0.9;//скидка massa*byn/g*0.9(-10%)
+    document.querySelector('.sale').innerHTML = '-10%';
     } else {
     document.querySelector('.sale').innerHTML = '';
     }
@@ -62,48 +62,84 @@
         el.oninput = calc;
     });
 
-  function sizeplusX() {
-  var inputX = document.getElementById('scale_x');
-  var currentValueX = parseFloat(inputX.value) || 0;
-  inputX.value = (currentValueX + 0.1).toFixed(2);
-  scale_xyz();
-  calc3d();
-}
-  function sizeplusY() {
-  var inputY = document.getElementById('scale_y');
-  var currentValueY = parseFloat(inputY.value) || 0;
-  inputY.value = (currentValueY + 0.1).toFixed(2);
-  scale_xyz();
-  calc3d();
-}
-  function sizeplusZ() {
-  var inputZ = document.getElementById('scale_z');
-  var currentValueZ = parseFloat(inputZ.value) || 0;
-  inputZ.value = (currentValueZ + 0.1).toFixed(2);
-  scale_xyz();
-  calc3d();
-}
-  function sizeminusX() {
-  var inputX = document.getElementById('scale_x');
-  var currentValueX = parseFloat(inputX.value) || 0;
-  inputX.value = (currentValueX - 0.1).toFixed(2);
-  scale_xyz();
-  calc3d();
-}
-  function sizeminusY() {
-  var inputY = document.getElementById('scale_y');
-  var currentValueY = parseFloat(inputY.value) || 0;
-  inputY.value = (currentValueY - 0.1).toFixed(2);
-  scale_xyz();
-  calc3d();
-}
-  function sizeminusZ() {
-  var inputZ = document.getElementById('scale_z');
-  var currentValueZ = parseFloat(inputZ.value) || 0;
-  inputZ.value = (currentValueZ - 0.1).toFixed(2);
-  scale_xyz();
-  calc3d();
-}
+
+
+
+    window.addEventListener('DOMContentLoaded', (event) => {
+      let isLocked = false;
+      let lockButton = document.getElementById('lock');
+      lockButton.addEventListener('click', function() {
+          isLocked = !isLocked;
+          lockButton.innerHTML = isLocked ? '<span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" ><path d="M9.5 11c.8 0 1.5.7 1.5 1.5S10.3 14 9.5 14 8 13.3 8 12.5 8.7 11 9.5 11m5 8c-.8 0-1.5-.7-1.5-1.5s.7-1.5 1.5-1.5 1.5.7 1.5 1.5-.7 1.5-1.5 1.5m-5.3.2-1.4-1.4 7.1-7.1 1.4 1.4-7.1 7.1M18 8h-1V6c0-2.8-2.2-5-5-5S7 3.2 7 6h2c0-1.7 1.3-3 3-3s3 1.3 3 3v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2m0 12H6V10h12v10Z"></path></svg></span>' : '<span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.5 11c.8 0 1.5.7 1.5 1.5S8.3 14 7.5 14 6 13.3 6 12.5 6.7 11 7.5 11m5 8c-.8 0-1.5-.7-1.5-1.5s.7-1.5 1.5-1.5 1.5.7 1.5 1.5-.7 1.5-1.5 1.5m-5.3.2-1.4-1.4 7.1-7.1 1.4 1.4-7.1 7.1M18 1c-2.8 0-5 2.2-5 5v2H4c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2h-1V6c0-1.7 1.3-3 3-3s3 1.3 3 3v2h2V6c0-2.8-2.2-5-5-5m-2 9v10H4V10h12Z"></path></svg></span>';
+      });
+      // Вызовите функцию click() для lockButton
+      lockButton.click();
+      function updateAll(inputId) {
+          if (isLocked) {
+              const value = document.getElementById(inputId).value;
+              document.getElementById('scale_x').value = value;
+              document.getElementById('scale_y').value = value;
+              document.getElementById('scale_z').value = value;
+          }
+      }
+      document.getElementById('scale_x').addEventListener('input', function() {
+          updateAll('scale_x');scale_xyz();calc3d();
+      });
+      document.getElementById('scale_y').addEventListener('input', function() {
+          updateAll('scale_y');scale_xyz();calc3d();
+      });
+      document.getElementById('scale_z').addEventListener('input', function() {
+          updateAll('scale_z');scale_xyz();calc3d();
+      });
+  });
+
+
+
+
+
+
+    function sizeplusX() {
+      var inputX = document.getElementById('scale_x');
+      var currentValueX = parseFloat(inputX.value) || 0;
+      inputX.value = (currentValueX + 0.1).toFixed(2);
+      var event = new Event('input');
+      inputX.dispatchEvent(event);
+    }
+    function sizeplusY() {
+      var inputY = document.getElementById('scale_y');
+      var currentValueY = parseFloat(inputY.value) || 0;
+      inputY.value = (currentValueY + 0.1).toFixed(2);
+      var event = new Event('input');
+      inputY.dispatchEvent(event);
+    }
+    function sizeplusZ() {
+      var inputZ = document.getElementById('scale_z');
+      var currentValueZ = parseFloat(inputZ.value) || 0;
+      inputZ.value = (currentValueZ + 0.1).toFixed(2);
+      var event = new Event('input');
+      inputZ.dispatchEvent(event);
+    }
+    function sizeminusX() {
+      var inputX = document.getElementById('scale_x');
+      var currentValueX = parseFloat(inputX.value) || 0;
+      inputX.value = (currentValueX - 0.1).toFixed(2);
+      var event = new Event('input');
+      inputX.dispatchEvent(event);
+    }
+    function sizeminusY() {
+      var inputY = document.getElementById('scale_y');
+      var currentValueY = parseFloat(inputY.value) || 0;
+      inputY.value = (currentValueY - 0.1).toFixed(2);
+      var event = new Event('input');
+      inputY.dispatchEvent(event);
+    }
+    function sizeminusZ() {
+      var inputZ = document.getElementById('scale_z');
+      var currentValueZ = parseFloat(inputZ.value) || 0;
+      inputZ.value = (currentValueZ - 0.1).toFixed(2);
+      var event = new Event('input');
+      inputZ.dispatchEvent(event);
+    }
 
   function scale_xyz() {
     var scale_x = parseFloat(document.getElementById('scale_x').value);
@@ -169,8 +205,8 @@ if (isNaN(scale_z)) {
 }
 price = massa * 0.15 * dk;//$
 if (dk >= 2 && price >= 100 ) {
-  total = massa * 0.10 * dk;//скидка massa*byn/g*0.7(-33,3%)
-  document.querySelector('.sale').innerHTML = '-33,3%';
+  total = massa * 0.15 * dk * 0.9;//скидка massa*byn/g*0.9(-10%)
+  document.querySelector('.sale').innerHTML = '<div style="color:#13bfa6">-10%</div>';
 } else {
   total = massa * 0.15 * dk;
   document.querySelector('.sale').innerHTML = '';
