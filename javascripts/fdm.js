@@ -76,10 +76,10 @@
       lockButton.click();
       function updateAll(inputId) {
           if (isLocked) {
-              const value = document.getElementById(inputId).value;
-              document.getElementById('scale_x').value = value;
-              document.getElementById('scale_y').value = value;
-              document.getElementById('scale_z').value = value;
+              const value1 = document.getElementById(inputId).value;
+              document.getElementById('scale_x').value = value1;
+              document.getElementById('scale_y').value = value1;
+              document.getElementById('scale_z').value = value1;
           }
       }
       document.getElementById('scale_x').addEventListener('input', function() {
@@ -141,12 +141,16 @@
       inputZ.dispatchEvent(event);
     }
 
-  function scale_xyz() {
-    var scale_x = parseFloat(document.getElementById('scale_x').value);
-    var scale_y = parseFloat(document.getElementById('scale_y').value);
-    var scale_z = parseFloat(document.getElementById('scale_z').value);
-
-    stl_viewer.set_scale(1, scale_x, scale_y, scale_z);
+    function scale_xyz() {
+      var scale_x = document.getElementById('scale_x').value;
+      var scale_y = document.getElementById('scale_y').value;
+      var scale_z = document.getElementById('scale_z').value;
+  
+      scale_x = scale_x ? parseFloat(scale_x) : 1;
+      scale_y = scale_y ? parseFloat(scale_y) : 1;
+      scale_z = scale_z ? parseFloat(scale_z) : 1;
+  
+      stl_viewer.set_scale(1, scale_x, scale_y, scale_z);
 
     calc3d();
     }
@@ -204,8 +208,9 @@ if (isNaN(scale_z)) {
   console.error('Ошибка: некорректное значение для scale_z');
 }
 price = massa * 0.15 * dk;//$
+total1pt = (massa).toFixed(1) * 0.15;//massa*byn/g
 if (dk >= 2 && price >= 100 ) {
-  total = massa * 0.15 * dk * 0.9;//скидка massa*byn/g*0.9(-10%)
+  total = (massa).toFixed(1) * 0.15 * 0.9 * dk;//скидка massa*byn/g*0.9(-10%)
   document.querySelector('.sale').innerHTML = '<div style="color:#13bfa6">-10%</div>';
 } else {
   total = massa * 0.15 * dk;
@@ -220,6 +225,7 @@ if (dk >= 2 && price >= 100 ) {
   
   document.getElementById('masssa').value = massa.toFixed(0);
   document.getElementById('total').value = total.toFixed(2);
+  document.getElementById('total1pt').value = total1pt.toFixed(2);
   };
 
   // Обработчики событий для кнопок

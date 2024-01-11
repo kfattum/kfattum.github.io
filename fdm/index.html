@@ -717,11 +717,42 @@
 <html><head><style>
   input {
 text-align: center;
-border-radius: 0.1rem;
+border-radius: 0.3rem;
+height:25px;
+padding:0px;
+}
+.inputB{
+  display: inline-block;
+  vertical-align: bottom;
+  white-space: nowrap;
+}
+.sale {
+  display: inline-block;
+}
+.trid-element {
+  padding-top:4px;
+  padding-bottom:4px;
+  vertical-align: bottom;
 }
 .increment-btn {
-  border-radius: 0.9rem;
+  /* border-radius: 0.3rem 0rem 0rem 0.3rem; */
   text-align:center;
+  vertical-align: bottom;
+  height:25px;
+  width:25px;
+}
+.R {
+  border-radius: 0rem 0.3rem 0.3rem 0rem;
+  margin-right:2px;
+  margin-left:-4.5px;
+}
+.L {
+  border-radius: 0.3rem 0rem 0rem 0.3rem;
+  margin-right:-4.5px;
+  margin-left:2px;
+}
+.M {
+border-radius: 0px;
 }
 .flex-element {
   position: relative;
@@ -752,14 +783,18 @@ border-radius: 0.1rem;
   margin-top: 20px;
   align-items: flex-start;
   width: 100%;
-}     
+}  
+  .fte1 {order: 2;}
+  .fte2 {order: 3;}
+  .fte3 {order: 4;}
+  .fte4 {order: 1;}   
 @media (min-width: 365px) and (max-width: 500px) {
   .flex-element {
   width: 100%;
   }
   .flex-container {
   justify-content: center;
-  gap: 40px;
+  gap: 0px;
   margin-top: 0px;
   }  
   .fte1 {order: 2;}
@@ -891,7 +926,7 @@ input[type="number"] {
             </style> <script src="../assets/javascripts/glightbox.min.js"></script></head><body><div class="fatter-conteiner">
   <div class="flex-container"> 
     <div class="flex-element" style="text-align: center;">
-    <img alt="Alt text" class="skiplightbox" style="margin-left:20%;margin-right: 20%;" src="../bigbuba.webp" width="56.5%">
+    <img alt="Alt text" class="skiplightbox" loading="lazy" style="margin-left:20%;margin-right: 20%;" src="../bigbuba.webp" width="56.5%">
     <h2 style="margin-top: 0px;">Единичные изделия</h2>
     Изделия, производимые в единичном экземпляре. 10+ цветов / срок от 1 дня<br>
     <br>
@@ -900,7 +935,7 @@ input[type="number"] {
   </div>
 
   <div class="flex-element" style="text-align: center;">
-   <img alt="Alt text" class="skiplightbox" src="../tower-revers.webp">
+   <img alt="Alt text" loading="lazy" class="skiplightbox" src="../tower-revers.webp">
    <h2 style="margin-top: 0px;">Мелкосерийные изделия</h2>
    Изделия, производимые небольшими партиями. 10+ цветов / срок от 3 дней
    <!-- <h3>0.10 BYN/г</h3> --><br>
@@ -916,6 +951,7 @@ input[type="number"] {
 <form>
   <input type="radio" value="500" name="forma" checked>
     <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M21 16.5c0 .38-.21.71-.53.88l-7.9 4.44c-.16.12-.36.18-.57.18-.21 0-.41-.06-.57-.18l-7.9-4.44A.991.991 0 0 1 3 16.5v-9c0-.38.21-.71.53-.88l7.9-4.44c.16-.12.36-.18.57-.18.21 0 .41.06.57.18l7.9 4.44c.32.17.53.5.53.88v9M12 4.15 6.04 7.5 12 10.85l5.96-3.35L12 4.15M5 15.91l6 3.38v-6.71L5 9.21v6.7m14 0v-6.7l-6 3.37v6.71l6-3.38Z"></path></svg></span>3D модель
+
   <input type="radio" value="200" name="forma">
     <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M21 16.5c0 .38-.21.71-.53.88l-7.9 4.44c-.16.12-.36.18-.57.18-.21 0-.41-.06-.57-.18l-7.9-4.44A.991.991 0 0 1 3 16.5v-9c0-.38.21-.71.53-.88l7.9-4.44c.16-.12.36-.18.57-.18.21 0 .41.06.57.18l7.9 4.44c.32.17.53.5.53.88v9M12 4.15 6.04 7.5 12 10.85l5.96-3.35L12 4.15M5 15.91l6 3.38v-6.71L5 9.21v6.7m14 0v-6.7l-6 3.37v6.71l6-3.38Z"></path></svg></span>Параллелепипед
 
@@ -924,65 +960,59 @@ input[type="number"] {
 
   <input type="radio" value="300" name="forma">
   <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M12 6c4.41 0 8 2.69 8 6s-3.59 6-8 6-8-2.69-8-6 3.59-6 8-6m0-2C6.5 4 2 7.58 2 12s4.5 8 10 8 10-3.58 10-8-4.5-8-10-8Z"></path></svg></span>Эллипсоид
+
   <input type="radio" value="400" name="forma">
-    <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M12 2c-2.11 0-9 .29-9 4v12c0 3.71 6.89 4 9 4 2.11 0 9-.29 9-4V6c0-3.71-6.89-4-9-4m0 8c1.38 0 4.8-.13 7-1.25v6.5C16.8 14.13 13.38 14 12 14s-4.8.13-7 1.25v-6.5C7.2 9.87 10.62 10 12 10m0-6c3.87 0 7 .89 7 2 0 1.11-3.13 2-7 2s-7-.89-7-2c0-1.11 3.13-2 7-2m0 16c-3.87 0-7-.89-7-2 0-1.1 3.13-2 7-2s7 .9 7 2c0 1.11-3.13 2-7 2Z"></path></svg></span>
-  Цилиндр
-  </form>
+    <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M12 2c-2.11 0-9 .29-9 4v12c0 3.71 6.89 4 9 4 2.11 0 9-.29 9-4V6c0-3.71-6.89-4-9-4m0 8c1.38 0 4.8-.13 7-1.25v6.5C16.8 14.13 13.38 14 12 14s-4.8.13-7 1.25v-6.5C7.2 9.87 10.62 10 12 10m0-6c3.87 0 7 .89 7 2 0 1.11-3.13 2-7 2s-7-.89-7-2c0-1.11 3.13-2 7-2m0 16c-3.87 0-7-.89-7-2 0-1.1 3.13-2 7-2s7 .9 7 2c0 1.11-3.13 2-7 2Z"></path></svg></span>Цилиндр
+</form>
+
 <div id="wtxt" style="color:#13bfa6">Обращаею ваше внимание на то, что этот калькулятор дает лишь приблизительную оценку объема, массы и стоимости 3D-печати.</div>
 <div class="error"></div>
+
 <div class="flex-table-container">
 <div class="flex-table-element fte1">
 <table id="2d-input">
     <thead>
         <tr>
-            <th colspan="3">Введите размеры</th>
+            <th colspan="2">Введите размеры</th>
         </tr>
     </thead>
 
 <tbody>
     <tr id="length">
-        <td class="td1">Длина</td>
+        <td class="td1">Длина, мм</td>
         <td>      <input type="number" id="f" min="10"></td>
-        <td>       мм</td>
     </tr>
     <tr id="width">
-        <td class="td1">Ширина</td>
+        <td class="td1">Ширина, мм</td>
         <td>      <input type="number" id="h" min="10"></td>
-        <td>       мм</td>
     </tr>       
     <tr id="height">
-        <td class="td1">Высота</td>
+        <td class="td1">Высота, мм</td>
         <td>      <input type="number" id="g" min="10"></td>
-        <td>       мм</td>
     </tr>       
     <tr id="diametr">
-        <td class="td1">Диаметр</td>
+        <td class="td1">Диаметр, мм</td>
         <td>      <input type="number" id="a" min="1"></td>
-        <td>       мм</td>
     </tr>
   <tr id="wall">        
-        <td class="td1">Толщина стенок</td>
-        <td><button class="increment-btn" data-input="c" data-step="-0.4">-</button> <input type="number" id="c" min="0.4" value="0.8"> <button class="increment-btn" data-input="c" data-step="0.4">+</button></td>
-        <td>мм</td>
+        <td class="td1">Толщина стенок, мм</td>
+        <td><button class="increment-btn" data-input="c" data-step="-0.4">-</button><input type="number" id="c" min="0.4" value="0.8"><button class="increment-btn" data-input="c" data-step="0.4">+</button></td>
     </tr>       
     <tr id="infil"> 
-        <td class="td1">Заполнение</td>
-        <td><button class="increment-btn" data-input="s" data-step="-1">-</button> <input type="number" name="s" id="s" value="30" min="0" max="100"> <button class="increment-btn" data-input="s" data-step="1">+</button></td>
-        <td>%  </td>
+        <td class="td1">Заполнение, %</td>
+        <td><button class="increment-btn" data-input="s" data-step="-1">-</button><input type="number" name="s" id="s" value="30" min="0" max="100"><button class="increment-btn" data-input="s" data-step="10">+</button></td>
     </tr>
     <tr id="material">  
         <td class="td1">Материал</td>
-        <td>      <select id="p">
+        <td><select id="p">
       <!-- <option value="1.0">PLA</option> -->
       <option value="1.087" selected>PETG</option>
       <!-- <option value="1.2">Flex</option> -->
-    </select>         </td>
-    <td></td>
+    </select></td>
     </tr>
     <tr id="ht">    
-        <td class="td1">Количество</td>
+        <td class="td1">Количество, шт</td>
         <td><button class="increment-btn" data-input="k" data-step="-1">-</button> <input type="number" id="k" value="1" min="1"> <button class="increment-btn" data-input="k" data-step="1">+</button></td>
-        <td>шт</td>
     </tr>
 </tbody>
 </table> 
@@ -992,87 +1022,75 @@ input[type="number"] {
 
 <div class="flex-table-element fte2">
 
-<table name="3dt" id="3d">
-    <thead>
-        <tr>
-            <th style="width: 5px;"></th>
-            <th>         X</th>
-            <th>         Y</th>
-          <th>        Z</th>
-        </tr>
-    </thead>
+<div class="trid" name="3dt" id="3d">
 
-<tbody>
-    <tr>
-        <td>Размер, мм</td>
-        <td>      <input id="sizex" style="width:45px" type="text" step="1" readonly></td>
-        <td>      <input id="sizey" style="width:45px" type="text" step="1" readonly></td>
-        <td>      <input id="sizez" style="width:45px" type="text" step="1" readonly></td>
-    </tr>
-    <tr>
-        <td>Масштаб <button id="lock" style="color:#13bfa6"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M9.5 11c.8 0 1.5.7 1.5 1.5S10.3 14 9.5 14 8 13.3 8 12.5 8.7 11 9.5 11m5 8c-.8 0-1.5-.7-1.5-1.5s.7-1.5 1.5-1.5 1.5.7 1.5 1.5-.7 1.5-1.5 1.5m-5.3.2-1.4-1.4 7.1-7.1 1.4 1.4-7.1 7.1M18 8h-1V6c0-2.8-2.2-5-5-5S7 3.2 7 6h2c0-1.7 1.3-3 3-3s3 1.3 3 3v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2m0 12H6V10h12v10Z"></path></svg></span></button></td>
-        <td><button id="bXM" class="increment-btn" onclick="sizeminusX()"> - </button> <input name="scale_xyz" style="width:45px" value="1" min="0" id="scale_x" type="number" step="0.1"> <button id="bXP" class="increment-btn" onclick="sizeplusX()"> + </button></td>
-        <td><button id="bYM" class="increment-btn" onclick="sizeminusY()"> - </button> <input name="scale_xyz" style="width:45px" value="1" min="0" id="scale_y" type="number" step="0.1"> <button id="bYP" class="increment-btn" onclick="sizeplusY()"> + </button></td>
-        <td><button id="bZM" class="increment-btn" onclick="sizeminusZ()"> - </button> <input name="scale_xyz" style="width:45px" value="1" min="0" id="scale_z" type="number" step="0.1"> <button id="bZP" class="increment-btn" onclick="sizeplusZ()"> + </button></td>
-    </tr>
-  <tr>  
-        <td>Заполнение</td>
-        <td colspan="2"><button class="increment-btn" data-input="ds" data-step="-1">-</button> <input style="width:45px" type="number" name="3dt" id="ds" value="30" min="0" max="100"> <button class="increment-btn" data-input="ds" data-step="1">+</button>   %</td>
-        <td></td>
-    </tr>   
-  <tr>
-        <td>Материал</td>
-        <td colspan="2">      <select name="3dt" id="dp">
-      <!-- <option value="1.0">PLA</option> -->
-      <option value="1.087" selected>PETG</option>
-      <!-- <option value="1.2">Flex</option> -->
-    </select></td>
-    <td>
-  </td></tr>
-    <tr>
-        <td>Объем</td>
-        <td colspan="2">      <input style="width:60px" type="number" id="volume" readonly>   см<sup>3</sup></td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Площадь</td>
-        <td colspan="2">      <input style="width:60px" type="number" id="area" readonly>   см<sup>2</sup></td>
-        <td></td>
-    </tr>       
-    <tr>
-        <td>Масса</td>
-        <td colspan="2">      <input style="width:60px" type="number" id="masssa" min="0.1" readonly>   г</td>
-        <td></td>
-    </tr>
-    <tr>    
-        <td>Количество</td>
-        <td colspan="2"><button class="increment-btn" data-input="dk" data-step="-1">-</button> <input style="width:60px" type="number" name="3dt" id="dk" value="1" min="1"> <button class="increment-btn" data-input="dk" data-step="1">+</button>   шт</td>
-        <td></td>
-    </tr>   
-    <tr>
-        <td>Итого</td>
-        <td colspan="2">      <input style="width:60px" type="number" id="total" min="0.1" readonly>   BYN</td>
-        <td><div class="sale"></div></td>
-    </tr>                   
-</tbody>
-</table> 
+<div class="trid-element">Размер, мм 
+  <input class="L" id="sizex" placeholder="x" style="width:60px" type="text" step="1" readonly>
+  <input class="M" id="sizey" placeholder="y" style="width:60px; radius:0px" type="text" step="1" readonly>
+  <input class="R" id="sizez" placeholder="z" style="width:60px" type="text" step="1" readonly>
 </div>
 
+<div class="trid-element">Масштаб
+  <button id="lock" style="color:#13bfa6"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M9.5 11c.8 0 1.5.7 1.5 1.5S10.3 14 9.5 14 8 13.3 8 12.5 8.7 11 9.5 11m5 8c-.8 0-1.5-.7-1.5-1.5s.7-1.5 1.5-1.5 1.5.7 1.5 1.5-.7 1.5-1.5 1.5m-5.3.2-1.4-1.4 7.1-7.1 1.4 1.4-7.1 7.1M18 8h-1V6c0-2.8-2.2-5-5-5S7 3.2 7 6h2c0-1.7 1.3-3 3-3s3 1.3 3 3v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2m0 12H6V10h12v10Z"></path></svg></span></button>
+  <div class="inputB"><button id="bXM" class="increment-btn L" onclick="sizeminusX()"> - </button> <input class="M" name="scale_xyz" style="width:30px" value="1" min="0" id="scale_x" step="0.1"> <button id="bXP" class="increment-btn R" onclick="sizeplusX()"> + </button></div> 
+   <div class="inputB"><button id="bYM" class="increment-btn L" onclick="sizeminusY()"> - </button> <input class="M" name="scale_xyz" style="width:30px" value="1" min="0" id="scale_y" step="0.1"> <button id="bYP" class="increment-btn R" onclick="sizeplusY()"> + </button></div>
+   <div class="inputB"><button id="bZM" class="increment-btn L" onclick="sizeminusZ()"> - </button> <input class="M" name="scale_xyz" style="width:30px" value="1" min="0" id="scale_z" step="0.1"> <button id="bZP" class="increment-btn R" onclick="sizeplusZ()"> + </button></div>
+</div>
+
+<div class="trid-element" style="display:none">Заполнение, %
+  <button class="increment-btn L" data-input="ds" data-step="-1">-</button> <input style="width:45px" name="3dt" id="ds" value="70" min="0" max="100"> <button class="increment-btn R" data-input="ds" data-step="1">+</button>
+</div>  
+
+<div class="trid-element" style="display:none">Объем, см<sup>3</sup>
+  <input style="width:60px" type="number" id="volume" readonly>
+</div>
+
+<div class="trid-element" style="display:none">Площадь, см<sup>2</sup>
+  <input style="width:60px" type="number" id="area" readonly>
+</div>
+
+<div class="trid-element" style="display:none">Масса, г 
+  <input style="width:60px" type="number" id="masssa" min="0.1" readonly>
+</div>
+
+<div class="trid-element">Материал
+  <select name="3dt" id="dp">
+  <!-- <option value="1.0">PLA</option> -->
+  <option value="1.087" selected>PETG</option>
+  <!-- <option value="1.2">Flex</option> -->
+  </select>
+</div>  
+
+<div class="trid-element">
+    Цена за штуку
+  <input style="width:85px;margin-left:12px" id="total1pt" min="0.1" readonly> BYN
+</div> 
+
+<div class="trid-element">Количество, шт
+   <div class="inputB"><button class="increment-btn L" data-input="dk" data-step="-1">-</button> <input class="M" style="width:35px;" name="3dt" id="dk" value="1" min="1"> <button class="increment-btn R" data-input="dk" data-step="1">+</button></div>
+</div>
+
+<div class="trid-element">
+    Итого
+  <input style="width:85px;margin-left:75px" id="total" min="0.1" readonly> BYN <div class="sale"></div>
+</div> 
+
+  </div>
+</div>
 <!-- <button type="submit" id="submit">start</button> -->
 
 <div class="flex-table-element fte3">
 <table id="2d">
     <thead>
         <tr>
-            <th colspan="3">Прим. значения                                   </th>
+            <th colspan="2">Прим. значения                                   </th>
         </tr>
     </thead>
 
 <tbody>
     <tr>
-        <td>Объем</td>
+        <td>Объем,  см<sup>3</sup></td>
         <td><input type="number" id="r1" readonly></td>
-        <td>см<sup>3</sup></td>
     </tr>
     <!-- <tr>
         <td>Area</td>
@@ -1080,14 +1098,12 @@ input[type="number"] {
         <td>cm<sup>2</sup></td>
     </tr>        -->
     <tr>
-        <td>Масса</td>
+        <td>Масса, г</td>
         <td><input type="number" id="r6" min="0.1" readonly></td>
-        <td>г</td>
     </tr>       
     <tr>
         <td>Итого</td>
-        <td><input type="number" id="r8" min="0.1" readonly></td>
-        <td>BYN</td>
+        <td><input style="width:50px;" type="number" id="r8" min="0.1" readonly> BYN</td>
     </tr>                   
 </tbody>
 </table>  
@@ -1100,11 +1116,9 @@ input[type="number"] {
 
 
  <div class="flex-table-element fte4" id="file_select"> 
- <br>
- Загрузите 3D-модель, и вы сможете мгновенно узнать стоимость производства<br>
-   <br>
-  Принимаются файлы в форматах: 3MF, STL, OBJ 
-  <input style="padding-top:20px; color:#13bfa6;" type="file" onchange="stl_viewer.clean(); stl_viewer.add_model({local_file:this.files[0]}); loaded_sign()" accept=".stl,.obj,.vf,.vsj,.vsb,.3mf"><div class="loaded_sign"></div>
+  <label for="file">Загрузите 3D-модель, и вы сможете мгновенно узнать стоимость производства</label> 
+  <!-- Принимаются файлы в форматах: 3MF, STL, OBJ -->
+  <input style="padding-top:20px; color:#13bfa6;" id="file" name="file" type="file" onchange="stl_viewer.clean(); stl_viewer.add_model({local_file:this.files[0]}); loaded_sign()" accept=".stl,.obj,.vf,.vsj,.vsb,.3mf"><div class="loaded_sign"></div>
   <!-- <button id="del" onclick="stl_viewer.clean();">Удалить<span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 19a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V7H6v12M8 9h8v10H8V9m7.5-5-1-1h-5l-1 1H5v2h14V4h-3.5Z"></path></svg></span></button>   -->
 
   <div id="stl_cont" style="width:320px;height:160px;margin:0px;"></div>
@@ -1403,8 +1417,8 @@ function updateForm() {
     document.getElementById('2d-input').style.display = (value == '100' || value == '200' || value == '300' || value == '400') ? 'block' : 'none';
     document.getElementById('material').style.visibility = (value == '100' || value == '200' || value == '300' || value == '400' || value == '500') ? 'visible' : 'hidden';
         document.getElementById('material').style.display = (value == '100' || value == '200' || value == '300' || value == '400' || value == '500') ? 'block' : 'none';
-    document.getElementById('infil').style.visibility = (value == '100' || value == '200' || value == '300' || value == '400' || value == '500') ? 'visible' : 'hidden';
-        document.getElementById('infil').style.display = (value == '100' || value == '200' || value == '300' || value == '400' || value == '500') ? 'block' : 'none';
+    document.getElementById('infil').style.visibility = (value == '100' || value == '200' || value == '300' || value == '400') ? 'visible' : 'hidden';
+        document.getElementById('infil').style.display = (value == '100' || value == '200' || value == '300' || value == '400') ? 'block' : 'none';
     document.getElementById('ht').style.visibility = (value == '100' || value == '200' || value == '300' || value == '400' || value == '500') ? 'visible' : 'hidden';
         document.getElementById('ht').style.display = (value == '100' || value == '200' || value == '300' || value == '400' || value == '500') ? 'block' : 'none';
         document.getElementById('wtxt').style.display = (value == '100' || value == '200' || value == '300' || value == '400') ? 'block' : 'none';
