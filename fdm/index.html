@@ -715,8 +715,15 @@
   <h1>FDM 3D печать</h1>
 
 <html><head><style>
+.del {
+  color: #13bfa6;
+}
+.del:hover {
+  color: #ffd500;
+}
   input {
 text-align: center;
+vertical-align: bottom;
 border-radius: 0.3rem;
 height:25px;
 padding:0px;
@@ -733,6 +740,7 @@ padding:0px;
   padding-top:4px;
   padding-bottom:4px;
   vertical-align: bottom;
+  height:35px;
 }
 .increment-btn {
   /* border-radius: 0.3rem 0rem 0rem 0.3rem; */
@@ -794,7 +802,7 @@ border-radius: 0px;
   }
   .flex-container {
   justify-content: center;
-  gap: 0px;
+  gap: 10px;
   margin-top: 0px;
   }  
   .fte1 {order: 2;}
@@ -826,9 +834,6 @@ border-radius: 0px;
 }
 </style>
 <style>
-.td1 {
-width: 105px;
-}
 
 .md-typeset table:not([class]) td {
   padding: 14px 6px
@@ -867,7 +872,11 @@ input[type="number"] {
   margin-top: 20px;
   align-items: flex-start;
   width: 100%;
-}     
+}   
+  .stl_cont {
+    width: 320px;
+    height: 200px;
+  }    
 @media (min-width: 365px) and (max-width: 500px) {
   .flex-table-element {
   max-width: 420px;
@@ -881,6 +890,10 @@ input[type="number"] {
   /* font-size: 14px; */
   line-height: 1.1;
   }
+    .stl_cont {
+    width: 350px;
+    height: 200px;
+  }  
 }
 
 @media (min-width: 501px) and (max-width: 884px) {
@@ -889,6 +902,10 @@ input[type="number"] {
   }
   .flex-table-container {
     justify-content: center;
+  }  
+    .stl_cont {
+    width: 420px;
+    height: 200px;
   }  
 }
 @media (min-width: 884px) and (max-width: 1271px) {
@@ -903,6 +920,10 @@ input[type="number"] {
   .flex-table-element {
     max-width: 420px;
 }
+  .stl_cont {
+    width: 420px;
+    height: 200px;
+  }  
 }
 </style>
 <script src="../javascripts/three.min.js"></script>
@@ -948,74 +969,75 @@ input[type="number"] {
 
 <h3>Расчет стоимости 3D-печати</h3>
 
-<form>
+<div class="radio">
+<label class="custom-radio">
   <input type="radio" value="500" name="forma" checked>
     <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M21 16.5c0 .38-.21.71-.53.88l-7.9 4.44c-.16.12-.36.18-.57.18-.21 0-.41-.06-.57-.18l-7.9-4.44A.991.991 0 0 1 3 16.5v-9c0-.38.21-.71.53-.88l7.9-4.44c.16-.12.36-.18.57-.18.21 0 .41.06.57.18l7.9 4.44c.32.17.53.5.53.88v9M12 4.15 6.04 7.5 12 10.85l5.96-3.35L12 4.15M5 15.91l6 3.38v-6.71L5 9.21v6.7m14 0v-6.7l-6 3.37v6.71l6-3.38Z"></path></svg></span>3D модель
+</label>
+</div>
 
+<div class="radio">
+<label class="custom-radio">
   <input type="radio" value="200" name="forma">
     <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M21 16.5c0 .38-.21.71-.53.88l-7.9 4.44c-.16.12-.36.18-.57.18-.21 0-.41-.06-.57-.18l-7.9-4.44A.991.991 0 0 1 3 16.5v-9c0-.38.21-.71.53-.88l7.9-4.44c.16-.12.36-.18.57-.18.21 0 .41.06.57.18l7.9 4.44c.32.17.53.5.53.88v9M12 4.15 6.04 7.5 12 10.85l5.96-3.35L12 4.15M5 15.91l6 3.38v-6.71L5 9.21v6.7m14 0v-6.7l-6 3.37v6.71l6-3.38Z"></path></svg></span>Параллелепипед
+</label>    
+</div>
 
+<div class="radio">
+<label class="custom-radio">
   <input type="radio" value="100" name="forma">
     <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M12 20a8 8 0 0 1-8-8 8 8 0 0 1 8-8 8 8 0 0 1 8 8 8 8 0 0 1-8 8m0-18A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2Z"></path></svg></span>Шар
+</label>
+</div>
 
+<div class="radio">
+<label class="custom-radio">
   <input type="radio" value="300" name="forma">
   <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M12 6c4.41 0 8 2.69 8 6s-3.59 6-8 6-8-2.69-8-6 3.59-6 8-6m0-2C6.5 4 2 7.58 2 12s4.5 8 10 8 10-3.58 10-8-4.5-8-10-8Z"></path></svg></span>Эллипсоид
+</label>
+</div>
 
+<div class="radio">
+<label class="custom-radio">
   <input type="radio" value="400" name="forma">
     <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M12 2c-2.11 0-9 .29-9 4v12c0 3.71 6.89 4 9 4 2.11 0 9-.29 9-4V6c0-3.71-6.89-4-9-4m0 8c1.38 0 4.8-.13 7-1.25v6.5C16.8 14.13 13.38 14 12 14s-4.8.13-7 1.25v-6.5C7.2 9.87 10.62 10 12 10m0-6c3.87 0 7 .89 7 2 0 1.11-3.13 2-7 2s-7-.89-7-2c0-1.11 3.13-2 7-2m0 16c-3.87 0-7-.89-7-2 0-1.1 3.13-2 7-2s7 .9 7 2c0 1.11-3.13 2-7 2Z"></path></svg></span>Цилиндр
-</form>
+</label>    
+</div>
 
-<div id="wtxt" style="color:#13bfa6">Обращаею ваше внимание на то, что этот калькулятор дает лишь приблизительную оценку объема, массы и стоимости 3D-печати.</div>
+<div id="wtxt" style="color:#13bfa6"><div class="admonition tip">
+<p class="admonition-title">Обращаею ваше внимание на то, что этот калькулятор дает лишь приблизительную оценку объема, массы и стоимости 3D-печати.</p>
+</div></div>
 <div class="error"></div>
 
 <div class="flex-table-container">
-<div class="flex-table-element fte1">
-<table id="2d-input">
-    <thead>
-        <tr>
-            <th colspan="2">Введите размеры</th>
-        </tr>
-    </thead>
-
-<tbody>
-    <tr id="length">
-        <td class="td1">Длина, мм</td>
-        <td>      <input type="number" id="f" min="10"></td>
-    </tr>
-    <tr id="width">
-        <td class="td1">Ширина, мм</td>
-        <td>      <input type="number" id="h" min="10"></td>
-    </tr>       
-    <tr id="height">
-        <td class="td1">Высота, мм</td>
-        <td>      <input type="number" id="g" min="10"></td>
-    </tr>       
-    <tr id="diametr">
-        <td class="td1">Диаметр, мм</td>
-        <td>      <input type="number" id="a" min="1"></td>
-    </tr>
-  <tr id="wall">        
-        <td class="td1">Толщина стенок, мм</td>
-        <td><button class="increment-btn" data-input="c" data-step="-0.4">-</button><input type="number" id="c" min="0.4" value="0.8"><button class="increment-btn" data-input="c" data-step="0.4">+</button></td>
-    </tr>       
-    <tr id="infil"> 
-        <td class="td1">Заполнение, %</td>
-        <td><button class="increment-btn" data-input="s" data-step="-1">-</button><input type="number" name="s" id="s" value="30" min="0" max="100"><button class="increment-btn" data-input="s" data-step="10">+</button></td>
-    </tr>
-    <tr id="material">  
-        <td class="td1">Материал</td>
-        <td><select id="p">
-      <!-- <option value="1.0">PLA</option> -->
-      <option value="1.087" selected>PETG</option>
-      <!-- <option value="1.2">Flex</option> -->
-    </select></td>
-    </tr>
-    <tr id="ht">    
-        <td class="td1">Количество, шт</td>
-        <td><button class="increment-btn" data-input="k" data-step="-1">-</button> <input type="number" id="k" value="1" min="1"> <button class="increment-btn" data-input="k" data-step="1">+</button></td>
-    </tr>
-</tbody>
-</table> 
+  <div class="flex-table-element fte1">
+    <div id="2d-input">
+        <div class="trid-element td1" id="length">Длина, мм <input style="margin-left:10px" type="number" id="f" min="10"></div>
+        <div class="trid-element td1" id="width">Ширина, мм <input type="number" id="h" min="10"></div>
+        <div class="trid-element td1" id="height">Высота, мм <input style="margin-left:5px" type="number" id="g" min="10"></div>
+        <div class="trid-element td1" id="diametr">Диаметр, мм <input type="number" id="a" min="1"></div>
+      <div class="trid-element td1" id="wall">Толщина стенок, мм 
+        <div class="inputB">
+          <button class="increment-btn L" data-input="c" data-step="-0.4">-</button>
+          <input class="M" type="number" id="c" min="0.4" value="0.8">
+          <button class="increment-btn R" data-input="c" data-step="0.4">+</button>
+        </div>  
+      </div>        
+        <div class="trid-element td1" id="infil">Заполнение, %
+        <div class="inputB">
+          <button class="increment-btn L" data-input="s" data-step="-10">-</button>
+          <input class="M" type="number" name="s" id="s" value="30" min="0" max="100">
+          <button class="increment-btn R" data-input="s" data-step="10">+</button>
+        </div>
+      </div>
+        <div class="trid-element td1" id="material">Материал
+        <select class="increment-select" id="p">
+        <!-- <option value="1.0">PLA</option> -->
+        <option value="1.087" selected>PETG</option>
+        <!-- <option value="1.2">Flex</option> -->
+        </select>
+      </div>  
+  </div>
 </div>
 
 
@@ -1031,14 +1053,14 @@ input[type="number"] {
 </div>
 
 <div class="trid-element">Масштаб
-  <button id="lock" style="color:#13bfa6"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M9.5 11c.8 0 1.5.7 1.5 1.5S10.3 14 9.5 14 8 13.3 8 12.5 8.7 11 9.5 11m5 8c-.8 0-1.5-.7-1.5-1.5s.7-1.5 1.5-1.5 1.5.7 1.5 1.5-.7 1.5-1.5 1.5m-5.3.2-1.4-1.4 7.1-7.1 1.4 1.4-7.1 7.1M18 8h-1V6c0-2.8-2.2-5-5-5S7 3.2 7 6h2c0-1.7 1.3-3 3-3s3 1.3 3 3v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2m0 12H6V10h12v10Z"></path></svg></span></button>
+  <button class="lock" id="lock"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M9.5 11c.8 0 1.5.7 1.5 1.5S10.3 14 9.5 14 8 13.3 8 12.5 8.7 11 9.5 11m5 8c-.8 0-1.5-.7-1.5-1.5s.7-1.5 1.5-1.5 1.5.7 1.5 1.5-.7 1.5-1.5 1.5m-5.3.2-1.4-1.4 7.1-7.1 1.4 1.4-7.1 7.1M18 8h-1V6c0-2.8-2.2-5-5-5S7 3.2 7 6h2c0-1.7 1.3-3 3-3s3 1.3 3 3v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2m0 12H6V10h12v10Z"></path></svg></span></button>
   <div class="inputB"><button id="bXM" class="increment-btn L" onclick="sizeminusX()"> - </button> <input class="M" name="scale_xyz" style="width:30px" value="1" min="0" id="scale_x" step="0.1"> <button id="bXP" class="increment-btn R" onclick="sizeplusX()"> + </button></div> 
    <div class="inputB"><button id="bYM" class="increment-btn L" onclick="sizeminusY()"> - </button> <input class="M" name="scale_xyz" style="width:30px" value="1" min="0" id="scale_y" step="0.1"> <button id="bYP" class="increment-btn R" onclick="sizeplusY()"> + </button></div>
    <div class="inputB"><button id="bZM" class="increment-btn L" onclick="sizeminusZ()"> - </button> <input class="M" name="scale_xyz" style="width:30px" value="1" min="0" id="scale_z" step="0.1"> <button id="bZP" class="increment-btn R" onclick="sizeplusZ()"> + </button></div>
 </div>
-
+<!-- style="display:none" -->
 <div class="trid-element" style="display:none">Заполнение, %
-  <button class="increment-btn L" data-input="ds" data-step="-1">-</button> <input style="width:45px" name="3dt" id="ds" value="70" min="0" max="100"> <button class="increment-btn R" data-input="ds" data-step="1">+</button>
+  <button class="increment-btn L" data-input="ds" data-step="-10">-</button> <input class="M" style="width:45px" name="3dt" id="ds" value="70" min="0" max="100"> <button class="increment-btn R" data-input="ds" data-step="10">+</button>
 </div>  
 
 <div class="trid-element" style="display:none">Объем, см<sup>3</sup>
@@ -1054,7 +1076,7 @@ input[type="number"] {
 </div>
 
 <div class="trid-element">Материал
-  <select name="3dt" id="dp">
+  <select class="increment-select" style="width:77px;" name="3dt" id="dp">
   <!-- <option value="1.0">PLA</option> -->
   <option value="1.087" selected>PETG</option>
   <!-- <option value="1.2">Flex</option> -->
@@ -1062,8 +1084,8 @@ input[type="number"] {
 </div>  
 
 <div class="trid-element">
-    Цена за штуку
-  <input style="width:85px;margin-left:12px" id="total1pt" min="0.1" readonly> BYN
+    Цена за шт, BYN
+  <input style="width:85px;" id="total1pt" min="0.1" readonly>
 </div> 
 
 <div class="trid-element">Количество, шт
@@ -1071,8 +1093,8 @@ input[type="number"] {
 </div>
 
 <div class="trid-element">
-    Итого
-  <input style="width:85px;margin-left:75px" id="total" min="0.1" readonly> BYN <div class="sale"></div>
+    Итого, BYN
+  <input style="width:85px;" id="total" min="0.1" readonly> <div class="sale"></div>
 </div> 
 
   </div>
@@ -1080,34 +1102,35 @@ input[type="number"] {
 <!-- <button type="submit" id="submit">start</button> -->
 
 <div class="flex-table-element fte3">
-<table id="2d">
-    <thead>
-        <tr>
-            <th colspan="2">Прим. значения                                   </th>
-        </tr>
-    </thead>
-
-<tbody>
-    <tr>
-        <td>Объем,  см<sup>3</sup></td>
-        <td><input type="number" id="r1" readonly></td>
-    </tr>
+  <div id="2d">
+    <div class="trid-element" style="display:none">Объем, см<sup>3</sup> <input type="number" id="r1" readonly></div>
     <!-- <tr>
         <td>Area</td>
         <td colspan="2"><input type="number" id="area" readonly></td>
         <td>cm<sup>2</sup></td>
     </tr>        -->
-    <tr>
-        <td>Масса, г</td>
-        <td><input type="number" id="r6" min="0.1" readonly></td>
-    </tr>       
-    <tr>
-        <td>Итого</td>
-        <td><input style="width:50px;" type="number" id="r8" min="0.1" readonly> BYN</td>
-    </tr>                   
-</tbody>
-</table>  
+        <div class="trid-element" style="display:none">Масса, г <input type="number" id="r6" min="0.1" readonly></div>
+    <div class="trid-element">Цена за шт, BYN <input style="width:60px;" type="number" id="r9" min="0.1" readonly></div>
+        <div class="trid-element td1" id="ht">Количество, шт
+        <div class="inputB">
+          <button class="increment-btn L" data-input="k" data-step="-1">-</button>
+          <input class="M" type="number" id="k" value="1" min="1">
+          <button class="increment-btn R" data-input="k" data-step="1">+</button>
+        </div>
+      </div>
+        <div class="trid-element">Итого, BYN <input style="width:60px;" type="number" id="r8" min="0.1" readonly></div>
+  </div>
+</div>
 
+<style>
+.img-mid {display: flex;align-items: center; justify-content: center;}
+</style>
+
+<div class="flex-table-element fte5" style="display: flex">
+  <div class="img-mid"><img alt="Alt text" id="2dimg1" loading="lazy" class="skiplightbox" style="width: 48%;" src="../../images/3d1.png"></div>
+  <div class="img-mid"><img alt="Alt text" id="2dimg2" loading="lazy" class="skiplightbox" style="width: 40%;" src="../../images/3d2.png"></div>
+  <div class="img-mid"><img alt="Alt text" id="2dimg3" loading="lazy" class="skiplightbox" style="width: 60%;" src="../../images/3d3.png"></div>
+  <div class="img-mid"><img alt="Alt text" id="2dimg4" loading="lazy" class="skiplightbox" style="width: 38%;" src="../../images/3d4.png"></div>
 </div>
 
 
@@ -1115,14 +1138,13 @@ input[type="number"] {
 
 
 
- <div class="flex-table-element fte4" id="file_select"> 
-  <label for="file">Загрузите 3D-модель, и вы сможете мгновенно узнать стоимость производства</label> 
-  <!-- Принимаются файлы в форматах: 3MF, STL, OBJ -->
-  <input style="padding-top:20px; color:#13bfa6;" id="file" name="file" type="file" onchange="stl_viewer.clean(); stl_viewer.add_model({local_file:this.files[0]}); loaded_sign()" accept=".stl,.obj,.vf,.vsj,.vsb,.3mf"><div class="loaded_sign"></div>
-  <!-- <button id="del" onclick="stl_viewer.clean();">Удалить<span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 19a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V7H6v12M8 9h8v10H8V9m7.5-5-1-1h-5l-1 1H5v2h14V4h-3.5Z"></path></svg></span></button>   -->
-
-  <div id="stl_cont" style="width:320px;height:160px;margin:0px;"></div>
-</div>
+<div class="flex-table-element fte4" id="file_select"> 
+  <div id="stl_cont" class="stl_cont"></div>
+    <label for="file" style="margin-top:10px" class="md-button md-button--primary"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="m14 2 6 6v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8m4 18V9h-5V4H6v16h12m-6-8 4 4h-2.5v3h-3v-3H8l4-4Z"></path></svg></span> <div class="loaded_sign" style="display: inline-block;"></div> Выберите файл</label> 
+    <input style="color:#13bfa6;" class="input-file" id="file" name="file" type="file" onchange="stl_viewer.clean(); stl_viewer.add_model({local_file:this.files[0]}); loaded_sign()" accept=".stl,.obj,.vf,.vsj,.vsb,.3mf">
+    <!-- <button id="del" class="del" onclick="stl_viewer.clean();"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 19a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V7H6v12M8 9h8v10H8V9m7.5-5-1-1h-5l-1 1H5v2h14V4h-3.5Z"></path></svg></span></button> -->
+    <div style="font-size: 14px;">Принимаются файлы в форматах: 3MF, STL, OBJ.</div>
+  </div>
 </div>
 
 <h3>Этапы работы</h3>
@@ -1202,7 +1224,7 @@ input[type="number"] {
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <class>Наведите камеру на qr-код <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M4 4h6v6H4V4m16 0v6h-6V4h6m-6 11h2v-2h-2v-2h2v2h2v-2h2v2h-2v2h2v3h-2v2h-2v-2h-3v2h-2v-4h3v-1m2 0v3h2v-3h-2M4 20v-6h6v6H4M6 6v2h2V6H6m10 0v2h2V6h-2M6 16v2h2v-2H6m-2-5h2v2H4v-2m5 0h4v4h-2v-2H9v-2m2-5h2v4h-2V6M2 2v4H0V2a2 2 0 0 1 2-2h4v2H2m20-2a2 2 0 0 1 2 2v4h-2V2h-4V0h4M2 18v4h4v2H2a2 2 0 0 1-2-2v-4h2m20 4v-4h2v4a2 2 0 0 1-2 2h-4v-2h4Z"></path></svg></span> для перехода в telegram <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"></path></svg></span> или воспользуйтесь кнопкой
+        <class>Наведите камеру на qr-код <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M4 4h6v6H4V4m16 0v6h-6V4h6m-6 11h2v-2h-2v-2h2v2h2v-2h2v2h-2v2h2v3h-2v2h-2v-2h-3v2h-2v-4h3v-1m2 0v3h2v-3h-2M4 20v-6h6v6H4M6 6v2h2V6H6m10 0v2h2V6h-2M6 16v2h2v-2H6m-2-5h2v2H4v-2m5 0h4v4h-2v-2H9v-2m2-5h2v4h-2V6M2 2v4H0V2a2 2 0 0 1 2-2h4v2H2m20-2a2 2 0 0 1 2 2v4h-2V2h-4V0h4M2 18v4h4v2H2a2 2 0 0 1-2-2v-4h2m20 4v-4h2v4a2 2 0 0 1-2 2h-4v-2h4Z"></path></svg></span> для перехода в telegram или воспользуйтесь кнопкой
         <a href="#openModal" title="Close" class="close">×</a>
       </class></div>
       <div class="modal-body">
@@ -1210,7 +1232,7 @@ input[type="number"] {
 <data-type data-width="100%" data-height="auto" data-desc-position="bottom"><a class="glightbox" href="/images/small/tg.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Image title" class="R06" loading="lazy" src="/images/small/tg.jpg" width="500"></a>
 <figcaption> </figcaption>
 </data-type></figure>
-<a class="md-button md-button--primary button_wide full" href="https://t.me/kFattum"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"></path></svg></span> Прямая ссылка</a>
+<a class="md-button md-button--primary button_wide full" target="_blank" href="https://t.me/kFattum"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"></path></svg></span> Прямая ссылка</a>
       </div>
     </div>
   </div>
@@ -1422,6 +1444,10 @@ function updateForm() {
     document.getElementById('ht').style.visibility = (value == '100' || value == '200' || value == '300' || value == '400' || value == '500') ? 'visible' : 'hidden';
         document.getElementById('ht').style.display = (value == '100' || value == '200' || value == '300' || value == '400' || value == '500') ? 'block' : 'none';
         document.getElementById('wtxt').style.display = (value == '100' || value == '200' || value == '300' || value == '400') ? 'block' : 'none';
+    document.getElementById('2dimg1').style.display = (value == '200') ? 'flex' : 'none';
+    document.getElementById('2dimg2').style.display = (value == '400') ? 'flex' : 'none';
+    document.getElementById('2dimg3').style.display = (value == '300') ? 'flex' : 'none';
+    document.getElementById('2dimg4').style.display = (value == '100') ? 'flex' : 'none';
 }
 document.querySelectorAll('input[name="forma"]').forEach(function(radio) {
     radio.addEventListener('change', updateForm);

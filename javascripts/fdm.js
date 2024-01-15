@@ -39,6 +39,7 @@
     var resultR5 = resultR3 * s; // Объем заполнения, мм3 %
     var resultR6 = ((p*resultR5)+(p*resultR4))/1000; // Масса, г
     var resultR8 = resultR6 * 0.15 * k; // $
+    var resultR9 = resultR6 * 0.15; // $1
     if (resultR8 > 99 && k >= 2) {
     resultR8 = resultR6 * 0.15 * k * 0.9;//скидка massa*byn/g*0.9(-10%)
     document.querySelector('.sale').innerHTML = '-10%';
@@ -47,7 +48,7 @@
     }
   // Проверка на отрицательные значения
     if (resultR5 < 0 || resultR3 < 0) {
-        document.querySelector('.error').innerHTML = 'Ошибка: объем стенки не может быть больше объема модели, уменьшите толщину стенок или увеличьте размеры вашей модели';
+        document.querySelector('.error').innerHTML = '<div class="admonition warning"><p class="admonition-title">Ошибка: объем стенки не может быть больше объема модели, уменьшите толщину стенок или увеличьте размеры вашей модели</p></div>';
     } else {
     document.querySelector('.error').innerHTML = '';
     } 
@@ -57,6 +58,7 @@
     // document.getElementById('r5').value = (resultR5 / 1000).toFixed(3);
     document.getElementById('r6').value = resultR6.toFixed(0); 
     document.getElementById('r8').value = resultR8.toFixed(2);
+    document.getElementById('r9').value = resultR9.toFixed(2);
     }
     document.querySelectorAll('input[name="forma"], #f, #h, #g, #a, #c, #p, #s, #k').forEach(function(el) {
         el.oninput = calc;
@@ -71,6 +73,7 @@
       lockButton.addEventListener('click', function() {
           isLocked = !isLocked;
           lockButton.innerHTML = isLocked ? '<span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" ><path d="M9.5 11c.8 0 1.5.7 1.5 1.5S10.3 14 9.5 14 8 13.3 8 12.5 8.7 11 9.5 11m5 8c-.8 0-1.5-.7-1.5-1.5s.7-1.5 1.5-1.5 1.5.7 1.5 1.5-.7 1.5-1.5 1.5m-5.3.2-1.4-1.4 7.1-7.1 1.4 1.4-7.1 7.1M18 8h-1V6c0-2.8-2.2-5-5-5S7 3.2 7 6h2c0-1.7 1.3-3 3-3s3 1.3 3 3v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2m0 12H6V10h12v10Z"></path></svg></span>' : '<span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.5 11c.8 0 1.5.7 1.5 1.5S8.3 14 7.5 14 6 13.3 6 12.5 6.7 11 7.5 11m5 8c-.8 0-1.5-.7-1.5-1.5s.7-1.5 1.5-1.5 1.5.7 1.5 1.5-.7 1.5-1.5 1.5m-5.3.2-1.4-1.4 7.1-7.1 1.4 1.4-7.1 7.1M18 1c-2.8 0-5 2.2-5 5v2H4c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2h-1V6c0-1.7 1.3-3 3-3s3 1.3 3 3v2h2V6c0-2.8-2.2-5-5-5m-2 9v10H4V10h12Z"></path></svg></span>';
+          lockButton.style.color = isLocked ? '' : '#ffd500';
       });
       // Вызовите функцию click() для lockButton
       lockButton.click();
@@ -92,6 +95,7 @@
           updateAll('scale_z');scale_xyz();calc3d();
       });
   });
+  
 
 
 

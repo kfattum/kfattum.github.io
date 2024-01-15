@@ -204,7 +204,7 @@ font-weight: bold};
 
 [data-md-color-primary=black] .md-button--primary {
   background-color: #1d3136;
-  border-color: var(--md-typeset-a-color);
+  border-color: #13bfa6;
   color: #13bfa6;
 }
 
@@ -588,9 +588,103 @@ position: relative;
 
 .increment-btn {
   color: #13bfa6;
-  background-color: #41474a;
+  background-color: #1d3136;
   width: 18px;
   height: 18px;
   text-align:center;
   font-weight: bold;
 }
+.increment-btn:hover {
+  color: #ffd500;
+}
+.increment-select {
+  color: #13bfa6;
+  height: 25px;
+  text-align:center;
+  font-weight: bold;
+  border:0px;
+  border-radius: 0.3rem;
+}
+.increment-select:hover {
+  color: #ffd500;
+}
+.lock {
+  color: #13bfa6;
+  display: inline-block;
+}
+.lock:hover {
+  color: #ffd500;
+}
+button::after {
+  color: #ffd500;
+}
+.radio {
+  display: inline-block;
+  margin-left: 16px;
+}  
+  /* для элемента input c type="radio" */
+  .custom-radio>input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+  }
+
+  /* для элемента label связанного с .custom-radio */
+  .custom-radio>span {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+  }
+
+  /* создание в label псевдоэлемента  before со следующими стилями */
+  .custom-radio>span::before {
+    content: '';
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border: 1px solid #adb5bd;
+    border-radius: 50%;
+    margin-right: 0.5em;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50% 50%;
+  }
+
+  /* стили при наведении курсора на радио */
+  .custom-radio>input:not(:disabled):not(:checked)+span:hover::before {
+    border-color: #fff;
+  }
+
+  /* стили для активной радиокнопки (при нажатии на неё) */
+  .custom-radio>input:not(:disabled):active+span::before {
+    border-color: #ffd500ce;
+    background-color: #ffd500;
+  }
+
+  /* стили для радиокнопки, находящейся в фокусе */
+  .custom-radio>input:focus+span::before {
+    box-shadow: 0 0 0 0.2rem #ffd50041;
+  }
+
+  /* стили для радиокнопки, находящейся в фокусе и не находящейся в состоянии checked */
+  .custom-radio>input:focus:not(:checked)+span::before {
+    border-color: #23a6d5;
+  }
+
+  /* стили для радиокнопки, находящейся в состоянии checked */
+  .custom-radio>input:checked+span::before {
+    border-color: #ffd500ce;
+    background-color: #ffd500;
+    box-shadow: 0 0 0 0.2rem #ffd50041;
+    /* background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e"); */
+  }
+
+  /* стили для радиокнопки, находящейся в состоянии disabled */
+  .custom-radio>input:disabled+span::before {
+    background-color: #e9ecef;
+  }
+  input[type="file"] {
+    display: none;
+  }
