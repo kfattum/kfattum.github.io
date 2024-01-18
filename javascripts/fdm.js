@@ -176,6 +176,7 @@ function delete_sign() {
   // document.querySelector("#submit").onclick = calc3d;
   function calc3d(){
   delete_sign();
+  del3dinfo();
   var info = JSON.stringify(stl_viewer.get_model_info(1));
       
   var dp = parseFloat(document.getElementById('dp').value);//mat
