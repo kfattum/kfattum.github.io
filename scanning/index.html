@@ -753,7 +753,7 @@
   }
   .flex-container {
   justify-content: center;
-  gap: 40px;
+  gap: 20px;
   margin-top: 0px;
   }  
 }
@@ -824,7 +824,7 @@
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Описание</label><label for="__tabbed_1_2">Характеристики 3D сканера</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>Выполняю 3D сканирование объектов портативным ручным 3D сканером. В результате сканирования получается облако точек из которого делается привычная полигональная модель в формате STL, OBJ, PLY. Полученный 3d скан можно использовать для 3d печати копии объекта, либо с помощью реверс-инжиниринга преобразовать в твердотельную модель, внести изменения в оригинальное изделие и использовать полученный объект в CAD\CAM системах.</p>
+<p>Выполняю 3D сканирование объектов портативным ручным 3D сканером. В результате сканирования получается облако точек из которого делается привычная полигональная модель в формате STL, OBJ, PLY. Полученный 3d скан можно использовать для 3d печати копии объекта, реверс-инжиниринга.</p>
 </div>
 <div class="tabbed-block">
 <ul>
@@ -861,12 +861,12 @@
 <div id="element1">
 <pre class="mermaid"><code>graph LR
   A(Реальный объект) --&gt;|3D сканирование| PR(Облако точек);
-  PR --&gt;|Обработка&lt;br&gt;данных|DP(Полигональная модель&lt;br&gt; Формат файла: STL, OBJ, PLY)</code></pre>
+  PR --&gt;|Обработка&lt;br&gt;данных|DP("Цифровая модель&lt;br&gt;(Полигональная модель)")</code></pre>
 </div>
 <div id="element2">
 <pre class="mermaid"><code>graph TB
   A(Реальный объект) --&gt;|3D сканирование| PR(Облако точек);
-  PR --&gt;|Обработка&lt;br&gt;данных|DP(Полигональная модель&lt;br&gt; Формат файла: STL, OBJ, PLY)</code></pre>
+  PR --&gt;|Обработка&lt;br&gt;данных|DP("Цифровая модель&lt;br&gt;(Полигональная модель)")</code></pre>
 </div>
 
 <div id="tg" class="modal">
