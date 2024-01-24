@@ -163,16 +163,55 @@
     });
 
   function loaded_sign() {
-    document.querySelector('.loaded_sign').innerHTML = '<span class="twemoji load"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 12a9 9 0 0 0 9 9c2.39 0 4.68-.94 6.4-2.6l-1.5-1.5A6.706 6.706 0 0 1 11 19c-6.24 0-9.36-7.54-4.95-11.95C10.46 2.64 18 5.77 18 12h-3l4 4h.1l3.9-4h-3a9 9 0 0 0-18 0Z"></path></svg></span>';
+    // Получаем div с классом "loaded_sign"
+let div = document.querySelector('.loaded_sign');
+
+// Удаляем span с классом "twemoji"
+let oldSpan = div.querySelector('.twemoji');
+div.removeChild(oldSpan);
+
+// Создаем новый span с классом "twemoji load"
+let newSpan = document.createElement('span');
+newSpan.classList.add('twemoji', 'load');
+
+// Добавляем SVG в новый span
+let svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+svg.setAttribute('viewBox', '0 0 24 24');
+let path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+path.setAttribute('d', 'M2 12a9 9 0 0 0 9 9c2.39 0 4.68-.94 6.4-2.6l-1.5-1.5A6.706 6.706 0 0 1 11 19c-6.24 0-9.36-7.54-4.95-11.95C10.46 2.64 18 5.77 18 12h-3l4 4h.1l3.9-4h-3a9 9 0 0 0-18 0Z');
+svg.appendChild(path);
+newSpan.appendChild(svg);
+
+// Добавляем новый span в div
+div.appendChild(newSpan);
   }
 function delete_sign() {
-    setTimeout(function() {
-        var element = document.querySelector('.loaded_sign');
-        if (element) {
-            element.parentNode.removeChild(element);
-        }
-    }, 1000); // Задержка 
+  // Получаем div с классом "loaded_sign"
+  let div = document.querySelector('.loaded_sign');
+
+  // Удаляем span с классом "twemoji"
+  let oldSpan = div.querySelector('.twemoji');
+  div.removeChild(oldSpan);
+
+  // Создаем новый span с классом "twemoji load"
+  let newSpan = document.createElement('span');
+  newSpan.classList.add('twemoji');
+
+  // Добавляем SVG в новый span
+  let svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+  svg.setAttribute('viewBox', '0 0 24 24');
+  let path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+  path.setAttribute('d', 'm14 2 6 6v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8m4 18V9h-5V4H6v16h12m-6-8 4 4h-2.5v3h-3v-3H8l4-4Z');
+  svg.appendChild(path);
+  newSpan.appendChild(svg);
+
+  // Добавляем новый span в div
+  div.appendChild(newSpan);
 }
+
+
+
+
   // document.querySelector("#submit").onclick = calc3d;
   function calc3d(){
   delete_sign();
