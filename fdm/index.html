@@ -1009,10 +1009,12 @@ input[type="number"] {
 </label>    
 </div>
 
-<div id="wtxt" style="color:#13bfa6"><div class="admonition tip">
+<div class="preloader blur">
+
+  <div id="wtxt" style="color:#13bfa6"><div class="admonition tip">
 <p class="admonition-title">Обращаею ваше внимание на то, что этот калькулятор дает лишь приблизительную оценку стоимости 3D-печати.</p>
 </div></div>
-<div class="error"></div>
+  <div class="error"></div>
 
 <div class="flex-table-container">
   <div class="flex-table-element fte1">
@@ -1152,8 +1154,9 @@ input[type="number"] {
     <input style="color:#13bfa6;" class="input-file" id="file" name="file" type="file" onchange="stl_viewer.clean(); stl_viewer.add_model({local_file:this.files[0]}); loaded_sign(); del3dinfo()" accept=".stl,.obj,.3mf">
     <!-- <button id="del" class="del" onclick="stl_viewer.clean();"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 19a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V7H6v12M8 9h8v10H8V9m7.5-5-1-1h-5l-1 1H5v2h14V4h-3.5Z"></path></svg></span></button> -->
     <div style="font-size: 14px;"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M256 32c14.2 0 27.3 7.5 34.5 19.8l216 368c7.3 12.4 7.3 27.7.2 40.1S486.3 480 472 480H40c-14.3 0-27.6-7.7-34.7-20.1s-7-27.8.2-40.1l216-368C228.7 39.5 241.8 32 256 32zm0 128c-13.3 0-24 10.7-24 24v112c0 13.3 10.7 24 24 24s24-10.7 24-24V184c0-13.3-10.7-24-24-24zm32 224a32 32 0 1 0-64 0 32 32 0 1 0 64 0z"></path></svg></span> Принимаются файлы в форматах: stl, 3mf, obj. Пустотелые модели (вазы) не поддерживаются.</div>
+      </div>
+    </div>
   </div>
-</div>
 
 <script>
 function del3dinfo(){
@@ -1428,6 +1431,7 @@ function del3dinfo(){
 </style>
 
 <script src="../javascripts/fdm.js"></script>
+
 <script>
 function updateForm() {
     var value = document.querySelector('input[name="forma"]:checked').value;
@@ -1463,7 +1467,15 @@ document.querySelectorAll('input[name="forma"]').forEach(function(radio) {
     radio.addEventListener('change', updateForm);
 });
 window.onload = updateForm;
+
+window.setTimeout(function () {
+  var element = document.querySelector('.preloader');
+if (element) {
+    element.classList.remove('blur');
+}
+}, 1000);
 </script>
+
 <script>
   var stl_viewer=new StlViewer (document.getElementById("stl_cont"),{
     model_loaded_callback:calc3d,
