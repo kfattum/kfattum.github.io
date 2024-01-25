@@ -767,8 +767,8 @@ border-radius: 0px;
   background: #191c22;
   border-radius: 0.9rem; 
   padding-bottom: 20px;
-  padding-left:5px;
-  padding-right:5px;
+  padding-left:8px;
+  padding-right:8px;
   /* outline: 1px solid #14151a; */
 }
 /* .flex-element:hover {
@@ -952,7 +952,7 @@ input[type="number"] {
             </style> <script src="../assets/javascripts/glightbox.min.js"></script></head><body><div class="fatter-conteiner">
   <div class="flex-container"> 
     <div class="flex-element" style="text-align: center;">
-    <img alt="Alt text" class="skiplightbox" loading="lazy" style="margin-left:20%;margin-right: 20%;" src="../bigbuba.webp" width="56.5%">
+    <img alt="Alt text" class="skiplightbox" loading="lazy" style="margin-left:20%;margin-right: 20%;" src="../bigbuba.webp" width="46.5%">
     <h2 style="margin-top: 0px;">Единичные изделия</h2>
     Изделия, производимые в единичном экземпляре. 10+ цветов / срок от 1 дня<br>
     <br>
@@ -961,7 +961,7 @@ input[type="number"] {
   </div>
 
   <div class="flex-element" style="text-align: center;">
-   <img alt="Alt text" loading="lazy" class="skiplightbox" src="../tower-revers.webp">
+   <img alt="Alt text" loading="lazy" class="skiplightbox" src="../tower-revers.webp" width="82.7%">
    <h2 style="margin-top: 0px;">Мелкосерийные изделия</h2>
    Изделия, производимые небольшими партиями. 10+ цветов / срок от 3 дней
    <!-- <h3>0.10 Br/г</h3> --><br>
@@ -1466,14 +1466,10 @@ function updateForm() {
 document.querySelectorAll('input[name="forma"]').forEach(function(radio) {
     radio.addEventListener('change', updateForm);
 });
-window.onload = updateForm;
-
-window.setTimeout(function () {
-  var element = document.querySelector('.preloader');
-if (element) {
-    element.classList.remove('blur');
-}
-}, 1000);
+document.addEventListener('DOMContentLoaded', function() {
+    updateForm();
+    deblur();
+});
 </script>
 
 <script>
@@ -1629,6 +1625,8 @@ if (element) {
     
     
       <script src="../assets/javascripts/bundle.aecac24b.min.js"></script>
+      
+        <script src="../javascripts/extra.js"></script>
       
     
   </body>
