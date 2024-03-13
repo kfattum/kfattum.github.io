@@ -453,11 +453,11 @@ font-weight: bold};
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  background-color: #1e2224;
+  background-color: #14151a;
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
   border-radius: .3rem;
-  outline: 4px solid #41474a;
+  outline: 4px solid #262829;
 }
 @media (min-width: 768px) {
 .modal-content {
