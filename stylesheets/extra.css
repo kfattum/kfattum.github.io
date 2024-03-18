@@ -5,6 +5,10 @@
   max-width: 1280px;
   min-width: 320px;
 }
+@media screen and (min-width: 125em)
+html {
+  font-size: 137.5%;
+}
 div.mermaid {
   text-align: center;
  }
