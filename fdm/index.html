@@ -710,7 +710,17 @@ border-radius: 0px;
   .fte2 {order: 3;}
   .fte3 {order: 4;}
   .fte4 {order: 1;}   
+@media (max-width: 500px) {
+  .hide-webm {
+  display:none;
+  visibility: hidden;
+  }
+}  
 @media (min-width: 365px) and (max-width: 500px) {
+  .hide-webm {
+  display:none;
+  visibility: hidden;
+  }
   .flex-element {
   width: 100%;
   }
@@ -876,7 +886,7 @@ input[type="number"] {
     <!-- <a class="md-button" href="#openModal">Заказать  <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12.75 7.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5v-3.5Z"></path><path d="M12 1c6.075 0 11 4.925 11 11s-4.925 11-11 11S1 18.075 1 12 5.925 1 12 1ZM2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5 9.5 9.5 0 0 0 2.5 12Z"></path></svg></span></a> -->
   </div>
 
-  <div class="flex-element" style="text-align: center;">
+  <div class="flex-element hide-webm" style="text-align: center;">
    <img alt="Alt text" loading="lazy" class="skiplightbox" src="../tower-revers.webp" width="82.7%">
    <!-- <h2 style="margin-top: 0px;">Мелкосерийные изделия</h2> -->
    <!-- Изделия, производимые небольшими партиями. 10+ цветов / срок от 3 дней -->
