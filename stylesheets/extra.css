@@ -706,3 +706,6 @@ button::after {
   input[type="file"] {
     display: none;
   }
+  input {
+    background-color: #3b3b3b;
+  }
