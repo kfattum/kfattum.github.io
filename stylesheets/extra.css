@@ -97,7 +97,15 @@ font-weight: bold};
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
 }
-
+.button-gradient-background {
+  background: linear-gradient(-45deg, #c25635, #b92f64, #1c84aa, #1a9b7d);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+.button-gradient-background:hover {
+  background: #ffd500;
+  animation: none;
+}
 @keyframes gradient {
 0% {
  background-position: 0% 50%;
@@ -177,6 +185,19 @@ font-weight: bold};
   border: 3px solid #bec1c6;
   background-color: #ffffff;
 }
+
+.yoomoney {
+  color: #8b3ffd;
+  text-align: center;
+  padding:10px;
+  display: flex;
+  align-items: flex-end;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+}
+
 .full {width:100%;}
 
 /* slaider */
@@ -708,4 +729,8 @@ button::after {
   }
   input {
     background-color: #3b3b3b;
+  }
+
+  .iframe-conteiner-yandex{
+    height: 30px;
   }
