@@ -106,6 +106,12 @@ font-weight: bold};
   background: #ffd500;
   animation: none;
 }
+.button-tg {
+  color: #54a9ea;
+}
+.button-tg:hover {
+  color: #ffd500;
+}
 @keyframes gradient {
 0% {
  background-position: 0% 50%;
@@ -554,6 +560,14 @@ position: relative;
   flex: 1 1 auto;
   padding: 15px;
   overflow: auto;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+@media (width < 440px) {
+.tg-widgets-wix {
+  left: 54%;
+  transform: translate(-50%, 0);
+}
 }
 .overlay1 {
   z-index: 1;
