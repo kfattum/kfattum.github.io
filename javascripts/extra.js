@@ -11,11 +11,10 @@ function deblur() {
 document.querySelectorAll('.button_copy').forEach(button => {
     button.addEventListener('click', function(e) {
         e.preventDefault();
-        
-        const currentUrl = window.location.href;
+        const cleanUrl = window.location.origin + window.location.pathname;
         const notification = document.getElementById('copy-notification');
 
-        navigator.clipboard.writeText(currentUrl).then(() => {
+        navigator.clipboard.writeText(cleanUrl).then(() => {
             // Показываем уведомление
             notification.classList.add('show');
             
@@ -32,8 +31,12 @@ document.querySelectorAll('.button_copy').forEach(button => {
 
 // поделиться в тг
 document.getElementById('shareButton').addEventListener('click', function() {
-    const url = encodeURIComponent(window.location.href); // Использует текущий URL страницы
-    const text = encodeURIComponent(document.title); // Использует заголовок страницы в качестве описания
+    // Собираем URL без хэша и параметров
+    const cleanUrl = window.location.origin + window.location.pathname;
+    
+    const url = encodeURIComponent(cleanUrl); 
+    const text = encodeURIComponent(document.title); 
     const shareUrl = `https://t.me/share/url?url=${url}&text=${text}`;
-    window.open(shareUrl, '_blank'); // Открывает ссылку в новой вкладке
+    
+    window.open(shareUrl, '_blank');
 });
