@@ -1,0 +1,2021 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="E-Ink Display | ESPHome-TRMNL 7.5"">
+      
+      
+      
+        <link rel="canonical" href="https://3dpm.ru/en/open_projects/ESPHome-TRMNL_7%2B5/">
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../control-pad/">
+      
+      
+        
+          <link rel="alternate" href="../../../open_projects/ESPHome-TRMNL_7%2B5/" hreflang="ru">
+        
+          <link rel="alternate" href="./" hreflang="en">
+        
+      
+      
+      <link rel="icon" href="../../../images/favicon26.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>E-Ink Display | ESPHome-TRMNL 7.5" - 3DPM // Fattum</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+    
+      
+
+    
+
+
+    
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="yellow">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#e-ink-display-esphome-trmnl-75" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../" title="3DPM // Fattum" class="md-header__button md-logo" aria-label="3DPM // Fattum" data-md-component="logo">
+      
+  <img src="../../../images/logo26_3.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            3DPM // Fattum
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              E-Ink Display | ESPHome-TRMNL 7.5"
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Select language">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../../open_projects/ESPHome-TRMNL_7%2B5/" hreflang="ru" class="md-select__link">
+              Русский
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Главная
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="https://t.me/llldpm "target="_blank"" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Telegram 🡥
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Открытые проекты
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../contacts/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Контакты
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../" title="3DPM // Fattum" class="md-nav__button md-logo" aria-label="3DPM // Fattum" data-md-component="logo">
+      
+  <img src="../../../images/logo26_3.svg" alt="logo">
+
+    </a>
+    3DPM // Fattum
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Главная
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://t.me/llldpm "target="_blank"" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Telegram 🡥
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Открытые проекты
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Открытые проекты
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    E-Ink Display | ESPHome-TRMNL 7.5"
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    E-Ink Display | ESPHome-TRMNL 7.5"
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Files
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Description
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#components" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Components
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#assembly" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Assembly
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#firmware-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Firmware Installation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installing-inker" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installing Inker
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Installing Inker">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#updating-inker" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Updating Inker
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#home-assistant-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Home Assistant Configuration
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#battery-voltage-sensor-calibration-adc-calibration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Battery Voltage Sensor Calibration (ADC Calibration)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-custom-widgets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creating Custom Widgets
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Creating Custom Widgets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-1-home-assistant-time-and-date" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 1. Home Assistant "Time and Date"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-2-home-assistant-calendar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 2. Home Assistant "Calendar"
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#faq" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FAQ
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#help-something-is-not-working" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Help! Something is not working.
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comments" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comments
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../control-pad/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Control pad for Home Assistant
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LX-QC01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    USB quick charge trigger case LX-QC01
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../GL1.1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RGB лампа с Wi-Fi управлением V1.1 | GyverLamp | Огненная лампа
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../GL1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RGB лампа с Wi-Fi управлением V1 | GyverLamp | Огненная лампа
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Runcam_Thumb_mount/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Крепление для Runcam Thumb на Diatone GT M515
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Switch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Крепление выключателя для Ender3v2 | Корпус выключателя для конструкционного профиля 40x**
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contacts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Контакты
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Files
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Description
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#components" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Components
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#assembly" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Assembly
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#firmware-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Firmware Installation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installing-inker" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installing Inker
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Installing Inker">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#updating-inker" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Updating Inker
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#home-assistant-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Home Assistant Configuration
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#battery-voltage-sensor-calibration-adc-calibration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Battery Voltage Sensor Calibration (ADC Calibration)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-custom-widgets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creating Custom Widgets
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Creating Custom Widgets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-1-home-assistant-time-and-date" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 1. Home Assistant "Time and Date"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-2-home-assistant-calendar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 2. Home Assistant "Calendar"
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#faq" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FAQ
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#help-something-is-not-working" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Help! Something is not working.
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comments" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comments
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+  
+
+
+
+  
+
+
+  <nav class="md-path" aria-label="Navigation" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="../../" class="md-path__link">
+        
+  <span class="md-ellipsis">
+    Главная
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Открытые проекты
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+  
+
+
+
+
+<div><h1 id="e-ink-display-esphome-trmnl-75">E-Ink Display | ESPHome-TRMNL 7.5"</h1>
+<div class="slick-slider">
+  <div class="slider slider-for">
+    <div class="slider-img">
+      <a class="glightbox" href="/images/eink/DSC00162.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img class="R02" src="/images/eink/DSC00162.jpg"></a>
+    </div>
+    <div class="slider-img">
+      <a class="glightbox" href="/images/eink/DSC00163.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img class="R02" loading="lazy" src="/images/eink/DSC00163.jpg"></a>
+    </div>
+    <div class="slider-img">
+      <a class="glightbox" href="/images/eink/DSC00158.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img class="R02" loading="lazy" src="/images/eink/DSC00158.jpg"></a>
+    </div>
+    <div class="slider-img">
+      <a class="glightbox" href="/images/eink/DSC00159.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img class="R02" loading="lazy" src="/images/eink/DSC00159.jpg"></a>
+    </div>
+    <div class="slider-img">
+      <a class="glightbox" href="/images/eink/DSC00166.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img class="R02" loading="lazy" src="/images/eink/DSC00166.jpg"></a>
+    </div>
+    <div class="slider-img">
+      <a class="glightbox" href="/images/eink/DSC00116.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img class="R02" loading="lazy" src="/images/eink/DSC00116.jpg"></a>
+    </div>
+    <div class="slider-img">
+      <a class="glightbox" href="/images/eink/Gemini_2.webp" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img class="R02" loading="lazy" src="/images/eink/Gemini_2.webp"></a>
+    </div>
+  </div>
+  <div class="slider slider-nav">
+    <div class="slider-img">
+      <img class="R02 skiplightbox" src="/images/eink/DSC00162.jpg" width="161">
+    </div>
+    <div class="slider-img">
+      <img class="R02 skiplightbox" loading="lazy" src="/images/eink/DSC00163.jpg" width="161">
+    </div>
+    <div class="slider-img">
+      <img class="R02 skiplightbox" loading="lazy" src="/images/eink/DSC00158.jpg" width="161">
+    </div>
+    <div class="slider-img">
+      <img class="R02 skiplightbox" loading="lazy" src="/images/eink/DSC00159.jpg" width="161">
+    </div>
+    <div class="slider-img">
+      <img class="R02 skiplightbox" loading="lazy" src="/images/eink/DSC00166.jpg" width="161">
+    </div>
+    <div class="slider-img">
+      <img class="R02 skiplightbox" loading="lazy" src="/images/eink/DSC00116.jpg" width="161">
+    </div>
+    <div class="slider-img">
+      <img class="R02 skiplightbox" loading="lazy" src="/images/eink/Gemini_2.webp" width="161">
+    </div>
+  </div>
+</div>
+
+<style>
+.slick-slider {
+  width: 95%;
+  box-sizing: border-box;
+  margin: auto;
+}
+@media (width < 1280px) {
+    .slick-slider{
+      width: 100%;
+    }
+  }
+.slider-img {
+  margin-right: 5px;
+  margin-left: 5px;
+  margin-bottom: 10px;
+}
+</style>
+
+<h2 class="clearfix" id="files">Files</h2>
+<p><a class="md-button" href="https://www.crealitycloud.com/flowprint/model-detail/69e11e4efc74b721e0a4c2d1" target="_blank">Creality Cloud</a>
+<a class="md-button" href="https://github.com/kfattum/esphome-trmnl" target="_blank"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33s1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2"></path></svg></span> github</a>
+<a class="md-button" href="https://yoomoney.ru/to/4100117892549005" target="_blank">☕︎ Buy the author a tea 🡥</a>​</p>
+<hr>
+<h2 id="description">Description</h2>
+<p>This is an electronic paper (E-Ink) screen running on <a href="https://esphome.io" target="_blank"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M7.253 2.755c-.676 0-1.231.555-1.231 1.232v.976h-.083a.72.72 0 0 0-.717.716v11.682H.71v-.57h3.544a.355.355 0 0 0 .354-.354v-1.279a.355.355 0 0 0-.354-.355H.709v-.565h3.544a.355.355 0 0 0 .354-.355v-1.278a.355.355 0 0 0-.354-.355H.709v-.569h3.544a.355.355 0 0 0 .354-.355V10.05a.355.355 0 0 0-.354-.354H.709V6.113a.355.355 0 0 0-.355-.355.355.355 0 0 0-.354.355v3.937a.355.355 0 0 0 .354.355h3.544v.566H.354a.355.355 0 0 0-.354.355v1.279a.355.355 0 0 0 .354.354h3.544v.57H.354a.355.355 0 0 0-.354.354v1.275a.355.355 0 0 0 .354.355h3.544v.57H.354a.355.355 0 0 0-.354.354v1.278a.355.355 0 0 0 .354.355h4.868v.086c0 .389.323.716.717.716h.083v1.14c0 .677.555 1.233 1.231 1.233.677 0 1.233-.556 1.233-1.232v-1.14h.477v1.137c0 .676.556 1.232 1.232 1.232.677 0 1.232-.556 1.232-1.232v-1.138h.481v1.138c0 .676.556 1.232 1.232 1.232s1.233-.556 1.233-1.232v-1.138h.48v1.138c0 .676.556 1.232 1.232 1.232.677 0 1.232-.556 1.232-1.232v-1.138h.481v1.138c0 .676.556 1.232 1.232 1.232s1.233-.556 1.233-1.232v-1.138h.477v1.138c0 .676.555 1.232 1.231 1.232.677 0 1.233-.556 1.233-1.232v-1.138h.079c.39 0 .717-.323.717-.716V5.679a.723.723 0 0 0-.714-.716h-.082v-.979c0-.676-.556-1.231-1.232-1.23h-.001a1.24 1.24 0 0 0-1.231 1.233v.976h-.477v-.98c0-.675-.557-1.23-1.233-1.228h-.001c-.676 0-1.23.556-1.23 1.232v.976h-.482v-.976c0-.677-.555-1.232-1.232-1.232s-1.232.555-1.232 1.232v.976h-.48v-.976c0-.677-.557-1.232-1.233-1.232s-1.232.555-1.232 1.232v.976h-.48v-.976c0-.677-.556-1.232-1.233-1.232-.676 0-1.232.555-1.232 1.232v.976h-.477v-.976c0-.677-.556-1.232-1.233-1.232m0 .715a.51.51 0 0 1 .517.517v.976H6.737v-.976a.51.51 0 0 1 .516-.517m2.942 0a.51.51 0 0 1 .517.517v.976H9.679v-.976a.51.51 0 0 1 .516-.517m2.945 0a.51.51 0 0 1 .516.517v.976h-1.032v-.976a.51.51 0 0 1 .516-.517m2.945 0a.51.51 0 0 1 .517.517v.976h-1.033v-.976a.51.51 0 0 1 .516-.517m2.945 0h.001a.507.507 0 0 1 .515.513v.98h-1.032v-.976a.51.51 0 0 1 .516-.517m2.942.001h.001a.507.507 0 0 1 .515.513v.979h-1.032v-.976a.51.51 0 0 1 .516-.516M6.018 5.758h17.186v12.319H6.018zm8.63 2.777a.32.32 0 0 0-.234.095l-3.776 3.78a.322.322 0 0 0 .228.55h.62v2.225a.32.32 0 0 0 .323.322h5.67a.32.32 0 0 0 .322-.322V12.96h.621a.322.322 0 0 0 .228-.55l-.856-.859v-1.533a.32.32 0 0 0-.322-.323h-.591a.32.32 0 0 0-.323.323v.3L14.87 8.63a.32.32 0 0 0-.221-.095zm-7.91 10.337H7.77v1.14a.51.51 0 0 1-.517.517.51.51 0 0 1-.516-.516zm2.94 0h1.034v1.138a.51.51 0 0 1-.517.516.51.51 0 0 1-.516-.516zm2.946 0h1.032v1.138a.51.51 0 0 1-.516.516.51.51 0 0 1-.516-.516zm2.945 0h1.033v1.138a.51.51 0 0 1-.517.516.51.51 0 0 1-.516-.516zm2.945 0h1.032v1.138a.51.51 0 0 1-.516.516.51.51 0 0 1-.516-.516zm2.941 0h1.033v1.138a.51.51 0 0 1-.517.516.51.51 0 0 1-.516-.516z"></path></svg></span> ESPHome</a> firmware, designed to display information from your <a href="https://github.com/usetrmnl/inker" target="_blank">Inker</a> server and managed by <a href="https://www.home-assistant.io/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M22.939 10.627 13.061.749a1.505 1.505 0 0 0-2.121 0l-9.879 9.878C.478 11.21 0 12.363 0 13.187v9c0 .826.675 1.5 1.5 1.5h9.227l-4.063-4.062a2 2 0 0 1-.664.113c-1.13 0-2.05-.92-2.05-2.05s.92-2.05 2.05-2.05 2.05.92 2.05 2.05c0 .233-.041.456-.113.665l3.163 3.163V9.928a2.05 2.05 0 0 1-1.15-1.84c0-1.13.92-2.05 2.05-2.05s2.05.92 2.05 2.05a2.05 2.05 0 0 1-1.15 1.84v8.127l3.146-3.146A2.05 2.05 0 0 1 18 12.239c1.13 0 2.05.92 2.05 2.05s-.92 2.05-2.05 2.05a2 2 0 0 1-.709-.13L12.9 20.602v3.088h9.6c.825 0 1.5-.675 1.5-1.5v-9c0-.825-.477-1.977-1.061-2.561z"></path></svg></span> Home Assistant</a>.</p>
+<pre class="mermaid"><code>flowchart LR
+    HA["Home &lt;br&gt; Assistant"] -- JSON API --&gt; Inker["Inker"]
+    RSS["RSS Feeds"] --&gt; Inker
+    Inker -- PNG --&gt; ESPH["ESPHome &lt;br&gt; E-Ink Display"]
+    HA &lt;--&gt; MQTT_Int["MQTT &lt;br&gt; Integration"]
+    HA --&gt; BP["blueprint"]
+    BP --&gt; MQTT_Int
+    MQTT_Int &lt;--&gt; Mosq["Mosquitto &lt;br&gt; broker"]
+    Mosq &lt;-- MQTT --&gt; ESPH</code></pre>
+<figure>
+<p><a class="glightbox" href="../../../images/eink/inker.webp" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="img" class="R02" src="../../../images/eink/inker.webp"></a></p>
+<figcaption><a href="https://github.com/usetrmnl/inker" target="_blank">INKER</a> - create interfaces without a single line of code</figcaption>
+</figure>
+<p><strong>Features:</strong></p>
+<ul>
+<li><strong>Energy Efficiency</strong>: The screen pauses updates when you are not at home or in the room.</li>
+<li><strong>Extensibility</strong>: Thanks to <a href="https://esphome.io" target="_blank"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M7.253 2.755c-.676 0-1.231.555-1.231 1.232v.976h-.083a.72.72 0 0 0-.717.716v11.682H.71v-.57h3.544a.355.355 0 0 0 .354-.354v-1.279a.355.355 0 0 0-.354-.355H.709v-.565h3.544a.355.355 0 0 0 .354-.355v-1.278a.355.355 0 0 0-.354-.355H.709v-.569h3.544a.355.355 0 0 0 .354-.355V10.05a.355.355 0 0 0-.354-.354H.709V6.113a.355.355 0 0 0-.355-.355.355.355 0 0 0-.354.355v3.937a.355.355 0 0 0 .354.355h3.544v.566H.354a.355.355 0 0 0-.354.355v1.279a.355.355 0 0 0 .354.354h3.544v.57H.354a.355.355 0 0 0-.354.354v1.275a.355.355 0 0 0 .354.355h3.544v.57H.354a.355.355 0 0 0-.354.354v1.278a.355.355 0 0 0 .354.355h4.868v.086c0 .389.323.716.717.716h.083v1.14c0 .677.555 1.233 1.231 1.233.677 0 1.233-.556 1.233-1.232v-1.14h.477v1.137c0 .676.556 1.232 1.232 1.232.677 0 1.232-.556 1.232-1.232v-1.138h.481v1.138c0 .676.556 1.232 1.232 1.232s1.233-.556 1.233-1.232v-1.138h.48v1.138c0 .676.556 1.232 1.232 1.232.677 0 1.232-.556 1.232-1.232v-1.138h.481v1.138c0 .676.556 1.232 1.232 1.232s1.233-.556 1.233-1.232v-1.138h.477v1.138c0 .676.555 1.232 1.231 1.232.677 0 1.233-.556 1.233-1.232v-1.138h.079c.39 0 .717-.323.717-.716V5.679a.723.723 0 0 0-.714-.716h-.082v-.979c0-.676-.556-1.231-1.232-1.23h-.001a1.24 1.24 0 0 0-1.231 1.233v.976h-.477v-.98c0-.675-.557-1.23-1.233-1.228h-.001c-.676 0-1.23.556-1.23 1.232v.976h-.482v-.976c0-.677-.555-1.232-1.232-1.232s-1.232.555-1.232 1.232v.976h-.48v-.976c0-.677-.557-1.232-1.233-1.232s-1.232.555-1.232 1.232v.976h-.48v-.976c0-.677-.556-1.232-1.233-1.232-.676 0-1.232.555-1.232 1.232v.976h-.477v-.976c0-.677-.556-1.232-1.233-1.232m0 .715a.51.51 0 0 1 .517.517v.976H6.737v-.976a.51.51 0 0 1 .516-.517m2.942 0a.51.51 0 0 1 .517.517v.976H9.679v-.976a.51.51 0 0 1 .516-.517m2.945 0a.51.51 0 0 1 .516.517v.976h-1.032v-.976a.51.51 0 0 1 .516-.517m2.945 0a.51.51 0 0 1 .517.517v.976h-1.033v-.976a.51.51 0 0 1 .516-.517m2.945 0h.001a.507.507 0 0 1 .515.513v.98h-1.032v-.976a.51.51 0 0 1 .516-.517m2.942.001h.001a.507.507 0 0 1 .515.513v.979h-1.032v-.976a.51.51 0 0 1 .516-.516M6.018 5.758h17.186v12.319H6.018zm8.63 2.777a.32.32 0 0 0-.234.095l-3.776 3.78a.322.322 0 0 0 .228.55h.62v2.225a.32.32 0 0 0 .323.322h5.67a.32.32 0 0 0 .322-.322V12.96h.621a.322.322 0 0 0 .228-.55l-.856-.859v-1.533a.32.32 0 0 0-.322-.323h-.591a.32.32 0 0 0-.323.323v.3L14.87 8.63a.32.32 0 0 0-.221-.095zm-7.91 10.337H7.77v1.14a.51.51 0 0 1-.517.517.51.51 0 0 1-.516-.516zm2.94 0h1.034v1.138a.51.51 0 0 1-.517.516.51.51 0 0 1-.516-.516zm2.946 0h1.032v1.138a.51.51 0 0 1-.516.516.51.51 0 0 1-.516-.516zm2.945 0h1.033v1.138a.51.51 0 0 1-.517.516.51.51 0 0 1-.516-.516zm2.945 0h1.032v1.138a.51.51 0 0 1-.516.516.51.51 0 0 1-.516-.516zm2.941 0h1.033v1.138a.51.51 0 0 1-.517.516.51.51 0 0 1-.516-.516z"></path></svg></span> ESPHome</a>, the device supports a huge number of <a href="https://esphome.io/components/">additional sensors</a>. </li>
+<li><strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M10.657 23.994h-9.45A1.21 1.21 0 0 1 0 22.788v-9.18h.071c5.784 0 10.504 4.65 10.586 10.386m7.606 0h-4.045C14.135 16.246 7.795 9.977 0 9.942V6.038h.071c9.983 0 18.121 8.044 18.192 17.956m4.53 0h-.97C21.754 12.071 11.995 2.407 0 2.372v-1.16C0 .55.544.006 1.207.006h7.64C15.733 2.49 21.257 7.789 24 14.508v8.291c0 .663-.544 1.195-1.207 1.195M16.713.006h6.092A1.19 1.19 0 0 1 24 1.2v5.914c-.91-1.242-2.046-2.65-3.158-3.762C19.588 2.11 18.122.987 16.714.005Z"></path></svg></span> MQTT Communication</strong>: Instant data exchange with your server.</li>
+</ul>
+<p><strong>Case:</strong></p>
+<ul>
+<li><strong>Compactness</strong>: Minimalist case (175.6 x 116.6 x 11.25 mm) with thin bezels, focusing all attention on the screen.</li>
+<li><strong>Ergonomics</strong>: Convenient buttons are located in plain sight—no more fumbling for them on the back panel.</li>
+<li><strong>Three Mounting Options</strong>: kickstand (desktop), hanger (wall-mounted), magnets (wall-mounted).</li>
+<li><strong>Simple Assembly</strong>: The case is assembled with reliable latches—no extra screws or complex mounting required.</li>
+</ul>
+<hr>
+<h2 id="components">Components</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Image</th>
+<th style="text-align: left;">Component</th>
+<th style="text-align: left;">Link</th>
+<th style="text-align: center;">Qty</th>
+<th style="text-align: left;">Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><a class="glightbox" href="../../../images/parts/eink.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="ePaper 7.5" src="../../../images/parts/eink.png" width="100"></a> <a class="glightbox" href="/images/parts/eink%20bp.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="ePaper 7.5 bp" src="/images/parts/eink%20bp.png" width="100"></a></td>
+<td style="text-align: left;">7.5" ePaper Display</td>
+<td style="text-align: left;"><a href="https://aliexpress.com/item/1005006573527365.html" target="_blank">Aliexpress</a></td>
+<td style="text-align: center;">1</td>
+<td style="text-align: left;">This is a 3-color B/W/R display, but only B/W will work due to RAM limitations.<br><a href="https://esphome.io/components/display/waveshare_epaper/#configuration-variables">Supported displays</a><br> Max dimensions: 171.20 x 112.20 x 1.50 mm</td>
+</tr>
+<tr>
+<td style="text-align: center;"><a class="glightbox" href="../../../images/parts/usb%20c%20m.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="USB C plug" src="../../../images/parts/usb%20c%20m.png" width="100"></a></td>
+<td style="text-align: left;">USB C plug</td>
+<td style="text-align: left;"><a href="https://aliexpress.com/item/1005001337982060.html" target="_blank">Aliexpress</a></td>
+<td style="text-align: center;">1</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: center;"><a class="glightbox" href="../../../images/parts/usb%20c%20f.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="USB C socket" src="../../../images/parts/usb%20c%20f.png" width="100"></a></td>
+<td style="text-align: left;">USB C socket</td>
+<td style="text-align: left;"><a href="https://aliexpress.com/item/1005001337982060.html" target="_blank">Aliexpress</a></td>
+<td style="text-align: center;">1</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: center;"><a class="glightbox" href="/images/parts/%D0%9F%D0%BE%D0%BB%D0%B7%D1%83%D0%BD%D0%BA%D0%BE%D0%B2%D1%8B%D0%B5%20%D0%BF%D0%B5%D1%80%D0%B5%D0%BA%D0%BB%D1%8E%D1%87%D0%B0%D1%82%D0%B5%D0%BB%D0%B8.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Slide switches" src="/images/parts/%D0%9F%D0%BE%D0%BB%D0%B7%D1%83%D0%BD%D0%BA%D0%BE%D0%B2%D1%8B%D0%B5%20%D0%BF%D0%B5%D1%80%D0%B5%D0%BA%D0%BB%D1%8E%D1%87%D0%B0%D1%82%D0%B5%D0%BB%D0%B8.png" width="100"></a></td>
+<td style="text-align: left;">Slide switch TLZWLA SS12F15VG4</td>
+<td style="text-align: left;"><a href="https://aliexpress.com/item/4000699324084.html" target="_blank">Aliexpress</a></td>
+<td style="text-align: center;">1</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: center;"><a class="glightbox" href="../../../images/parts/%D0%BA%D0%BD%D0%BE%D0%BF%D0%BA%D0%B0%206X6X10.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="img" src="../../../images/parts/%D0%BA%D0%BD%D0%BE%D0%BF%D0%BA%D0%B0%206X6X10.jpg" width="100"></a></td>
+<td style="text-align: left;">Tactile button 6X6X10</td>
+<td style="text-align: left;"><a href="https://aliexpress.com/item/1005005371058192.html" target="_blank">Aliexpress</a></td>
+<td style="text-align: center;">1</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: center;"><a class="glightbox" href="../../../images/parts/300px-E-Paper-ESP32-Driver-Board-01.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="img" src="../../../images/parts/300px-E-Paper-ESP32-Driver-Board-01.jpg" width="100"></a></td>
+<td style="text-align: left;">Waveshare E-Paper ESP32 Driver Board (V3)</td>
+<td style="text-align: left;"><a href="https://aliexpress.com/item/1005007253862264.html" target="_blank">Aliexpress</a></td>
+<td style="text-align: center;">1</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">—</td>
+<td style="text-align: left;">Li-ion Battery</td>
+<td style="text-align: left;">—</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: left;">Max thickness 7.4 mm. Updating once per hour, a 1400 mAh (5.18 Wh) battery lasts about a month.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><a class="glightbox" href="../../../images/parts/TP4056.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="img" src="../../../images/parts/TP4056.png" width="100"></a></td>
+<td style="text-align: left;">TP4056 charging module</td>
+<td style="text-align: left;"><a href="https://aliexpress.com/item/32453058256.html" target="_blank">Aliexpress</a></td>
+<td style="text-align: center;">1</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">—</td>
+<td style="text-align: left;">100 kOhm Resistor</td>
+<td style="text-align: left;">—</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: center;"><a class="glightbox" href="../../../images/parts/%D0%9D%D0%B5%D0%BE%D0%B4%D0%B8%D0%BC%D0%BE%D0%B2%D1%8B%D0%B5%20%D0%BC%D0%B0%D0%B3%D0%BD%D0%B8%D1%82%D1%8B.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="img" src="../../../images/parts/%D0%9D%D0%B5%D0%BE%D0%B4%D0%B8%D0%BC%D0%BE%D0%B2%D1%8B%D0%B5%20%D0%BC%D0%B0%D0%B3%D0%BD%D0%B8%D1%82%D1%8B.png" width="100"></a></td>
+<td style="text-align: left;">8x3mm Neodymium magnet</td>
+<td style="text-align: left;">—</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: left;">5 magnets securely hold the 150g display on a metal door.</td>
+</tr>
+<tr>
+<td style="text-align: center;">—</td>
+<td style="text-align: left;">T-7000/B-7000 Glue</td>
+<td style="text-align: left;">—</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+<p>Estimated cost per screen (including 20% VAT and shipping): ~$50.</p>
+<hr>
+<h2 id="assembly">Assembly</h2>
+<ol>
+<li>
+<p>Remove the red PWR LED from the Waveshare E-Paper ESP32 Driver Board to save power.</p>
+</li>
+<li>
+<p>To make the ESP32 driver board thinner, desolder the pins on its bottom side. (Tip: lift and remove the plastic spacer between pins with a screwdriver first).</p>
+</li>
+<li>
+<p>Set switch #1 on the ESP32 to position A. 
+    <figure markdown>
+    <a class="glightbox" href="../../../images/eink/esp32%20A%20B.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="img" class="R02" loading="lazy" src="../../../images/eink/esp32%20A%20B.png" width="300"></a>
+    </figure></p>
+</li>
+<li>
+<p>Set switch #2 on the ESP32 to the "ON" position. This switch controls power to the UART module via USB. When the module is not in use, you can manually turn it off to save energy (note: if switch 2 is "OFF", firmware cannot be uploaded).</p>
+</li>
+<li>
+<p>Assemble all housing parts in the specified order.
+    <figure markdown>
+    <a class="glightbox" href="../../../images/eink/eink%20v3%20v39%201%D0%BA1.webp" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="img" class="R02" loading="lazy" src="../../../images/eink/eink%20v3%20v39%201%D0%BA1.webp" width="600"></a>
+    </figure></p>
+</li>
+<li>
+<p>Solder the components according to the diagram.
+    <figure markdown>
+    <a class="glightbox" href="../../../images/eink/eink.svg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="img" class="R02" loading="lazy" src="../../../images/eink/eink.svg" style="background: #ffffff;" width="600"></a>
+    <figcaption><a href="https://app.cirkitdesigner.com/project/40136c59-80ac-4ec9-8909-b4dab8e631ea" target="_blank">Project Link</a></figcaption>
+    </figure></p>
+</li>
+<li>
+<p>Apply T-7000/B-7000 glue around the magnets to prevent the case from sliding on smooth metal surfaces. </p>
+<p><figure markdown>
+<a class="glightbox" href="/images/eink/DSC00166.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="img" class="R02" loading="lazy" src="/images/eink/DSC00166.jpg" width="600"></a>
+</figure></p>
+</li>
+</ol>
+<hr>
+<h2 id="firmware-installation">Firmware Installation</h2>
+<ol>
+<li>
+<p>Install ESPHome Device Builder <br>
+<a href="https://my.home-assistant.io/redirect/supervisor_addon/?addon=5c53de3b_esphome&amp;repository_url=https%3A%2F%2Fgithub.com%2Fesphome%2Fhome-assistant-addon" target="_blank"><img alt="Open your Home Assistant instance and show the add-on dashboard." src="https://my.home-assistant.io/badges/supervisor_addon.svg"></a></p>
+</li>
+<li>
+<p>Download the configuration file <a href="https://github.com/kfattum/esphome-trmnl/blob/main/esphome-trmnl.yaml" target="_blank">esphome-trmnl.yaml</a> and modify the values to your own:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Variable</th>
+<th style="text-align: left;">Value</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>fw_version</code></td>
+<td style="text-align: left;"><code>1.0.1 esphome-trmnl</code></td>
+<td style="text-align: left;">Firmware version</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>server_url</code></td>
+<td style="text-align: left;"><code>http://192.168.1.123:80</code></td>
+<td style="text-align: left;">Inker server URL</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>mqtt_broker_ip</code></td>
+<td style="text-align: left;"><code>192.168.1.100</code></td>
+<td style="text-align: left;">Mosquitto broker IP address</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>manual_ip_static_ip</code></td>
+<td style="text-align: left;"><code>192.168.1.222</code></td>
+<td style="text-align: left;">Static IP for the display</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>manual_ip_gateway</code></td>
+<td style="text-align: left;"><code>192.168.1.1</code></td>
+<td style="text-align: left;">Network gateway</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>manual_ip_subnet</code></td>
+<td style="text-align: left;"><code>255.255.255.0</code></td>
+<td style="text-align: left;">Network subnet</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>name</code></td>
+<td style="text-align: left;"><code>trmnl</code></td>
+<td style="text-align: left;">Device system name (lowercase, numbers, hyphens, up to 24 chars)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>friendly_name</code></td>
+<td style="text-align: left;"><code>TRMNL</code></td>
+<td style="text-align: left;">Display name in Home Assistant</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>model</code></td>
+<td style="text-align: left;"><code>7.50in-bV3</code></td>
+<td style="text-align: left;">E-ink display model</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>wifi_output_power</code></td>
+<td style="text-align: left;"><code>8.5dB</code></td>
+<td style="text-align: left;">Wi-Fi transmit power (8.5 to 20.5 dB)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>img_type</code></td>
+<td style="text-align: left;"><code>BINARY</code></td>
+<td style="text-align: left;">Internal image encoding method</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>img_format</code></td>
+<td style="text-align: left;"><code>PNG</code></td>
+<td style="text-align: left;">Encoded image format</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>img_url_setup_logo</code></td>
+<td style="text-align: left;"><code>http://raw.github.../setup-logo.bmp</code></td>
+<td style="text-align: left;">Placeholder image</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>deep_sleep_delay</code></td>
+<td style="text-align: left;"><code>1000ms</code></td>
+<td style="text-align: left;">Delay before entering sleep mode</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>sleep_time</code></td>
+<td style="text-align: left;"><code>3600</code></td>
+<td style="text-align: left;">Default sleep time (sec)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>error_sleep_duration</code></td>
+<td style="text-align: left;"><code>1200</code></td>
+<td style="text-align: left;">Sleep time if an error occurs (sec)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>reset_duration</code></td>
+<td style="text-align: left;"><code>200 ms</code></td>
+<td style="text-align: left;">Display reset operation duration</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>wifi_connect_delay</code></td>
+<td style="text-align: left;"><code>15s</code></td>
+<td style="text-align: left;">Wi-Fi connection timeout</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>mqtt_connect_delay</code></td>
+<td style="text-align: left;"><code>500ms</code></td>
+<td style="text-align: left;">Delay after successful MQTT connection</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>button</code></td>
+<td style="text-align: left;"><code>GPIO32</code></td>
+<td style="text-align: left;">Control button pin</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>adc_pin</code></td>
+<td style="text-align: left;"><code>GPIO34</code></td>
+<td style="text-align: left;">ADC pin (for battery monitoring)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>deep_sleep_pin</code></td>
+<td style="text-align: left;"><code>GPIO32</code></td>
+<td style="text-align: left;">Pin to wake up from deep sleep</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>clk_pin</code></td>
+<td style="text-align: left;"><code>GPIO13</code></td>
+<td style="text-align: left;">SPI Clock pin</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>mosi_pin</code></td>
+<td style="text-align: left;"><code>GPIO14</code></td>
+<td style="text-align: left;">SPI MOSI pin</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>cs_pin</code></td>
+<td style="text-align: left;"><code>GPIO15</code></td>
+<td style="text-align: left;">SPI Chip Select pin</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>dc_pin" |</code>GPIO27`</td>
+<td style="text-align: left;">Data/Command pin</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>busy_pin</code></td>
+<td style="text-align: left;"><code>GPIO25</code></td>
+<td style="text-align: left;">Busy pin (invert if using 7.50in V2/V3: <code>inverted: true</code>)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>reset_pin</code></td>
+<td style="text-align: left;"><code>GPIO26</code></td>
+<td style="text-align: left;">Hardware reset pin</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Add to ESPHome <code>secrets.yaml</code>:
+</p><div class="highlight"><pre><span></span><code><span class="nt">mqtt_password</span><span class="p">:</span><span class="w"> </span><span class="c1"># password for MQTT connection</span>
+<span class="nt">wifi_ssid</span><span class="p">:</span><span class="w"> </span><span class="c1"># your wifi ssid</span>
+<span class="nt">wifi_password</span><span class="p">:</span><span class="w"> </span><span class="c1"># your wifi password</span>
+</code></pre></div>
+</li>
+<li>Upload the edited yaml to ESPHome and install the firmware on the ESP32.</li>
+</ol>
+<hr>
+<h2 id="installing-inker">Installing <a href="https://github.com/usetrmnl/inker" target="_blank"><strong>Inker</strong></a></h2>
+<div class="admonition info">
+<p class="admonition-title">Important Note</p>
+<p>This guide assumes you already have <a href="https://www.home-assistant.io/installation/">Home Assistant</a> installed. You will also need Docker with the Docker Compose plugin. Instructions are based on Debian OS.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked id="__tabbed_1_1" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Docker Compose</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ol>
+<li>
+<p>Create a directory
+    </p><div class="highlight"><span class="filename">Create a directory (e.g., ./inker) and enter it.</span><pre><span></span><code>mkdir<span class="w"> </span>./inker
+<span class="nb">cd</span><span class="w"> </span>./inker
+</code></pre></div>
+</li>
+<li>
+<p>Create <code>docker-compose.yml</code>:</p>
+<div class="highlight"><span class="filename">Create docker-compose.yml</span><pre><span></span><code>cat<span class="w"> </span><span class="s">&lt;&lt;EOF &gt; docker-compose.yml</span>
+<span class="s">services:</span>
+<span class="s">  inker:</span>
+<span class="s">    image: wojooo/inker:latest</span>
+<span class="s">    container_name: inker</span>
+<span class="s">    restart: unless-stopped</span>
+<span class="s">    ports:</span>
+<span class="s">      - "80:80"</span>
+<span class="s">    volumes:</span>
+<span class="s">      - postgres_data:/var/lib/postgresql/17/main</span>
+<span class="s">      - redis_data:/data</span>
+<span class="s">      - uploads_data:/app/uploads</span>
+<span class="s">    environment:</span>
+<span class="s">      TZ: UTC</span>
+<span class="s">      ADMIN_PIN: "1111"</span>
+<span class="s">volumes:</span>
+<span class="s">  postgres_data:</span>
+<span class="s">  redis_data:</span>
+<span class="s">  uploads_data:</span>
+<span class="s">EOF</span>
+</code></pre></div>
+</li>
+<li>
+<p>Start the container</p>
+</li>
+</ol>
+<p>Run the following command in the directory:</p>
+<div class="highlight"><span class="filename">Start container</span><pre><span></span><code>docker<span class="w"> </span>compose<span class="w"> </span>up<span class="w"> </span>-d
+</code></pre></div>
+<h3 id="updating-inker">Updating Inker</h3>
+<p>To update and restart:
+</p><div class="highlight"><span class="filename">Update and restart Inker.</span><pre><span></span><code>docker<span class="w"> </span>compose<span class="w"> </span>pull<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>docker<span class="w"> </span>compose<span class="w"> </span>up<span class="w"> </span>-d
+</code></pre></div>
+To free up space:
+<div class="highlight"><span class="filename">Remove unused Docker images.</span><pre><span></span><code>docker<span class="w"> </span>image<span class="w"> </span>prune
+</code></pre></div>
+</div>
+</div>
+</div>
+<h2 id="home-assistant-configuration">Home Assistant Configuration</h2>
+<ol>
+<li>
+<p>Install <strong>Mosquitto broker</strong> <br>
+  <a href="https://my.home-assistant.io/redirect/supervisor_addon/?addon=core_mosquitto" target="_blank"><img alt="Open Mosquitto broker panel in Home Assistant." src="https://my.home-assistant.io/badges/supervisor_addon.svg"></a><br>
+  In the "Configuration" tab, enter the "name" and "mqtt_password" used in the firmware.</p>
+</li>
+<li>
+<p>Install <strong>MQTT Integration</strong><br>
+  <a href="https://my.home-assistant.io/redirect/config_flow_start?domain=mqtt" target="_blank"><img alt="MQTT" src="https://my.home-assistant.io/badges/config_flow_start.svg"></a><br>
+  Turn on the screen; it should appear in the MQTT integration.</p>
+</li>
+<li>
+<p>Install <strong>blueprint</strong> <br>
+  <a href="https://my.home-assistant.io/redirect/blueprint_import/?blueprint_url=https://raw.githubusercontent.com/kfattum/esphome-trmnl/refs/heads/main/blueprint_controlling_epaper_display_by_presence.yaml" target="_blank"><img alt="Open in Home Assistant" src="https://my.home-assistant.io/badges/blueprint_import.svg"></a></p>
+</li>
+</ol>
+<hr>
+<h2 id="battery-voltage-sensor-calibration-adc-calibration">Battery Voltage Sensor Calibration (ADC Calibration)</h2>
+<ol>
+<li>
+<p>Record readings at battery voltages of 4.20, 4.19, 3.75, 3.50, and 3.00 V. </p>
+</li>
+<li>
+<p>Enter the data into the filter. To the left of (-&gt;) is the sensor value, to the right is the true value:
+</p><div class="highlight"><pre><span></span><code><span class="w">    </span><span class="nt">sensor</span><span class="p">:</span>
+<span class="w"> </span><span class="w w-Error"> </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">platform</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">adc</span>
+<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">...</span>
+<span class="w">    </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">battery_voltage</span>
+<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">...</span>
+<span class="w">       </span><span class="l l-Scalar l-Scalar-Plain">- calibrate_linear</span><span class="p p-Indicator">:</span>
+<span class="w">           </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3.22 -&gt; 3.75</span>
+<span class="w">           </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3.64 -&gt; 4.19</span>
+<span class="w">           </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3.89 -&gt; 4.20</span>
+<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">...</span>
+</code></pre></div>
+</li>
+</ol>
+<hr>
+<h2 id="creating-custom-widgets">Creating Custom Widgets</h2>
+<h3 id="example-1-home-assistant-time-and-date">Example 1. Home Assistant "Time and Date"</h3>
+<p><strong>Phase 1.</strong> Data Source Setup. Telling Inker where to get data from HA.</p>
+<p><a class="glightbox" href="/images/eink/hat1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="img" src="/images/eink/hat1.png"></a></p>
+<ol>
+<li><strong>Create a new Data Source</strong> in Inker.</li>
+<li><strong>Basic Information</strong>:<ul>
+<li><strong>Name</strong>: e.g., <code>HA Time</code>.</li>
+<li><strong>Type</strong>: <strong>JSON API</strong>.</li>
+</ul>
+</li>
+<li><strong>Connection</strong>:<ul>
+<li><strong>URL</strong>: <code>http://&lt;HA-IP-Address&gt;:&lt;port&gt;/api/states/&lt;sensor_name&gt;</code></li>
+<li><strong>HTTP Method</strong>: <strong>GET</strong>.</li>
+<li><strong>Custom Headers</strong>: Add <code>Authorization</code> header.<ul>
+<li><strong>Header name</strong>: <code>Authorization</code></li>
+<li><strong>Header value</strong>: <code>Bearer YOUR_TOKEN</code> (replace with your Long-Lived Access Token from HA profile).</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Click <strong>Test URL</strong>. If successful, available fields will appear on the right.</li>
+<li><strong>Settings</strong>:<ul>
+<li><strong>Refresh Interval (seconds)</strong>: Set desired update interval.</li>
+</ul>
+</li>
+<li><strong>Save Changes</strong>.</li>
+</ol>
+<p><strong>Phase 2.</strong> Widget Setup. Configuring the display.</p>
+<p><a class="glightbox" href="/images/eink/hat2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="img" src="/images/eink/hat2.png"></a></p>
+<ol>
+<li><strong>Create a new Custom Widget</strong> in Inker.</li>
+<li>Select the <strong>Data Source</strong> created above.</li>
+<li><strong>Widget Name</strong>: e.g., <code>HA time</code>.</li>
+<li><strong>JavaScript Transform</strong>:<ul>
+<li><strong>Output Mode</strong>: <strong>Single Value</strong>.</li>
+<li><strong>JavaScript Code</strong>:</li>
+</ul>
+</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">state</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">$</span><span class="p">.</span><span class="nx">state</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">dateObj</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nb">Date</span><span class="p">(</span><span class="nx">state</span><span class="p">);</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">formatter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nb">Intl</span><span class="p">.</span><span class="nx">DateTimeFormat</span><span class="p">(</span><span class="s1">'en-US'</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">weekday</span><span class="o">:</span><span class="w"> </span><span class="s1">'short'</span><span class="p">,</span><span class="w"> </span><span class="c1">// Mon, Tue...</span>
+<span class="w">    </span><span class="nx">day</span><span class="o">:</span><span class="w"> </span><span class="s1">'numeric'</span><span class="p">,</span><span class="w">   </span><span class="c1">// 15</span>
+<span class="w">    </span><span class="nx">month</span><span class="o">:</span><span class="w"> </span><span class="s1">'short'</span><span class="p">,</span><span class="w">   </span><span class="c1">// Mar</span>
+<span class="w">    </span><span class="nx">hour</span><span class="o">:</span><span class="w"> </span><span class="s1">'2-digit'</span><span class="p">,</span><span class="w">  </span><span class="c1">// 22</span>
+<span class="w">    </span><span class="nx">minute</span><span class="o">:</span><span class="w"> </span><span class="s1">'2-digit'</span><span class="w"> </span><span class="c1">// 13</span>
+<span class="p">});</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">formatter</span><span class="p">.</span><span class="nx">format</span><span class="p">(</span><span class="nx">dateObj</span><span class="p">);</span>
+<span class="k">return</span><span class="w"> </span><span class="nx">result</span><span class="p">;</span>
+</code></pre></div>
+<ol>
+<li><strong>Live Output</strong> will show the formatted time (e.g., <code>Tue, May 5, 11:45</code>).</li>
+<li><strong>Save Changes</strong>.</li>
+</ol>
+<hr>
+<h3 id="example-2-home-assistant-calendar">Example 2. Home Assistant "Calendar"</h3>
+<p><strong>Phase 1. Data Source Setup</strong> (Similar to Example 1, but using <code>/api/states</code> endpoint (`http://<ha-ip-address>:<port>/api/states)).</port></ha-ip-address></p>
+<p><strong>Phase 2. Widget Setup</strong></p>
+<ol>
+<li>
+<p><strong>JavaScript Code</strong>:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">entities</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">"calendar.test1"</span><span class="p">,</span><span class="w"> </span><span class="s2">"calendar.test2"</span><span class="p">];</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">groupedEvents</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{};</span><span class="w"> </span><span class="c1">// Object for grouping: { "Today (05.05)": ["Event 1", "Event 2"] }</span>
+
+<span class="nx">entities</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">entityId</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">calendar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">$</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="nx">item</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">item</span><span class="p">.</span><span class="nx">entity_id</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="nx">entityId</span><span class="p">);</span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">calendar</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nx">calendar</span><span class="p">.</span><span class="nx">attributes</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nx">calendar</span><span class="p">.</span><span class="nx">attributes</span><span class="p">.</span><span class="nx">start_time</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kd">const</span><span class="w"> </span><span class="nx">eventName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">calendar</span><span class="p">.</span><span class="nx">attributes</span><span class="p">.</span><span class="nx">message</span><span class="p">;</span>
+<span class="w">        </span><span class="kd">const</span><span class="w"> </span><span class="nx">startTime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">calendar</span><span class="p">.</span><span class="nx">attributes</span><span class="p">.</span><span class="nx">start_time</span><span class="p">;</span>
+
+<span class="w">        </span><span class="kd">const</span><span class="w"> </span><span class="nx">eventDate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nb">Date</span><span class="p">(</span><span class="nx">startTime</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="s1">' '</span><span class="p">,</span><span class="w"> </span><span class="s1">'T'</span><span class="p">));</span>
+<span class="w">        </span><span class="kd">const</span><span class="w"> </span><span class="nx">today</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nb">Date</span><span class="p">();</span>
+
+<span class="w">        </span><span class="nx">eventDate</span><span class="p">.</span><span class="nx">setHours</span><span class="p">(</span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">);</span>
+<span class="w">        </span><span class="nx">today</span><span class="p">.</span><span class="nx">setHours</span><span class="p">(</span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">);</span>
+
+<span class="w">        </span><span class="kd">const</span><span class="w"> </span><span class="nx">daysUntilEvent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">Math</span><span class="p">.</span><span class="nx">round</span><span class="p">((</span><span class="nx">eventDate</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">today</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="p">(</span><span class="mf">1000</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">60</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">60</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">24</span><span class="p">));</span>
+
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">daysUntilEvent</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="mf">0</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nx">daysUntilEvent</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="mf">1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="kd">const</span><span class="w"> </span><span class="nx">dayStr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">daysUntilEvent</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="mf">0</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="s2">"Today"</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s2">"Tomorrow"</span><span class="p">;</span>
+<span class="w">            </span><span class="kd">const</span><span class="w"> </span><span class="nx">day</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">String</span><span class="p">(</span><span class="nx">eventDate</span><span class="p">.</span><span class="nx">getDate</span><span class="p">()).</span><span class="nx">padStart</span><span class="p">(</span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="s1">'0'</span><span class="p">);</span>
+<span class="w">            </span><span class="kd">const</span><span class="w"> </span><span class="nx">month</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">String</span><span class="p">(</span><span class="nx">eventDate</span><span class="p">.</span><span class="nx">getMonth</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">1</span><span class="p">).</span><span class="nx">padStart</span><span class="p">(</span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="s1">'0'</span><span class="p">);</span>
+
+<span class="w">            </span><span class="kd">const</span><span class="w"> </span><span class="nx">label</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sb">`</span><span class="si">${</span><span class="nx">dayStr</span><span class="si">}</span><span class="sb"> (</span><span class="si">${</span><span class="nx">day</span><span class="si">}</span><span class="sb">.</span><span class="si">${</span><span class="nx">month</span><span class="si">}</span><span class="sb">)`</span><span class="p">;</span>
+
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="nx">groupedEvents</span><span class="p">[</span><span class="nx">label</span><span class="p">])</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="nx">groupedEvents</span><span class="p">[</span><span class="nx">label</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[];</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">            </span><span class="nx">groupedEvents</span><span class="p">[</span><span class="nx">label</span><span class="p">].</span><span class="nx">push</span><span class="p">(</span><span class="nx">eventName</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">});</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">Object</span><span class="p">.</span><span class="nx">keys</span><span class="p">(</span><span class="nx">groupedEvents</span><span class="p">).</span><span class="nx">map</span><span class="p">(</span><span class="nx">label</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">events</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">groupedEvents</span><span class="p">[</span><span class="nx">label</span><span class="p">].</span><span class="nx">join</span><span class="p">(</span><span class="s2">", "</span><span class="p">);</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="sb">`</span><span class="si">${</span><span class="nx">label</span><span class="si">}</span><span class="sb"> </span><span class="si">${</span><span class="nx">events</span><span class="si">}</span><span class="sb">`</span><span class="p">;</span>
+<span class="p">});</span>
+
+<span class="k">return</span><span class="w"> </span><span class="nx">result</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="s2">"\n"</span><span class="p">);</span>
+</code></pre></div>
+</li>
+</ol>
+<hr>
+<h2 id="faq">FAQ</h2>
+<ul>
+<li><strong>How to change Wi-Fi SSID and password?</strong> Connect via USB <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg></span> open <a href="https://web.esphome.io/">web.esphome.io</a> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg></span> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1M8 13h8v-2H8zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4a5 5 0 0 0 5-5 5 5 0 0 0-5-5"></path></svg></span> CONNECT <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg></span> (<span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M12 16a2 2 0 0 1 2 2 2 2 0 0 1-2 2 2 2 0 0 1-2-2 2 2 0 0 1 2-2m0-6a2 2 0 0 1 2 2 2 2 0 0 1-2 2 2 2 0 0 1-2-2 2 2 0 0 1 2-2m0-6a2 2 0 0 1 2 2 2 2 0 0 1-2 2 2 2 0 0 1-2-2 2 2 0 0 1 2-2"></path></svg></span>) <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg></span> Configure Wi-Fi (ESP32 must be active).</li>
+</ul>
+<hr>
+<h2 id="help-something-is-not-working">Help! Something is not working.</h2>
+<ul>
+<li>
+<p><strong>Incorrect display</strong>: if image quality is low, try toggling switch #1 on the ESP32.</p>
+</li>
+<li>
+<p><strong>Nothing works</strong>: open <a href="https://web.esphome.io/">web.esphome.io</a>, connect via USB, and check the logs. </p>
+</li>
+<li>
+<p><strong>ESPHome won't build</strong>: delete <code>C:\Users\&lt;user&gt;\.platformio\</code> and <code>\.esphome\build</code> folders.</p>
+</li>
+</ul>
+<p><a name="donat"></a></p>
+<div class="corner-wrapper yoomoney">
+  <p style="font-weight: 300; padding-left:10px;padding-right:10px; padding-bottom:8px; font-size: 1.6em;">Buy the author a cup of tea ☕︎</p><p>
+  <a name="donat"></a>
+  <iframe src="https://yoomoney.ru/quickpay/fundraise/button?billNumber=178EDKBGRJF.241220&amp;" width="210" height="50" frameborder="0" allowtransparency="true" scrolling="no"></iframe>
+</p></div>
+
+<div class="button_wide md-feedback__title">
+    Share with friends 
+  <div id="copy-notification">Link copied!</div>  
+  <a class="button_copy" title="Copy link" style="cursor: pointer;">
+  <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M19 21H8V7h11m0-2H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2m-3-4H4a2 2 0 0 0-2 2v14h2V3h12V1Z"></path></svg></span>
+  </a>
+      <button id="shareButton" class="button-tg"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"></path></svg></span>
+      </button> 
+      <!-- <br> -->
+      <!-- Follow on <a href="https://t.me/llldpm" target="_blank">Telegram</a> -->
+</div>
+
+<h2 id="comments">Comments</h2>
+<p><link rel="stylesheet" href="/stylesheets/slick.css">
+<link rel="stylesheet" href="/stylesheets/slick-theme.css"></p>
+<script src="/javascripts/jquery.min.js" defer></script>
+<script src="/javascripts/slick.min.js" defer></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+ $('.slider-for').slick({
+   slidesToShow: 1,
+  slidesToScroll: 1,
+  speed: 250,
+  arrows: false,
+  fade: true,
+  touchThreshold: 7,
+  asNavFor: ".slider-nav"
+});
+$(".slider-nav").slick({
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  speed: 250,
+  asNavFor: ".slider-for",
+  centerMode: true,
+  focusOnSelect: true,
+  slide: "div",
+  variableWidth: true,
+  infinite: false,
+  touchThreshold: 7,
+  initialSlide: 1,
+  dots: false
+});});
+</script></div>
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">May 7, 2026</span>
+  </span>
+
+    
+    
+    
+    
+  </aside>
+
+
+
+  
+    
+  
+
+
+
+<div class="corner-wrapper">
+    <script async src="https://comments.app/js/widget.js?3" data-comments-app-website="BV76JGsM" data-limit="5" data-color="41474a" data-dislikes="1" data-colorful="1"></script>
+  </div>
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2023-2025 <a href="https://t.me/kFattum">Fattum</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://www.printables.com/social/462706-fattum" target="_blank" rel="noopener" title="Printables" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3.678 4.8 12 9.6v9.6l8.322-4.8V4.8L12 0ZM12 19.2l-8.322-4.8V24Z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://www.thingiverse.com/fattum" target="_blank" rel="noopener" title="thingiverse" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.955.005C5.425-.152-.091 5.485.007 11.805c-.235 6.756 5.537 12.25 12.052 12.196C18.621 23.9 23.912 18.595 24 12.03 24.031 5.483 18.505-.18 11.955.005m-.047 1.701a10.276 10.276 0 0 1 7.36 17.529 10.275 10.275 0 0 1-17.556-7.287C1.71 6.308 6.268 1.728 11.907 1.706zm-5.55 4.781c-.322 0-.358.033-.358.361v2.248c0 .351.04.391.398.391h3.823c.274 0 .274.004.274.265v9.736a.18.18 0 0 0 .051.146c.04.038.093.059.148.053h2.555c.247-.003.283-.035.283-.28v-9.32c0-.124.004-.239 0-.39s.055-.21.218-.21h3.9c.319.004.35-.032.35-.344V6.855c0-.34-.024-.363-.37-.363h-5.626z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="mailto:<Fattum@3dpm.ru>" target="_blank" rel="noopener" title="Почта" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M1.75 3h20.5c.966 0 1.75.784 1.75 1.75v14a1.75 1.75 0 0 1-1.75 1.75H1.75A1.75 1.75 0 0 1 0 18.75v-14C0 3.784.784 3 1.75 3M1.5 7.412V18.75c0 .138.112.25.25.25h20.5a.25.25 0 0 0 .25-.25V7.412l-9.52 6.433c-.592.4-1.368.4-1.96 0Zm0-2.662v.852l10.36 7a.25.25 0 0 0 .28 0l10.36-7V4.75a.25.25 0 0 0-.25-.25H1.75a.25.25 0 0 0-.25.25"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://t.me/kFattum" target="_blank" rel="noopener" title="Telegram // Fattum" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M256 8a248 248 0 1 0 0 496 248 248 0 1 0 0-496m115 168.7c-3.7 39.2-19.9 134.4-28.1 178.3-3.5 18.6-10.3 24.8-16.9 25.4-14.4 1.3-25.3-9.5-39.3-18.7-21.8-14.3-34.2-23.2-55.3-37.2-24.5-16.1-8.6-25 5.3-39.5 3.7-3.8 67.1-61.5 68.3-66.7.2-.7.3-3.1-1.2-4.4s-3.6-.8-5.1-.5c-2.2.5-37.1 23.5-104.6 69.1-9.9 6.8-18.9 10.1-26.9 9.9-8.9-.2-25.9-5-38.6-9.1-15.5-5-27.9-7.7-26.8-16.3.6-4.5 6.7-9 18.4-13.7 72.3-31.5 120.5-52.3 144.6-62.3 68.9-28.6 83.2-33.6 92.5-33.8 2.1 0 6.6.5 9.6 2.9 2 1.7 3.2 4.1 3.5 6.7.5 3.2.6 6.5.4 9.8z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://t.me/llldpm" target="_blank" rel="noopener" title="Telegram // 3DPM" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M256 8a248 248 0 1 0 0 496 248 248 0 1 0 0-496m115 168.7c-3.7 39.2-19.9 134.4-28.1 178.3-3.5 18.6-10.3 24.8-16.9 25.4-14.4 1.3-25.3-9.5-39.3-18.7-21.8-14.3-34.2-23.2-55.3-37.2-24.5-16.1-8.6-25 5.3-39.5 3.7-3.8 67.1-61.5 68.3-66.7.2-.7.3-3.1-1.2-4.4s-3.6-.8-5.1-.5c-2.2.5-37.1 23.5-104.6 69.1-9.9 6.8-18.9 10.1-26.9 9.9-8.9-.2-25.9-5-38.6-9.1-15.5-5-27.9-7.7-26.8-16.3.6-4.5 6.7-9 18.4-13.7 72.3-31.5 120.5-52.3 144.6-62.3 68.9-28.6 83.2-33.6 92.5-33.8 2.1 0 6.6.5 9.6 2.9 2 1.7 3.2 4.1 3.5 6.7.5 3.2.6 6.5.4 9.8z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["content.code.copy", "announce.dismiss", "toc.follow", "navigation.expand", "navigation.indexes", "navigation.tabs", "navigation.prune", "navigation.tracking", "navigation.top", "navigation.path"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../../javascripts/extra.js"></script>
+      
+    
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
+</html>

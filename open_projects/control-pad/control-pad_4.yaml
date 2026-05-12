@@ -1,0 +1,332 @@
+#https://albert.nz/esphome-button-xiaomi-zigbee
+#https://gist.github.com/albertnis/f33066b0b3623a9839a3429c8f19f4d4
+
+substitutions:
+  entity_name: "Подстольная панель управления"
+  upper_devicename: "control_pad"
+esphome:
+  name: control_pad
+  comment: 4 кнопки
+  friendly_name: Подстольная панель управления 
+
+esp32:
+  board: esp32-c3-devkitm-1
+  framework:
+    type: esp-idf
+  cpu_frequency: 80MHz
+    
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+
+ota:
+  - platform: esphome
+
+improv_serial:
+
+wifi:
+  power_save_mode: LIGHT
+  reboot_timeout: 10min
+  output_power: 8.5dB
+  # Включите резервную точку доступа (captive portal) на случай сбоя Wi-Fi-соединения
+  # ap:
+  #   ssid: 
+  #   password: 
+
+
+text_sensor:
+  - platform: template
+    name: 'Кнопка 1'
+    id: control_pad_key1
+    icon: 'mdi:button-pointer'
+    on_value: # Когда установлено состояние
+      then:
+        - if:
+            condition:
+              text_sensor.state:
+                id: control_pad_key1
+                state: ''
+            else: # Если не пустой
+              - delay: 200ms
+              - text_sensor.template.publish:
+                  id: control_pad_key1
+                  state: !lambda 'return "";' # Сброс на пустое место
+
+  - platform: template
+    name: 'Кнопка 2'
+    id: control_pad_key2
+    icon: 'mdi:button-pointer'
+    on_value: # Когда установлено состояние
+      then:
+        - if:
+            condition:
+              text_sensor.state:
+                id: control_pad_key2
+                state: ''
+            else: # Если не пустой
+              - delay: 200ms
+              - text_sensor.template.publish:
+                  id: control_pad_key2
+                  state: !lambda 'return "";' # Сброс на пустое место
+
+  - platform: template
+    name: 'Кнопка 3'
+    id: control_pad_key3
+    icon: 'mdi:button-pointer'
+    on_value: # Когда установлено состояние
+      then:
+        - if:
+            condition:
+              text_sensor.state:
+                id: control_pad_key3
+                state: ''
+            else: # Если не пустой
+              - delay: 200ms
+              - text_sensor.template.publish:
+                  id: control_pad_key3
+                  state: !lambda 'return "";' # Сброс на пустое место
+
+  - platform: template
+    name: 'Кнопка 4'
+    id: control_pad_key4
+    icon: 'mdi:button-pointer'
+    on_value: # Когда установлено состояние
+      then:
+        - if:
+            condition:
+              text_sensor.state:
+                id: control_pad_key4
+                state: ''
+            else: # Если не пустой
+              - delay: 200ms
+              - text_sensor.template.publish:
+                  id: control_pad_key4
+                  state: !lambda 'return "";' # Сброс на пустое место
+
+  - platform: template
+    name: 'Кнопка 4 hold'
+    id: control_pad_key4_hold
+    icon: 'mdi:button-pointer'
+
+#Кнопка 1
+binary_sensor:
+  - platform: gpio
+    pin:
+      number: GPIO0
+      mode: INPUT_PULLUP
+    id: raw_state_key_1
+    internal: true
+    filters:
+      - invert:
+      - delayed_on: 60ms
+      - delayed_off: 60ms
+    on_multi_click:
+
+      - timing:
+          - ON for 70ms to 400ms
+          - OFF for at least 330ms
+        then:
+          - text_sensor.template.publish:
+              id: control_pad_key1
+              state: !lambda 'return "single";'
+
+      - timing:
+          - ON for 70ms to 400ms
+          - OFF for 70ms to 300ms
+          - ON for 70ms to 400ms
+          - OFF for at least 330ms
+        then:
+          - text_sensor.template.publish:
+              id: control_pad_key1
+              state: !lambda 'return "double";'
+
+      - timing:
+          - ON for 70ms to 400ms
+          - OFF for 70ms to 300ms
+          - ON for 70ms to 400ms
+          - OFF for 70ms to 300ms
+          - ON for 70ms to 400ms
+          - OFF for at least 50ms
+        then:
+          - text_sensor.template.publish:
+              id: control_pad_key1
+              state: !lambda 'return "triple";'
+
+      - timing:
+          - ON for at least 1s
+        then:
+          - text_sensor.template.publish:
+              id: control_pad_key1
+              state: !lambda 'return "hold";'
+
+#Кнопка 2
+  - platform: gpio
+    pin:
+      number: GPIO1
+      mode: INPUT_PULLUP
+    id: raw_state_key_2
+    internal: true
+    filters:
+      - invert:
+      - delayed_on: 60ms
+      - delayed_off: 60ms
+    on_multi_click:
+
+      - timing:
+          - ON for 70ms to 400ms
+          - OFF for at least 330ms
+        then:
+          - text_sensor.template.publish:
+              id: control_pad_key2
+              state: !lambda 'return "single";'
+
+      - timing:
+          - ON for 70ms to 400ms
+          - OFF for 70ms to 300ms
+          - ON for 70ms to 400ms
+          - OFF for at least 330ms
+        then:
+          - text_sensor.template.publish:
+              id: control_pad_key2
+              state: !lambda 'return "double";'
+
+      - timing:
+          - ON for 70ms to 400ms
+          - OFF for 70ms to 300ms
+          - ON for 70ms to 400ms
+          - OFF for 70ms to 300ms
+          - ON for 70ms to 400ms
+          - OFF for at least 50ms
+        then:
+          - text_sensor.template.publish:
+              id: control_pad_key2
+              state: !lambda 'return "triple";'
+
+      - timing:
+          - ON for at least 1s
+        then:
+          - text_sensor.template.publish:
+              id: control_pad_key2
+              state: !lambda 'return "hold";'
+
+#Кнопка 3
+  - platform: gpio
+    pin:
+      number: GPIO2
+      mode: INPUT_PULLUP
+    id: raw_state_key_3
+    internal: true
+    filters:
+      - invert:
+      - delayed_on: 60ms
+      - delayed_off: 60ms
+    on_multi_click:
+
+      - timing:
+          - ON for 70ms to 400ms
+          - OFF for at least 330ms
+        then:
+          - text_sensor.template.publish:
+              id: control_pad_key3
+              state: !lambda 'return "single";'
+
+      - timing:
+          - ON for 70ms to 400ms
+          - OFF for 70ms to 300ms
+          - ON for 70ms to 400ms
+          - OFF for at least 330ms
+        then:
+          - text_sensor.template.publish:
+              id: control_pad_key3
+              state: !lambda 'return "double";'
+
+      - timing:
+          - ON for 70ms to 400ms
+          - OFF for 70ms to 300ms
+          - ON for 70ms to 400ms
+          - OFF for 70ms to 300ms
+          - ON for 70ms to 400ms
+          - OFF for at least 50ms
+        then:
+          - text_sensor.template.publish:
+              id: control_pad_key3
+              state: !lambda 'return "triple";'
+
+      - timing:
+          - ON for at least 1s
+        then:
+          - text_sensor.template.publish:
+              id: control_pad_key3
+              state: !lambda 'return "hold";'
+
+#Кнопка 4
+  - platform: gpio
+    pin:
+      number: GPIO3
+      mode: INPUT_PULLUP
+    id: raw_state_key_4
+    internal: true
+    filters:
+      - invert:
+      - delayed_on: 60ms
+      - delayed_off: 60ms
+    on_multi_click:
+
+      - timing:
+          - ON for 70ms to 400ms
+          - OFF for at least 330ms
+        then:
+          - text_sensor.template.publish:
+              id: control_pad_key4
+              state: !lambda 'return "single";'
+
+      - timing:
+          - ON for 70ms to 400ms
+          - OFF for 70ms to 300ms
+          - ON for 70ms to 400ms
+          - OFF for at least 330ms
+        then:
+          - text_sensor.template.publish:
+              id: control_pad_key4
+              state: !lambda 'return "double";'
+
+      - timing:
+          - ON for 70ms to 400ms
+          - OFF for 70ms to 300ms
+          - ON for 70ms to 400ms
+          - OFF for 70ms to 300ms
+          - ON for 70ms to 400ms
+          - OFF for at least 50ms
+        then:
+          - text_sensor.template.publish:
+              id: control_pad_key4
+              state: !lambda 'return "triple";'
+
+      - timing:
+          - ON for at least 1s
+        then:
+          - text_sensor.template.publish:
+              id: control_pad_key4_hold
+              state: "hold"
+    on_release:  
+      - text_sensor.template.publish:
+         id: control_pad_key4_hold
+         state: ""
+
+
+light:
+  - platform: status_led
+    name: ${entity_name} sys_status
+    pin: GPIO8
+    internal: True
+    restore_mode: ALWAYS_ON
+
+esp32_ble_tracker:
+  scan_parameters:
+    active: true
+
+bluetooth_proxy:
+  active: true
