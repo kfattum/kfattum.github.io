@@ -5,7 +5,7 @@
 /* Ширина страницы */
 .md-grid {
   width: 100%;
-  max-width: 1280px;
+  max-width: 1500px;
   min-width: 320px;
 }
 /* @media screen and (min-width: 125em)
@@ -486,21 +486,21 @@ position: relative;
 [data-md-color-scheme="slate"] {
   --link-color: #ffd500;
   --md-accent-fg-color: #ffd500;
-  /* --md-typeset-color: #ffffff; */
-  /* --md-primary-fg-color: #14151a; */
+
+  --md-primary-fg-color: #14151a;
   --md-primary-fg-color: #13bfa6;
 }
-.md-typeset .tabbed-set>input:first-child:checked~.tabbed-labels>:first-child, .md-typeset .tabbed-set>input:nth-child(10):checked~.tabbed-labels>:nth-child(10), .md-typeset .tabbed-set>input:nth-child(11):checked~.tabbed-labels>:nth-child(11), .md-typeset .tabbed-set>input:nth-child(12):checked~.tabbed-labels>:nth-child(12), .md-typeset .tabbed-set>input:nth-child(13):checked~.tabbed-labels>:nth-child(13), .md-typeset .tabbed-set>input:nth-child(14):checked~.tabbed-labels>:nth-child(14), .md-typeset .tabbed-set>input:nth-child(15):checked~.tabbed-labels>:nth-child(15), .md-typeset .tabbed-set>input:nth-child(16):checked~.tabbed-labels>:nth-child(16), .md-typeset .tabbed-set>input:nth-child(17):checked~.tabbed-labels>:nth-child(17), .md-typeset .tabbed-set>input:nth-child(18):checked~.tabbed-labels>:nth-child(18), .md-typeset .tabbed-set>input:nth-child(19):checked~.tabbed-labels>:nth-child(19), .md-typeset .tabbed-set>input:nth-child(2):checked~.tabbed-labels>:nth-child(2), .md-typeset .tabbed-set>input:nth-child(20):checked~.tabbed-labels>:nth-child(20), .md-typeset .tabbed-set>input:nth-child(3):checked~.tabbed-labels>:nth-child(3), .md-typeset .tabbed-set>input:nth-child(4):checked~.tabbed-labels>:nth-child(4), .md-typeset .tabbed-set>input:nth-child(5):checked~.tabbed-labels>:nth-child(5), .md-typeset .tabbed-set>input:nth-child(6):checked~.tabbed-labels>:nth-child(6), .md-typeset .tabbed-set>input:nth-child(7):checked~.tabbed-labels>:nth-child(7), .md-typeset .tabbed-set>input:nth-child(8):checked~.tabbed-labels>:nth-child(8), .md-typeset .tabbed-set>input:nth-child(9):checked~.tabbed-labels>:nth-child(9) {
+ /* .md-typeset .tabbed-set>input:first-child:checked~.tabbed-labels>:first-child, .md-typeset .tabbed-set>input:nth-child(10):checked~.tabbed-labels>:nth-child(10), .md-typeset .tabbed-set>input:nth-child(11):checked~.tabbed-labels>:nth-child(11), .md-typeset .tabbed-set>input:nth-child(12):checked~.tabbed-labels>:nth-child(12), .md-typeset .tabbed-set>input:nth-child(13):checked~.tabbed-labels>:nth-child(13), .md-typeset .tabbed-set>input:nth-child(14):checked~.tabbed-labels>:nth-child(14), .md-typeset .tabbed-set>input:nth-child(15):checked~.tabbed-labels>:nth-child(15), .md-typeset .tabbed-set>input:nth-child(16):checked~.tabbed-labels>:nth-child(16), .md-typeset .tabbed-set>input:nth-child(17):checked~.tabbed-labels>:nth-child(17), .md-typeset .tabbed-set>input:nth-child(18):checked~.tabbed-labels>:nth-child(18), .md-typeset .tabbed-set>input:nth-child(19):checked~.tabbed-labels>:nth-child(19), .md-typeset .tabbed-set>input:nth-child(2):checked~.tabbed-labels>:nth-child(2), .md-typeset .tabbed-set>input:nth-child(20):checked~.tabbed-labels>:nth-child(20), .md-typeset .tabbed-set>input:nth-child(3):checked~.tabbed-labels>:nth-child(3), .md-typeset .tabbed-set>input:nth-child(4):checked~.tabbed-labels>:nth-child(4), .md-typeset .tabbed-set>input:nth-child(5):checked~.tabbed-labels>:nth-child(5), .md-typeset .tabbed-set>input:nth-child(6):checked~.tabbed-labels>:nth-child(6), .md-typeset .tabbed-set>input:nth-child(7):checked~.tabbed-labels>:nth-child(7), .md-typeset .tabbed-set>input:nth-child(8):checked~.tabbed-labels>:nth-child(8), .md-typeset .tabbed-set>input:nth-child(9):checked~.tabbed-labels>:nth-child(9) {
   color: #ffd500;
 }
-/* .md-typeset .tabbed-labels>label {
+ .md-typeset .tabbed-labels>label {
   color: #ffd500bd;
-} */
+} 
 
 .js .md-typeset .tabbed-labels:before {
   background: #ffd500;
   color: #ffd500;
-} 
+}  */
 .md-nav__link { --md-typeset-a-color: #13bfa6;}
 .md-typeset a { --md-typeset-a-color: #13bfa6;}
 
@@ -676,3 +676,162 @@ button::after {
 /* [dir=ltr] .md-typeset ol li ol, [dir=ltr] .md-typeset ol li ul, [dir=ltr] .md-typeset ul li ol, [dir=ltr] .md-typeset ul li ul {
     margin-left: 1.625em;
 } */
+
+.ha-badge img {
+    height: 1.8em;
+    vertical-align: middle;
+    display: inline-block;
+    margin-bottom: 2px; При необходимости подкорректировать положение
+}
+
+/* ===================================================================================== */
+ /* кнопка "Поддержать" на шапке сайта */
+/* Эффекты по наведению (Pure CSS) */
+/* Автоматическая адаптация под текущую тему MkDocs Material */
+:root {
+    --boosty-bg: var(--md-default-bg-color, #ffffff);
+    --boosty-border: var(--md-default-fg-color--lightest, #bec1c6);
+    --boosty-text-main: var(--md-default-fg-color, #000000);
+    --boosty-progress-bg: var(--md-default-fg-color--lightest, #e8e8ed);
+    
+    --boosty-link: #13bfa6;
+    --color-boosty: #f15f2c;
+    --color-paypal: #003087;
+    --color-yoomoney: #8b3ffd;
+}
+
+.heart-header-widget {
+  color: #ffffff;
+  fill: currentColor; /* Закрашивает фигуру этим же цветом */
+  width: 20px;
+  height: 20px;
+}
+.support-header-widget {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-right: 12px;
+    z-index: 100;
+}
+
+/* Стили кнопки */
+.support-header-widget .boosty-action-btn {
+    background-color: var(--boosty-link) !important;
+    color: #ffffff !important;
+    border: none !important;
+    padding: 6px 14px !important;
+    border-radius: 6px !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    cursor: pointer !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    transition: opacity 0.15s ease !important;
+}
+
+.support-header-widget .boosty-action-btn:hover {
+    opacity: 0.9 !important;
+}
+
+.support-header-widget .arrow-icon {
+    width: 25px !important;
+    height: 25px !important;
+    fill: currentColor !important;
+    transition: transform 0.2s ease !important;
+}
+
+/* Выпадающее меню (открывается ВНИЗ по наведению) */
+.support-header-widget .boosty-payment-menu {
+    position: absolute !important;
+    top: calc(100% + 10px) !important;
+    right: 0 !important;
+    background-color: var(--boosty-bg) !important;
+    border: 1px solid var(--boosty-border) !important;
+    border-radius: 8px !important;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15) !important;
+    width: 180px !important;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    padding: 6px !important;
+    list-style: none !important;
+    margin: 0 !important;
+    pointer-events: none; /* Защита от случайных кликов, когда скрыто */
+}
+
+/* Невидимый "мостик", чтобы меню не закрывалось, пока мышь идет от кнопки к меню */
+.support-header-widget .boosty-payment-menu::before {
+    content: '';
+    position: absolute;
+    top: -15px;
+    left: 0;
+    right: 0;
+    height: 15px;
+}
+
+.support-header-widget:hover .boosty-payment-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.support-header-widget:hover .arrow-icon {
+    transform: rotate(180deg) !important;
+}
+
+/* Пункты меню */
+.support-header-widget .boosty-payment-item {
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    padding: 8px 12px !important;
+    color: var(--boosty-text-main) !important;
+    text-decoration: none !important;
+    border-radius: 4px !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    transition: background-color 0.15s ease, padding-left 0.15s ease !important;
+}
+
+.support-header-widget .boosty-payment-item:hover {
+    background-color: var(--boosty-progress-bg) !important;
+    padding-left: 16px !important;
+}
+
+/* Точки */
+.support-header-widget .payment-dot {
+    width: 8px !important;
+    height: 8px !important;
+    border-radius: 50% !important;
+    display: inline-block !important;
+}
+
+.support-header-widget .dot-boosty { background-color: var(--color-boosty) !important; }
+.support-header-widget .dot-paypal { background-color: var(--color-paypal) !important; }
+.support-header-widget .dot-yoomoney { background-color: var(--color-yoomoney) !important; }
+
+/* Адаптация под смартфоны */
+@media screen and (max-width: 600px) {
+    .support-header-widget {
+        margin-right: 6px;
+    }
+    .support-header-widget .boosty-action-btn {
+        padding: 6px 8px !important;
+    }
+    .support-header-widget .btn-text {
+        display: none; /* Прячем текст на мобильных */
+    }
+    .support-header-widget .boosty-action-btn::before {
+        content: none; /* Эмодзи вместо текста */
+        font-size: 14px;
+    }
+    .support-header-widget .arrow-icon {
+        display: none !important;
+    }
+    .support-header-widget .boosty-payment-menu {
+        right: -30px !important;
+    }
+}

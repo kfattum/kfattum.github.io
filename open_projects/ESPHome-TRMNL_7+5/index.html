@@ -1,12 +1,9 @@
-
-<!doctype html>
-<html lang="ru" class="no-js">
-  <head>
+<!DOCTYPE html><html lang="ru" class="no-js"><head>
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="E-Ink дисплей | ESPHome-TRMNL 7.5"">
+        <meta name="description" content="E-Ink дисплей | ESPHome-TRMNL 7.5" "="">
       
       
       
@@ -51,8 +48,8 @@
       
         
         
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
@@ -68,16 +65,17 @@
 
 
     
-   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
-    html.glightbox-open { overflow: initial; height: 100%; }
-    .gslide-title { margin-top: 0px; user-select: text; }
-    .gslide-desc { color: #666; user-select: text; }
-    .gslide-image img { background: white; }
-    .gscrollbar-fixer { padding-right: 15px; }
-    .gdesc-inner { font-size: 0.75rem; }
-    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
-    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
   
   
     
@@ -101,22 +99,73 @@
     </div>
     <div data-md-component="announce">
       
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+              <button class="md-banner__button md-icon" aria-label="Больше не показывать">
+                
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+              </button>
+            
+            
+
+
+⚠️ <strong>Смена адреса сайта:</strong> с 01.09.2026 сайт переедет с домена 3dpm.ru на <a href="https://kfattum.github.io/">kfattum.github.io</a>. Это вынужденная мера, связанная с изменениями в законодательстве РФ
+
+
+          </div>
+          
+            <script>var el=document.querySelector("[data-md-component=announce]");if(el){var content=el.querySelector(".md-typeset");__md_hash(content.innerHTML)===__md_get("__announce")&&(el.hidden=!0)}</script>
+          
+        </aside>
+      
     </div>
     
     
-      
+      <!--
+  Copyright (c) 2016-2025 Martin Donath <martin.donath@squidfunk.com>
 
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Determine classes -->
+
+
+
+<!-- Header -->
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Верхний колонтитул">
+
+    <!-- Link to home -->
     <a href="../.." title="3DPM // Fattum" class="md-header__button md-logo" aria-label="3DPM // Fattum" data-md-component="logo">
       
   <img src="../../images/logo26_3.svg" alt="logo">
 
     </a>
+
+    <!-- Button to open drawer -->
     <label class="md-header__button md-icon" for="__drawer">
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
     </label>
+
+    <!-- Header title -->
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
@@ -133,16 +182,53 @@
         </div>
       </div>
     </div>
+
+    <!-- Color palette toggle -->
     
       
     
+
+    <!-- User preference: color palette -->
     
+
+    <!-- ВИДЖЕТ ПОДДЕРЖКИ (Вставить левее переключателя языка) -->
+    <div class="support-header-widget">
+        <button class="boosty-action-btn" aria-label="Поддержать">
+            <svg class="heart-header-widget" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M96 224a192 192 0 1 1 384 0 192 192 0 1 1-384 0m176-92v4c-28.8.3-52 23.7-52 52.5 0 25.7 18.5 47.6 43.9 51.8l41.7 7c6 1 10.4 6.2 10.4 12.3 0 6.9-5.6 12.5-12.5 12.5L248 272c-11 0-20 9-20 20s9 20 20 20h24v4c0 11 9 20 20 20s20-9 20-20v-4.7c25-4.1 44-25.7 44-51.8 0-25.7-18.5-47.6-43.9-51.8l-41.7-7c-6-1-10.4-6.2-10.4-12.3 0-6.9 5.6-12.5 12.5-12.5H320c11 0 20-9 20-20s-9-20-20-20h-8v-4c0-11-9-20-20-20s-20 9-20 20zM48 344v104c0 8.8 7.2 16 16 16h448c8.8 0 16-7.2 16-16V344c0-13.3 10.7-24 24-24s24 10.7 24 24v104c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V344c0-13.3 10.7-24 24-24s24 10.7 24 24"></path></svg>
+                <span class="custom-header-block">
+                
+                    <span>Поддержать</span>
+                
+                </span>
+            <svg class="arrow-icon" viewBox="0 0 24 24">
+                <path d="M7 10l5 5 5-5H7z"></path>
+            </svg>
+        </button>
+        
+        <div class="boosty-payment-menu">
+            <a href="https://boosty.to/fattum/donate" target="_blank" rel="noopener noreferrer" class="boosty-payment-item">
+                <span class="payment-dot dot-boosty"></span>
+                <span>Boosty</span>
+            </a>
+            <a href="https://www.paypal.com/paypalme/kfattum" target="_blank" rel="noopener noreferrer" class="boosty-payment-item">
+                <span class="payment-dot dot-paypal"></span>
+                <span>PayPal</span>
+            </a>
+            <a href="https://yoomoney.ru/to/4100117892549005" target="_blank" rel="noopener noreferrer" class="boosty-payment-item">
+                <span class="payment-dot dot-yoomoney"></span>
+                <span>ЮMoney</span>
+            </a>
+        </div>
+    </div>
+    <!-- /ВИДЖЕТ ПОДДЕРЖКИ -->
+
+    <!-- Site language selector -->
     
       <div class="md-header__option">
   <div class="md-select">
     
     <button class="md-header__button md-icon" aria-label="Выберите язык">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"></path></svg>
     </button>
     <div class="md-select__inner">
       <ul class="md-select__list">
@@ -164,35 +250,41 @@
   </div>
 </div>
     
+
+    <!-- Button to open search modal -->
     
       
+
+      <!-- Check if search is actually enabled - see https://t.ly/DT_0V -->
       
         <label class="md-header__button md-icon" for="__search">
           
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
         </label>
+
+        <!-- Search interface -->
         <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Поиск" placeholder="Поиск" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <input type="text" class="md-search__input" name="query" aria-label="Поиск" placeholder="Поиск" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required="">
       <label class="md-search__icon md-icon" for="__search">
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
       </label>
       <nav class="md-search__options" aria-label="Поиск">
         
         <button type="reset" class="md-search__icon md-icon" title="Очистить" aria-label="Очистить" tabindex="-1">
           
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
         </button>
       </nav>
       
     </form>
     <div class="md-search__output">
-      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix="">
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
             Инициализация поиска
@@ -205,12 +297,14 @@
 </div>
       
     
+
+    <!-- Repository information -->
     
       <div class="md-header__source">
         <a href="https://github.com/kfattum/3dpm.ru" title="Перейти к репозиторию" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"></path></svg>
   </div>
   <div class="md-source__repository">
     GitHub
@@ -219,6 +313,8 @@
       </div>
     
   </nav>
+
+  <!-- Navigation tabs (sticky) -->
   
 </header>
     
@@ -257,13 +353,32 @@
   
   
     <li class="md-tabs__item">
-      <a href="https://t.me/llldpm "target="_blank"" class="md-tabs__link">
+      <a href="https://t.me/llldpm " target="_blank" "="" class="md-tabs__link">
         
   
   
     
   
   Telegram 🡥
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="https://boosty.to/fattum " target="_blank" "="" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Boosty 🡥
 
       </a>
     </li>
@@ -326,7 +441,7 @@
               
                 
               
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -349,7 +464,7 @@
       <a href="https://github.com/kfattum/3dpm.ru" title="Перейти к репозиторию" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"></path></svg>
   </div>
   <div class="md-source__repository">
     GitHub
@@ -357,7 +472,7 @@
 </a>
     </div>
   
-  <ul class="md-nav__list" data-md-scrollfix>
+  <ul class="md-nav__list" data-md-scrollfix="">
     
       
       
@@ -393,7 +508,7 @@
   
   
     <li class="md-nav__item">
-      <a href="https://t.me/llldpm "target="_blank"" class="md-nav__link">
+      <a href="https://t.me/llldpm " target="_blank" "="" class="md-nav__link">
         
   
   
@@ -401,6 +516,33 @@
     
   
     Telegram 🡥
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://boosty.to/fattum " target="_blank" "="" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Boosty 🡥
   
 
     
@@ -460,7 +602,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked="">
         
           
           <div class="md-nav__link md-nav__container">
@@ -482,14 +624,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_3">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -497,7 +639,7 @@
   
 
           </label>
-          <ul class="md-nav__list" data-md-scrollfix>
+          <ul class="md-nav__list" data-md-scrollfix="">
             
               
             
@@ -521,7 +663,7 @@
           
   
   
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 16H3V4h18m0-2H3c-1.11 0-2 .89-2 2v12a2 2 0 0 0 2 2h7v2H8v2h8v-2h-2v-2h7a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 16H3V4h18m0-2H3c-1.11 0-2 .89-2 2v12a2 2 0 0 0 2 2h7v2H8v2h8v-2h-2v-2h7a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2"></path></svg>
   
   <span class="md-ellipsis">
     
@@ -541,7 +683,7 @@
         
   
   
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 16H3V4h18m0-2H3c-1.11 0-2 .89-2 2v12a2 2 0 0 0 2 2h7v2H8v2h8v-2h-2v-2h7a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 16H3V4h18m0-2H3c-1.11 0-2 .89-2 2v12a2 2 0 0 0 2 2h7v2H8v2h8v-2h-2v-2h7a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2"></path></svg>
   
   <span class="md-ellipsis">
     
@@ -569,7 +711,7 @@
       <span class="md-nav__icon md-icon"></span>
       Содержание
     </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
@@ -669,7 +811,7 @@
   <a href="#_6" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Калибровка сенсора напряжения батареи (Калибровка АЦП)
+        Управление с помощью кнопки
       
     </span>
   </a>
@@ -678,6 +820,17 @@
       
         <li class="md-nav__item">
   <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Калибровка сенсора напряжения батареи (Калибровка АЦП)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
     <span class="md-ellipsis">
       
         Создание пользовательских виджетов
@@ -716,6 +869,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#ps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        P.S.
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#faq" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -738,7 +902,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
+  <a href="#_9" class="md-nav__link">
     <span class="md-ellipsis">
       
         Комментарии
@@ -768,7 +932,7 @@
         
   
   
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M64 112c-8.8 0-16 7.2-16 16v256c0 8.8 7.2 16 16 16h448c8.8 0 16-7.2 16-16V128c0-8.8-7.2-16-16-16zM0 128c0-35.3 28.7-64 64-64h448c35.3 0 64 28.7 64 64v256c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64zm176 192h224c8.8 0 16 7.2 16 16v16c0 8.8-7.2 16-16 16H176c-8.8 0-16-7.2-16-16v-16c0-8.8 7.2-16 16-16m-72-72c0-8.8 7.2-16 16-16h16c8.8 0 16 7.2 16 16v16c0 8.8-7.2 16-16 16h-16c-8.8 0-16-7.2-16-16zm16-96h16c8.8 0 16 7.2 16 16v16c0 8.8-7.2 16-16 16h-16c-8.8 0-16-7.2-16-16v-16c0-8.8 7.2-16 16-16m64 96c0-8.8 7.2-16 16-16h16c8.8 0 16 7.2 16 16v16c0 8.8-7.2 16-16 16h-16c-8.8 0-16-7.2-16-16zm16-96h16c8.8 0 16 7.2 16 16v16c0 8.8-7.2 16-16 16h-16c-8.8 0-16-7.2-16-16v-16c0-8.8 7.2-16 16-16m64 96c0-8.8 7.2-16 16-16h16c8.8 0 16 7.2 16 16v16c0 8.8-7.2 16-16 16h-16c-8.8 0-16-7.2-16-16zm16-96h16c8.8 0 16 7.2 16 16v16c0 8.8-7.2 16-16 16h-16c-8.8 0-16-7.2-16-16v-16c0-8.8 7.2-16 16-16m64 96c0-8.8 7.2-16 16-16h16c8.8 0 16 7.2 16 16v16c0 8.8-7.2 16-16 16h-16c-8.8 0-16-7.2-16-16zm16-96h16c8.8 0 16 7.2 16 16v16c0 8.8-7.2 16-16 16h-16c-8.8 0-16-7.2-16-16v-16c0-8.8 7.2-16 16-16m64 96c0-8.8 7.2-16 16-16h16c8.8 0 16 7.2 16 16v16c0 8.8-7.2 16-16 16h-16c-8.8 0-16-7.2-16-16zm16-96h16c8.8 0 16 7.2 16 16v16c0 8.8-7.2 16-16 16h-16c-8.8 0-16-7.2-16-16v-16c0-8.8 7.2-16 16-16"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M64 112c-8.8 0-16 7.2-16 16v256c0 8.8 7.2 16 16 16h448c8.8 0 16-7.2 16-16V128c0-8.8-7.2-16-16-16zM0 128c0-35.3 28.7-64 64-64h448c35.3 0 64 28.7 64 64v256c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64zm176 192h224c8.8 0 16 7.2 16 16v16c0 8.8-7.2 16-16 16H176c-8.8 0-16-7.2-16-16v-16c0-8.8 7.2-16 16-16m-72-72c0-8.8 7.2-16 16-16h16c8.8 0 16 7.2 16 16v16c0 8.8-7.2 16-16 16h-16c-8.8 0-16-7.2-16-16zm16-96h16c8.8 0 16 7.2 16 16v16c0 8.8-7.2 16-16 16h-16c-8.8 0-16-7.2-16-16v-16c0-8.8 7.2-16 16-16m64 96c0-8.8 7.2-16 16-16h16c8.8 0 16 7.2 16 16v16c0 8.8-7.2 16-16 16h-16c-8.8 0-16-7.2-16-16zm16-96h16c8.8 0 16 7.2 16 16v16c0 8.8-7.2 16-16 16h-16c-8.8 0-16-7.2-16-16v-16c0-8.8 7.2-16 16-16m64 96c0-8.8 7.2-16 16-16h16c8.8 0 16 7.2 16 16v16c0 8.8-7.2 16-16 16h-16c-8.8 0-16-7.2-16-16zm16-96h16c8.8 0 16 7.2 16 16v16c0 8.8-7.2 16-16 16h-16c-8.8 0-16-7.2-16-16v-16c0-8.8 7.2-16 16-16m64 96c0-8.8 7.2-16 16-16h16c8.8 0 16 7.2 16 16v16c0 8.8-7.2 16-16 16h-16c-8.8 0-16-7.2-16-16zm16-96h16c8.8 0 16 7.2 16 16v16c0 8.8-7.2 16-16 16h-16c-8.8 0-16-7.2-16-16v-16c0-8.8 7.2-16 16-16m64 96c0-8.8 7.2-16 16-16h16c8.8 0 16 7.2 16 16v16c0 8.8-7.2 16-16 16h-16c-8.8 0-16-7.2-16-16zm16-96h16c8.8 0 16 7.2 16 16v16c0 8.8-7.2 16-16 16h-16c-8.8 0-16-7.2-16-16v-16c0-8.8 7.2-16 16-16"></path></svg>
   
   <span class="md-ellipsis">
     
@@ -798,7 +962,7 @@
         
   
   
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 2c-1.1 0-2 .9-2 2v8H5v4l4 4v2h6v-2l4-4v-4h-1V4a2 2 0 0 0-2-2M8 4h8v8H8m1-5v2h2V7m2 0v2h2V7Z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 2c-1.1 0-2 .9-2 2v8H5v4l4 4v2h6v-2l4-4v-4h-1V4a2 2 0 0 0-2-2M8 4h8v8H8m1-5v2h2V7m2 0v2h2V7Z"></path></svg>
   
   <span class="md-ellipsis">
     
@@ -828,7 +992,7 @@
         
   
   
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 7h20v3h-2l1 9h-2.5l-.56-5H6.06l-.56 5H3l1-9H2zm15.5 3h-11l-.21 2h11.42z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 7h20v3h-2l1 9h-2.5l-.56-5H6.06l-.56 5H3l1-9H2zm15.5 3h-11l-.21 2h11.42z"></path></svg>
   
   <span class="md-ellipsis">
     
@@ -858,7 +1022,7 @@
         
   
   
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 3 8 16h8L14 3zm1.5 2.75a.75.75 0 0 1 .75.75.75.75 0 0 1-.75.75.75.75 0 0 1-.75-.75.75.75 0 0 1 .75-.75m1 2.75a1 1 0 0 1 1 1 1 1 0 0 1-1 1 1 1 0 0 1-1-1 1 1 0 0 1 1-1m-1 3.5a1.5 1.5 0 0 1 1.5 1.5 1.5 1.5 0 0 1-1.5 1.5 1.5 1.5 0 0 1-1.5-1.5 1.5 1.5 0 0 1 1.5-1.5M8 17l2 2-2 2h8l-2-2 2-2z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 3 8 16h8L14 3zm1.5 2.75a.75.75 0 0 1 .75.75.75.75 0 0 1-.75.75.75.75 0 0 1-.75-.75.75.75 0 0 1 .75-.75m1 2.75a1 1 0 0 1 1 1 1 1 0 0 1-1 1 1 1 0 0 1-1-1 1 1 0 0 1 1-1m-1 3.5a1.5 1.5 0 0 1 1.5 1.5 1.5 1.5 0 0 1-1.5 1.5 1.5 1.5 0 0 1-1.5-1.5 1.5 1.5 0 0 1 1.5-1.5M8 17l2 2-2 2h8l-2-2 2-2z"></path></svg>
   
   <span class="md-ellipsis">
     
@@ -888,7 +1052,7 @@
         
   
   
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 3 8 16h8L14 3zm1.5 2.75a.75.75 0 0 1 .75.75.75.75 0 0 1-.75.75.75.75 0 0 1-.75-.75.75.75 0 0 1 .75-.75m1 2.75a1 1 0 0 1 1 1 1 1 0 0 1-1 1 1 1 0 0 1-1-1 1 1 0 0 1 1-1m-1 3.5a1.5 1.5 0 0 1 1.5 1.5 1.5 1.5 0 0 1-1.5 1.5 1.5 1.5 0 0 1-1.5-1.5 1.5 1.5 0 0 1 1.5-1.5M8 17l2 2-2 2h8l-2-2 2-2z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 3 8 16h8L14 3zm1.5 2.75a.75.75 0 0 1 .75.75.75.75 0 0 1-.75.75.75.75 0 0 1-.75-.75.75.75 0 0 1 .75-.75m1 2.75a1 1 0 0 1 1 1 1 1 0 0 1-1 1 1 1 0 0 1-1-1 1 1 0 0 1 1-1m-1 3.5a1.5 1.5 0 0 1 1.5 1.5 1.5 1.5 0 0 1-1.5 1.5 1.5 1.5 0 0 1-1.5-1.5 1.5 1.5 0 0 1 1.5-1.5M8 17l2 2-2 2h8l-2-2 2-2z"></path></svg>
   
   <span class="md-ellipsis">
     
@@ -918,7 +1082,7 @@
         
   
   
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 4h-3.17L15 2H9L7.17 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2m0 14H4V6h4.05l1.83-2h4.24l1.83 2H20zM12 7a5 5 0 0 0-5 5 5 5 0 0 0 5 5 5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 4h-3.17L15 2H9L7.17 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2m0 14H4V6h4.05l1.83-2h4.24l1.83 2H20zM12 7a5 5 0 0 0-5 5 5 5 0 0 0 5 5 5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"></path></svg>
   
   <span class="md-ellipsis">
     
@@ -948,7 +1112,7 @@
         
   
   
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"></path></svg>
   
   <span class="md-ellipsis">
     
@@ -1011,7 +1175,7 @@
               
                 
               
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -1027,7 +1191,7 @@
       <span class="md-nav__icon md-icon"></span>
       Содержание
     </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
@@ -1127,7 +1291,7 @@
   <a href="#_6" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Калибровка сенсора напряжения батареи (Калибровка АЦП)
+        Управление с помощью кнопки
       
     </span>
   </a>
@@ -1136,6 +1300,17 @@
       
         <li class="md-nav__item">
   <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Калибровка сенсора напряжения батареи (Калибровка АЦП)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
     <span class="md-ellipsis">
       
         Создание пользовательских виджетов
@@ -1174,6 +1349,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#ps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        P.S.
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#faq" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1196,7 +1382,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
+  <a href="#_9" class="md-nav__link">
     <span class="md-ellipsis">
       
         Комментарии
@@ -1226,7 +1412,7 @@
   
 
 
-  <nav class="md-path" aria-label="Навигация" >
+  <nav class="md-path" aria-label="Навигация">
     <ol class="md-path__list">
       
         
@@ -1277,7 +1463,7 @@
   
     <a href="https://github.com/kfattum/3dpm.ru/edit/main/docs/open_projects/ESPHome-TRMNL_7+5.md" title="Редактировать страницу" class="md-content__button md-icon" rel="edit">
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"></path></svg>
     </a>
   
   
@@ -1286,37 +1472,37 @@
     
     <a href="https://github.com/kfattum/3dpm.ru/raw/main/docs/open_projects/ESPHome-TRMNL_7+5.md" title="Посмотреть исходный код страницы" class="md-content__button md-icon">
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.2 8.2 0 0 1-1.23-2"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.2 8.2 0 0 1-1.23-2"></path></svg>
     </a>
   
 
 
-<div><h1 id="e-ink-esphome-trmnl-75">E-Ink дисплей | ESPHome-TRMNL 7.5"</h1>
+<h1 id="e-ink-esphome-trmnl-75">E-Ink дисплей | ESPHome-TRMNL 7.5"</h1>
 <div class="slick-slider">
   <div class="slider slider-for">
     <div class="slider-img">
-      <a class="glightbox" href="/images/eink/DSC00162.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img class="R02" src="/images/eink/DSC00162.jpg"></a>
+      <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/images/eink/DSC00162.jpg" data-desc-position="bottom"><img class="R02" src="/images/eink/DSC00162.jpg"></a>
     </div>
     <div class="slider-img">
-      <a class="glightbox" href="/images/eink/DSC00163.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img class="R02" loading="lazy" src="/images/eink/DSC00163.jpg"></a>
+      <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/images/eink/DSC00163.jpg" data-desc-position="bottom"><img class="R02" loading="lazy" src="/images/eink/DSC00163.jpg"></a>
     </div>
     <div class="slider-img">
-      <a class="glightbox" href="/images/eink/DSC00158.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img class="R02" loading="lazy" src="/images/eink/DSC00158.jpg"></a>
+      <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/images/eink/DSC00158.jpg" data-desc-position="bottom"><img class="R02" loading="lazy" src="/images/eink/DSC00158.jpg"></a>
     </div>
     <!-- <div class="slider-img">
-      <a class="glightbox" href="/images/eink/DSC00155.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img class="R02" loading=lazy src="/images/eink/DSC00155.jpg"></a>
+      <img class="R02" loading=lazy src="/images/eink/DSC00155.jpg">
     </div> -->
     <div class="slider-img">
-      <a class="glightbox" href="/images/eink/DSC00159.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img class="R02" loading="lazy" src="/images/eink/DSC00159.jpg"></a>
+      <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/images/eink/DSC00159.jpg" data-desc-position="bottom"><img class="R02" loading="lazy" src="/images/eink/DSC00159.jpg"></a>
     </div>
     <div class="slider-img">
-      <a class="glightbox" href="/images/eink/DSC00166.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img class="R02" loading="lazy" src="/images/eink/DSC00166.jpg"></a>
+      <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/images/eink/DSC00166.jpg" data-desc-position="bottom"><img class="R02" loading="lazy" src="/images/eink/DSC00166.jpg"></a>
     </div>
     <div class="slider-img">
-      <a class="glightbox" href="/images/eink/DSC00116.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img class="R02" loading="lazy" src="/images/eink/DSC00116.jpg"></a>
+      <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/images/eink/DSC00116.jpg" data-desc-position="bottom"><img class="R02" loading="lazy" src="/images/eink/DSC00116.jpg"></a>
     </div>
     <div class="slider-img">
-      <a class="glightbox" href="/images/eink/Gemini_2.webp" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img class="R02" loading="lazy" src="/images/eink/Gemini_2.webp"></a>
+      <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/images/eink/Gemini_2.webp" data-desc-position="bottom"><img class="R02" loading="lazy" src="/images/eink/Gemini_2.webp"></a>
     </div>
 
   </div>
@@ -1367,37 +1553,40 @@
 }
 </style>
 <h2 class="clearfix" id="_1">Файлы</h2>
-<p><a class="md-button" href="https://www.printables.com/model/1691341" target="_blank"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M3.678 4.8 12 9.6v9.6l8.322-4.8V4.8L12 0ZM12 19.2l-8.322-4.8V24Z"></path></svg></span> Printables</a>
-<a class="md-button" href="https://www.thingiverse.com/thing:7352345" target="_blank"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M11.955.005C5.425-.152-.091 5.485.007 11.805c-.235 6.756 5.537 12.25 12.052 12.196C18.621 23.9 23.912 18.595 24 12.03 24.031 5.483 18.505-.18 11.955.005m-.047 1.701a10.276 10.276 0 0 1 7.36 17.529 10.275 10.275 0 0 1-17.556-7.287C1.71 6.308 6.268 1.728 11.907 1.706zm-5.55 4.781c-.322 0-.358.033-.358.361v2.248c0 .351.04.391.398.391h3.823c.274 0 .274.004.274.265v9.736a.18.18 0 0 0 .051.146c.04.038.093.059.148.053h2.555c.247-.003.283-.035.283-.28v-9.32c0-.124.004-.239 0-.39s.055-.21.218-.21h3.9c.319.004.35-.032.35-.344V6.855c0-.34-.024-.363-.37-.363h-5.626z"></path></svg></span> Thingiverse</a>
+<p><a class="md-button" href="https://www.printables.com/model/1691341" target="_blank"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3.678 4.8 12 9.6v9.6l8.322-4.8V4.8L12 0ZM12 19.2l-8.322-4.8V24Z"></path></svg></span> Printables</a>
+<a class="md-button" href="https://www.thingiverse.com/thing:7352345" target="_blank"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.955.005C5.425-.152-.091 5.485.007 11.805c-.235 6.756 5.537 12.25 12.052 12.196C18.621 23.9 23.912 18.595 24 12.03 24.031 5.483 18.505-.18 11.955.005m-.047 1.701a10.276 10.276 0 0 1 7.36 17.529 10.275 10.275 0 0 1-17.556-7.287C1.71 6.308 6.268 1.728 11.907 1.706zm-5.55 4.781c-.322 0-.358.033-.358.361v2.248c0 .351.04.391.398.391h3.823c.274 0 .274.004.274.265v9.736a.18.18 0 0 0 .051.146c.04.038.093.059.148.053h2.555c.247-.003.283-.035.283-.28v-9.32c0-.124.004-.239 0-.39s.055-.21.218-.21h3.9c.319.004.35-.032.35-.344V6.855c0-.34-.024-.363-.37-.363h-5.626z"></path></svg></span> Thingiverse</a>
 <a class="md-button" href="https://www.crealitycloud.com/flowprint/model-detail/69e11e4efc74b721e0a4c2d1" target="_blank">Creality Cloud</a>
-<a class="md-button" href="https://makerworld.com/ru/models/2798115" target="_blank"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M12.662 24V8.959l8.535 3.369V24zm-9.859-.003v-7.521l8.534-3.371-.001 10.892zM2.803 0h8.533l.001 11.672-8.534 3.369zm9.859 0h8.535v10.892l-8.535-3.371z"></path></svg></span> MakerWorld</a>
-<a class="md-button" href="https://github.com/kfattum/esphome-trmnl" target="_blank"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33s1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2"></path></svg></span> github</a>
-<a class="md-button" href="https://yoomoney.ru/to/4100117892549005" target="_blank">☕︎ Угостить автора чашечкой чая 🡥</a>​</p>
+<a class="md-button" href="https://makerworld.com/ru/models/2798115" target="_blank"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12.662 24V8.959l8.535 3.369V24zm-9.859-.003v-7.521l8.534-3.371-.001 10.892zM2.803 0h8.533l.001 11.672-8.534 3.369zm9.859 0h8.535v10.892l-8.535-3.371z"></path></svg></span> MakerWorld</a>
+<a class="md-button" href="https://github.com/kfattum/esphome-trmnl" target="_blank"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33s1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2"></path></svg></span> github</a></p>
 <hr>
+<div class="admonition warning">
+<p class="admonition-title">Критические изменения</p>
+<p>В релизе 2.0.0 внесены критические изменения. Обновлена прошивка, blueprint и интеграция.</p>
+</div>
 <h2 id="_2">Описание</h2>
-<p>Это экран на электронных чернилах на прошивке <a href="https://esphome.io" target="_blank"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M7.253 2.755c-.676 0-1.231.555-1.231 1.232v.976h-.083a.72.72 0 0 0-.717.716v11.682H.71v-.57h3.544a.355.355 0 0 0 .354-.354v-1.279a.355.355 0 0 0-.354-.355H.709v-.565h3.544a.355.355 0 0 0 .354-.355v-1.278a.355.355 0 0 0-.354-.355H.709v-.569h3.544a.355.355 0 0 0 .354-.355V10.05a.355.355 0 0 0-.354-.354H.709V6.113a.355.355 0 0 0-.355-.355.355.355 0 0 0-.354.355v3.937a.355.355 0 0 0 .354.355h3.544v.566H.354a.355.355 0 0 0-.354.355v1.279a.355.355 0 0 0 .354.354h3.544v.57H.354a.355.355 0 0 0-.354.354v1.275a.355.355 0 0 0 .354.355h3.544v.57H.354a.355.355 0 0 0-.354.354v1.278a.355.355 0 0 0 .354.355h4.868v.086c0 .389.323.716.717.716h.083v1.14c0 .677.555 1.233 1.231 1.233.677 0 1.233-.556 1.233-1.232v-1.14h.477v1.137c0 .676.556 1.232 1.232 1.232.677 0 1.232-.556 1.232-1.232v-1.138h.481v1.138c0 .676.556 1.232 1.232 1.232s1.233-.556 1.233-1.232v-1.138h.48v1.138c0 .676.556 1.232 1.232 1.232.677 0 1.232-.556 1.232-1.232v-1.138h.481v1.138c0 .676.556 1.232 1.232 1.232s1.233-.556 1.233-1.232v-1.138h.477v1.138c0 .676.555 1.232 1.231 1.232.677 0 1.233-.556 1.233-1.232v-1.138h.079c.39 0 .717-.323.717-.716V5.679a.723.723 0 0 0-.714-.716h-.082v-.979c0-.676-.556-1.231-1.232-1.23h-.001a1.24 1.24 0 0 0-1.231 1.233v.976h-.477v-.98c0-.675-.557-1.23-1.233-1.228h-.001c-.676 0-1.23.556-1.23 1.232v.976h-.482v-.976c0-.677-.555-1.232-1.232-1.232s-1.232.555-1.232 1.232v.976h-.48v-.976c0-.677-.557-1.232-1.233-1.232s-1.232.555-1.232 1.232v.976h-.48v-.976c0-.677-.556-1.232-1.233-1.232-.676 0-1.232.555-1.232 1.232v.976h-.477v-.976c0-.677-.556-1.232-1.233-1.232m0 .715a.51.51 0 0 1 .517.517v.976H6.737v-.976a.51.51 0 0 1 .516-.517m2.942 0a.51.51 0 0 1 .517.517v.976H9.679v-.976a.51.51 0 0 1 .516-.517m2.945 0a.51.51 0 0 1 .516.517v.976h-1.032v-.976a.51.51 0 0 1 .516-.517m2.945 0a.51.51 0 0 1 .517.517v.976h-1.033v-.976a.51.51 0 0 1 .516-.517m2.945 0h.001a.507.507 0 0 1 .515.513v.98h-1.032v-.976a.51.51 0 0 1 .516-.517m2.942.001h.001a.507.507 0 0 1 .515.513v.979h-1.032v-.976a.51.51 0 0 1 .516-.516M6.018 5.758h17.186v12.319H6.018zm8.63 2.777a.32.32 0 0 0-.234.095l-3.776 3.78a.322.322 0 0 0 .228.55h.62v2.225a.32.32 0 0 0 .323.322h5.67a.32.32 0 0 0 .322-.322V12.96h.621a.322.322 0 0 0 .228-.55l-.856-.859v-1.533a.32.32 0 0 0-.322-.323h-.591a.32.32 0 0 0-.323.323v.3L14.87 8.63a.32.32 0 0 0-.221-.095zm-7.91 10.337H7.77v1.14a.51.51 0 0 1-.517.517.51.51 0 0 1-.516-.516zm2.94 0h1.034v1.138a.51.51 0 0 1-.517.516.51.51 0 0 1-.516-.516zm2.946 0h1.032v1.138a.51.51 0 0 1-.516.516.51.51 0 0 1-.516-.516zm2.945 0h1.033v1.138a.51.51 0 0 1-.517.516.51.51 0 0 1-.516-.516zm2.945 0h1.032v1.138a.51.51 0 0 1-.516.516.51.51 0 0 1-.516-.516zm2.941 0h1.033v1.138a.51.51 0 0 1-.517.516.51.51 0 0 1-.516-.516z"></path></svg></span> ESPHome</a>​ созданный для отображения информации с вашего сервера <a href="https://github.com/usetrmnl/inker" target="_blank">Inker</a> и управляемый <a href="https://www.home-assistant.io/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M22.939 10.627 13.061.749a1.505 1.505 0 0 0-2.121 0l-9.879 9.878C.478 11.21 0 12.363 0 13.187v9c0 .826.675 1.5 1.5 1.5h9.227l-4.063-4.062a2 2 0 0 1-.664.113c-1.13 0-2.05-.92-2.05-2.05s.92-2.05 2.05-2.05 2.05.92 2.05 2.05c0 .233-.041.456-.113.665l3.163 3.163V9.928a2.05 2.05 0 0 1-1.15-1.84c0-1.13.92-2.05 2.05-2.05s2.05.92 2.05 2.05a2.05 2.05 0 0 1-1.15 1.84v8.127l3.146-3.146A2.05 2.05 0 0 1 18 12.239c1.13 0 2.05.92 2.05 2.05s-.92 2.05-2.05 2.05a2 2 0 0 1-.709-.13L12.9 20.602v3.088h9.6c.825 0 1.5-.675 1.5-1.5v-9c0-.825-.477-1.977-1.061-2.561z"></path></svg></span> Home Assistant</a>. Проект не создан командой ESPHome или ТRMNL и не аффилирован с ними.
+<p>Это E-Ink дисплей на прошивке <a href="https://esphome.io" target="_blank"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.253 2.755c-.676 0-1.231.555-1.231 1.232v.976h-.083a.72.72 0 0 0-.717.716v11.682H.71v-.57h3.544a.355.355 0 0 0 .354-.354v-1.279a.355.355 0 0 0-.354-.355H.709v-.565h3.544a.355.355 0 0 0 .354-.355v-1.278a.355.355 0 0 0-.354-.355H.709v-.569h3.544a.355.355 0 0 0 .354-.355V10.05a.355.355 0 0 0-.354-.354H.709V6.113a.355.355 0 0 0-.355-.355.355.355 0 0 0-.354.355v3.937a.355.355 0 0 0 .354.355h3.544v.566H.354a.355.355 0 0 0-.354.355v1.279a.355.355 0 0 0 .354.354h3.544v.57H.354a.355.355 0 0 0-.354.354v1.275a.355.355 0 0 0 .354.355h3.544v.57H.354a.355.355 0 0 0-.354.354v1.278a.355.355 0 0 0 .354.355h4.868v.086c0 .389.323.716.717.716h.083v1.14c0 .677.555 1.233 1.231 1.233.677 0 1.233-.556 1.233-1.232v-1.14h.477v1.137c0 .676.556 1.232 1.232 1.232.677 0 1.232-.556 1.232-1.232v-1.138h.481v1.138c0 .676.556 1.232 1.232 1.232s1.233-.556 1.233-1.232v-1.138h.48v1.138c0 .676.556 1.232 1.232 1.232.677 0 1.232-.556 1.232-1.232v-1.138h.481v1.138c0 .676.556 1.232 1.232 1.232s1.233-.556 1.233-1.232v-1.138h.477v1.138c0 .676.555 1.232 1.231 1.232.677 0 1.233-.556 1.233-1.232v-1.138h.079c.39 0 .717-.323.717-.716V5.679a.723.723 0 0 0-.714-.716h-.082v-.979c0-.676-.556-1.231-1.232-1.23h-.001a1.24 1.24 0 0 0-1.231 1.233v.976h-.477v-.98c0-.675-.557-1.23-1.233-1.228h-.001c-.676 0-1.23.556-1.23 1.232v.976h-.482v-.976c0-.677-.555-1.232-1.232-1.232s-1.232.555-1.232 1.232v.976h-.48v-.976c0-.677-.557-1.232-1.233-1.232s-1.232.555-1.232 1.232v.976h-.48v-.976c0-.677-.556-1.232-1.233-1.232-.676 0-1.232.555-1.232 1.232v.976h-.477v-.976c0-.677-.556-1.232-1.233-1.232m0 .715a.51.51 0 0 1 .517.517v.976H6.737v-.976a.51.51 0 0 1 .516-.517m2.942 0a.51.51 0 0 1 .517.517v.976H9.679v-.976a.51.51 0 0 1 .516-.517m2.945 0a.51.51 0 0 1 .516.517v.976h-1.032v-.976a.51.51 0 0 1 .516-.517m2.945 0a.51.51 0 0 1 .517.517v.976h-1.033v-.976a.51.51 0 0 1 .516-.517m2.945 0h.001a.507.507 0 0 1 .515.513v.98h-1.032v-.976a.51.51 0 0 1 .516-.517m2.942.001h.001a.507.507 0 0 1 .515.513v.979h-1.032v-.976a.51.51 0 0 1 .516-.516M6.018 5.758h17.186v12.319H6.018zm8.63 2.777a.32.32 0 0 0-.234.095l-3.776 3.78a.322.322 0 0 0 .228.55h.62v2.225a.32.32 0 0 0 .323.322h5.67a.32.32 0 0 0 .322-.322V12.96h.621a.322.322 0 0 0 .228-.55l-.856-.859v-1.533a.32.32 0 0 0-.322-.323h-.591a.32.32 0 0 0-.323.323v.3L14.87 8.63a.32.32 0 0 0-.221-.095zm-7.91 10.337H7.77v1.14a.51.51 0 0 1-.517.517.51.51 0 0 1-.516-.516zm2.94 0h1.034v1.138a.51.51 0 0 1-.517.516.51.51 0 0 1-.516-.516zm2.946 0h1.032v1.138a.51.51 0 0 1-.516.516.51.51 0 0 1-.516-.516zm2.945 0h1.033v1.138a.51.51 0 0 1-.517.516.51.51 0 0 1-.516-.516zm2.945 0h1.032v1.138a.51.51 0 0 1-.516.516.51.51 0 0 1-.516-.516zm2.941 0h1.033v1.138a.51.51 0 0 1-.517.516.51.51 0 0 1-.516-.516z"></path></svg></span> ESPHome</a>​ созданный для отображения информации с вашего сервера <a href="https://github.com/usetrmnl/inker" target="_blank"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M192 512C86 512 0 426 0 320 0 228.8 130.2 45.9 166.6-3.5c5.9-8 15.2-12.5 25.2-12.5h.4c10 0 19.3 4.5 25.2 12.5C253.8 45.9 384 228.8 384 320c0 106-86 192-192 192m-80-200c0-13.3-10.7-24-24-24s-24 10.7-24 24c0 75.1 60.9 136 136 136 13.3 0 24-10.7 24-24s-10.7-24-24-24c-48.6 0-88-39.4-88-88"></path></svg></span> Inker</a> и управляемый <a href="https://www.home-assistant.io/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22.939 10.627 13.061.749a1.505 1.505 0 0 0-2.121 0l-9.879 9.878C.478 11.21 0 12.363 0 13.187v9c0 .826.675 1.5 1.5 1.5h9.227l-4.063-4.062a2 2 0 0 1-.664.113c-1.13 0-2.05-.92-2.05-2.05s.92-2.05 2.05-2.05 2.05.92 2.05 2.05c0 .233-.041.456-.113.665l3.163 3.163V9.928a2.05 2.05 0 0 1-1.15-1.84c0-1.13.92-2.05 2.05-2.05s2.05.92 2.05 2.05a2.05 2.05 0 0 1-1.15 1.84v8.127l3.146-3.146A2.05 2.05 0 0 1 18 12.239c1.13 0 2.05.92 2.05 2.05s-.92 2.05-2.05 2.05a2 2 0 0 1-.709-.13L12.9 20.602v3.088h9.6c.825 0 1.5-.675 1.5-1.5v-9c0-.825-.477-1.977-1.061-2.561z"></path></svg></span> Home Assistant</a>. Проект не создан командой  <code>ESPHome</code> или <code>ТRMNL</code> и не аффилирован с ними.
 </p><pre class="mermaid"><code>flowchart LR
     HA["Home &lt;br&gt; Assistant"] -- JSON API --&gt; Inker["Inker"]
-    RSS["RSS-каналы"] --&gt; Inker
-    Inker -- PNG --&gt; ESPH["ESPHome &lt;br&gt; E-Ink дисплей"]
-    HA &lt;--&gt; MQTT_Int["интеграция &lt;br&gt; MQTT"]
+    Inker &lt;-- HTTP-запросы --&gt; ESPH["ESPHome &lt;br&gt; E-Ink дисплей"]
+    HA &lt;--&gt; Int["Кастомная интеграция"]
     HA --&gt; BP["blueprint"]
-    BP --&gt; MQTT_Int
-    MQTT_Int &lt;--&gt; Mosq["Mosquitto &lt;br&gt; broker"]
-    Mosq &lt;-- MQTT --&gt; ESPH</code></pre>
+    BP --&gt; Int
+    Int &lt;-- HTTP-запросы --&gt; ESPH</code></pre><p></p>
 <!-- <figure markdown>
 ![img](../images/eink/DSC00130 (Small).webp)
 </figure> -->
 
 <figure>
-<p><a class="glightbox" href="../../images/eink/inker.webp" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="img" class="R02" src="../../images/eink/inker.webp"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../images/eink/inker.webp" data-desc-position="bottom"><img alt="img" class="R02" src="../../images/eink/inker.webp"></a></p>
 <figcaption><a href="https://github.com/usetrmnl/inker" target="_blank">INKER</a> - создавайте интерфейс без единой строчки кода</figcaption>
 </figure>
 <p><strong>Особенности:</strong></p>
 <ul>
+<li><strong>Создано для умного дома</strong>: Выводите данные на экран и переключайте страницы с помощью автоматизаций  <code>Home Assistant</code></li>
+<li><strong>Настраиваемая частота обновления</strong>: Гибко изменяйте интервал обновления экрана прямо из  <code>Home Assistant</code>, адаптируя его под текущие задачи, сценарии или время суток.</li>
+<li><strong>Телеметрия</strong>: Получайте актуальные данные о состоянии дисплея в  <code>Home Assistant</code>.</li>
 <li><strong>Энергоэффективность</strong>: Экран приостанавливает обновления, когда вас нет дома или в комнате.</li>
-<li><strong>Расширяемость</strong>: Благодаря <a href="https://esphome.io" target="_blank"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M7.253 2.755c-.676 0-1.231.555-1.231 1.232v.976h-.083a.72.72 0 0 0-.717.716v11.682H.71v-.57h3.544a.355.355 0 0 0 .354-.354v-1.279a.355.355 0 0 0-.354-.355H.709v-.565h3.544a.355.355 0 0 0 .354-.355v-1.278a.355.355 0 0 0-.354-.355H.709v-.569h3.544a.355.355 0 0 0 .354-.355V10.05a.355.355 0 0 0-.354-.354H.709V6.113a.355.355 0 0 0-.355-.355.355.355 0 0 0-.354.355v3.937a.355.355 0 0 0 .354.355h3.544v.566H.354a.355.355 0 0 0-.354.355v1.279a.355.355 0 0 0 .354.354h3.544v.57H.354a.355.355 0 0 0-.354.354v1.275a.355.355 0 0 0 .354.355h3.544v.57H.354a.355.355 0 0 0-.354.354v1.278a.355.355 0 0 0 .354.355h4.868v.086c0 .389.323.716.717.716h.083v1.14c0 .677.555 1.233 1.231 1.233.677 0 1.233-.556 1.233-1.232v-1.14h.477v1.137c0 .676.556 1.232 1.232 1.232.677 0 1.232-.556 1.232-1.232v-1.138h.481v1.138c0 .676.556 1.232 1.232 1.232s1.233-.556 1.233-1.232v-1.138h.48v1.138c0 .676.556 1.232 1.232 1.232.677 0 1.232-.556 1.232-1.232v-1.138h.481v1.138c0 .676.556 1.232 1.232 1.232s1.233-.556 1.233-1.232v-1.138h.477v1.138c0 .676.555 1.232 1.231 1.232.677 0 1.233-.556 1.233-1.232v-1.138h.079c.39 0 .717-.323.717-.716V5.679a.723.723 0 0 0-.714-.716h-.082v-.979c0-.676-.556-1.231-1.232-1.23h-.001a1.24 1.24 0 0 0-1.231 1.233v.976h-.477v-.98c0-.675-.557-1.23-1.233-1.228h-.001c-.676 0-1.23.556-1.23 1.232v.976h-.482v-.976c0-.677-.555-1.232-1.232-1.232s-1.232.555-1.232 1.232v.976h-.48v-.976c0-.677-.557-1.232-1.233-1.232s-1.232.555-1.232 1.232v.976h-.48v-.976c0-.677-.556-1.232-1.233-1.232-.676 0-1.232.555-1.232 1.232v.976h-.477v-.976c0-.677-.556-1.232-1.233-1.232m0 .715a.51.51 0 0 1 .517.517v.976H6.737v-.976a.51.51 0 0 1 .516-.517m2.942 0a.51.51 0 0 1 .517.517v.976H9.679v-.976a.51.51 0 0 1 .516-.517m2.945 0a.51.51 0 0 1 .516.517v.976h-1.032v-.976a.51.51 0 0 1 .516-.517m2.945 0a.51.51 0 0 1 .517.517v.976h-1.033v-.976a.51.51 0 0 1 .516-.517m2.945 0h.001a.507.507 0 0 1 .515.513v.98h-1.032v-.976a.51.51 0 0 1 .516-.517m2.942.001h.001a.507.507 0 0 1 .515.513v.979h-1.032v-.976a.51.51 0 0 1 .516-.516M6.018 5.758h17.186v12.319H6.018zm8.63 2.777a.32.32 0 0 0-.234.095l-3.776 3.78a.322.322 0 0 0 .228.55h.62v2.225a.32.32 0 0 0 .323.322h5.67a.32.32 0 0 0 .322-.322V12.96h.621a.322.322 0 0 0 .228-.55l-.856-.859v-1.533a.32.32 0 0 0-.322-.323h-.591a.32.32 0 0 0-.323.323v.3L14.87 8.63a.32.32 0 0 0-.221-.095zm-7.91 10.337H7.77v1.14a.51.51 0 0 1-.517.517.51.51 0 0 1-.516-.516zm2.94 0h1.034v1.138a.51.51 0 0 1-.517.516.51.51 0 0 1-.516-.516zm2.946 0h1.032v1.138a.51.51 0 0 1-.516.516.51.51 0 0 1-.516-.516zm2.945 0h1.033v1.138a.51.51 0 0 1-.517.516.51.51 0 0 1-.516-.516zm2.945 0h1.032v1.138a.51.51 0 0 1-.516.516.51.51 0 0 1-.516-.516zm2.941 0h1.033v1.138a.51.51 0 0 1-.517.516.51.51 0 0 1-.516-.516z"></path></svg></span> ESPHome</a>, устройство поддерживает подключение огромного количества <a href="https://esphome.io/components/">дополнительных датчиков</a>. </li>
-<li><strong>Связь по <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M10.657 23.994h-9.45A1.21 1.21 0 0 1 0 22.788v-9.18h.071c5.784 0 10.504 4.65 10.586 10.386m7.606 0h-4.045C14.135 16.246 7.795 9.977 0 9.942V6.038h.071c9.983 0 18.121 8.044 18.192 17.956m4.53 0h-.97C21.754 12.071 11.995 2.407 0 2.372v-1.16C0 .55.544.006 1.207.006h7.64C15.733 2.49 21.257 7.789 24 14.508v8.291c0 .663-.544 1.195-1.207 1.195M16.713.006h6.092A1.19 1.19 0 0 1 24 1.2v5.914c-.91-1.242-2.046-2.65-3.158-3.762C19.588 2.11 18.122.987 16.714.005Z"></path></svg></span> MQTT</strong>: Мгновенный обмен данными с вашим сервером.</li>
+<li><strong>Расширяемость</strong>: Благодаря <a href="https://esphome.io" target="_blank"> <code>ESPHome</code></a>, устройство поддерживает подключение огромного количества <a href="https://esphome.io/components/">дополнительных датчиков</a>. </li>
 </ul>
 <p><strong>Корпус:</strong></p>
 <ul>
@@ -1407,6 +1596,447 @@
 <li><strong>Простая сборка</strong>: Корпус собирается на надежных защелках — никаких лишних винтов и сложного монтажа.</li>
 </ul>
 <hr>
+
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boosty &amp; Multi-Payment Progress Widget</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            /* Автоматическая адаптация под темную/светлую тему MkDocs Material */
+            /* Если переменные темы существуют, берем их, иначе используем стандартные значения */
+            --boosty-bg: var(--md-card-background, var(--md-default-bg-color, #ffffff));
+            --boosty-border:  #bec1c6;
+            --boosty-text-main: var(--md-default-fg-color, #000000);
+            --boosty-text-secondary: var(--md-default-fg-color--light, #88888b);
+            --boosty-progress-bg: var(--md-default-fg-color--lightest, #e8e8ed);
+
+            /* Цвет кнопок и прогресс-бара плавно следует за основным цветом вашей темы MkDocs */
+            --boosty-link: #13bfa6;
+            --boosty-progress-fill: #13bfa6;
+            --boosty-radius: 12px;
+
+            /* Фиксированные фирменные цвета платформ */
+            --color-boosty: #f15f2c;
+            --color-paypal: #003087;
+            --color-yoomoney: #8b3ffd;
+        }
+
+        .boosty-body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin: 0;
+        }
+
+        /* Карточка с защитой от внешних стилей */
+        .boosty-body .boosty-card {
+            background-color: var(--boosty-bg) !important;
+            border: 3px solid var(--boosty-border) !important;
+            border-radius: var(--boosty-radius) !important;
+            padding: 24px !important;
+            width: 100% !important;
+            max-width: 330px !important;
+            box-sizing: border-box !important;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05) !important;
+            transition: border-color 0.2s ease, box-shadow 0.2s ease !important;
+            position: relative !important;
+            overflow: visible !important; 
+        }
+
+        .boosty-body .boosty-card:hover {
+            box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12) !important;
+        }
+
+        .boosty-body .boosty-amounts {
+            margin-bottom: 16px !important;
+            display: flex !important;
+            align-items: baseline !important;
+            flex-wrap: wrap !important;
+            gap: 6px !important;
+        }
+
+        .boosty-body .boosty-amount-current, 
+        .boosty-body .boosty-amount-target {
+            font-size: 19px !important;
+            font-weight: 700 !important;
+            color: var(--boosty-text-main) !important;
+        }
+
+        .boosty-body .boosty-amount-label {
+            font-size: 14px !important;
+            color: var(--boosty-text-secondary) !important;
+            font-weight: 400 !important;
+        }
+
+        .boosty-body .boosty-progress-container {
+            width: 100% !important;
+            height: 8px !important;
+            background-color: var(--boosty-progress-bg) !important;
+            border-radius: 4px !important;
+            margin-bottom: 20px !important;
+            overflow: hidden !important;
+        }
+
+        .boosty-body .boosty-progress-bar {
+            height: 100% !important;
+            background-color: var(--boosty-progress-fill) !important;
+            border-radius: 4px !important;
+            width: 0%;
+            transition: width 1s cubic-bezier(0.4, 0, 0.2, 1) !important;
+        }
+
+        .boosty-body .boosty-description {
+            font-size: 15px !important;
+            line-height: 1.5 !important;
+            color: var(--boosty-text-main) !important;
+            margin-bottom: 24px !important;
+            font-weight: 400 !important;
+            word-wrap: break-word !important;
+            min-height: 45px !important;
+        }
+
+        .boosty-body .boosty-footer {
+            display: flex !important;
+            justify-content: space-between !important;
+            align-items: center !important;
+            position: relative !important;
+        }
+
+        /* Защищенная кнопка "Поддержать" */
+        .boosty-body .boosty-action-btn {
+            background-color: var(--boosty-link) !important;
+            color: #ffffff !important;
+            border: none !important;
+            padding: 10px 18px !important;
+            border-radius: 8px !important;
+            font-size: 14px !important;
+            font-weight: 600 !important;
+            cursor: pointer !important;
+            transition: background-color 0.15s ease, opacity 0.15s ease !important;
+            display: inline-flex !important;
+            align-items: center !important;
+            gap: 8px !important;
+            user-select: none !important;
+            text-decoration: none !important;
+            box-shadow: none !important;
+        }
+
+        .boosty-body .boosty-action-btn:hover {
+            opacity: 0.9 !important;
+        }
+
+        .boosty-body .boosty-action-btn .arrow-icon {
+            transition: transform 0.2s ease !important;
+            width: 25px !important;
+            height: 25px !important;
+            fill: currentColor !important;
+        }
+
+        .boosty-body .boosty-card.menu-active .boosty-action-btn .arrow-icon {
+            transform: rotate(180deg) !important;
+        }
+
+        .boosty-body .boosty-icon {
+            color: var(--boosty-text-secondary) !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            width: 24px !important;
+            height: 24px !important;
+            transition: color 0.2s ease !important;
+        }
+
+        .boosty-body .boosty-card:hover .boosty-icon {
+            color: var(--boosty-text-main) !important;
+        }
+
+        /* Выпадающее меню с полной защитой от стилей MkDocs */
+        .boosty-body .boosty-payment-menu {
+            position: absolute !important;
+            bottom: calc(100% + 8px) !important;
+            left: 0 !important;
+            background-color: var(--boosty-bg) !important; /* Наследует цвет карточки */
+            border: 1px solid var(--boosty-border) !important;
+            border-radius: 10px !important;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.18) !important;
+            width: 220px !important;
+            opacity: 0 !important;
+            visibility: hidden !important;
+            transform: translateY(10px) !important;
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+            z-index: 100 !important;
+            padding: 6px !important;
+            margin: 0 !important;
+            list-style: none !important;
+        }
+
+        .boosty-body .boosty-card.menu-active .boosty-payment-menu {
+            opacity: 1 !important;
+            visibility: visible !important;
+            transform: translateY(0) !important;
+        }
+
+        /* Полный сброс стилей ссылок MkDocs Material для пунктов меню */
+        .boosty-body .boosty-payment-menu a.boosty-payment-item {
+            display: flex !important;
+            align-items: center !important;
+            gap: 10px !important;
+            padding: 10px 12px !important;
+            color: var(--boosty-text-main) !important;
+            text-decoration: none !important;
+            border-radius: 6px !important;
+            font-size: 14px !important;
+            font-weight: 500 !important;
+            border-bottom: none !important; /* Убираем нижнюю линию от MkDocs */
+            box-shadow: none !important;
+            background: transparent !important;
+            transition: background-color 0.15s ease, padding-left 0.15s ease !important;
+        }
+
+        .boosty-body .boosty-payment-menu a.boosty-payment-item:hover {
+            background-color: var(--boosty-progress-bg) !important; /* Контрастный фон на ведении */
+            padding-left: 15px !important;
+            text-decoration: none !important;
+            color: var(--boosty-text-main) !important;
+            border-bottom: none !important;
+        }
+
+        .boosty-body .payment-dot {
+            width: 8px !important;
+            height: 8px !important;
+            border-radius: 50% !important;
+            flex-shrink: 0 !important;
+            display: inline-block !important;
+        }
+        .boosty-body .dot-boosty { background-color: var(--color-boosty) !important; }
+        .boosty-body .dot-paypal { background-color: var(--color-paypal) !important; }
+        .boosty-body .dot-yoomoney { background-color: var(--color-yoomoney) !important; }
+
+        .boosty-overlay-helper {
+            position: fixed !important;
+            top: 0 !important;
+            left: 0 !important;
+            right: 0 !important;
+            bottom: 0 !important;
+            z-index: 90 !important;
+            display: none;
+        }
+        .boosty-overlay-helper.active {
+            display: block !important;
+        }
+    </style>
+
+
+
+    <!-- Вспомогательный слой для закрытия выпадающих меню при клике в любое место -->
+    <div class="boosty-overlay-helper" id="menuOverlay"></div>
+
+    <div class="boosty-body">
+
+        <!-- Карточка 1 -->
+        <div class="boosty-card" data-current="0" data-target="216" data-boosty="https://boosty.to/fattum/single-payment/donation/804778/target?share=target_link" data-paypal="https://www.paypal.com/paypalme/kfattum" data-yoomoney="https://yoomoney.ru/to/4100117892549005">
+
+            <div class="boosty-amounts">
+
+                <span class="boosty-amount-current"><span class="val">0</span> $</span>
+                <span class="boosty-amount-label">из</span>
+                <span class="boosty-amount-target"><span class="val">100</span> $</span>
+                <span class="boosty-amount-label">собрано</span>
+
+            </div>
+
+            <div class="boosty-progress-container">
+                <div class="boosty-progress-bar"></div>
+            </div>
+
+            <div class="boosty-description">
+                <span>
+
+                    Разработка 13.3-дюймовой версии
+
+                </span>
+            </div>
+
+            <div class="boosty-footer">
+                <button class="boosty-action-btn">
+                    <span>
+
+                        Поддержать
+
+                    </span>
+                    <svg class="arrow-icon" viewBox="0 0 24 24">
+                        <path d="M7 10l5 5 5-5H7z"></path>
+                    </svg>
+                </button>
+
+                <div class="boosty-payment-menu">
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="boosty-payment-item val-boosty">
+                        <span class="payment-dot dot-boosty"></span>
+                        <span>Boosty</span>
+                    </a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="boosty-payment-item val-paypal">
+                        <span class="payment-dot dot-paypal"></span>
+                        <span>PayPal</span>
+                    </a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="boosty-payment-item val-yoomoney">
+                        <span class="payment-dot dot-yoomoney"></span>
+                        <span>ЮMoney</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Карточка 2 -->
+        <div class="boosty-card" data-current="10" data-target="100" data-boosty="https://boosty.to/fattum/single-payment/donation/804792/target?share=target_link" data-paypal="https://www.paypal.com/paypalme/kfattum" data-yoomoney="https://yoomoney.ru/to/4100117892549005"> 
+
+            <div class="boosty-amounts">
+
+                <span class="boosty-amount-current"><span class="val">0</span> $</span>
+                <span class="boosty-amount-label">из</span>
+                <span class="boosty-amount-target"><span class="val">100</span> $</span>
+                <span class="boosty-amount-label">собрано</span>
+
+            </div>
+
+            <div class="boosty-progress-container">
+                <div class="boosty-progress-bar"></div>
+            </div>
+
+            <div class="boosty-description">
+                <span>
+
+                    Разработка 7.5-дюймовой версии с современной начинкой.
+
+                </span>
+            </div>
+
+            <div class="boosty-footer">
+                <button class="boosty-action-btn">
+                    <span>
+
+                        Поддержать
+
+                    </span>
+                    <svg class="arrow-icon" viewBox="0 0 24 24">
+                        <path d="M7 10l5 5 5-5H7z"></path>
+                    </svg>
+                </button>
+
+                <div class="boosty-payment-menu">
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="boosty-payment-item val-boosty">
+                        <span class="payment-dot dot-boosty"></span>
+                        <span>Boosty</span>
+                    </a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="boosty-payment-item val-paypal">
+                        <span class="payment-dot dot-paypal"></span>
+                        <span>PayPal</span>
+                    </a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="boosty-payment-item val-yoomoney">
+                        <span class="payment-dot dot-yoomoney"></span>
+                        <span>ЮMoney</span>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const cards = document.querySelectorAll('.boosty-card');
+            const overlay = document.getElementById('menuOverlay');
+
+            function closeAllMenus() {
+                cards.forEach(card => card.classList.remove('menu-active'));
+                overlay.classList.remove('active');
+            }
+
+            overlay.addEventListener('click', closeAllMenus);
+
+            cards.forEach(card => {
+                const current = parseFloat(card.getAttribute('data-current')) || 0;
+                const target = parseFloat(card.getAttribute('data-target')) || 1;
+
+                let percentage = (current / target) * 100;
+                if (percentage > 100) percentage = 100;
+                if (percentage < 0) percentage = 0;
+
+                setTimeout(() => {
+                    const progressBar = card.querySelector('.boosty-progress-bar');
+                    if (progressBar) progressBar.style.width = `${percentage}%`;
+                }, 150);
+
+                const formatNumber = (num) => {
+                    return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+                };
+
+                const currentEl = card.querySelector('.boosty-amount-current .val');
+                const targetEl = card.querySelector('.boosty-amount-target .val');
+
+                if (currentEl) currentEl.textContent = formatNumber(current);
+                if (targetEl) targetEl.textContent = formatNumber(target);
+
+                const linkBoosty = card.getAttribute('data-boosty');
+                const linkPaypal = card.getAttribute('data-paypal');
+                const linkYoomoney = card.getAttribute('data-yoomoney');
+
+                const itemBoosty = card.querySelector('.boosty-payment-item.val-boosty');
+                const itemPaypal = card.querySelector('.boosty-payment-item.val-paypal');
+                const itemYoomoney = card.querySelector('.boosty-payment-item.val-yoomoney');
+
+                if (linkBoosty && itemBoosty) {
+                    itemBoosty.href = linkBoosty;
+                } else if (itemBoosty) {
+                    itemBoosty.style.display = 'none';
+                }
+
+                if (linkPaypal && itemPaypal) {
+                    itemPaypal.href = linkPaypal;
+                } else if (itemPaypal) {
+                    itemPaypal.style.display = 'none';
+                }
+
+                if (linkYoomoney && itemYoomoney) {
+                    itemYoomoney.href = linkYoomoney;
+                } else if (itemYoomoney) {
+                    itemYoomoney.style.display = 'none';
+                }
+
+                const actionBtn = card.querySelector('.boosty-action-btn');
+                if (actionBtn) {
+                    actionBtn.addEventListener('click', (e) => {
+                        e.stopPropagation();
+                        const isCurrentlyActive = card.classList.contains('menu-active');
+                        closeAllMenus();
+                        if (!isCurrentlyActive) {
+                            card.classList.add('menu-active');
+                            overlay.classList.add('active');
+                        }
+                    });
+                }
+
+                const menu = card.querySelector('.boosty-payment-menu');
+                if (menu) {
+                    menu.addEventListener('click', () => {
+                        setTimeout(closeAllMenus, 100);
+                    });
+                }
+            });
+        });
+    </script>
+
+
+
 <h2 id="_3">Компоненты</h2>
 <table>
 <thead>
@@ -1420,42 +2050,42 @@
 </thead>
 <tbody>
 <tr>
-<td style="text-align: center;"><a class="glightbox" href="../../images/parts/eink.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="ePaper дисплей 7.5" src="../../images/parts/eink.png" width="100"></a> <a class="glightbox" href="/images/parts/eink%20bp.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="ePaper дисплей 7.5 bp" src="/images/parts/eink%20bp.png" width="100"></a></td>
+<td style="text-align: center;"><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../images/parts/eink.png" data-desc-position="bottom"><img alt="ePaper дисплей 7.5" src="../../images/parts/eink.png" width="100"></a> <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/images/parts/eink%20bp.png" data-desc-position="bottom"><img alt="ePaper дисплей 7.5 bp" src="/images/parts/eink%20bp.png" width="100"></a></td>
 <td style="text-align: left;">ePaper дисплей 7.5"</td>
 <td style="text-align: left;"><a href="https://aliexpress.ru/item/1005006573527365.html" target="_blank">Aliexpress</a></td>
 <td style="text-align: center;">1</td>
 <td style="text-align: left;">Это 3-цветный B/W/R дисплей но использовать получится только B/W из за нехватки оперативной памяти.<br><a href="https://esphome.io/components/display/waveshare_epaper/#configuration-variables">поддерживаемые дисплеи</a><br> Предельные размеры экрана 171.20 x 112.20x 1.50, mm</td>
 </tr>
 <tr>
-<td style="text-align: center;"><a class="glightbox" href="../../images/parts/usb%20c%20m.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="USB C штекер" src="../../images/parts/usb%20c%20m.png" width="100"></a></td>
+<td style="text-align: center;"><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../images/parts/usb%20c%20m.png" data-desc-position="bottom"><img alt="USB C штекер" src="../../images/parts/usb%20c%20m.png" width="100"></a></td>
 <td style="text-align: left;">USB C штекер</td>
 <td style="text-align: left;"><a href="https://aliexpress.ru/item/1005001337982060.html" target="_blank">Aliexpress</a></td>
 <td style="text-align: center;">1</td>
 <td style="text-align: left;"></td>
 </tr>
 <tr>
-<td style="text-align: center;"><a class="glightbox" href="../../images/parts/usb%20c%20f.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="USB C разъем" src="../../images/parts/usb%20c%20f.png" width="100"></a></td>
+<td style="text-align: center;"><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../images/parts/usb%20c%20f.png" data-desc-position="bottom"><img alt="USB C разъем" src="../../images/parts/usb%20c%20f.png" width="100"></a></td>
 <td style="text-align: left;">USB C разъем</td>
 <td style="text-align: left;"><a href="https://aliexpress.ru/item/1005001337982060.html" target="_blank">Aliexpress</a></td>
 <td style="text-align: center;">1</td>
 <td style="text-align: left;"></td>
 </tr>
 <tr>
-<td style="text-align: center;"><a class="glightbox" href="/images/parts/%D0%9F%D0%BE%D0%BB%D0%B7%D1%83%D0%BD%D0%BA%D0%BE%D0%B2%D1%8B%D0%B5%20%D0%BF%D0%B5%D1%80%D0%B5%D0%BA%D0%BB%D1%8E%D1%87%D0%B0%D1%82%D0%B5%D0%BB%D0%B8.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Ползунковые переключатели" src="/images/parts/%D0%9F%D0%BE%D0%BB%D0%B7%D1%83%D0%BD%D0%BA%D0%BE%D0%B2%D1%8B%D0%B5%20%D0%BF%D0%B5%D1%80%D0%B5%D0%BA%D0%BB%D1%8E%D1%87%D0%B0%D1%82%D0%B5%D0%BB%D0%B8.png" width="100"></a></td>
+<td style="text-align: center;"><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/images/parts/%D0%9F%D0%BE%D0%BB%D0%B7%D1%83%D0%BD%D0%BA%D0%BE%D0%B2%D1%8B%D0%B5%20%D0%BF%D0%B5%D1%80%D0%B5%D0%BA%D0%BB%D1%8E%D1%87%D0%B0%D1%82%D0%B5%D0%BB%D0%B8.png" data-desc-position="bottom"><img alt="Ползунковые переключатели" src="/images/parts/%D0%9F%D0%BE%D0%BB%D0%B7%D1%83%D0%BD%D0%BA%D0%BE%D0%B2%D1%8B%D0%B5%20%D0%BF%D0%B5%D1%80%D0%B5%D0%BA%D0%BB%D1%8E%D1%87%D0%B0%D1%82%D0%B5%D0%BB%D0%B8.png" width="100"></a></td>
 <td style="text-align: left;">Ползунковый переключатель TLZWLA SS12F15VG4</td>
 <td style="text-align: left;"><a href="https://aliexpress.ru/item/4000699324084.html" target="_blank">Aliexpress</a></td>
 <td style="text-align: center;">1</td>
 <td style="text-align: left;"></td>
 </tr>
 <tr>
-<td style="text-align: center;"><a class="glightbox" href="../../images/parts/%D0%BA%D0%BD%D0%BE%D0%BF%D0%BA%D0%B0%206X6X10.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="img" src="../../images/parts/%D0%BA%D0%BD%D0%BE%D0%BF%D0%BA%D0%B0%206X6X10.jpg" width="100"></a></td>
+<td style="text-align: center;"><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../images/parts/%D0%BA%D0%BD%D0%BE%D0%BF%D0%BA%D0%B0%206X6X10.jpg" data-desc-position="bottom"><img alt="img" src="../../images/parts/%D0%BA%D0%BD%D0%BE%D0%BF%D0%BA%D0%B0%206X6X10.jpg" width="100"></a></td>
 <td style="text-align: left;">Тактовая кнопка 6X6X10</td>
 <td style="text-align: left;"><a href="https://aliexpress.ru/item/1005005371058192.html" target="_blank">Aliexpress</a></td>
 <td style="text-align: center;">1</td>
 <td style="text-align: left;"></td>
 </tr>
 <tr>
-<td style="text-align: center;"><a class="glightbox" href="../../images/parts/300px-E-Paper-ESP32-Driver-Board-01.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="img" src="../../images/parts/300px-E-Paper-ESP32-Driver-Board-01.jpg" width="100"></a></td>
+<td style="text-align: center;"><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../images/parts/300px-E-Paper-ESP32-Driver-Board-01.jpg" data-desc-position="bottom"><img alt="img" src="../../images/parts/300px-E-Paper-ESP32-Driver-Board-01.jpg" width="100"></a></td>
 <td style="text-align: left;">Контроллер Waveshare E-Paper ESP32 Driver Board (V3)</td>
 <td style="text-align: left;"><a href="https://aliexpress.ru/item/1005007253862264.html" target="_blank">Aliexpress</a></td>
 <td style="text-align: center;">1</td>
@@ -1469,7 +2099,7 @@
 <td style="text-align: left;">Максимальная толщина 7.4 мм. При обновлении раз в час, аккумулятора на 1400 mAh (5.18 Wh) хватает примерно на месяц работы</td>
 </tr>
 <tr>
-<td style="text-align: center;"><a class="glightbox" href="../../images/parts/TP4056.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="img" src="../../images/parts/TP4056.png" width="100"></a></td>
+<td style="text-align: center;"><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../images/parts/TP4056.png" data-desc-position="bottom"><img alt="img" src="../../images/parts/TP4056.png" width="100"></a></td>
 <td style="text-align: left;">Модуль зарядки TP4056</td>
 <td style="text-align: left;"><a href="https://aliexpress.ru/item/32453058256.html" target="_blank">Aliexpress</a></td>
 <td style="text-align: center;">1</td>
@@ -1483,7 +2113,7 @@
 <td style="text-align: left;"></td>
 </tr>
 <tr>
-<td style="text-align: center;"><a class="glightbox" href="../../images/parts/%D0%9D%D0%B5%D0%BE%D0%B4%D0%B8%D0%BC%D0%BE%D0%B2%D1%8B%D0%B5%20%D0%BC%D0%B0%D0%B3%D0%BD%D0%B8%D1%82%D1%8B.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="img" src="../../images/parts/%D0%9D%D0%B5%D0%BE%D0%B4%D0%B8%D0%BC%D0%BE%D0%B2%D1%8B%D0%B5%20%D0%BC%D0%B0%D0%B3%D0%BD%D0%B8%D1%82%D1%8B.png" width="100"></a></td>
+<td style="text-align: center;"><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../images/parts/%D0%9D%D0%B5%D0%BE%D0%B4%D0%B8%D0%BC%D0%BE%D0%B2%D1%8B%D0%B5%20%D0%BC%D0%B0%D0%B3%D0%BD%D0%B8%D1%82%D1%8B.png" data-desc-position="bottom"><img alt="img" src="../../images/parts/%D0%9D%D0%B5%D0%BE%D0%B4%D0%B8%D0%BC%D0%BE%D0%B2%D1%8B%D0%B5%20%D0%BC%D0%B0%D0%B3%D0%BD%D0%B8%D1%82%D1%8B.png" width="100"></a></td>
 <td style="text-align: left;">Неодимовый магнит 8x3mm</td>
 <td style="text-align: left;">—</td>
 <td style="text-align: center;">5</td>
@@ -1503,225 +2133,100 @@
 <h2 id="_4">Сборка</h2>
 <ol>
 <li>
-<p>Удалите красный светодиод PWR с Waveshare E-Paper ESP32 Driver Board для экономии энергии </p>
+<p>Удалите красный светодиод PWR с <code>Waveshare E-Paper ESP32 Driver Board</code> для экономии энергии </p>
 </li>
 <li>
 <p>Чтобы сделать плату драйвера ESP32 тоньше, отпаяйте контакты на её нижней стороне. (Совет: сначала поднимите и снимите пластик между контактами с помощью отвёртки).</p>
 </li>
 <li>
 <p>Установите переключатель №1 на ESP32 в положение A. 
-    <figure markdown>
-    <a class="glightbox" href="../../images/eink/esp32%20A%20B.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="img" class="R02" loading="lazy" src="../../images/eink/esp32%20A%20B.png" width="300"></a>
-    </figure></p>
+    </p><figure markdown="">
+    <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../images/eink/esp32%20A%20B.png" data-desc-position="bottom"><img alt="img" class="R02" loading="lazy" src="../../images/eink/esp32%20A%20B.png" width="300"></a>
+    </figure><p></p>
 </li>
 <li>
-<p>Установите переключатель №2 на ESP32  в положение «ON». Этот переключатель управляет питанием модуля UART через USB. Когда модуль не используется, вы можете вручную выключить его для экономии энергии (если переключатель 2 находится в положении «ВЫКЛ», загрузить программу невозможно).</p>
+<p>Установите переключатель №2 на ESP32  в положение «ON». Этот переключатель управляет питанием модуля UART через USB. Когда модуль не используется, вы можете вручную выключить его для экономии энергии (если переключатель 2 находится в положении «OFF», загрузить программу невозможно).</p>
 </li>
 <li>
 <p>Соберите все части корпуса в указанной последовательности.
-    <figure markdown>
-    <a class="glightbox" href="../../images/eink/eink%20v3%20v39%201%D0%BA1.webp" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="img" class="R02" loading="lazy" src="../../images/eink/eink%20v3%20v39%201%D0%BA1.webp" width="600"></a>
-    </figure></p>
+    </p><figure markdown="">
+    <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../images/eink/eink%20v3%20v39%201%D0%BA1.webp" data-desc-position="bottom"><img alt="img" class="R02" loading="lazy" src="../../images/eink/eink%20v3%20v39%201%D0%BA1.webp" width="600"></a>
+    </figure><p></p>
 </li>
 <li>
 <p>Спаяйте компоненты по схеме.
-    <figure markdown>
-    <a class="glightbox" href="../../images/eink/eink.svg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="img" class="R02" loading="lazy" src="../../images/eink/eink.svg" style="background: #ffffff;" width="600"></a>
+    </p><figure markdown="">
+    <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../images/eink/eink.svg" data-desc-position="bottom"><img alt="img" class="R02" loading="lazy" src="../../images/eink/eink.svg" style="background: #ffffff;" width="600"></a>
     <figcaption><a href="https://app.cirkitdesigner.com/project/40136c59-80ac-4ec9-8909-b4dab8e631ea" target="_blank">ссылка на проект</a></figcaption>
-    </figure></p>
+    </figure><p></p>
 </li>
 <li>
 <p>Нанесите клей T-7000/B-7000 в райне магнитов что бы корпус не скользил по гладкой металлической поверхности </p>
-<p><figure markdown>
-<a class="glightbox" href="/images/eink/DSC00166.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="img" class="R02" loading="lazy" src="/images/eink/DSC00166.jpg" width="600"></a>
-</figure></p>
+<p></p><figure markdown="">
+<a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/images/eink/DSC00166.jpg" data-desc-position="bottom"><img alt="img" class="R02" loading="lazy" src="/images/eink/DSC00166.jpg" width="600"></a>
+</figure><p></p>
 </li>
 </ol>
 <hr>
 <h2 id="_5">Установка прошивки</h2>
-<ol>
-<li>
-<p>Установите ESPHome Device Builder <br>
-<a href="https://my.home-assistant.io/redirect/supervisor_addon/?addon=5c53de3b_esphome&amp;repository_url=https%3A%2F%2Fgithub.com%2Fesphome%2Fhome-assistant-addon" target="_blank"><img alt="Откройте свой экземпляр Home Assistant и отобразите панель управления дополнения." src="https://my.home-assistant.io/badges/supervisor_addon.svg"></a></p>
-</li>
-<li>
-<p>Скачайте конфигурационный файл <a href="https://github.com/kfattum/esphome-trmnl/blob/main/esphome-trmnl.yaml" target="_blank">esphome-trmnl.yaml</a> и измените значения на свои </p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Переменная</th>
-<th style="text-align: left;">Значение</th>
-<th style="text-align: left;">Описание</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;"><code>fw_version</code></td>
-<td style="text-align: left;"><code>1.0.1 esphome-trmnl</code></td>
-<td style="text-align: left;">Версия прошивки</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>server_url</code></td>
-<td style="text-align: left;"><code>http://192.168.1.123:80</code></td>
-<td style="text-align: left;">URL-адрес сервера Inker</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>mqtt_broker_ip</code></td>
-<td style="text-align: left;"><code>192.168.1.100</code></td>
-<td style="text-align: left;">IP-адрес брокера Mosquitto</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>manual_ip_static_ip</code></td>
-<td style="text-align: left;"><code>192.168.1.222</code></td>
-<td style="text-align: left;">Статический IP-адрес дисплея</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>manual_ip_gateway</code></td>
-<td style="text-align: left;"><code>192.168.1.1</code></td>
-<td style="text-align: left;">Шлюз локальной сети</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>manual_ip_subnet</code></td>
-<td style="text-align: left;"><code>255.255.255.0</code></td>
-<td style="text-align: left;">Подсеть локальной сети</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>name</code></td>
-<td style="text-align: left;"><code>trmnl</code></td>
-<td style="text-align: left;">Системное имя устройства (строчные буквы, цифры, дефис, до 24 симв.)</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>friendly_name</code></td>
-<td style="text-align: left;"><code>TRMNL</code></td>
-<td style="text-align: left;">Имя в интерфейсе Home Assistant</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>model</code></td>
-<td style="text-align: left;"><code>7.50in-bV3</code></td>
-<td style="text-align: left;">Модель e-ink дисплея</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>wifi_output_power</code></td>
-<td style="text-align: left;"><code>8.5dB</code></td>
-<td style="text-align: left;">Мощность передачи Wi-Fi (от 8.5 до 20.5 dB)</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>img_type</code></td>
-<td style="text-align: left;"><code>BINARY</code></td>
-<td style="text-align: left;">Способ внутреннего кодирования изображения</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>img_format</code></td>
-<td style="text-align: left;"><code>PNG</code></td>
-<td style="text-align: left;">Формат, в котором закодировано изображение.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>img_url_setup_logo</code></td>
-<td style="text-align: left;"><code>http://raw.github.../setup-logo.bmp</code></td>
-<td style="text-align: left;">Изображение заглушка</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>deep_sleep_delay</code></td>
-<td style="text-align: left;"><code>1000ms</code></td>
-<td style="text-align: left;">Задержка перед переходом в сон</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>sleep_time</code></td>
-<td style="text-align: left;"><code>3600</code></td>
-<td style="text-align: left;">Время сна по умолчанию (сек.)</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>error_sleep_duration</code></td>
-<td style="text-align: left;"><code>1200</code></td>
-<td style="text-align: left;">Время сна при возникновении ошибки (сек.)</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>reset_duration</code></td>
-<td style="text-align: left;"><code>200 ms</code></td>
-<td style="text-align: left;">Длительность операции сброса дисплея</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>wifi_connect_delay</code></td>
-<td style="text-align: left;"><code>15s</code></td>
-<td style="text-align: left;">Таймаут ожидания подключения к Wi-Fi</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>mqtt_connect_delay</code></td>
-<td style="text-align: left;"><code>500ms</code></td>
-<td style="text-align: left;">Задержка после успешного подключения к MQTT</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>button</code></td>
-<td style="text-align: left;"><code>GPIO32</code></td>
-<td style="text-align: left;">Пин кнопки управления</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>adc_pin</code></td>
-<td style="text-align: left;"><code>GPIO34</code></td>
-<td style="text-align: left;">Пин АЦП (для мониторинга батареи)</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>deep_sleep_pin</code></td>
-<td style="text-align: left;"><code>GPIO32</code></td>
-<td style="text-align: left;">Пин для пробуждения из глубокого сна</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>clk_pin</code></td>
-<td style="text-align: left;"><code>GPIO13</code></td>
-<td style="text-align: left;">SPI Clock пин</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>mosi_pin</code></td>
-<td style="text-align: left;"><code>GPIO14</code></td>
-<td style="text-align: left;">SPI MOSI пин</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>cs_pin</code></td>
-<td style="text-align: left;"><code>GPIO15</code></td>
-<td style="text-align: left;">SPI Chip Select пин</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>dc_pin</code></td>
-<td style="text-align: left;"><code>GPIO27</code></td>
-<td style="text-align: left;">Data/Command пин</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>busy_pin</code></td>
-<td style="text-align: left;"><code>GPIO25</code></td>
-<td style="text-align: left;">Busy пин (Для предотвращения необратимого повреждения дисплея необходимо инвертировать контакт BUSY на моделях gdew0154m09, Waveshare 7.30in-f и Waveshare 7.50in V2 (и наверно на V3 и других новых моделях). Установите для контакта busy значение <code>inverted: true</code> в настройках)</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>reset_pin</code></td>
-<td style="text-align: left;"><code>GPIO26</code></td>
-<td style="text-align: left;">Пин аппаратного сброса дисплея</td>
-</tr>
-</tbody>
-</table>
-</li>
-<li>
-<p>Добавьте в secrets.yaml ESPHome 
-</p><div class="highlight"><pre><span></span><code>mqtt_password: #пароль для подключения к MQTT
-wifi_ssid: #имя вашей wifi сети
-wifi_password #пароль вашей wifi сети
-</code></pre></div>
-</li>
-<li>Загрузите отредактированный yaml в ESPHome и установите прошивку на ESP32</li>
-</ol>
-<hr>
-<h2 id="inker">Установка <a href="https://github.com/usetrmnl/inker" target="_blank"><strong>Inker</strong></a></h2>
-<div class="admonition info">
-<p class="admonition-title">Важное примечание</p>
-<p>Данное руководство предполагает, что у вас уже установлен <a href="https://www.home-assistant.io/installation/">Home Assistant</a>. Также для работы потребуется Docker с установленным плагином Docker Compose. Все действия в инструкции описываются из расчета, что установка производится на ОС Debian.</p>
-</div>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked id="__tabbed_1_1" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Docker Compose</label></div>
+<p>Вы можете использовать кнопку ниже, чтобы установить предварительно собранную прошивку на <code>Waveshare E-Paper ESP32 Driver Board (V3)</code> через USB из браузера или <a href="https://github.com/kfattum/esphome-trmnl/releases/latest/download/esphome-trmnl.yaml" target="_blank">скачать конфигурационный файл</a> и установить прошивку через <a href="/open_projects/ESPHome-TRMNL_7%2B5/#__tabbed_1_2">ESPHome Device Builder</a></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Web-установщик</label><label for="__tabbed_1_2">ESPHome Device Builder</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
+<ol>
+<li>Подключите ESP к USB-порту. Возможно, вам потребуется нажать и удерживать кнопку <code>boot</code>, одновременно нажимая кнопку <code>reset</code>.</li>
+<li>Нажмите «<code>Connect</code>» и выберите правильный COM-порт.</li>
+<li>Подождите около 2 минут, пока прошивка установится.</li>
+<li>После установки вы можете настроить Wi-Fi.</li>
+</ol>
+<p></p><div>
+    <esp-web-install-button manifest="/open_projects/ESPHome-TRMNL_7+5/manifest.json"></esp-web-install-button>
+</div><p></p>
+<div class="admonition info">
+<p class="admonition-title">Изменение URL адреса  <code>HA</code> и <code>Inker</code></p>
+<p>Стандартные URL адреса  <code>HA</code> ( http://homeassistant.local:8123 ) и  <code>Inker</code> ( http://homeassistant.local:8123 ) можно изменить в web-интерфейсе ESP32 (стандартный логин и пароль от web-интерфейса <code>esphome-trmnl</code>). Нажмите кнопку чтобы разбудить плату, через секунду зажмите кнопку на 5 секунд чтобы прейти в режим настроек. Если плата подключена к wifi то отобразится qr-код со ссылкой на web-интерфейс, а если не подключена то qr-код со ссылкой на <a href="https://esphome.io/components/captive_portal/" target="_blank">captive portal</a></p>
+</div>
+</div>
+<div class="tabbed-block">
+<ol>
+<li>
+<p>Установите <code>ESPHome Device Builder</code> 
+<a class="ha-badge" href="https://my.home-assistant.io/redirect/supervisor_addon/?addon=5c53de3b_esphome&amp;repository_url=https%3A%2F%2Fgithub.com%2Fesphome%2Fhome-assistant-addon" target="_blank"><img alt="Откройте свой экземпляр  Home Assistant и отобразите панель управления дополнения." src="https://my.home-assistant.io/badges/supervisor_addon.svg"></a></p>
+</li>
+<li>
+<p>Скачайте конфигурационный файл <a href="https://github.com/kfattum/esphome-trmnl/releases/latest/download/esphome-trmnl.yaml" target="_blank">esphome-trmnl.yaml</a> и измените значения <code>substitutions</code> на свои </p>
+</li>
+<li>
+<p>Добавьте в <code>secrets.yaml</code>  <code>ESPHome</code> 
+</p><div class="highlight"><pre><span></span><code>wifi_ssid: "Имя_вашей_wifi_сети"
+wifi_password: "Пароль_вашей_wifi_сети"
+trmnl_wifi_ap_password: "Пароль_для_точки_доступа_дисплея"
+trmnl_web_username: "Имя_пользователя_для_доступа_к_веб-интерфейсу_дисплея"
+trmnl_web_password: "Пароль_для_доступа_к_веб-интерфейсу_дисплея"
+trmnl_ota_password: "Пароль_для_OTA_обновлений"
+</code></pre></div><p></p>
+</li>
+<li>Загрузите отредактированный yaml в <code>ESPHome</code> и установите прошивку на ESP32</li>
+</ol>
+</div>
+</div>
+</div>
+<hr>
+<h2 id="inker">Установка <a href="https://github.com/usetrmnl/inker" target="_blank"><strong>Inker</strong></a></h2>
+<p>Вы можете установить официальный <strong><code>Inker</code></strong> в Docker и поменять URL сервера <code>Inker</code> в web-интерфейсе ESP32 или установить мой форк прямо в HA и ничего не менять </p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="" id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">Docker Compose</label><label for="__tabbed_2_2">Не официальный форк  Inker для  Home Assistant</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="admonition info">
+<p class="admonition-title">Важное примечание</p>
+<p>Данное руководство предполагает, что у вас уже установлен <a href="https://www.home-assistant.io/installation/"> Home Assistant</a>. Также для работы потребуется Docker с установленным плагином Docker Compose. Все действия в инструкции описываются из расчета, что установка производится на ОС Debian.</p>
+</div>
 <ol>
 <li>
 <p>Создайте директорию
     </p><div class="highlight"><span class="filename">Создайте директорию (например, ./inker) для хранения файла `docker-compose.yml` и перейдите в неё.</span><pre><span></span><code>mkdir<span class="w"> </span>./inker
 <span class="nb">cd</span><span class="w"> </span>./inker
-</code></pre></div>
+</code></pre></div><p></p>
 </li>
 <li>
 <p>Создайте <code>docker-compose.yml</code> выполните следующие команды:</p>
@@ -1756,29 +2261,62 @@ wifi_password #пароль вашей wifi сети
 </code></pre></div>
 <h3 id="inker_1">Обновление Inker</h3>
 <p>При выпуске новой версии следует ознакомиться с примечаниями к выпуску и учесть все отмеченные в них изменения, нарушающие обратную совместимость. После этого приложение можно обновить и перезапустить с помощью следующих команд, запущенных в каталоге, где находится файл docker-compose.yml:
-</p><div class="highlight"><span class="filename">Обновление и перезапуск Inker.</span><pre><span></span><code>docker<span class="w"> </span>compose<span class="w"> </span>pull<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>docker<span class="w"> </span>compose<span class="w"> </span>up<span class="w"> </span>-d
+</p><div class="highlight"><span class="filename">Обновление и перезапуск  Inker.</span><pre><span></span><code>docker<span class="w"> </span>compose<span class="w"> </span>pull<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>docker<span class="w"> </span>compose<span class="w"> </span>up<span class="w"> </span>-d
 </code></pre></div>
 Для освобождения дискового пространства устаревшие образы контейнеров старой версии можно удалить с помощью следующей команды:
 <div class="highlight"><span class="filename">Удалите неиспользуемые образы Docker.</span><pre><span></span><code>docker<span class="w"> </span>image<span class="w"> </span>prune
-</code></pre></div>
+</code></pre></div><p></p>
+</div>
+<div class="tabbed-block">
+<ul>
+<li>Установите приложение в <code>HA</code>
+ <a class="ha-badge" href="https://my.home-assistant.io/redirect/supervisor_addon/?repository_url=https%3A%2F%2Fgithub.com%2Fkfattum%2Finker-home-assistant-app&amp;addon=inker-home-assistant-app"><img alt="Open your  Home Assistant instance and show the dashboard of an app." src="https://my.home-assistant.io/badges/supervisor_addon.svg"></a></li>
+</ul>
 </div>
 </div>
 </div>
-<h2 id="home-assistant">Настройка Home Assistant</h2>
+<div class="admonition warning">
+<p class="admonition-title">Безопасность</p>
+<p>Настоятельно рекомендуется оставить  <code>Inker</code> доступным исключительно внутри вашей <strong>локальной сети</strong> и не пробрасывать порты наружу. Если вам критически необходим удаленный доступ, используйте только доверенные и защищенные каналы.</p>
+</div>
+<h2 id="home-assistant">Настройка  Home Assistant</h2>
 <ol>
 <li>
-<p>Установите <strong>Mosquitto broker</strong> <br>
-  <a href="https://my.home-assistant.io/redirect/supervisor_addon/?addon=core_mosquitto" target="_blank"><img alt="Открыть панель Mosquitto broker в вашем Home Assistant." src="https://my.home-assistant.io/badges/supervisor_addon.svg"></a><br>
-  На вкладке "Конфигурация" <strong>Mosquitto broker</strong> введите "name" и "mqtt_password" которые вы использовали в прошивке</p>
+<p>Установите интеграцию <strong><code>ESPHome-TRMNL</code></strong><br></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="" id="__tabbed_3_1" name="__tabbed_3" type="radio"><input id="__tabbed_3_2" name="__tabbed_3" type="radio"><div class="tabbed-labels"><label for="__tabbed_3_1">С использованием <code>HACS</code> (рекомендуется)</label><label for="__tabbed_3_2">Без <code>HACS</code></label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Этот метод позволяет получать обновления непосредственно на главной странице <code>HACS</code>. Если <code>HACS</code> еще не установлен, загрузите его, следуя инструкциям на странице <a href="https://hacs.xyz/docs/setup/download/">hacs.xyz/docs/setup/download/</a></p>
+<ul>
+<li>
+<p>Скачайте интеграцию
+<a class="ha-badge" href="https://my.home-assistant.io/redirect/hacs_repository/?owner=kfattum&amp;repository=esphome-trmnl&amp;category=Integrations"><img alt="Open your  Home Assistant instance and open a repository inside the  Home Assistant Community Store." src="https://my.home-assistant.io/badges/hacs_repository.svg"></a><br></p>
 </li>
 <li>
-<p>Установите интеграцию <strong>MQTT</strong><br>
-  <a href="https://my.home-assistant.io/redirect/config_flow_start?domain=mqtt" target="_blank"><img alt="MQTT" src="https://my.home-assistant.io/badges/config_flow_start.svg"></a><br>
-  Включите экран, он должен появится в интеграции <strong>MQTT</strong></p>
+<p>Перезапустите  <code>Home Assistant</code>, чтобы система распознала новые файлы.</p>
+</li>
+<li>Перейдите в Настройки -&gt; Устройства и службы -&gt; Добавить интеграцию, найдите <code>ESPHome-TRMNL</code> -&gt; Добавить</li>
+<li>Когда вы включите экран, он должен автоматически появиться в интеграции <strong><code>ESPHome-TRMNL</code></strong></li>
+</ul>
+</div>
+<div class="tabbed-block">
+<p>Этот метод требует ручного копирования файлов и самостоятельного отслеживания обновлений.</p>
+<ol>
+<li>Перейдите в репозиторий интеграции на <code>GitHub</code>: <a href="https://github.com/kfattum/esphome-trmnl">kfattum/esphome-trmnl</a>.</li>
+<li>Скачайте архив из последнего релиза в разделе <strong><code>Releases</code></strong>.</li>
+<li>Распакуйте загруженный архив на вашем компьютере.</li>
+<li>Найдите внутри папку <code>custom_components/esphome_trmnl</code> и скопируйте папку <code>esphome_trmnl</code> в директорию <code>custom_components</code> вашей конфигурации  <code>Home Assistant</code>.</li>
+<li>Перезапустите  <code>Home Assistant</code>, чтобы система распознала новые файлы.</li>
+<li>Перейдите в <strong>Настройки</strong> -&gt; <strong>Устройства и службы</strong> -&gt; <strong>Добавить интеграцию</strong>, найдите <code>ESPHome-TRMNL</code> -&gt; Добавить</li>
+<li>Когда вы включите экран, он должен автоматически появиться в интеграции <strong><code>ESPHome-TRMNL</code></strong> </li>
+</ol>
+</div>
+</div>
+</div>
 </li>
 <li>
-<p>Установите <strong>blueprint</strong> <br>
-  <a href="https://my.home-assistant.io/redirect/blueprint_import/?blueprint_url=https://raw.githubusercontent.com/kfattum/esphome-trmnl/refs/heads/main/blueprint_controlling_epaper_display_by_presence.yaml" target="_blank"><img alt="Open in Home Assistant" src="https://my.home-assistant.io/badges/blueprint_import.svg"></a></p>
+<p>Установите <strong><code>blueprint</code></strong>
+<a class="ha-badge" href="https://my.home-assistant.io/redirect/blueprint_import/?blueprint_url=https://github.com/kfattum/esphome-trmnl/releases/latest/download/blueprint_controlling_epaper_display_by_presence.yaml" target="_blank"><img alt="Open in  Home Assistant" src="https://my.home-assistant.io/badges/blueprint_import.svg"></a></p>
 </li>
 </ol>
 <!-- ---
@@ -1808,10 +2346,16 @@ wifi_password #пароль вашей wifi сети
 [:simple-github:](#){target=_blank .md-button}  -->
 
 <hr>
-<h2 id="_6">Калибровка сенсора напряжения батареи (Калибровка АЦП)</h2>
+<h2 id="_6">Управление с помощью кнопки</h2>
+<ul>
+<li>Удержание кнопки в режиме глубокого сна сбрасывает принудительно установленный экран, интервал обновления и блокировку обновления дисплея в интеграции  <code>Home Assistant</code></li>
+<li>Длинное нажатие (более 5 секунд) в активном режиме включает режим настройки в котором если плата подключена к wifi то отобразится qr-код со ссылкой на web-интерфейс (стандартный логин и пароль от web-интерфейса <code>esphome-trmnl</code>), а если не подключена то qr-код со ссылкой на <a href="https://esphome.io/components/captive_portal/" target="_blank">captive portal</a>. В этом режиме устройство не засыпает 30 минут, а затем переходит в глубокий сон.</li>
+<li>Короткое нажатие пробуждает/перезагружает устройство</li>
+</ul>
+<h2 id="_7">Калибровка сенсора напряжения батареи (Калибровка АЦП)</h2>
 <ol>
 <li>
-<p>Запишите показания при напряжение акб 4.20, 4.19, 3.75, 3.50 и 3.00 V. </p>
+<p>Запишите показания при напряжение акб 4.20, 4.19, 3.75 и 3.60 V. </p>
 </li>
 <li>
 <p>Впишите данные в фильтр. Слева от (-&gt;) значения от датчика, а справа истинное значение 
@@ -1825,57 +2369,69 @@ wifi_password #пароль вашей wifi сети
 <span class="w">           </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3.64 -&gt; 4.19</span>
 <span class="w">           </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3.89 -&gt; 4.20</span>
 <span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">...</span>
-</code></pre></div>
+</code></pre></div><p></p>
 </li>
 </ol>
 <hr>
-<h2 id="_7">Создание пользовательских виджетов</h2>
-<h3 id="1-home-assistant">Пример 1. Home Assistant "Время и дата"</h3>
-<p><strong>Этап 1.</strong> Настройка источника данных (Data Source). Здесь мы указываем inker, откуда и как забирать информацию из Home Assistant.</p>
+<h2 id="_8">Создание пользовательских виджетов</h2>
+<h3 id="1-home-assistant">Пример 1.  <code>Home Assistant</code> "Время и дата"</h3>
+<p><strong>Этап 1.</strong> Настройка источника данных (Data Source). Здесь мы указываем  inker, откуда и как забирать информацию из  <code>Home Assistant</code>.</p>
 <figure>
-<p><a class="glightbox" href="/images/eink/hat1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="img" src="/images/eink/hat1.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/images/eink/hat1.png" data-desc-position="bottom"><img alt="img" class="R02" loading="lazy" src="/images/eink/hat1.png" width="600"></a></p>
 </figure>
 <ol>
-<li><strong>Создайте новый источник данных</strong> в интерфейсе inker.</li>
-<li>В блоке <strong>Basic Information</strong> (Основная информация):<ul>
-<li><strong>Name</strong>: Введите понятное имя, например, <code>НА Время</code>.</li>
-<li><strong>Type</strong>: Выберите <strong>JSON API</strong>.</li>
+<li><strong>Создайте новый источник данных</strong> в интерфейсе  <code>inker</code>.</li>
+<li>В блоке <strong><code>Basic Information</code></strong> (Основная информация):<ul>
+<li><strong><code>Name</code></strong>: Введите понятное имя, например, <code>НА Время</code>.</li>
+<li><strong><code>Type</code></strong>: Выберите <strong><code>JSON API</code></strong>.</li>
 </ul>
 </li>
-<li>В блоке <strong>Connection</strong> (Подключение):<ul>
-<li><strong>URL</strong>: Укажите адрес к API вашего Home Assistant для конкретного сенсора. <ul>
+<li>
+<p>В блоке <strong><code>Connection</code></strong> (Подключение):</p>
+<ul>
+<li><strong><code>URL</code></strong>: Укажите адрес к API вашего  <code>Home Assistant</code> для конкретного сенсора. <ul>
 <li><em>Формат:</em> <code>http://&lt;IP-адрес-HA&gt;:&lt;порт&gt;/api/states/&lt;название_сенсора&gt;</code></li>
 </ul>
 </li>
-<li><strong>HTTP Method</strong>: Выберите <strong>GET</strong>.</li>
-<li><strong>Custom Headers</strong> (Пользовательские заголовки): Обязательно добавьте заголовок для авторизации в Home Assistant (для этого вам понадобится долгосрочный токен доступа, созданный в профиле пользователя HA).<ul>
-<li><strong>Header name</strong>: введите <code>Authorization</code></li>
-<li><strong>Header value</strong>: введите <code>Bearer ВАШ_ТОКЕН</code> (замените <code>ВАШ_ТОКЕН</code> на реальный токен из HA, обратите внимание на пробел после слова Bearer).</li>
-<li>Нажмите кнопку <strong>Add</strong>.</li>
+<li><strong><code>HTTP Method</code></strong>: Выберите <strong><code>GET</code></strong>.</li>
+<li>
+<p><strong><code>Custom Headers</code></strong> (Пользовательские заголовки): Обязательно добавьте заголовок для авторизации в  <code>Home Assistant</code> (для этого вам понадобится долгосрочный токен доступа, созданный в профиле непривилегированного пользователя HA).</p>
+<ul>
+<li><strong><code>Header name</code></strong>: введите <code>Authorization</code></li>
+<li><strong><code>Header value</code></strong>: введите <code>Bearer ВАШ_ТОКЕН</code> (замените <code>ВАШ_ТОКЕН</code> на реальный токен из HA, обратите внимание на пробел после слова Bearer).</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Безопасность</p>
+<p>Категорически не рекомендуется создавать долгосрочный токен от имени учетной записи администратора  <code>Home Assistant</code>.</p>
+</div>
+<ul>
+<li>Нажмите кнопку <strong><code>Add</code></strong>.</li>
 </ul>
 </li>
 </ul>
 </li>
-<li>Нажмите зеленую кнопку <strong>Test URL</strong>. Если все настроено верно, inker подключится к Home Assistant и в правой панели появятся доступные поля (например, <code>entity_id</code>, <code>state</code>, <code>last_changed</code> и т.д.).</li>
-<li>В блоке <strong>Settings</strong> (Настройки):<ul>
-<li><strong>Refresh Interval (seconds)</strong>: Укажите интервал обновления данных в секундах. </li>
+<li>
+<p>Нажмите зеленую кнопку <strong><code>Test URL</code></strong>. Если все настроено верно,  inker подключится к  Home Assistant и в правой панели появятся доступные поля (например, <code>entity_id</code>, <code>state</code>, <code>last_changed</code> и т.д.).</p>
+</li>
+<li>В блоке <strong><code>Settings</code></strong> (Настройки):<ul>
+<li><strong><code>Refresh Interval</code> (seconds)</strong>: Укажите интервал обновления данных в секундах. </li>
 </ul>
 </li>
-<li>Нажмите <strong>Save Changes</strong> (Сохранить изменения).</li>
+<li>Нажмите <strong><code>Save Changes</code></strong> (Сохранить изменения).</li>
 </ol>
 <p><strong>Этап 2.</strong> Настройка виджета. Здесь мы настраиваем, как именно полученные данные будут отображаться на экране.</p>
-<p><a class="glightbox" href="/images/eink/hat2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="img" src="/images/eink/hat2.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/images/eink/hat2.png" data-desc-position="bottom"><img alt="img" class="R02" loading="lazy" src="/images/eink/hat2.png" width="600"></a></p>
 <ol>
-<li><strong>Создайте новый пользовательский виджет</strong> в интерфейсе inker.</li>
-<li>Выберите <strong>Data Source</strong> (источника данных) который мы создали на первом этапе (например, "НА Время").</li>
+<li><strong>Создайте новый пользовательский виджет</strong> в интерфейсе  inker.</li>
+<li>Выберите <strong><code>Data Source</code></strong> (источника данных) который мы создали на первом этапе (например, "НА Время").</li>
 <li>Выберите тип отображения (Choose Display Type) <strong>JavaScript</strong></li>
-<li>В поле <strong>Widget Name</strong> укажите название для виджета, например, <code>HA time</code>.</li>
-<li>В блоке <strong>JavaScript Transform</strong> мы настроим форматирование полученных данных:<ul>
-<li><strong>Output Mode</strong>: Выберите <strong>Single Value</strong>.</li>
-<li>В поле <strong>JavaScript Code</strong> вставьте следующий код для преобразования даты и времени:</li>
+<li>В поле <strong><code>Widget Name</code></strong> укажите название для виджета, например, <code>HA time</code>.</li>
+<li>
+<p>В блоке <strong><code>JavaScript Transform</code></strong> мы настроим форматирование полученных данных:</p>
+<ul>
+<li><strong><code>Output Mode</code></strong>: Выберите <strong>Single Value</strong>.</li>
+<li>В поле <strong><code>JavaScript Code</code></strong> вставьте следующий код для преобразования даты и времени:</li>
 </ul>
-</li>
-</ol>
 <div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">state</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">$</span><span class="p">.</span><span class="nx">state</span><span class="p">;</span>
 <span class="kd">const</span><span class="w"> </span><span class="nx">dateObj</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nb">Date</span><span class="p">(</span><span class="nx">state</span><span class="p">);</span>
 <span class="kd">const</span><span class="w"> </span><span class="nx">formatter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nb">Intl</span><span class="p">.</span><span class="nx">DateTimeFormat</span><span class="p">(</span><span class="s1">'ru-RU'</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
@@ -1888,18 +2444,20 @@ wifi_password #пароль вашей wifi сети
 <span class="kd">const</span><span class="w"> </span><span class="nx">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">formatter</span><span class="p">.</span><span class="nx">format</span><span class="p">(</span><span class="nx">dateObj</span><span class="p">);</span>
 <span class="k">return</span><span class="w"> </span><span class="nx">result</span><span class="p">;</span>
 </code></pre></div>
-<ol>
-<li>В блоке <strong>Live Output</strong> ниже вы сразу увидите результат работы вашего кода. Если данные из HA поступают корректно, там отобразится отформатированное время (например: <code>вт, 5 мая, 11:45</code>). Вы также увидите предпросмотр готового виджета в панели <strong>Live Preview</strong> справа вверху.</li>
-<li>Нажмите <strong>Save Changes</strong> (Сохранить изменения), чтобы завершить настройку виджета.</li>
+</li>
+<li>
+<p>В блоке <strong><code>Live Output</code></strong> ниже вы сразу увидите результат работы вашего кода. Если данные из  HA поступают корректно, там отобразится отформатированное время (например: <code>вт, 5 мая, 11:45</code>). Вы также увидите предпросмотр готового виджета в панели <strong><code>Live Preview</code></strong> справа вверху.</p>
+</li>
+<li>Нажмите <strong><code>Save Changes</code></strong> (Сохранить изменения), чтобы завершить настройку виджета.</li>
 </ol>
 <hr>
-<h3 id="2-home-assistant">Пример 2. Home Assistant "Календарь"</h3>
-<p>Этот виджет соберет события из нескольких календарей HA и выведет их одной строкой.</p>
+<h3 id="2-home-assistant">Пример 2.  Home Assistant "Календарь"</h3>
+<p>Этот виджет соберет события из нескольких календарей  HA и выведет их одной строкой.</p>
 <p>Настраивается аналогично <a href="#1-home-assistant">Примеру 1</a> , но с другим URL, который отдаёт состояние всех сущностей:</p>
 <div class="highlight"><pre><span></span><code>http://<span class="p">&lt;</span><span class="nt">IP_АДРЕС_HA</span><span class="p">&gt;</span>:<span class="p">&lt;</span><span class="nt">ПОРТ</span><span class="p">&gt;</span>/api/states
 </code></pre></div>
 <figure>
-<p><a class="glightbox" href="/images/eink/hat1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="img" class="R02" loading="lazy" src="/images/eink/hat1.png" width="600"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/images/eink/hat1.png" data-desc-position="bottom"><img alt="img" class="R02" loading="lazy" src="/images/eink/hat1.png" width="600"></a></p>
 </figure>
 <div class="highlight"><span class="filename">JavaScript код</span><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">entities</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">"calendar.test1"</span><span class="p">,</span><span class="w"> </span><span class="s2">"calendar.test2"</span><span class="p">];</span>
 <span class="kd">const</span><span class="w"> </span><span class="nx">groupedEvents</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{};</span><span class="w"> </span><span class="c1">// Объект для группировки: { "Сегодня (05.05)": ["Событие 1", "Событие 2"] }</span>
@@ -1946,15 +2504,22 @@ wifi_password #пароль вашей wifi сети
 <span class="k">return</span><span class="w"> </span><span class="nx">result</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="s2">"  |  "</span><span class="p">);</span>
 </code></pre></div>
 <ul>
-<li>В блоке <strong>Live Output</strong> ниже вы сразу увидите результат работы вашего кода. Если данные из HA поступают корректно, там отобразится данные календаря за текущий день или завтрашний (например: <code>Сегодня (05.05)": ["Событие 1", "Событие 2"]</code>). </li>
+<li>В блоке <strong><code>Live Output</code></strong> ниже вы сразу увидите результат работы вашего кода. Если данные из  HA поступают корректно, там отобразится данные календаря за текущий день или завтрашний (например: <code>Сегодня (05.05)": ["Событие 1", "Событие 2"]</code>). </li>
 </ul>
 <figure>
-<p><a class="glightbox" href="/images/eink/ha2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="img" class="R02" loading="lazy" src="/images/eink/ha2.png" width="600"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/images/eink/ha2.png" data-desc-position="bottom"><img alt="img" class="R02" loading="lazy" src="/images/eink/ha2.png" width="600"></a></p>
 </figure>
 <hr>
+<!-- ## :material-diamond-stone: Эксклюзивные материалы на Boosty -->
+<!-- include "./ESPHome-TRMNL_7+5/boosty-vitrina.md"  -->
+
+<h2 id="ps">P.S.</h2>
+<ul>
+<li>Если у вас есть идеи, как эффективно высосать аккумулятор до 3 В без кучи рассыпухи, то пишите в комментариях (E-Paper ESP32 Driver Board поддерживает входное напряжение от 3,6 В до 5,5 В). </li>
+</ul>
 <h2 id="faq">FAQ</h2>
 <ul>
-<li><strong>Как изменить ssid и пароль wifi?</strong> Подключитесь по usb <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg></span> откройте <a href="https://web.esphome.io/">web.esphome.io</a> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg></span> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1M8 13h8v-2H8zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4a5 5 0 0 0 5-5 5 5 0 0 0-5-5"></path></svg></span> CONNECT <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg></span> (<span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M12 16a2 2 0 0 1 2 2 2 2 0 0 1-2 2 2 2 0 0 1-2-2 2 2 0 0 1 2-2m0-6a2 2 0 0 1 2 2 2 2 0 0 1-2 2 2 2 0 0 1-2-2 2 2 0 0 1 2-2m0-6a2 2 0 0 1 2 2 2 2 0 0 1-2 2 2 2 0 0 1-2-2 2 2 0 0 1 2-2"></path></svg></span>) <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg></span> Configure Wi-Fi (ESP32 должна быть в активном режиме)</li>
+<li><strong>Как изменить ssid и пароль wifi?</strong> Подключитесь по usb <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg></span> откройте <a href="https://web.esphome.io/">web.esphome.io</a> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg></span> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1M8 13h8v-2H8zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4a5 5 0 0 0 5-5 5 5 0 0 0-5-5"></path></svg></span> CONNECT <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg></span> (<span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 16a2 2 0 0 1 2 2 2 2 0 0 1-2 2 2 2 0 0 1-2-2 2 2 0 0 1 2-2m0-6a2 2 0 0 1 2 2 2 2 0 0 1-2 2 2 2 0 0 1-2-2 2 2 0 0 1 2-2m0-6a2 2 0 0 1 2 2 2 2 0 0 1-2 2 2 2 0 0 1-2-2 2 2 0 0 1 2-2"></path></svg></span>) <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg></span> Configure Wi-Fi (ESP32 должна быть в активном режиме)</li>
 </ul>
 <hr>
 <h2 id="-">Помогите! Что-то не работает.</h2>
@@ -1966,33 +2531,26 @@ wifi_password #пароль вашей wifi сети
 <p><strong>Ничего не работает</strong> -&gt; откройте <a href="https://web.esphome.io/">web.esphome.io</a> и подключите панель через usb и посмотрите логи. </p>
 </li>
 <li>
-<p>Esphome не обновлялся но перестал собирать рабочую прошивку: удалите папки 'C:\Users\name_user.platformio\' и '.esphome\build'</p>
+<p><code>Esphome</code> не обновлялся но перестал собирать рабочую прошивку: удалите папки <code>C:\Users\name_user\.platformio\</code> и <code>\.esphome\build</code></p>
 </li>
 </ul>
-<p><a name="donat"></a></p>
-<div class="corner-wrapper yoomoney">
-  <p style="font-weight: 300; padding-left:10px;padding-right:10px; padding-bottom:8px; font-size: 1.6em;">Угостите автора чашечкой чая ☕︎</p><p>
-  <a name="donat"></a>
-  <iframe src="https://yoomoney.ru/quickpay/fundraise/button?billNumber=178EDKBGRJF.241220&amp;" width="210" height="50" frameborder="0" allowtransparency="true" scrolling="no"></iframe>
-</p></div>
-
 <div class="button_wide md-feedback__title">
     Поделитесь с друзьями 
   <div id="copy-notification">Ссылка скопирована!</div>  
   <a class="button_copy" title="Скопировать ссылку" style="cursor: pointer;">
-  <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M19 21H8V7h11m0-2H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2m-3-4H4a2 2 0 0 0-2 2v14h2V3h12V1Z"></path></svg></span>
+  <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 21H8V7h11m0-2H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2m-3-4H4a2 2 0 0 0-2 2v14h2V3h12V1Z"></path></svg></span>
   </a>
-      <button id="shareButton" class="button-tg"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"></path></svg></span>
+      <button id="shareButton" class="button-tg"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"></path></svg></span>
       </button> 
       <br>
       Подписывайтесь в <a href="https://t.me/llldpm" target="_blank">Telegram</a>
 </div>
 
-<h2 id="_8">Комментарии</h2>
+<h2 id="_9">Комментарии</h2>
 <p><link rel="stylesheet" href="/stylesheets/slick.css">
 <link rel="stylesheet" href="/stylesheets/slick-theme.css"></p>
-<script src="/javascripts/jquery.min.js" defer></script>
-<script src="/javascripts/slick.min.js" defer></script>
+<script src="/javascripts/jquery.min.js" defer=""></script>
+<script src="/javascripts/slick.min.js" defer=""></script>
 <script>
 document.addEventListener('DOMContentLoaded', () => {
  $('.slider-for').slick({
@@ -2018,7 +2576,11 @@ $(".slider-nav").slick({
   initialSlide: 1,
   dots: false
 });});
-</script></div>
+</script>
+
+<p><script type="module" src="https://unpkg.com/esp-web-tools@10/dist/web/install-button.js?module" script="">
+
+</p></script></p>
 
 
 
@@ -2037,9 +2599,9 @@ $(".slider-nav").slick({
       
   <span class="md-source-file__fact">
     <span class="md-icon" title="Последнее обновление">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">15 мая 2026 г.</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="6 июня 2026 г. 15:43:47 UTC">6 июня 2026 г.</span>
   </span>
 
     
@@ -2057,7 +2619,7 @@ $(".slider-nav").slick({
 
 
 <div class="corner-wrapper">
-    <script async src="https://comments.app/js/widget.js?3" data-comments-app-website="BV76JGsM" data-limit="5" data-color="41474a" data-dislikes="1" data-colorful="1"></script>
+    <script async="" src="https://comments.app/js/widget.js?3" data-comments-app-website="BV76JGsM" data-limit="5" data-color="41474a" data-dislikes="1" data-colorful="1"></script>
   </div>
 
                 
@@ -2068,9 +2630,9 @@ $(".slider-nav").slick({
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
         
-          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden="">
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
   К началу
 </button>
         
@@ -2083,7 +2645,7 @@ $(".slider-nav").slick({
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Copyright &copy; 2023-2025 <a href="https://t.me/kFattum">Fattum</a>
+      Copyright © 2023-2025 <a href="https://t.me/kFattum">Fattum</a>
     </div>
   
   
@@ -2102,7 +2664,7 @@ $(".slider-nav").slick({
     
     
     <a href="https://www.printables.com/social/462706-fattum" target="_blank" rel="noopener" title="Printables" class="md-social__link">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3.678 4.8 12 9.6v9.6l8.322-4.8V4.8L12 0ZM12 19.2l-8.322-4.8V24Z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3.678 4.8 12 9.6v9.6l8.322-4.8V4.8L12 0ZM12 19.2l-8.322-4.8V24Z"></path></svg>
     </a>
   
     
@@ -2110,15 +2672,15 @@ $(".slider-nav").slick({
     
     
     <a href="https://www.thingiverse.com/fattum" target="_blank" rel="noopener" title="thingiverse" class="md-social__link">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.955.005C5.425-.152-.091 5.485.007 11.805c-.235 6.756 5.537 12.25 12.052 12.196C18.621 23.9 23.912 18.595 24 12.03 24.031 5.483 18.505-.18 11.955.005m-.047 1.701a10.276 10.276 0 0 1 7.36 17.529 10.275 10.275 0 0 1-17.556-7.287C1.71 6.308 6.268 1.728 11.907 1.706zm-5.55 4.781c-.322 0-.358.033-.358.361v2.248c0 .351.04.391.398.391h3.823c.274 0 .274.004.274.265v9.736a.18.18 0 0 0 .051.146c.04.038.093.059.148.053h2.555c.247-.003.283-.035.283-.28v-9.32c0-.124.004-.239 0-.39s.055-.21.218-.21h3.9c.319.004.35-.032.35-.344V6.855c0-.34-.024-.363-.37-.363h-5.626z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.955.005C5.425-.152-.091 5.485.007 11.805c-.235 6.756 5.537 12.25 12.052 12.196C18.621 23.9 23.912 18.595 24 12.03 24.031 5.483 18.505-.18 11.955.005m-.047 1.701a10.276 10.276 0 0 1 7.36 17.529 10.275 10.275 0 0 1-17.556-7.287C1.71 6.308 6.268 1.728 11.907 1.706zm-5.55 4.781c-.322 0-.358.033-.358.361v2.248c0 .351.04.391.398.391h3.823c.274 0 .274.004.274.265v9.736a.18.18 0 0 0 .051.146c.04.038.093.059.148.053h2.555c.247-.003.283-.035.283-.28v-9.32c0-.124.004-.239 0-.39s.055-.21.218-.21h3.9c.319.004.35-.032.35-.344V6.855c0-.34-.024-.363-.37-.363h-5.626z"></path></svg>
     </a>
   
     
     
     
     
-    <a href="mailto:<Fattum@3dpm.ru>" target="_blank" rel="noopener" title="Почта" class="md-social__link">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M1.75 3h20.5c.966 0 1.75.784 1.75 1.75v14a1.75 1.75 0 0 1-1.75 1.75H1.75A1.75 1.75 0 0 1 0 18.75v-14C0 3.784.784 3 1.75 3M1.5 7.412V18.75c0 .138.112.25.25.25h20.5a.25.25 0 0 0 .25-.25V7.412l-9.52 6.433c-.592.4-1.368.4-1.96 0Zm0-2.662v.852l10.36 7a.25.25 0 0 0 .28 0l10.36-7V4.75a.25.25 0 0 0-.25-.25H1.75a.25.25 0 0 0-.25.25"/></svg>
+    <a href="mailto:&lt;Fattum@3dpm.ru&gt;" target="_blank" rel="noopener" title="Почта" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M1.75 3h20.5c.966 0 1.75.784 1.75 1.75v14a1.75 1.75 0 0 1-1.75 1.75H1.75A1.75 1.75 0 0 1 0 18.75v-14C0 3.784.784 3 1.75 3M1.5 7.412V18.75c0 .138.112.25.25.25h20.5a.25.25 0 0 0 .25-.25V7.412l-9.52 6.433c-.592.4-1.368.4-1.96 0Zm0-2.662v.852l10.36 7a.25.25 0 0 0 .28 0l10.36-7V4.75a.25.25 0 0 0-.25-.25H1.75a.25.25 0 0 0-.25.25"></path></svg>
     </a>
   
     
@@ -2126,7 +2688,7 @@ $(".slider-nav").slick({
     
     
     <a href="https://t.me/kFattum" target="_blank" rel="noopener" title="Telegram // Fattum" class="md-social__link">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M256 8a248 248 0 1 0 0 496 248 248 0 1 0 0-496m115 168.7c-3.7 39.2-19.9 134.4-28.1 178.3-3.5 18.6-10.3 24.8-16.9 25.4-14.4 1.3-25.3-9.5-39.3-18.7-21.8-14.3-34.2-23.2-55.3-37.2-24.5-16.1-8.6-25 5.3-39.5 3.7-3.8 67.1-61.5 68.3-66.7.2-.7.3-3.1-1.2-4.4s-3.6-.8-5.1-.5c-2.2.5-37.1 23.5-104.6 69.1-9.9 6.8-18.9 10.1-26.9 9.9-8.9-.2-25.9-5-38.6-9.1-15.5-5-27.9-7.7-26.8-16.3.6-4.5 6.7-9 18.4-13.7 72.3-31.5 120.5-52.3 144.6-62.3 68.9-28.6 83.2-33.6 92.5-33.8 2.1 0 6.6.5 9.6 2.9 2 1.7 3.2 4.1 3.5 6.7.5 3.2.6 6.5.4 9.8z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M256 8a248 248 0 1 0 0 496 248 248 0 1 0 0-496m115 168.7c-3.7 39.2-19.9 134.4-28.1 178.3-3.5 18.6-10.3 24.8-16.9 25.4-14.4 1.3-25.3-9.5-39.3-18.7-21.8-14.3-34.2-23.2-55.3-37.2-24.5-16.1-8.6-25 5.3-39.5 3.7-3.8 67.1-61.5 68.3-66.7.2-.7.3-3.1-1.2-4.4s-3.6-.8-5.1-.5c-2.2.5-37.1 23.5-104.6 69.1-9.9 6.8-18.9 10.1-26.9 9.9-8.9-.2-25.9-5-38.6-9.1-15.5-5-27.9-7.7-26.8-16.3.6-4.5 6.7-9 18.4-13.7 72.3-31.5 120.5-52.3 144.6-62.3 68.9-28.6 83.2-33.6 92.5-33.8 2.1 0 6.6.5 9.6 2.9 2 1.7 3.2 4.1 3.5 6.7.5 3.2.6 6.5.4 9.8z"></path></svg>
     </a>
   
     
@@ -2134,7 +2696,26 @@ $(".slider-nav").slick({
     
     
     <a href="https://t.me/llldpm" target="_blank" rel="noopener" title="Telegram // 3DPM" class="md-social__link">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M256 8a248 248 0 1 0 0 496 248 248 0 1 0 0-496m115 168.7c-3.7 39.2-19.9 134.4-28.1 178.3-3.5 18.6-10.3 24.8-16.9 25.4-14.4 1.3-25.3-9.5-39.3-18.7-21.8-14.3-34.2-23.2-55.3-37.2-24.5-16.1-8.6-25 5.3-39.5 3.7-3.8 67.1-61.5 68.3-66.7.2-.7.3-3.1-1.2-4.4s-3.6-.8-5.1-.5c-2.2.5-37.1 23.5-104.6 69.1-9.9 6.8-18.9 10.1-26.9 9.9-8.9-.2-25.9-5-38.6-9.1-15.5-5-27.9-7.7-26.8-16.3.6-4.5 6.7-9 18.4-13.7 72.3-31.5 120.5-52.3 144.6-62.3 68.9-28.6 83.2-33.6 92.5-33.8 2.1 0 6.6.5 9.6 2.9 2 1.7 3.2 4.1 3.5 6.7.5 3.2.6 6.5.4 9.8z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M256 8a248 248 0 1 0 0 496 248 248 0 1 0 0-496m115 168.7c-3.7 39.2-19.9 134.4-28.1 178.3-3.5 18.6-10.3 24.8-16.9 25.4-14.4 1.3-25.3-9.5-39.3-18.7-21.8-14.3-34.2-23.2-55.3-37.2-24.5-16.1-8.6-25 5.3-39.5 3.7-3.8 67.1-61.5 68.3-66.7.2-.7.3-3.1-1.2-4.4s-3.6-.8-5.1-.5c-2.2.5-37.1 23.5-104.6 69.1-9.9 6.8-18.9 10.1-26.9 9.9-8.9-.2-25.9-5-38.6-9.1-15.5-5-27.9-7.7-26.8-16.3.6-4.5 6.7-9 18.4-13.7 72.3-31.5 120.5-52.3 144.6-62.3 68.9-28.6 83.2-33.6 92.5-33.8 2.1 0 6.6.5 9.6 2.9 2 1.7 3.2 4.1 3.5 6.7.5 3.2.6 6.5.4 9.8z"></path></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://boosty.to/fattum" target="_blank" rel="noopener" title="Блог на boosty" class="md-social__link">
+      <!--?xml version="1.0" encoding="utf-8"?-->
+<!-- Generator: Adobe Illustrator 24.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 235.6 292.2" style="enable-background:new 0 0 235.6 292.2;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FFFFFF;}
+</style>
+<g id="b_1_">
+	<path class="st0" d="M44.3,164.5L76.9,51.6H127l-10.1,35c-0.1,0.2-0.2,0.4-0.3,0.6L90,179.6h24.8c-10.4,25.9-18.5,46.2-24.3,60.9
+		c-45.8-0.5-58.6-33.3-47.4-72.1 M90.7,240.6l60.4-86.9h-25.6l22.3-55.7c38.2,4,56.2,34.1,45.6,70.5
+		c-11.3,39.1-57.1,72.1-101.7,72.1C91.3,240.6,91,240.6,90.7,240.6z"></path>
+</g>
+</svg>
     </a>
   
 </div>
@@ -2160,7 +2741,7 @@ $(".slider-nav").slick({
         <script src="../../javascripts/extra.js"></script>
       
     
-  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
-document$.subscribe(() => { lightbox.reload() });
-</script></body>
-</html>
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>
