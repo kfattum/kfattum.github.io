@@ -2,6 +2,9 @@
 .md-header__source {
   display: none;
 }
+.md-source {
+  display: none;
+}
 /* Ширина страницы */
 .md-grid {
   width: 100%;

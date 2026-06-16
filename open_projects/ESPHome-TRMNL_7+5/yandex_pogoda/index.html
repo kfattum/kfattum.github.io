@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://3dpm.ru/open_projects/ESPHome-TRMNL_7%2B5/yandex_pogoda/">
       
       
-        <link rel="prev" href="../">
+        <link rel="prev" href="../readme_custom_components_esphome-trmnl/">
       
       
         <link rel="next" href="../mchs/">
@@ -665,6 +665,8 @@
       
         
       
+        
+      
     
     
     
@@ -742,6 +744,34 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../readme_custom_components_esphome-trmnl/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Интеграция с Home Assistant
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -766,10 +796,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2_3" checked>
         
           
-          <label class="md-nav__link" for="__nav_4_2_2" id="__nav_4_2_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_2_3" id="__nav_4_2_3_label" tabindex="0">
             
   
   
@@ -787,8 +817,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_2_2_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_4_2_2">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_2_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_2_3">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -872,6 +902,34 @@
       
     </span>
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Настройка локализации (смена языка)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Настройка локализации (смена языка)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Как изменить язык:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1050,7 +1108,7 @@
   <span class="md-ellipsis">
     
   
-    RGB лампа с Wi-Fi управлением | GyverLamp | Огненная лампа
+    Gyverlamp
   
 
     
@@ -1196,6 +1254,34 @@
       
     </span>
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Настройка локализации (смена языка)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Настройка локализации (смена языка)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Как изменить язык:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1345,6 +1431,23 @@
 </li>
 <li>После импорта откройте API яндекс погоды на вкладке Extensions. Найдите URL https://api.weather.yandex.ru/v2/forecast?lat=12.34567&amp;lon=12.34567&amp;lang=ru_RU&amp;limit=2 и замените координаты lat и lon на координаты вашего города.</li>
 <li>В Header name указан тестовый X-Yandex-Weather-Key. Для работы нужно получить собственный бесплатный ключ на странице yandex.ru/pogoda/b2b/smarthome</li>
+</ol>
+<h2 id="_2">Настройка локализации (смена языка)</h2>
+<p>Для управления языком вывода в скрипте предусмотрена специальная переменная <code>lang</code>, расположенная в верхней части кода. По умолчанию скрипт настроен на русский язык.</p>
+<h3 id="_3">Как изменить язык:</h3>
+<ol>
+<li>
+<p>Откройте виджет и найдите строку настройки переменной <code>lang</code> (строка 5):
+</p><div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">lang</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'ru'</span><span class="p">;</span>
+</code></pre></div>
+</li>
+<li>
+<p>Замените значение в кавычках на код требуемого языка:</p>
+<ul>
+<li><strong><code>'ru'</code></strong> — для отображения на русском языке</li>
+<li><strong><code>'en'</code></strong> — для отображения на английском языке</li>
+</ul>
+</li>
 </ol></div>
 
 

@@ -6,11 +6,17 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
+        <meta name="description" content="Кастомная интеграция ESPHome-TRMNL для двусторонней связи Home Assistant с E-Ink дисплеем на ESPHome">
+      
       
       
         <link rel="canonical" href="https://3dpm.ru/open_projects/ESPHome-TRMNL_7%2B5/readme_custom_components_esphome-trmnl/">
       
       
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../yandex_pogoda/">
       
       
         
@@ -25,7 +31,7 @@
     
     
       
-        <title>Macro Rendering Error - 3DPM // Fattum</title>
+        <title>Интеграция с Home Assistant - 3DPM // Fattum</title>
       
     
     
@@ -88,7 +94,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#macro-rendering-error" class="md-skip">
+        <a href="#esphome-trmnl-home-assistant" class="md-skip">
           Перейти к содержанию
         </a>
       
@@ -181,7 +187,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Macro Rendering Error
+              Интеграция с Home Assistant
             
           </span>
         </div>
@@ -394,10 +400,12 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
+      <li class="md-tabs__item md-tabs__item--active">
         <a href="../../" class="md-tabs__link">
           
   
@@ -441,6 +449,8 @@
         <div class="md-main__inner md-grid">
           
             
+              
+                
               
               <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
                 <div class="md-sidebar__scrollwrap">
@@ -560,6 +570,8 @@
       
   
   
+    
+  
   
   
     
@@ -587,6 +599,391 @@
     
     
       
+        
+        
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Открытые проекты
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Открытые проекты
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ESPHome-TRMNL 7.5"
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    ESPHome-TRMNL 7.5"
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Общая информация
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Интеграция с Home Assistant
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Интеграция с Home Assistant
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Описание
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Поддерживаемые устройства
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Установка
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Сущности интеграции
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Сущности интеграции">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Сенсоры
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Управление
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Сброс значений управляющих сущностей
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Пример автоматизации
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Пример автоматизации">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Сценарий работы автоматизации
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Поиск неисправностей
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Поиск неисправностей">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Дисплей не появляется в интеграции
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        На экране надпись ERROR
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
       
     
     
@@ -601,14 +998,14 @@
   
   
   
-    <a href="../../" class="md-nav__link">
+    <a href="../yandex_pogoda/" class="md-nav__link">
       
   
   
   <span class="md-ellipsis">
     
   
-    Открытые проекты
+    Виджеты
   
 
     
@@ -622,6 +1019,220 @@
     </a>
   
 
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../control-pad/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Подстольная панель управления для Home Assistant в стиле Logitech MK240
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../LX-QC01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Корпус для USB-триггера QC 2.0/3.0 LX-QC01
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Adjustable%20furniture%20leg/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Регулируемая мебельная ножка 43-71 мм с трапецеидальной резьбой
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../GL1.1/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gyverlamp
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Runcam_Thumb_mount/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Крепление для Runcam Thumb на Diatone GT M515
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Switch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Крепление выключателя для Ender3v2 | Корпус выключателя для конструкционного профиля 40x**
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
       
     </li>
   
@@ -662,6 +1273,8 @@
             
             
               
+                
+              
               <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
@@ -674,6 +1287,164 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Описание
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Поддерживаемые устройства
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Установка
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Сущности интеграции
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Сущности интеграции">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Сенсоры
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Управление
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Сброс значений управляющих сущностей
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Пример автоматизации
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Пример автоматизации">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Сценарий работы автоматизации
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Поиск неисправностей
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Поиск неисправностей">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Дисплей не появляется в интеграции
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        На экране надпись ERROR
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -685,15 +1456,77 @@
               
                 
 
+  
+
 
 
   
 
 
+  <nav class="md-path" aria-label="Навигация" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="../../.." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    Главная
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../../" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Открытые проекты
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    ESPHome-TRMNL 7.5"
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
               
               <article class="md-content__inner md-typeset">
                 
                   
+  
+
 
 
   
@@ -713,23 +1546,217 @@
   
 
 
-<div><h1 id="macro-rendering-error"><em>Macro Rendering Error</em></h1>
-<p><em>File</em>: <code>open_projects\ESPHome-TRMNL_7+5\readme_custom_components_esphome-trmnl.md</code></p>
-<p><em>UndefinedError</em>: 'states' is undefined</p>
-<div class="highlight"><pre><span></span><code>Traceback (most recent call last):
-  File "C:\Users\kanst\AppData\Local\Programs\Python\Python312\Lib\site-packages\mkdocs_macros\plugin.py", line 703, in render
-    return md_template.render(**page_variables)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\kanst\AppData\Local\Programs\Python\Python312\Lib\site-packages\jinja2\environment.py", line 1295, in render
-    self.environment.handle_exception()
-  File "C:\Users\kanst\AppData\Local\Programs\Python\Python312\Lib\site-packages\jinja2\environment.py", line 942, in handle_exception
-    raise rewrite_traceback_stack(source=source)
-  File "&lt;template&gt;", line 213, in top-level template code
-  File "C:\Users\kanst\AppData\Local\Programs\Python\Python312\Lib\site-packages\jinja2\utils.py", line 92, in from_obj
-    if hasattr(obj, "jinja_pass_arg"):
-       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-jinja2.exceptions.UndefinedError: 'states' is undefined
-</code></pre></div></div>
+<div><h1 id="esphome-trmnl-home-assistant">Интеграция ESPHome-TRMNL с Home Assistant</h1>
+<p><a class="glightbox" href="/images/eink/logo2x.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="img" class="R02" src="/images/eink/logo2x.png" width="300"></a></p>
+<h2 id="_1">Описание</h2>
+<p>Кастомная интеграция <code>esphome_trmnl</code> обеспечивает двустороннюю связь между Home Assistant и E-Ink дисплеем на ESPHome. Она позволяет:</p>
+<ul>
+<li>Получать телеметрию с дисплея (напряжение батареи, уровень заряда, уровень Wi-Fi сигнала)</li>
+<li>Блокировать обновление экрана</li>
+<li>Изменять интервал обновления</li>
+<li>Переопределять URL изображения для показа произвольного контента</li>
+</ul>
+<h2 id="_2">Поддерживаемые устройства</h2>
+<p>Дисплеи работающее под управлением прошивки ESPHome-TRMNL v2.0.0+.</p>
+<h2 id="_3">Установка</h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">С использованием "HACS" (рекомендуется)</label><label for="__tabbed_1_2">Без "HACS"</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Этот метод позволяет получать обновления непосредственно на главной странице "HACS". Если "HACS" еще не установлен, загрузите его, следуя инструкциям на странице <a href="https://hacs.xyz/docs/use/download/prerequisites/">hacs.xyz/docs/setup/download/</a></p>
+<ul>
+<li>В HACS перейдите в меню в правом верхнем углу, затем выберите «Пользовательские репозитории»</li>
+<li>Затем добавьте репозиторий https://github.com/kfattum/esphome-trmnl и выберите «Интеграция». После этого нажмите «Добавить».</li>
+<li>После добавления нажмите кнопку «Отмена» рядом с кнопкой «Добавить».</li>
+<li>Скачайте интеграцию нажав на кнопку <a class="ha-badge" href="https://my.home-assistant.io/redirect/hacs_repository/?owner=kfattum&amp;repository=esphome-trmnl&amp;category=Integrations" target="_blank"><img alt="Open your  Home Assistant instance and open a repository inside the  Home Assistant Community Store." src="https://my.home-assistant.io/badges/hacs_repository.svg"></a> или найдите ESPHome-TRMNL в поиске</li>
+<li>Перезапустите  "Home Assistant", чтобы система распознала новые файлы.</li>
+<li>Добавьте интеграцию в HA нажав на кнопку <a class="ha-badge" href="https://my.home-assistant.io/redirect/config_flow_start/?domain=esphome_trmnl" target="_blank"><img alt="Open your Home Assistant instance and start setting up a new integration." src="https://my.home-assistant.io/badges/config_flow_start.svg"></a> или перейдите в Настройки -&gt; Устройства и службы -&gt; Добавить интеграцию, найдите "ESPHome-TRMNL" -&gt; Добавить</li>
+<li>Когда вы включите экран, он должен автоматически появиться в интеграции <strong>"ESPHome-TRMNL"</strong></li>
+</ul>
+</div>
+<div class="tabbed-block">
+<p>Этот метод требует ручного копирования файлов и самостоятельного отслеживания обновлений.</p>
+<ol>
+<li>Скачайте архив <a href="https://github.com/kfattum/esphome-trmnl/releases/latest/download/esphome_trmnl_custom_integration.zip" target="_blank">esphome_trmnl_custom_integration.zip</a></li>
+<li>Распакуйте загруженный архив на вашем компьютере.</li>
+<li>Найдите внутри папку "custom_components/esphome_trmnl" и скопируйте папку "esphome_trmnl" в директорию "custom_components" вашей конфигурации  "Home Assistant".</li>
+<li>Перезапустите  "Home Assistant", чтобы система распознала новые файлы.</li>
+<li>Перейдите в <strong>Настройки</strong> -&gt; <strong>Устройства и службы</strong> -&gt; <strong>Добавить интеграцию</strong>, найдите "ESPHome-TRMNL" -&gt; Добавить</li>
+<li>Когда вы включите экран, он должен автоматически появиться в интеграции <strong>"ESPHome-TRMNL"</strong> </li>
+</ol>
+</div>
+</div>
+</div>
+<h2 id="_4">Сущности интеграции</h2>
+<p>Каждый дисплей создаёт набор сущностей. </p>
+<h3 id="_5">Сенсоры</h3>
+<table>
+<thead>
+<tr>
+<th>Сущность</th>
+<th>Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>sensor</code> Battery Voltage</td>
+<td>Напряжение батареи (В)</td>
+</tr>
+<tr>
+<td><code>sensor</code> Battery Level</td>
+<td>Уровень заряда (%)</td>
+</tr>
+<tr>
+<td><code>sensor</code> Wi-Fi Signal</td>
+<td>Уровень Wi-Fi сигнала (%)</td>
+</tr>
+<tr>
+<td><code>sensor</code> Last Update</td>
+<td>Время последнего ответа от дисплея</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_6">Управление</h3>
+<table>
+<thead>
+<tr>
+<th>Тип</th>
+<th>Название</th>
+<th>Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>switch</code></td>
+<td>Block display refresh</td>
+<td>Блокирует обновление экрана (ON — экран не обновляется)</td>
+</tr>
+<tr>
+<td><code>number</code></td>
+<td>Sleep Time</td>
+<td>Интервал между обновлениями в секундах ( 0 = интервал из inker. шаг 60, макс 9 999 999)</td>
+</tr>
+<tr>
+<td><code>text</code></td>
+<td>Image URL</td>
+<td>http ссылка на PNG-изображение с разрешением 800x480 для показа на экране ( например http://192.168.1.100:8124/api/device-images/design/2 отобразит 2 экран inker). Если поле пустое — дисплей показывает контент из Inker</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Примечание: сущности на стороне ESP (Inker Server URL, HA Server URL, Language) управляются через веб-интерфейс ESP32. Они не являются частью данной интеграции.</p>
+</blockquote>
+<h3 id="_7">Сброс значений управляющих сущностей</h3>
+<p>Зажмите кнопку на корпусе дольше 5 секунд в режиме глубокого сна — это сбросит <code>Image URL</code>, <code>Sleep Time</code> и <code>Block display refresh</code> до значений по умолчанию.</p>
+<h2 id="_8">Пример автоматизации</h2>
+<p>Этот пример демонстрирует, как динамически управлять E-Ink дисплеем в течение суток: переключать выводимый контент в вечернее время и переводить устройство в режим глубокого энергосбережения на ночь.</p>
+<h3 id="_9">Сценарий работы автоматизации</h3>
+<ol>
+<li><strong>Вечер (20:00):</strong> На дисплей отправляется команда смены изображения (экрана inker) через сущность <code>text</code>. На экран выводится вечерний шаблон (например, уютный дашборд или часы).</li>
+<li><strong>Полночь (00:00):</strong> Дисплей переводится в <strong>ночной режим</strong> для экономии батареи:</li>
+<li>Интервал обновления (<code>number</code>) увеличивается до <code>17800</code> секунд (~5 часов).</li>
+<li>Включается режим блокировки обновлений (<code>switch</code>), переводя устройство в сон.</li>
+<li>
+<p>Очищается URL. Теперь, когда экран проснется, будет отображаться плейлист inker.</p>
+</li>
+<li>
+<p><strong>Утро (05:30):</strong> Дисплей <strong>просыпается</strong>:</p>
+</li>
+<li>Время сна сбрасывается в <code>0</code> (возврат к стандартному интервалу опроса).</li>
+<li>Блокировка обновлений выключается, дисплей снова актуализирует данные на экране.</li>
+</ol>
+<details class="example">
+<summary>Код автоматизации (YAML)</summary>
+<p>Вы можете скопировать этот код в текстовый режим редактора автоматизаций Home Assistant:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">alias</span><span class="p">:</span><span class="w"> </span><span class="s">"ESPHome-TRMNL:</span><span class="nv"> </span><span class="s">Управление</span><span class="nv"> </span><span class="s">экраном</span><span class="nv"> </span><span class="s">в</span><span class="nv"> </span><span class="s">течение</span><span class="nv"> </span><span class="s">суток"</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">"Автоматическое</span><span class="nv"> </span><span class="s">переключение</span><span class="nv"> </span><span class="s">экранов</span><span class="nv"> </span><span class="s">и</span><span class="nv"> </span><span class="s">глубокий</span><span class="nv"> </span><span class="s">сон</span><span class="nv"> </span><span class="s">ночью"</span>
+<span class="nt">triggers</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">trigger</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">time</span>
+<span class="w">    </span><span class="nt">at</span><span class="p">:</span><span class="w"> </span><span class="s">"20:00:00"</span>
+<span class="w">    </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">вечер</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">trigger</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">time</span>
+<span class="w">    </span><span class="nt">at</span><span class="p">:</span><span class="w"> </span><span class="s">"00:00:00"</span>
+<span class="w">    </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">полночь</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">trigger</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">time</span>
+<span class="w">    </span><span class="nt">at</span><span class="p">:</span><span class="w"> </span><span class="s">"05:30:00"</span>
+<span class="w">    </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">утро</span>
+<span class="nt">conditions</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span>
+<span class="nt">actions</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">choose</span><span class="p">:</span>
+<span class="w">      </span><span class="c1"># ВЕЧЕРНИЙ РЕЖИМ</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">conditions</span><span class="p">:</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">condition</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">trigger</span>
+<span class="w">            </span><span class="nt">id</span><span class="p">:</span>
+<span class="w">              </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">вечер</span>
+<span class="w">        </span><span class="nt">sequence</span><span class="p">:</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text.set_value</span>
+<span class="w">            </span><span class="nt">target</span><span class="p">:</span>
+<span class="w">              </span><span class="nt">device_id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ad5052c25da850ff28860ef907f3367e</span>
+<span class="w">            </span><span class="nt">data</span><span class="p">:</span>
+<span class="w">              </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://192.168.1.100:8124/api/device-images/design/2</span>
+<span class="w">            </span><span class="nt">note</span><span class="p">:</span><span class="w"> </span><span class="s">"Установка</span><span class="nv"> </span><span class="s">вечернего</span><span class="nv"> </span><span class="s">макета</span><span class="nv"> </span><span class="s">экрана"</span>
+
+<span class="w">      </span><span class="c1"># НОЧНОЙ РЕЖИМ (ЭНЕРГОСБЕРЕЖЕНИЕ)</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">conditions</span><span class="p">:</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">condition</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">trigger</span>
+<span class="w">            </span><span class="nt">id</span><span class="p">:</span>
+<span class="w">              </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">полночь</span>
+<span class="w">        </span><span class="nt">sequence</span><span class="p">:</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">number.set_value</span>
+<span class="w">            </span><span class="nt">target</span><span class="p">:</span>
+<span class="w">              </span><span class="nt">area_id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">prikhozhaia</span>
+<span class="w">            </span><span class="nt">data</span><span class="p">:</span>
+<span class="w">              </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="s">"17800"</span>
+<span class="w">            </span><span class="nt">note</span><span class="p">:</span><span class="w"> </span><span class="s">"Увеличиваем</span><span class="nv"> </span><span class="s">интервал</span><span class="nv"> </span><span class="s">сна</span><span class="nv"> </span><span class="s">до</span><span class="nv"> </span><span class="s">утра"</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">switch.turn_on</span>
+<span class="w">            </span><span class="nt">target</span><span class="p">:</span>
+<span class="w">              </span><span class="nt">area_id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">prikhozhaia</span>
+<span class="w">            </span><span class="nt">note</span><span class="p">:</span><span class="w"> </span><span class="s">"Включаем</span><span class="nv"> </span><span class="s">блокировку</span><span class="nv"> </span><span class="s">обновлений</span><span class="nv"> </span><span class="s">(глубокий</span><span class="nv"> </span><span class="s">сон)"</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text.set_value</span>
+<span class="w">            </span><span class="nt">target</span><span class="p">:</span>
+<span class="w">              </span><span class="nt">device_id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ad5052c25da850ff28860ef907f3367e</span>
+<span class="w">            </span><span class="nt">data</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{}</span>
+<span class="w">            </span><span class="nt">note</span><span class="p">:</span><span class="w"> </span><span class="s">"Сброс</span><span class="nv"> </span><span class="s">кастомного</span><span class="nv"> </span><span class="s">URL"</span>
+
+<span class="w">      </span><span class="c1"># УТРЕННЕЕ ПРОБУЖДЕНИЕ</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">conditions</span><span class="p">:</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">condition</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">trigger</span>
+<span class="w">            </span><span class="nt">id</span><span class="p">:</span>
+<span class="w">              </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">утро</span>
+<span class="w">        </span><span class="nt">sequence</span><span class="p">:</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">number.set_value</span>
+<span class="w">            </span><span class="nt">target</span><span class="p">:</span>
+<span class="w">              </span><span class="nt">area_id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">prikhozhaia</span>
+<span class="w">            </span><span class="nt">data</span><span class="p">:</span>
+<span class="w">              </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="s">"0"</span>
+<span class="w">            </span><span class="nt">note</span><span class="p">:</span><span class="w"> </span><span class="s">"Сброс</span><span class="nv"> </span><span class="s">интервала</span><span class="nv"> </span><span class="s">сна</span><span class="nv"> </span><span class="s">на</span><span class="nv"> </span><span class="s">стандартный"</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">switch.turn_off</span>
+<span class="w">            </span><span class="nt">target</span><span class="p">:</span>
+<span class="w">              </span><span class="nt">area_id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">prikhozhaia</span>
+<span class="w">            </span><span class="nt">note</span><span class="p">:</span><span class="w"> </span><span class="s">"Отключение</span><span class="nv"> </span><span class="s">блокировки,</span><span class="nv"> </span><span class="s">запуск</span><span class="nv"> </span><span class="s">обновлений"</span>
+<span class="nt">mode</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">single</span>
+</code></pre></div>
+</details>
+<h2 id="_10">Поиск неисправностей</h2>
+<h3 id="_11">Дисплей не появляется в интеграции</h3>
+<ol>
+<li>Убедитесь, что дисплей включён и подключён к нужной сети Wi-Fi</li>
+<li>
+<p>Проверьте, что дисплей имеет доступ к Home Assistant (настроен HA URL в веб-интерфейсе ESP)</p>
+<div class="admonition info">
+<p class="admonition-title">Изменение URL адреса  "HA" и "Inker"</p>
+<p>Стандартные URL адреса  "HA" ( http://homeassistant.local:8123 ) и  "Inker" ( http://homeassistant.local:8124 ) можно изменить в web-интерфейсе ESP32 (стандартный логин и пароль от web-интерфейса "esphome-trmnl"). Нажмите кнопку чтобы разбудить плату, через секунду зажмите кнопку на 5 секунд чтобы прейти в режим настроек. Если плата подключена к wifi то отобразится qr-код со ссылкой на web-интерфейс, а если не подключена то qr-код со ссылкой на <a href="https://esphome.io/components/captive_portal/" target="_blank">captive portal</a></p>
+</div>
+</li>
+<li>
+<p>Проверьте логи дисплея через <a href="https://web.esphome.io/">web.esphome.io</a> (подключите ESP по USB)</p>
+</li>
+</ol>
+<h3 id="error">На экране надпись ERROR</h3>
+<ul>
+<li>Дисплей не может подключиться к Wi-Fi или Inker</li>
+<li>Убедитесь, что вы не используете https</li>
+<li>Проверьте логи дисплея через <a href="https://web.esphome.io/">web.esphome.io</a> (подключите ESP по USB)</li>
+</ul></div>
 
 
 
@@ -761,7 +1788,15 @@ jinja2.exceptions.UndefinedError: 'states' is undefined
 
 
 
+  
+    
+  
 
+
+
+<div class="corner-wrapper">
+    <script async src="https://comments.app/js/widget.js?3" data-comments-app-website="BV76JGsM" data-limit="5" data-color="41474a" data-dislikes="1" data-colorful="1"></script>
+  </div>
 
                 
               </article>
