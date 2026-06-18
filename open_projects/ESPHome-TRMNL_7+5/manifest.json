@@ -1,13 +1,13 @@
 {
   "name": "esphome-trmnl-factory",
-  "version": "2.0.5",
+  "version": "2.1.0",
   "new_install_prompt_erase": true,
   "builds": [
     {
       "chipFamily": "ESP32",
       "parts": [
         {
-          "path": "esphome-trmnl-factory-v2.0.5-b2.bin",
+          "path": "esphome-trmnl-factory-v2.1.0.bin",
           "offset": 0
         }
       ]
